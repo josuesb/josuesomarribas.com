@@ -37,3 +37,10 @@ Vercel to publish that directory with clean URLs.
 
 Import the repository normally. The checked-in `vercel.json` selects the build
 command and the static output directory, so no dashboard overrides are needed.
+# Content
+
+Blog articles are file-backed and live in `content/articles/<slug>/en.md`. Each file uses JSON-compatible YAML frontmatter followed by the original article HTML, which is valid inside Markdown. Topic metadata lives in `content/topics`.
+
+Run `npm run content:migrate` to re-import the Framer CSV backups. The importer preserves all 82 records, including drafts, normalizes slugs for static hosting, strips scripts and inline event handlers, and assigns `/images/blog/default-cover.png` as the temporary cover. Drafts remain on disk but are excluded from the index, sitemap, RSS, and generated public routes.
+
+The public content routes are `/writing/<slug>` and the English-content fallback `/es/writing/<slug>`. Spanish fallback pages are `noindex` until real `es.md` translations are added.

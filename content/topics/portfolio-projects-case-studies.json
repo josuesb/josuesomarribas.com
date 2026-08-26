@@ -1,0 +1,14 @@
+{
+  "slug": "portfolio-projects-case-studies",
+  "name": "Portfolio Projects & Case Studies",
+  "description": "Project-based posts and case studies showing design process, product thinking, mobile app concepts, research artifacts, and portfolio decisions.",
+  "pillarPost": "building-a-travel-app-a-work-in-progress",
+  "featuredPosts": [
+    "bitely-responsive-recipe-app-design",
+    "moosic-smart-music-app-for-android",
+    "picasso-s-library-native-android-ios-design-concept",
+    "alex-an-user-persona-based-on-user-research"
+  ],
+  "seoTitle": "Portfolio Projects & UX Case Studies",
+  "seoDescription": "Project-based posts and UX case studies covering app concepts, research artifacts, portfolio decisions, product thinking, and design process examples."
+}

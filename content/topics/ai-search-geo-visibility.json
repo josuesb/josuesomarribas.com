@@ -1,0 +1,15 @@
+{
+  "slug": "ai-search-geo-visibility",
+  "name": "AI Search, GEO & Visibility",
+  "description": "Posts about how search visibility changes when people use AI tools, how to structure content for AI answer engines, and how to track mentions, citations, and zero-click visibility.",
+  "pillarPost": "geo-vs-seo-ai-search",
+  "featuredPosts": [
+    "how-to-track-ai-visibility",
+    "make-blog-posts-ai-readable",
+    "ai-mentions-without-clicks",
+    "structural-seo-json-ld-framer",
+    "how-to-import-content-into-framer-automatically"
+  ],
+  "seoTitle": "AI Search",
+  "seoDescription": "Articles about GEO, AI search visibility, AI mentions, zero-click discovery, and how to make blog content easier for search engines and AI tools to understand."
+}

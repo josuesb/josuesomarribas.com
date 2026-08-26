@@ -1,0 +1,16 @@
+{
+  "slug": "ui-ux-writing-interface-clarity",
+  "name": "UI, UX Writing & Interface Clarity",
+  "description": "Posts about interface meaning, forms, labels, microcopy, semiotics, accessibility, content clarity, visual hierarchy, and how small design decisions affect user behavior.",
+  "pillarPost": "ux-is-semiotics-why-an-interface-is-a-system-of-signs",
+  "featuredPosts": [
+    "micro-semiotics-forms-ambiguous-labels-checkout",
+    "what-accessible-enough-really-means-in-2025",
+    "l10n-is-not-translation-market-tone-urgency",
+    "text-only-landing-page",
+    "the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update",
+    "4-unique-design-systems-you-haven-t-seen-yet-to-boost-your-inspiration"
+  ],
+  "seoTitle": "UI, UX Writing & Interface Clarity",
+  "seoDescription": "Articles about UX writing, interface clarity, forms, labels, accessibility, semiotics, visual hierarchy, and the small details that shape user behavior."
+}
