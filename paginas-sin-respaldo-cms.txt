@@ -1,0 +1,43 @@
+PAGINAS PUBLICADAS SIN RESPALDO EN LOS CSV DEL CMS
+Sitio: https://josuesomarribas.com
+Fecha del inventario: 2026-08-27
+
+Comparacion realizada contra:
+- backup/Articles (4).csv (82 articulos)
+- backup/Clusters (1).csv (8 temas/clusteres)
+
+Se encontraron 7 paginas no pertenecientes al CMS, cada una publicada en ingles y espanol (14 URLs):
+
+1. Inicio
+   EN: https://josuesomarribas.com/
+   ES: https://josuesomarribas.com/es/
+
+2. Contacto
+   EN: https://josuesomarribas.com/contact
+   ES: https://josuesomarribas.com/es/contact
+
+3. Airbnb
+   EN: https://josuesomarribas.com/airbnb
+   ES: https://josuesomarribas.com/es/airbnb
+
+4. Now
+   EN: https://josuesomarribas.com/now
+   ES: https://josuesomarribas.com/es/now
+
+5. Indice del blog
+   EN: https://josuesomarribas.com/blog
+   ES: https://josuesomarribas.com/es/blog
+
+6. Building Solutions
+   EN: https://josuesomarribas.com/building-solutions
+   ES: https://josuesomarribas.com/es/building-solutions
+
+7. Target Test
+   EN: https://josuesomarribas.com/target-test
+   ES: https://josuesomarribas.com/es/target-test
+
+Resultado adicional de la comprobacion:
+- Todos los articulos /blog/{slug} del sitemap tienen su slug en Articles (4).csv.
+- Todas las paginas /blog/topic/{slug} del sitemap tienen su slug en Clusters (1).csv.
+- Las capturas completas de estas 14 URLs estan en screenshots/en y screenshots/es.
+- Como Framer usa secciones animadas y contenido que aparece al hacer scroll, tambien se guardo cada tramo visible en screenshots/sections/en y screenshots/sections/es.
