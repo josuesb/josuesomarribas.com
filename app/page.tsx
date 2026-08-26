@@ -87,6 +87,20 @@ export default function Home() {
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
               <a className="btn btn-red" href="mailto:hello@josuesomarribas.com">Visit live site <Arrow /></a>
             </article>
+            <article className="project project-cream project-wide">
+              <header><span className="number">04</span><small>CLIENT WORK · WEB DESIGN + DEVELOPMENT</small></header>
+              <h3>Rofka Projects</h3><p>A digital presence for a Costa Rican construction company—from planning and design to finished spaces.</p>
+              <div className="rofka-preview"><div className="rofka-nav"><b>ROFKA</b><small>PROJECTS　 SERVICES　 ABOUT</small></div><div className="rofka-copy"><small>DESIGN · PLAN · BUILD</small><h4>Spaces built<br />with purpose.</h4><span>View our projects　↗</span></div><div className="rofka-building"><i/><i/><i/><i/></div></div>
+              <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Platform:</dt><dd>Framer</dd></div><div><dt>Focus:</dt><dd>Brand presence · Responsive UI</dd></div></dl>
+              <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+            </article>
+            <article className="project project-blue project-wide">
+              <header><span className="number">05</span><small>CLIENT WORK · CREATIVE WEB DEVELOPMENT</small></header>
+              <h3>Andrés Tenor</h3><p>A distinctive artist website for opera and bolero tenor Andrés Rodríguez, based in Barcelona.</p>
+              <div className="tenor-preview"><div className="tenor-nav"><b>ANDRÉS</b><small>ABOUT　 MUSIC　 CONTACT</small></div><div className="tenor-copy"><small>OPERA · BOLERO</small><h4>A voice that<br />crosses borders.</h4><span>Listen now　↗</span></div><div className="tenor-stage"><i/><i/><b>♪</b></div></div>
+              <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Location:</dt><dd>Barcelona · Europe</dd></div><div><dt>Focus:</dt><dd>Artist identity · Performance</dd></div></dl>
+              <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+            </article>
           </div>
 
           <aside className="nda"><div className="lock">♙</div><div><small>NDA-PROTECTED</small><h3>Enterprise work, selected details</h3><p>Airlines　·　Finance　·　Health devices　·　Legal</p></div><div className="nda-copy"><p>I can walk through responsibilities,<br />constraints and outcomes in conversation.</p><a className="btn btn-outline" href="mailto:hello@josuesomarribas.com">Ask about this work <Arrow /></a></div></aside>
