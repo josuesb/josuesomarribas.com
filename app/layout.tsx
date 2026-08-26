@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://josuesomarribas.com"),
   title: "Josue Somarribas — UX Engineer & CRO Developer",
   description: "UX engineering, experimentation and production front-end—from first signal to shipped experience.",
+  alternates: { canonical: "/", languages: { en: "/", es: "/es", "x-default": "/" } },
   openGraph: {
     title: "Josue Somarribas — UX Engineer & CRO Developer",
     description: "I find why people hesitate—then design and build the fix.",

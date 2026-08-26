@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
+import Home from "../page";
+
+export const metadata: Metadata = {
+  title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
+  description: "Investigación, experimentación y desarrollo front-end de producción, desde la primera señal hasta una experiencia publicada.",
+  alternates: { canonical: "/es", languages: { en: "/", es: "/es", "x-default": "/" } },
+  openGraph: { title: "Josue Somarribas — Ingeniero UX y desarrollador CRO", description: "Descubro por qué las personas dudan; después diseño y construyo la solución.", url: "/es", locale: "es_ES", alternateLocale: ["en_US"] },
+};
+
+const translations: Record<string, string> = {
+  "Primary navigation":"Navegación principal","Language selector":"Selector de idioma","Work":"Proyectos","Experiments":"Experimentos","Writing":"Artículos","About":"Sobre mí","Résumé":"Currículum","Let's talk ":"Hablemos ",
+  "UX ENGINEER × CRO DEVELOPER":"INGENIERO UX × DESARROLLADOR CRO","I find why people":"Descubro por qué las personas","hesitate—then design":"dudan; después diseño","and ":"y ","build the fix.":"construyo la solución.",
+  "Research, interface design, front-end implementation and experimentation—from first signal to shipped experience.":"Investigación, diseño de interfaces, implementación front-end y experimentación: desde la primera señal hasta una experiencia publicada.",
+  "View selected work ":"Ver proyectos seleccionados ","Discuss a project ":"Hablemos de un proyecto ","8+ years across UX and web development ":"Más de 8 años en UX y desarrollo web "," Working globally":" Trabajo globalmente",
+  "User research":"Investigación de usuarios","Uncover real user needs with clear, actionable insights.":"Descubrir necesidades reales mediante hallazgos claros y accionables.","Experiment design":"Diseño de experimentos","Formulate hypotheses, test quickly, learn what matters.":"Formular hipótesis, probar rápido y aprender lo que importa.",
+  "Production front-end":"Front-end de producción","Accessible, performant interfaces built to ship and scale.":"Interfaces accesibles y rápidas, preparadas para publicar y escalar.","Analytics & QA":"Analítica y QA","Reliable instrumentation and quality that protect learning.":"Instrumentación fiable y calidad que protegen el aprendizaje.",
+  "Selected work":"Proyectos seleccionados","Different problems. Different roles. The same obsession with clarity.":"Problemas distintos. Roles distintos. La misma obsesión por la claridad.","INDEPENDENT PRODUCT · RESEARCH + FRONT-END":"PRODUCTO INDEPENDIENTE · INVESTIGACIÓN + FRONT-END",
+  "A live tool for testing whether a value proposition is understood in five seconds.":"Una herramienta para comprobar si una propuesta de valor se entiende en cinco segundos.","Live product":"Producto real","Built end-to-end":"Creado de principio a fin","Research workflow":"Flujo de investigación","Try the tool ":"Probar herramienta ","Read the story →":"Leer el caso →",
+  "EXPERIMENT · UX ENGINEERING":"EXPERIMENTO · INGENIERÍA UX","A browser-based experiment exploring how typography changes perception and trust.":"Un experimento en el navegador que explora cómo la tipografía modifica la percepción y la confianza.","Which design feels more":"¿Qué diseño transmite más","trustworthy?":"confianza?","Choose one option.":"Elige una opción.",
+  "Interactive prototype":"Prototipo interactivo","Behavioral comparison":"Comparación de comportamiento","Front-end build":"Desarrollo front-end","Explore prototype ":"Explorar prototipo ","CLIENT WORK · WEB DEVELOPMENT":"TRABAJO PARA CLIENTE · DESARROLLO WEB","A digital home for Costa Rica's startup and pitch community.":"Un hogar digital para la comunidad de startups y pitch de Costa Rica.",
+  "Where founders":"Donde los fundadores","connect and grow.":"conectan y crecen.","See upcoming events":"Ver próximos eventos","Role:":"Rol:","Design implementation":"Implementación del diseño","Focus:":"Enfoque:","Responsive UI":"Interfaz responsive","Visit live site ":"Visitar web ",
+  "NDA-PROTECTED":"PROTEGIDO POR NDA","Enterprise work, selected details":"Trabajo enterprise, detalles seleccionados","I can walk through responsibilities,":"Puedo explicar responsabilidades,","constraints and outcomes in conversation.":"restricciones y resultados en una conversación.","Ask about this work ":"Preguntar por este trabajo ",
+  "From signal to shipped experiment":"De la señal al experimento publicado","Observe":"Observar","Frame":"Enmarcar","Prototype":"Prototipar","Instrument & ship":"Instrumentar y publicar","Learn":"Aprender",
+  "Have a stubborn":"¿Tienes un problema de producto","product problem?":"que se resiste?","Send me the messy version. No pitch deck required.":"Envíame la versión desordenada. No hace falta una presentación.","Start a conversation ":"Iniciar una conversación ","✉ Copy email":"✉ Copiar email","Based in Spain　·　CET　·　English + Spanish":"Desde España　·　CET　·　Español + Inglés","© 2026 Josue Somarribas. All rights reserved.":"© 2026 Josue Somarribas. Todos los derechos reservados."
+};
+
+function translate(node: ReactNode): ReactNode {
+  if (typeof node === "string") return translations[node] ?? node;
+  if (Array.isArray(node)) return node.map(translate);
+  if (!isValidElement(node)) return node;
+  const element = node as ReactElement<Record<string, unknown>>;
+  const props = { ...element.props } as Record<string, unknown>;
+  if (typeof props["aria-label"] === "string") props["aria-label"] = translations[props["aria-label"]] ?? props["aria-label"];
+  if (props.href === "/") props.className = "";
+  if (props.href === "/es") props.className = "active";
+  return cloneElement(element, props, translate(element.props.children as ReactNode));
+}
+
+export default function SpanishHome() { return <div lang="es">{translate(Home())}</div>; }

@@ -17,6 +17,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#work">Work</a><a href="#process">Experiments</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#footer">Résumé</a>
           </div>
+          <div className="language-switcher" aria-label="Language selector"><a className="active" href="/" lang="en">EN</a><span>/</span><a href="/es" lang="es">ES</a></div>
           <a className="btn btn-red nav-cta" href="mailto:hello@josuesomarribas.com">Let&apos;s talk <Arrow /></a>
         </nav>
 
