@@ -1,0 +1,135 @@
+TODO — josuesomarribas.com
+Revisión: 2026-08-27 (web local + código)
+
+PRIORIDAD ALTA — enlaces y acciones que ahora no cumplen lo que prometen
+
+[ ] Hacer que “Writing / Artículos” de la portada lleve a /writing y /es/writing.
+    Ahora apunta a #writing, que es el bloque de testimonio, no la página de artículos.
+
+[ ] Crear o enlazar las páginas reales de los proyectos:
+    - 5 Seconds Tester — “Try the tool / Probar herramienta”. Ahora: #process.
+    - 5 Seconds Tester — “Read the story / Leer el caso”. Ahora: #process.
+    - Font Tester — “Explore prototype / Explorar prototipo”. Ahora: #process.
+    - PitchCR — “Visit live site / Visitar web”. Ahora abre un email.
+
+[ ] Sustituir los enlaces sociales provisionales:
+    - GitHub (portada EN/ES y footer de Writing): href="#".
+    - LinkedIn (portada EN/ES y footer de Writing): href="#".
+
+[ ] Crear la página de la nota destacada “The Cost of FOUC…” / “El coste del FOUC…”.
+    “Read the note / Leer la nota” apunta a href="#".
+
+[ ] Decidir destinos reales para cada nota del listado de Writing. Las cinco tarjetas
+    parecen contenido publicable, pero actualmente no enlazan a ninguna página:
+    - Mutation Observers vs Polling: A Shootout for A/B Testing.
+    - Statistical Significance for Skeptics: When Flat Wins.
+    - The Squircle in Mobile CRO: Superellipses and Friction.
+    - JSON-LD for Case Studies: Schema for UX Portfolios.
+    - ElevenLabs for Developers: Advanced SSML Narration Hacks.
+    Crear también las versiones/rutas en español o definir una política de traducción.
+
+[ ] Implementar el formulario de newsletter. Ahora no tiene action ni manejador y el
+    envío recarga/navega sin guardar la dirección.
+
+[ ] Implementar “Copy email / Copiar email” en portada y Writing, con confirmación
+    visible y accesible (por ejemplo, “Email copied / Email copiado”).
+
+[ ] Crear o enlazar un RSS real. “RSS feed / Feed RSS” apunta a href="#".
+
+PRIORIDAD ALTA — errores detectados
+
+[ ] Corregir el idioma del documento en las rutas españolas. /es y /es/writing
+    mantienen <html lang="en">; debe ser lang="es" a nivel de documento.
+
+[ ] Corregir la duplicación del buscador, filtros y listado completo en Writing.
+    WritingPage renderiza <WritingIndex> una vez antes de la nota destacada y otra
+    vez después, por lo que la misma interfaz y las cinco notas aparecen dos veces.
+
+[ ] Actualizar o reemplazar tests/rendered-html.test.mjs. Sigue comprobando el
+    skeleton del proyecto inicial y falla contra la web actual (2 tests, 0 pasan).
+    El build sí termina correctamente antes de ejecutar esos tests.
+
+[ ] Dejar npm run lint en verde. En la revisión devuelve 27 errores:
+    enlaces href="#" no válidos, labels decorativos sin control asociado, navegación
+    interna con <a> en vez de Link, espacios Unicode irregulares y otros avisos a11y.
+
+PRIORIDAD MEDIA — páginas o destinos aún sin resolver
+
+[ ] Currículum: “Résumé / Currículum” solo baja al footer. Añadir PDF/página de CV o
+    cambiar el texto del enlace para que describa el destino real.
+
+[ ] Recomendaciones: “Read 14 recommendations” solo baja al footer. Crear sección o
+    página con las recomendaciones, o enlazar a la fuente externa correspondiente.
+    Añadir también la traducción española; en /es el texto sigue en inglés.
+
+[ ] “About / Sobre mí” apunta al inicio completo (#about está en toda la sección hero).
+    Añadir una sección biográfica real o cambiar el destino/nombre.
+
+[ ] “Field notes” es un filtro disponible pero ninguna nota usa esa categoría; al
+    seleccionarlo siempre muestra cero resultados. Añadir contenido o quitar el filtro.
+
+[ ] Revisar categorías sin filtro: hay notas con Data, SEO, Development y Audio, pero
+    esos filtros no aparecen. Definir taxonomía consistente.
+
+[ ] Decidir qué botones de las maquetas deben ser interactivos o decorativos:
+    A/B del hero, Start test, Choose A/B y See upcoming events parecen controles reales
+    para teclado/lector de pantalla, pero no hacen nada. Si son ilustración, retirarlos
+    del foco y marcarlos como decorativos; si son demos, implementar su comportamiento.
+
+PRIORIDAD MEDIA — SEO y contenido
+
+[ ] Añadir /writing y /es/writing a app/sitemap.ts; ahora solo incluye / y /es.
+
+[ ] Añadir páginas de detalle publicables al sitemap cuando existan, con canonical y
+    hreflang EN/ES correctos.
+
+[ ] Añadir datos estructurados útiles: Person/ProfilePage en la portada y Article o
+    BlogPosting en cada nota, cuando existan URLs individuales.
+
+[ ] Completar traducciones que siguen en inglés en /es y /es/writing, por ejemplo:
+    “Read 14 recommendations”, “Experimentation”, “UX Engineering”, “Field notes”,
+    “Copy email” y partes de los previews/etiquetas.
+
+[ ] Revisar fechas de Writing (todas son de 2024) y decidir si son contenido real,
+    borradores o ejemplos. Evitar publicar cinco resúmenes sin página de lectura.
+
+PRIORIDAD BAJA — calidad y acabado
+
+[ ] Añadir estilos :focus-visible consistentes para enlaces, botones, filtros y campos.
+
+[ ] Probar manualmente los breakpoints móvil/tablet y navegación con teclado. En móvil
+    el menú principal desaparece sin alternativa; añadir menú accesible si se necesitan
+    esas rutas desde pantallas pequeñas.
+
+[ ] Verificar contraste de texto pequeño y tenue, especialmente tarjetas, etiquetas,
+    proceso, bloque NDA y footer.
+
+[ ] Añadir pruebas mínimas por ruta (/, /es, /writing, /es/writing), enlaces internos,
+    cambio de idioma, filtros/búsqueda, newsletter y botones de copiar email.
+
+[ ] Revisar la captura full-page con animaciones: durante la auditoría el cosido visual
+    repitió parte del hero cerca del final. Confirmar en navegadores reales si es solo
+    un artefacto de captura provocado por transform/animación o un fallo reproducible.
+
+LISTA RESUMIDA DE LINKS SIN PÁGINA O DESTINO REAL
+
+- Home EN/ES: Try the tool / Probar herramienta -> #process
+- Home EN/ES: Read the story / Leer el caso -> #process
+- Home EN/ES: Explore prototype / Explorar prototipo -> #process
+- Home EN/ES: Visit live site / Visitar web -> mailto
+- Home EN/ES: Read 14 recommendations -> #footer
+- Home EN/ES: Résumé / Currículum -> #footer
+- Home EN/ES: GitHub -> #
+- Home EN/ES: LinkedIn -> #
+- Writing EN/ES: Read the note / Leer la nota -> #
+- Writing EN/ES: RSS feed / Feed RSS -> #
+- Writing EN/ES: GitHub -> #
+- Writing EN/ES: LinkedIn -> #
+- Writing EN/ES: las cinco notas del listado no tienen enlace a detalle
+
+COMPROBACIONES REALIZADAS
+
+- Rutas visibles: /, /es, /writing, /es/writing.
+- npm run build: correcto.
+- npm run lint: falla con 27 errores.
+- npm test: falla; 2 tests heredados del starter, 0 pasan.

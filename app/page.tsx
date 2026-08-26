@@ -1,5 +1,7 @@
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+export const dynamic = "force-static";
+
 const Heatmap = () => (
   <div className="heatmap" aria-label="Illustrative attention heatmap">
     <i /><i /><i /><i />

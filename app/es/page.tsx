@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import Home from "../page";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
   description: "Investigación, experimentación y desarrollo front-end de producción, desde la primera señal hasta una experiencia publicada.",
