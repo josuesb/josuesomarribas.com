@@ -35,6 +35,7 @@ function translate(node: ReactNode): ReactNode {
   if (typeof props["aria-label"] === "string") props["aria-label"] = translations[props["aria-label"]] ?? props["aria-label"];
   if (props.href === "/") props.className = "";
   if (props.href === "/es") props.className = "active";
+  if (props.href === "/writing") props.href = "/es/writing";
   return cloneElement(element, props, translate(element.props.children as ReactNode));
 }
 
