@@ -12,7 +12,7 @@ export default function NotFound() {
         <span data-text="404">404</span>
         <small>PX<br/>REF</small>
       </div>
-      <Image className="not-found-sun" src={brokenSun} alt="" aria-hidden="true" priority />
+      <Image className="not-found-sun" src={brokenSun} alt="" aria-hidden="true" priority unoptimized />
       <div className="not-found-copy">
         <p className="not-found-label">FIELD NOTE · 404—EX</p>
         <h1 id="not-found-title">Signal lost.</h1>
@@ -25,7 +25,7 @@ export default function NotFound() {
     </section>
 
     <section className="not-found-diagram shell" aria-label="The observed route stopped before reaching its expected destination">
-      <Image src={routeBlueprint} alt="Expected route reaches its destination; observed route ends without a match" priority />
+      <Image src={routeBlueprint} alt="Expected route reaches its destination; observed route ends without a match" priority unoptimized />
       <p aria-hidden="true">Try another<br/>path. ↙</p>
     </section>
 
