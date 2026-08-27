@@ -31,7 +31,7 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
   const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, datePublished:article.date, image:`https://josuesomarribas.com${article.image}`, author:{ "@type":"Person", name:"Josue Somarribas", url:"https://josuesomarribas.com" }, mainEntityOfPage:`https://josuesomarribas.com/writing/${article.slug}` };
 
   return <main className="article-page" lang="en">
-    <SiteNav locale={locale} current="writing" variant="article"/>
+    <div className="article-nav"><SiteNav locale={locale} current="writing"/></div>
     <ArticleTools title={article.title} mode="progress"/>
     <div className="article-layout shell">
       <aside className="article-sidebar">

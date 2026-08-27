@@ -1,6 +1,6 @@
 export default function SiteFooter({ locale="en", current }:{ locale?:"en"|"es"; current?:"writing"|"about" }) {
   const home = locale === "es" ? "/es" : "/";
-  const writing = locale === "es" ? "/es/writing" : "/writing";
+  const writing = locale === "es" ? "/es/blog" : "/blog";
   const t = locale === "es" ? { work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí" } : { work:"Work", experiments:"Experiments", writing:"Writing", about:"About" };
   return <footer><div className="shell">
     <a className="logo" href={home}>JS.</a>

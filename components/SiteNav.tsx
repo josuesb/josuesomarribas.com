@@ -6,10 +6,10 @@ const labels = {
   es:{ work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", resume:"Currículum", talk:"Hablemos" },
 };
 
-export default function SiteNav({ locale="en", current="home", variant="default" }:{ locale?:Locale; current?:Current; variant?:"default"|"article" }) {
+export default function SiteNav({ locale="en", current="home" }:{ locale?:Locale; current?:Current }) {
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
-  const writing = locale === "es" ? "/es/writing" : "/writing";
+  const writing = locale === "es" ? "/es/blog" : "/blog";
   const links = <>
     <a href={`${home}#work`}>{t.work}</a>
     <a href={`${home}#process`}>{t.experiments}</a>
@@ -18,13 +18,9 @@ export default function SiteNav({ locale="en", current="home", variant="default"
     <a href="/about#route">{t.resume}</a>
   </>;
   const language = <div className="language-switcher" aria-label="Language selector">
-    <a className={locale === "en" ? "active" : undefined} href={current === "writing" ? "/writing" : current === "about" ? "/about" : "/"} lang="en">EN</a><span>/</span>
-    <a className={locale === "es" ? "active" : undefined} href={current === "writing" ? "/es/writing" : "/es"} lang="es">ES</a>
+    <a className={locale === "en" ? "active" : undefined} href={current === "writing" ? "/blog" : current === "about" ? "/about" : "/"} lang="en">EN</a><span>/</span>
+    <a className={locale === "es" ? "active" : undefined} href={current === "writing" ? "/es/blog" : "/es"} lang="es">ES</a>
   </div>;
-  if (variant === "article") return <nav className="article-topnav" aria-label="Primary navigation"><div className="shell">
-    <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div>{links}</div>
-    <a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">{t.talk} ↗</a>
-  </div></nav>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{links}</div>{language}
     <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} <span aria-hidden="true">↗</span></a>
