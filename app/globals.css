@@ -282,3 +282,12 @@ footer .footer-email{display:none}
 @media(max-width:700px){
   .work-section{padding:48px 0 54px}.work-section>.shell{width:min(100% - 30px,1180px)}.work-section .section-intro{margin-bottom:28px}.projects,.more-projects{grid-template-columns:1fr}.projects .project:last-child{grid-column:auto}.project,.project-secondary{min-height:auto;padding:20px}.project>p{min-height:0}.project-preview-frame,.project-secondary .project-preview-frame{height:230px}.more-work-heading{margin-top:38px;align-items:flex-start;flex-direction:column;gap:7px}.card-actions{align-items:stretch}.card-actions .btn{flex:1}
 }
+
+/* Keep localized action labels intact. */
+.btn{white-space:nowrap}
+[lang="es"] .hero-copy .actions{gap:14px}
+[lang="es"] .hero-copy .actions .btn{padding-inline:20px}
+
+@media(max-width:600px){
+  [lang="es"] .hero-copy .actions .btn{width:100%}
+}

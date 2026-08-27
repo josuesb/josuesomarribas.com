@@ -8,15 +8,15 @@ export const metadata: Metadata = {
   title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
   description: "Investigación, experimentación y desarrollo front-end de producción, desde la primera señal hasta una experiencia publicada.",
   alternates: { canonical: "/es", languages: { en: "/", es: "/es", "x-default": "/" } },
-  openGraph: { title: "Josue Somarribas — Ingeniero UX y desarrollador CRO", description: "Descubro por qué las personas dudan; después diseño y construyo la solución.", url: "/es", locale: "es_ES", alternateLocale: ["en_US"] },
+  openGraph: { title: "Josue Somarribas — Ingeniero UX y desarrollador CRO", description: "Detecto dónde dudan las personas, diseño la experiencia y construyo la solución.", url: "/es", locale: "es_ES", alternateLocale: ["en_US"] },
 };
 
 const translations: Record<string, string> = {
   "Primary navigation":"Navegación principal","Language selector":"Selector de idioma","Work":"Proyectos","Experiments":"Experimentos","Writing":"Artículos","About":"Sobre mí","Résumé":"Currículum","Let's talk ":"Hablemos ",
-  "UX ENGINEER × CRO DEVELOPER":"INGENIERO UX × DESARROLLADOR CRO","I find why people":"Descubro por qué las personas","hesitate—then design":"dudan; después diseño","and ":"y ","build the fix.":"construyo la solución.",
+  "UX ENGINEER × CRO DEVELOPER":"INGENIERO UX × DESARROLLADOR CRO","I find why people":"Detecto dónde dudan","hesitate—then design":"y diseño","and ":"y ","build the fix.":"construyo la solución.",
   "Research, interface design, front-end implementation and experimentation—from first signal to shipped experience.":"Investigación, diseño de interfaces, implementación front-end y experimentación: desde la primera señal hasta una experiencia publicada.",
   "Research, interface design, front-end implementation and experimentation—from first signal to a measurable, shipped experience.":"Investigación, diseño de interfaces, implementación front-end y experimentación: desde la primera señal hasta una experiencia publicada y medible.",
-  "View selected work ":"Ver proyectos seleccionados ","Discuss a project ":"Hablemos de un proyecto ","8+ years across UX and web development ":"Más de 8 años en UX y desarrollo web "," Working globally":" Trabajo globalmente",
+  "View selected work ":"Ver proyectos ","Discuss a project ":"Cuéntame tu proyecto ","8+ years across UX and web development ":"Más de 8 años en UX y desarrollo web "," Working globally":" Trabajo globalmente",
   "User research":"Investigación de usuarios","Uncover real user needs with clear, actionable insights.":"Descubrir necesidades reales mediante hallazgos claros y accionables.","Experiment design":"Diseño de experimentos","Formulate hypotheses, test quickly, learn what matters.":"Formular hipótesis, probar rápido y aprender lo que importa.",
   "Turn signals into hypotheses, test quickly and learn what matters.":"Convertir señales en hipótesis, probar rápido y aprender lo que importa.","Build accessible, performant interfaces ready to ship and scale.":"Construir interfaces accesibles y rápidas, preparadas para publicar y escalar.","Instrument clean events, validate releases and protect the learning.":"Instrumentar eventos limpios, validar lanzamientos y proteger el aprendizaje.",
   "Production front-end":"Front-end de producción","Accessible, performant interfaces built to ship and scale.":"Interfaces accesibles y rápidas, preparadas para publicar y escalar.","Analytics & QA":"Analítica y QA","Reliable instrumentation and quality that protect learning.":"Instrumentación fiable y calidad que protegen el aprendizaje.",
