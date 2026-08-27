@@ -86,7 +86,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>Font Tester</h3><p>A browser-based experiment exploring how typography changes perception and trust.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/font-tester.png" alt="Font Tester comparison between a modern grotesk and a humanist serif" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <div className="tags"><span>Interactive prototype</span><span>Behavioral comparison</span><span>Front-end build</span></div>
-              <a className="bottom-link" href="#process">Explore prototype <Arrow /></a>
+              <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer">Explore prototype <Arrow /></a>
             </article>
             <article className="project project-cream">
               <header><span className="number">03</span><small>CLIENT WORK · WEB DEVELOPMENT</small></header>
