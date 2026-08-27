@@ -57,10 +57,10 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
         </div>}
         <div className="article-content" dangerouslySetInnerHTML={{ __html:html }}/>
         <section className={`article-takeaway ${isFouc ? "fouc-takeaway" : ""}`}><b>The takeaway</b><strong>{article.description}</strong><p>Clear thinking, careful implementation and honest measurement produce results that are easier to trust.</p></section>
-        <section className="article-author"><b className="logo">JS.</b><div><strong>Written by Josue Somarribas</strong><p>UX Engineer and CRO Developer writing about experimentation, front-end craft and the uncomfortable details between them.</p></div><a className="btn btn-red" href="mailto:hello@josuesomarribas.com">More about Josue →</a></section>
+        <section className="article-author"><b className="logo">JS.</b><div><strong>Written by Josue Somarribas</strong><p>UX Engineer and CRO Developer writing about experimentation, front-end craft and the uncomfortable details between them.</p></div><a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">More about Josue →</a></section>
       </article>
     </div>
-    <section className="article-cta"><div className="shell"><h2>{labels.compare}</h2><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">{labels.conversation} ↗</a><a className="btn btn-outline" href={indexHref}>{labels.back} ↑</a></div></section>
+    <section className="article-cta"><div className="shell"><h2>{labels.compare}</h2><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">{labels.conversation} ↗</a><a className="btn btn-outline" href={indexHref}>{labels.back} ↑</a></div></section>
     <div className="article-footer"><SiteFooter locale={locale} current="writing"/></div>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/>
   </main>;

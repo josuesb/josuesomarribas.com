@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 360" fill="none" stroke="#17222b" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(120 70)"><path d="M20 190 165 45l45 45L65 235l-55 15Z"/><path d="m165 45 25-25 45 45-25 25"/></g><g transform="translate(420 70)"><path d="m75 45-65 80 65 80M175 45l65 80-65 80M145 20l-40 230"/></g><g transform="translate(730 70)"><path d="m125 10 110 60v125l-110 60-110-60V70Z"/><path d="m15 70 110 65 110-65M125 135v120"/></g><g transform="translate(1040 70)"><rect x="10" y="25" width="240" height="205" rx="17"/><path d="m52 88 42 38-42 38M116 164h72"/></g><g transform="translate(1360 70)"><path d="M95 15h70M110 15v70L45 218c-11 20 0 37 25 37h120c25 0 36-17 25-37L150 85V15"/><path d="M80 190h100M105 145h50"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 260" fill="none" stroke="#17222b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 1. Design foundations -->
+  <g transform="translate(82 34)"><path d="m18 145 94-94 35 35-94 94-43 10Z"/><path d="m112 51 20-20 35 35-20 20"/></g>
+  <!-- 2. Web development -->
+  <g transform="translate(383 38)"><path d="m65 30-50 62 50 62M135 30l50 62-50 62M116 12 84 174"/></g>
+  <!-- 3. Product and UX -->
+  <g transform="translate(684 31)"><path d="m116 10 88 49v100l-88 49-88-49V59Z"/><path d="m28 59 88 52 88-52M116 111v97"/></g>
+  <!-- 4. UX engineering -->
+  <g transform="translate(982 40)"><rect x="12" y="15" width="188" height="150" rx="15"/><path d="m48 62 35 31-35 31M101 124h55"/></g>
+  <!-- 5. Experimentation -->
+  <g transform="translate(1302 31)"><path d="M72 12h58M84 12v55L35 170c-9 18 0 31 20 31h92c20 0 29-13 20-31L118 67V12"/><path d="M62 151h80M78 116h48"/></g>
+  <!-- 6. Full learning loop -->
+  <g transform="translate(1587 37)"><path d="M34 88a70 70 0 0 1 119-48l20 20"/><path d="m173 25v35h-35"/><path d="M170 105a70 70 0 0 1-119 48l-20-20"/><path d="m31 168v-35h35"/><circle cx="102" cy="96" r="18"/></g>
+</svg>

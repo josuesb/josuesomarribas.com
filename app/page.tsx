@@ -46,7 +46,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <p className="lead">Research, interface design, front-end implementation and experimentation—from first signal to shipped experience.</p>
             <div className="actions">
               <a className="btn btn-red" href="#work">View selected work <span>↓</span></a>
-              <a className="btn btn-outline" href="mailto:hello@josuesomarribas.com">Discuss a project <Arrow /></a>
+              <a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Discuss a project <Arrow /></a>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>PitchCR</h3><p>A digital home for Costa Rica&apos;s startup and pitch community.</p>
               <div className="pitch-preview"><div className="pitch-nav"><b>PITCHCR</b><small>Events　 Community　 Resources</small><i>Join</i></div><h4>Where founders<br />connect and grow.</h4><button>See upcoming events</button><Image className="pitch-asset" src="/assets/summer-complementarios/02-pitchcr-ilustracion-costera.svg" alt="" aria-hidden="true" width={1800} height={1100} /></div>
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
-              <a className="btn btn-red" href="mailto:hello@josuesomarribas.com">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">Visit live site <Arrow /></a>
             </article>
             <article className="project project-cream project-wide">
               <header><span className="number">04</span><small>CLIENT WORK · WEB DESIGN + DEVELOPMENT</small></header>
@@ -108,7 +108,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             </article>
           </div>
 
-          <aside className="nda"><div className="lock">♙</div><div><small>NDA-PROTECTED</small><h3>Enterprise work, selected details</h3><p>Airlines　·　Finance　·　Health devices　·　Legal</p></div><div className="nda-copy"><p>I can walk through responsibilities,<br />constraints and outcomes in conversation.</p><a className="btn btn-outline" href="mailto:hello@josuesomarribas.com">Ask about this work <Arrow /></a></div></aside>
+          <aside className="nda"><div className="lock">♙</div><div><small>NDA-PROTECTED</small><h3>Enterprise work, selected details</h3><p>Airlines　·　Finance　·　Health devices　·　Legal</p></div><div className="nda-copy"><p>I can walk through responsibilities,<br />constraints and outcomes in conversation.</p><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Ask about this work <Arrow /></a></div></aside>
         </div>
       </section>
 
@@ -127,7 +127,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
 
       <section className="quote" id="writing"><div className="shell quote-inner"><span>“</span><blockquote>Josue bridges design decisions<br />and production constraints<br />exceptionally well.<cite>Product collaborator</cite></blockquote><a href="#footer">Read 14 recommendations <Arrow /></a></div></section>
 
-      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">Start a conversation <Arrow /></a><button className="btn btn-outline" type="button">✉ Copy email</button></div><p>Based in Spain　·　CET　·　English + Spanish</p></div></div></section>
+      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a><button className="btn btn-outline" type="button">✉ Copy email</button></div><p>Based in Spain　·　CET　·　English + Spanish</p></div></div></section>
       <div id="footer"><SiteFooter locale={locale}/></div>
     </main>
   );

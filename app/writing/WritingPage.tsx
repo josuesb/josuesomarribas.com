@@ -19,6 +19,6 @@ export default function WritingPage({locale,articles}:{locale:"en"|"es";articles
   </section>
   <section className="writing-quote"><div className="shell"><b>“</b><h2>{t.quote}</h2><p>{t.quote2}</p><i>⟶</i></div></section>
   <section className="newsletter"><div className="shell"><div><h2>{t.follow}</h2><p>{t.follow2}</p></div><form><div><input type="email" placeholder={t.email} aria-label={t.email}/><button type="submit">{t.send}</button></div><a href="/rss.xml">{t.rss} ↗</a></form><div className="newsletter-art"><i/><b>≋</b></div></div></section>
-  <section className="writing-contact"><div className="shell"><h2>{t.compare}</h2><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">{t.start} ↗</a><button className="btn btn-outline">✉ Copy email</button><p>{t.base}</p></div></section>
+  <section className="writing-contact"><div className="shell"><h2>{t.compare}</h2><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">{t.start} ↗</a><button className="btn btn-outline">✉ Copy email</button><p>{t.base}</p></div></section>
   <SiteFooter locale={locale} current="writing"/>
   </main>}

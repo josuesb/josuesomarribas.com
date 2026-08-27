@@ -23,10 +23,10 @@ export default function SiteNav({ locale="en", current="home", variant="default"
   </div>;
   if (variant === "article") return <nav className="article-topnav" aria-label="Primary navigation"><div className="shell">
     <a className="logo" href={home} aria-label="Josue Somarribas home">JS.</a><div>{links}</div>
-    <a className="btn btn-red" href="mailto:hello@josuesomarribas.com">{t.talk} ↗</a>
+    <a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">{t.talk} ↗</a>
   </div></nav>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="Josue Somarribas home">JS.</a><div className="nav-links">{links}</div>{language}
-    <a className="btn btn-red nav-cta" href="mailto:hello@josuesomarribas.com">{t.talk} <span aria-hidden="true">↗</span></a>
+    <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} <span aria-hidden="true">↗</span></a>
   </nav>;
 }
