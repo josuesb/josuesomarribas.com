@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1050" fill="none">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence baseFrequency="0.018 0.09" numOctaves="2" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4"/>
+    </filter>
+  </defs>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700" text-anchor="middle" filter="url(#rough)">
+    <g transform="translate(300 300)" stroke="#f43a2b">
+      <circle r="218" stroke-width="10"/><circle r="195" stroke-width="3" stroke-dasharray="6 10"/>
+      <path d="M-30 0h60M0-30v60M-21-21l42 42M21-21l-42 42" stroke-width="7"/>
+      <text y="-92" fill="#f43a2b" stroke="none" font-size="39" letter-spacing="6">CURIOUS</text>
+      <text y="121" fill="#f43a2b" stroke="none" font-size="35" letter-spacing="4">BY DEFAULT</text>
+    </g>
+    <g transform="translate(900 300) rotate(-8)" stroke="#f0c55a">
+      <circle r="218" stroke-width="10"/><circle r="193" stroke-width="4"/>
+      <path d="M-87 7c48-34 126-34 174 0M-87 34c48-34 126-34 174 0M-87 61c48-34 126-34 174 0" stroke-width="8"/>
+      <text y="-105" fill="#f0c55a" stroke="none" font-size="31" letter-spacing="4">EXPERIMENT</text>
+      <text y="132" fill="#f0c55a" stroke="none" font-size="31" letter-spacing="4">EVERYTHING</text>
+    </g>
+    <g transform="translate(1500 300) rotate(7)" stroke="#f43a2b">
+      <circle r="218" stroke-width="8"/><circle r="192" stroke-width="3" stroke-dasharray="8 12"/>
+      <circle r="29" stroke-width="6"/><path d="M0-85v28M0 57v28M-85 0h28M57 0h28M-61-61l21 21M40 40l21 21M61-61L40-40M-40 40l-21 21" stroke-width="6"/>
+      <text y="-115" fill="#f43a2b" stroke="none" font-size="35" letter-spacing="6">FAST</text>
+      <text y="133" fill="#f43a2b" stroke="none" font-size="35" letter-spacing="6">CLARITY</text>
+    </g>
+    <g transform="translate(600 810) rotate(-5)" stroke="#064fc5">
+      <circle r="218" stroke-width="9"/><circle r="192" stroke-width="3"/>
+      <path d="M-73-28h146M-73 0h146M-73 28h146" stroke-width="7"/><circle cx="-97" cy="-28" r="8" fill="#064fc5"/><circle cx="97" cy="28" r="8" fill="#064fc5"/>
+      <text y="-112" fill="#064fc5" stroke="none" font-size="31" letter-spacing="3">DETAILS</text>
+      <text y="134" fill="#064fc5" stroke="none" font-size="31" letter-spacing="3">MATTER</text>
+    </g>
+    <g transform="translate(1200 810) rotate(6)" stroke="#111b22">
+      <circle r="218" stroke-width="9"/><circle r="192" stroke-width="3" stroke-dasharray="7 10"/>
+      <path d="M-80 20c26-55 94-71 142-30M62-10l-4-44 43 10M80-20C54 35-14 51-62 10M-62 10l4 44-43-10" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="-113" fill="#111b22" stroke="none" font-size="31" letter-spacing="4">SHIP · LEARN</text>
+      <text y="135" fill="#111b22" stroke="none" font-size="31" letter-spacing="4">REPEAT</text>
+    </g>
+  </g>
+</svg>

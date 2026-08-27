@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <rect x="885" y="502" width="468" height="447" rx="17" fill="#101a21"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" fill="#f7f0df">
+    <text x="918" y="570" font-weight="700">button.cta {</text><text x="945" y="612">background: <tspan fill="#ffc43d">#FF5830</tspan>;</text><text x="945" y="654">color: #FFF;</text><text x="945" y="696">font-weight: 600;</text><text x="945" y="738">border-radius: 8px;</text><text x="918" y="780">}</text><text x="918" y="866" fill="#9ccc3c">trackEvent<tspan fill="#f7f0df">('cta_click');</tspan></text>
+  </g>
+</svg>

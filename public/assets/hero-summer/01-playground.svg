@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2359b9"/><stop offset="1" stop-color="#0c3f98"/></linearGradient></defs>
+  <rect x="420" y="105" width="510" height="58" rx="12" fill="url(#b)" stroke="#5f84c9" stroke-width="2"/>
+  <circle cx="452" cy="134" r="10" fill="#f7f0df"/><circle cx="486" cy="134" r="10" fill="#ff4937"/><circle cx="520" cy="134" r="10" fill="#8fa2bd"/>
+  <rect x="420" y="185" width="510" height="410" rx="16" fill="url(#b)" stroke="#5f84c9" stroke-width="3"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#f7f0df"><text x="452" y="232" font-size="19" font-weight="700">EXPERIMENT PLAYGROUND</text><text x="452" y="294" font-size="24">A / B Test</text></g>
+  <rect x="451" y="321" width="390" height="70" rx="35" fill="#f7f0df"/>
+  <rect x="646" y="321" width="195" height="70" rx="35" fill="#f43a2b"/>
+  <text x="549" y="366" text-anchor="middle" fill="#17222b" font-family="Arial" font-size="25">A</text><text x="744" y="366" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25">B</text>
+  <g fill="#8fa9d1"><rect x="452" y="427" width="190" height="13" rx="7"/><rect x="452" y="456" width="135" height="13" rx="7"/><rect x="452" y="485" width="160" height="13" rx="7"/></g>
+  <rect x="452" y="526" width="135" height="39" rx="7" fill="#4384e6"/>
+  <rect x="690" y="425" width="177" height="140" fill="none" stroke="#8fa9d1" stroke-width="2"/><path d="M690 565l177-140M690 425l177 140" stroke="#8fa9d1" stroke-width="2"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <rect x="420" y="922" width="590" height="150" rx="15" fill="#222d33" stroke="#657079" stroke-width="2"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" fill="#f7f0df" text-anchor="middle"><text x="565" y="957">TRAFFIC</text><text x="715" y="957">CONFIDENCE</text><text x="865" y="957">IMPACT</text></g>
+  <g fill="#e8d9b6" stroke="#0c1419" stroke-width="5"><circle cx="565" cy="1010" r="42"/><circle cx="715" cy="1010" r="42"/><circle cx="865" cy="1010" r="42"/></g>
+  <g stroke="#17222b" stroke-width="5" stroke-linecap="round"><path d="M565 1010l18-30"/><path d="M715 1010l20-28"/><path d="M865 1010l13-34"/></g><path d="M902 980a45 45 0 0 1 5 55" fill="none" stroke="#f43a2b" stroke-width="7"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900">
+  <defs><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#10202a" flood-opacity=".25"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="3" seed="17" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="m"/><feComponentTransfer in="m"><feFuncA type="table" tableValues="0 .1"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter></defs>
+  <g filter="url(#shadow)"><path d="M80 94 565 70l37 713-490 31Z" fill="#f4ecd9"/><path d="M630 58 1154 87l-29 711-525-21Z" fill="#f8f1e2"/><path d="M1190 88 1712 64l28 718-527 23Z" fill="#f4ecd9"/></g>
+  <g opacity=".4" stroke="#c7bda9" stroke-width="2"><path d="M128 190h422M128 240h422M128 290h422M662 186h432M662 236h432M662 286h432M1248 190h420M1248 240h420M1248 290h420"/></g>
+  <g fill="#064fc5"><circle cx="161" cy="145" r="38"/><circle cx="707" cy="142" r="38"/><circle cx="1287" cy="145" r="38"/></g><g fill="#fff" font-family="Arial" font-size="25" text-anchor="middle"><text x="161" y="154">01</text><text x="707" y="151">02</text><text x="1287" y="154">03</text></g>
+</svg>

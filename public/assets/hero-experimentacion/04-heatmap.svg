@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <defs>
+    <radialGradient id="hot"><stop stop-color="#ffcc32"/><stop offset=".2" stop-color="#ffc82d"/><stop offset=".48" stop-color="#8dc54c" stop-opacity=".86"/><stop offset="1" stop-color="#1674d7" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <text x="176" y="526" fill="#f7f0df" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="24" font-weight="700">OBSERVE</text>
+  <rect x="176" y="560" width="302" height="191" rx="14" fill="#175bc6"/>
+  <g filter="url(#blur)"><circle cx="246" cy="687" r="58" fill="url(#hot)"/><circle cx="345" cy="663" r="75" fill="url(#hot)"/><circle cx="420" cy="608" r="55" fill="url(#hot)"/><circle cx="454" cy="728" r="49" fill="url(#hot)"/></g>
+  <g fill="#91a8cd"><rect x="176" y="768" width="302" height="14" rx="7"/><rect x="176" y="798" width="302" height="14" rx="7"/><rect x="176" y="828" width="187" height="14" rx="7"/></g>
+</svg>

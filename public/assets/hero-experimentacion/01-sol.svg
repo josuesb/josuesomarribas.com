@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <defs>
+    <radialGradient id="sun" cx="42%" cy="34%" r="70%"><stop stop-color="#ff4937"/><stop offset=".72" stop-color="#f63324"/><stop offset="1" stop-color="#df291d"/></radialGradient>
+    <filter id="grain" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="4" seed="19" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="m"/><feComponentTransfer in="m" result="g"><feFuncA type="table" tableValues="0 .13"/></feComponentTransfer><feComposite in="g" in2="SourceAlpha" operator="in" result="cg"/><feBlend in="SourceGraphic" in2="cg" mode="soft-light"/></filter>
+  </defs>
+  <circle cx="1264" cy="364" r="292" fill="url(#sun)" filter="url(#grain)"/>
+</svg>

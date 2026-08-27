@@ -1,0 +1,246 @@
+ASSETS GRÁFICOS NECESARIOS
+Basado en todos los mockups de /mockups
+
+Formato recomendado: PNG o WebP con fondo transparente, exportado a 2x.
+Los textos, botones, tablas, formularios, código y líneas simples deben construirse en HTML/CSS para conservar nitidez y accesibilidad.
+Cada elemento marcado como CAPA debe exportarse por separado para permitir animaciones.
+
+
+ASSETS GLOBALES REUTILIZABLES
+
+01. sol-rojo-texturizado.png
+    Círculo rojo/coral con textura de impresión y bordes suaves; motivo decorativo común en heroes y CTA.
+
+02. ondas-marfil-3-lineas.png
+    Tres líneas onduladas color marfil, horizontales y transparentes; se superponen al sol.
+
+03. ondas-azules-3-lineas.png
+    Tres líneas onduladas azules, horizontales; variante para fondos claros.
+
+04. ondas-blancas-3-lineas.png
+    Tres líneas onduladas blancas, horizontales; variante para fondos azules.
+
+05. flecha-manuscrita-azul.png
+    Flecha curva e irregular, estilo anotación manual.
+
+06. flecha-manuscrita-roja.png
+    Flecha curva e irregular, estilo anotación manual.
+
+07. flecha-manuscrita-lima.png
+    Flecha/puntero curvo de línea discontinua para la variante oscura/lima.
+
+08. sellos-editoriales.png
+    Set de sellos circulares texturizados: Curious by default, Experiment everything, Fast clarity, Details matter y Ship learn repeat.
+
+09. subrayados-y-garabatos.png
+    Set pequeño de subrayados, círculos, trazos y notas gestuales en rojo, azul y lima.
+
+10. textura-papel.png
+    Textura de papel/grano muy sutil y tileable para superficies claras.
+
+11. textura-grano-oscuro.png
+    Textura de grano/polvo muy sutil y tileable para la propuesta negra/lima.
+
+
+HOME — HERO REFINED V3 / GRÁFICO ADJUNTO
+
+12. hero-experimentacion-marco-navegador.png [CAPA]
+    Ventana azul grande con barra superior y estructura Observe → Hypothesize → Ship → Learn; fondo transparente fuera del marco.
+
+13. hero-experimentacion-heatmap.png [CAPA]
+    Tarjeta de heatmap azul con puntos de calor amarillos/rojos; animable con aparición o pulso.
+
+14. hero-experimentacion-ab-test.png [CAPA]
+    Tarjeta A/B con botones A crema y B rojo; animable como cambio de variante.
+
+15. hero-experimentacion-codigo.png [CAPA]
+    Tarjeta oscura con fragmento CSS/trackEvent; animable con entrada lateral.
+
+16. hero-experimentacion-reporte.png [CAPA]
+    Tarjeta crema “Illustrative experiment” con minigráfico; pieza frontal desplazable.
+
+17. hero-experimentacion-sol.png [CAPA]
+    Instancia grande del sol rojo situada detrás del navegador; puede reutilizar 01.
+
+18. hero-experimentacion-ondas.png [CAPA]
+    Instancia marfil de tres ondas que cruza el sol; puede reutilizar 02.
+
+
+HOME — FRENCH SUMMER DEEP TECH V2
+
+19. hero-playground-ventana-base.png [CAPA]
+    Ventana azul “Experiment playground” con panel A/B y pequeños controles.
+
+20. hero-playground-heatmap-flotante.png [CAPA]
+    Panel azul de heatmap con cuatro focos de calor; animable con pulso independiente.
+
+21. hero-playground-grafico-conversion.png [CAPA]
+    Panel azul con línea ascendente y valor +18.4%; animable trazando la línea.
+
+22. hero-playground-tarjeta-resultado.png [CAPA]
+    Tarjeta crema con “+18.4% conversion” y flecha azul.
+
+23. hero-playground-controles.png [CAPA]
+    Consola oscura con tres perillas Traffic, Confidence e Impact.
+
+24. hero-playground-confianza.png [CAPA]
+    Tarjeta oscura “Confidence 97%” con barra de progreso.
+
+25. hero-mar-barco-sol.png [CAPA]
+    Ilustración recortada de mar azul, olas, nubes crema, velero y sol rojo; idealmente separar barco, olas/nubes y sol si se animan.
+
+26. pitchcr-ilustracion-costera.png
+    Ilustración editorial de edificio/escaleras, palmera, sol y olas usada dentro de la tarjeta PitchCR.
+
+27. tarjetas-proceso-papel.png
+    Fondo irregular de tres hojas/tarjetas de proceso con sombra y textura, sin contenido textual.
+
+28. postits-proceso.png [CAPA]
+    Dos notas adhesivas amarilla y azul con aspecto de papel; movimiento/parallax independiente.
+
+29. cursor-blanco.png [CAPA]
+    Cursor grande blanco con contorno oscuro para señalar variantes.
+
+
+HOME — UX ENGINEER CRO CONCEPT V1 (NEGRO/LIMA)
+
+30. hero-dark-comparador-ab.png [CAPA]
+    Gran interfaz oscura dividida en Control A y Variant B, con heatmaps lima y CTA resaltado.
+
+31. hero-dark-codigo.png [CAPA]
+    Fragmento de código lima/naranja a la derecha del comparador.
+
+32. hero-dark-metrica-conversion.png [CAPA]
+    Tarjeta translúcida +18.4%, confianza 97% y curva ascendente punteada.
+
+33. hero-dark-embudo.png [CAPA]
+    Minigráfico vertical Conversion Funnel en negro y lima.
+
+34. hero-dark-cursor.png [CAPA]
+    Cursor blanco grande sobre el CTA de la variante.
+
+35. fondo-reticula-tecnica.png
+    Retícula oscura con reglas, cruces, marcas de medida y grano; tileable o dividida en ornamentos CSS.
+
+36. tarjetas-proceso-dark.png
+    Superficies oscuras con textura para Insight, Hypothesis y Shipped Experience; sin texto si el contenido se implementa en HTML.
+
+
+ABOUT — FRENCH DEEP TECH V1
+
+37. about-field-kit-cuaderno.png [CAPA]
+    Cuaderno azul “Field kit” con elástico, etiqueta manuscrita y pequeño botón circular.
+
+38. about-mapa-costa-rica-spain.png [CAPA]
+    Postal crema inclinada con mapas de Costa Rica y España, ruta punteada y marcador.
+
+39. about-ventana-experimento.png [CAPA]
+    Ventana oscura inclinada con pseudocódigo de hipótesis y tracking.
+
+40. about-tarjeta-ab.png [CAPA]
+    Tarjeta crema pequeña con opciones A y B.
+
+41. about-reloj-madrid.png [CAPA]
+    Nota crema pequeña con reloj analógico y texto Madrid/CET.
+
+42. about-nota-investigacion.png [CAPA]
+    Hoja cuadriculada inclinada con pregunta manuscrita de investigación.
+
+43. about-sello-curious.png [CAPA]
+    Sello circular coral “Curious by default”; puede reutilizarse desde 08.
+
+44. diagrama-venn-overlap.png
+    Diagrama de Venn de People, Interfaces y Systems con centro oscuro; sin textos exteriores si serán HTML.
+
+45. diagrama-idea-ship-learn.png
+    Minidiagrama azul de flujo IDEA → SHIP → LEARN sobre fondo transparente.
+
+46. grafico-resultados-planos.png
+    Minigráfico de puntos con zonas Win / No impact / Learn.
+
+47. detalle-ui-confianza.png
+    Pequeña composición editorial de botón rojo, tarjeta gris y bloque tipográfico “Aa”.
+
+48. iconos-ruta-profesional.png
+    Set lineal consistente: lápiz, código, cubo, terminal, matraz y ciclo.
+
+49. iconos-aporte-equipo.png
+    Set circular: lupa, lápiz y código, en variantes azul/amarillo.
+
+50. about-kit-hospitalidad.png [CAPA]
+    Composición con llaves, etiqueta Pura Vida, mapa, tarjeta de bienvenida, bocadillos y sol; separar llaves/etiqueta, mapa, tarjeta, bocadillos y sol para parallax.
+
+
+WRITING — FRENCH DEEP TECH V1
+
+51. writing-libro-abierto-base.png [CAPA]
+    Libro/cuaderno abierto dentro de un marco azul, visto en perspectiva suave.
+
+52. writing-pagina-codigo.png [CAPA]
+    Página izquierda azul con líneas de código; animable como escritura o aparición.
+
+53. writing-pagina-notas.png [CAPA]
+    Página derecha crema con gráficas, anotación “test idea”, heatmap y pequeña nota.
+
+54. writing-marcador-rojo.png [CAPA]
+    Cinta separadora roja sobre el libro; movimiento independiente.
+
+55. writing-cursor.png [CAPA]
+    Cursor negro/blanco sobre la página de notas.
+
+56. articulo-fouc-original-flicker-variant.png
+    Gráfico editorial azul con tres estados de navegador, flechas y timeline t0–t2; reutilizable en listado y artículo.
+
+57. mini-observer-vs-polling.png
+    Diagrama de nodos conectados frente a reloj analógico.
+
+58. mini-flat-wins.png
+    Gráfico de varias líneas azul/roja sin ganador.
+
+59. mini-squircle.png
+    Comparación geométrica entre rectángulo redondeado y squircle con guías.
+
+60. mini-json-ld.png
+    Flujo visual desde icono de código a campos schema y resultado enriquecido.
+
+61. mini-ssml-audio.png
+    Fragmento SSML junto a forma de onda azul.
+
+62. firma-garabato-blanca.png
+    Firma o líneas manuscritas blancas para la franja editorial azul.
+
+
+ARTICLE DETAIL — FOUC V1 Y SINGLE COLUMN V2
+
+63. fouc-hero-diagrama.png
+    Versión amplia del gráfico Original → Flicker → Variant con timeline, recorrido ocular y cursor; puede derivarse del asset 56.
+
+64. fouc-recorrido-ocular.png [CAPA]
+    Línea punteada ondulada con iconos de ojo y cursor; separar del gráfico 63 si se anima.
+
+65. fouc-timeline-300ms.png
+    Línea temporal HTML arrives → Control appears → Experiment loads → Variant paints, con biased window rojo.
+
+66. fouc-anotaciones-validity.png
+    Tres notas manuscritas rojas con flechas: First look matters, Intent is contagious y Garbage in, wrong out.
+
+67. fouc-banner-senal.png
+    Ilustración lineal de ojo y forma de onda blanca para el banner azul.
+
+68. fouc-checklist-papel.png
+    Fondo de hoja perforada para checklist, con textura y sombra; dejar casillas y texto en HTML si es posible.
+
+69. fouc-check-manuscrito.png [CAPA]
+    Círculo azul con check y flecha roja, estilo anotación manual.
+
+70. fouc-subrayado-takeaway.png
+    Subrayado rojo irregular para la frase principal del takeaway.
+
+
+NOTAS DE PRODUCCIÓN
+
+- No rasterizar navegación, titulares, párrafos, CTAs, inputs, tablas ni bloques de código salvo cuando formen parte inseparable de una ilustración editorial.
+- Mantener un mismo margen transparente alrededor de cada capa de una composición para que todas compartan origen y puedan superponerse sin reajustes.
+- Exportar las composiciones hero también como imagen completa de referencia, además de sus capas animables.
+- Los assets 01–11 deben funcionar como biblioteca compartida para evitar duplicados entre páginas.
+- Para móvil, usar las mismas capas y recomponerlas; evitar generar una sola imagen horizontal que obligue a reducir demasiado el gráfico.

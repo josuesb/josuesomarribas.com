@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
+  <rect x="1085" y="860" width="320" height="205" rx="15" fill="#222d33" stroke="#657079" stroke-width="2"/>
+  <text x="1118" y="907" fill="#f7f0df" font-family="Arial" font-size="20">Confidence</text><text x="1118" y="975" fill="#f7f0df" font-family="Georgia,serif" font-size="55">97%</text>
+  <rect x="1118" y="1005" width="245" height="17" rx="8" fill="#47545b"/><rect x="1118" y="1005" width="183" height="17" rx="8" fill="#d9e4d6"/>
+</svg>
