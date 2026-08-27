@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
-  <rect x="503" y="502" width="359" height="447" rx="17" fill="#174b96" stroke="#6f91c4" stroke-width="3"/>
-  <text x="533" y="556" fill="#f7f0df" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="25" font-weight="700">A / B test</text>
-  <rect x="533" y="594" width="299" height="86" rx="14" fill="#f7f0df"/>
-  <text x="682" y="649" fill="#17222b" text-anchor="middle" font-family="Arial,sans-serif" font-size="31">A</text>
-  <rect x="533" y="705" width="299" height="86" rx="14" fill="#f73525" stroke="#f7f0df" stroke-width="3"/>
-  <text x="682" y="761" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="33">B</text>
-  <g fill="#91a8cd"><rect x="533" y="822" width="299" height="14" rx="7"/><rect x="533" y="852" width="299" height="14" rx="7"/><rect x="533" y="882" width="299" height="14" rx="7"/></g>
+  <rect x="503" y="528" width="359" height="372" rx="17" fill="#174b96" stroke="#6f91c4" stroke-width="3"/>
+  <text x="533" y="580" fill="#f7f0df" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="25" font-weight="700">A / B test</text>
+  <rect x="533" y="620" width="299" height="70" rx="13" fill="#f7f0df"/>
+  <text x="682" y="666" fill="#17222b" text-anchor="middle" font-family="Arial,sans-serif" font-size="29">A</text>
+  <rect x="533" y="714" width="299" height="70" rx="13" fill="#f73525" stroke="#f7f0df" stroke-width="3"/>
+  <text x="682" y="761" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="31">B</text>
+  <g fill="#91a8cd"><rect x="533" y="818" width="299" height="12" rx="6"/><rect x="533" y="846" width="255" height="12" rx="6"/></g>
 </svg>
