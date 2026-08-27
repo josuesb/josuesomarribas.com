@@ -3,6 +3,7 @@ import type { Article } from "../../lib/content";
 import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import ArticleTools from "./ArticleTools";
+import { editorialImage } from "../../lib/editorial-assets";
 
 function plainText(value:string) { return value.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, " ").trim(); }
 function headingId(value:string) { return plainText(value).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
@@ -22,6 +23,8 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
   const indexHref = locale === "es" ? "/es/writing" : "/writing";
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
+  const isFouc = /fouc/i.test(article.slug);
+  const heroImage = isFouc ? "/assets/article-fouc/01-hero-diagrama.svg" : editorialImage(article.slug, article.image);
   const labels = locale === "es"
     ? { writing:"Artículos", back:"Volver a artículos", note:"Este artículo todavía está disponible únicamente en inglés.", talk:"Hablemos", compare:"¿Comparamos notas?", conversation:"Iniciar conversación", contents:"EN ESTE ARTÍCULO", share:"COMPARTIR" }
     : { writing:"Writing", back:"Back to Writing", note:"", talk:"Let’s talk", compare:"Want to compare notes?", conversation:"Start a conversation", contents:"IN THIS NOTE", share:"SHARE" };
@@ -44,10 +47,16 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
           <p className="article-description">{article.description}</p>
           <div className="article-meta"><span>By Josue Somarribas</span><span>•</span><span>{minutes} min read</span><span>•</span><time dateTime={article.date}>Updated {new Intl.DateTimeFormat("en", { month:"short", year:"numeric" }).format(new Date(article.date))}</time></div>
           <ArticleTools title={article.title}/>
-          <Image src={article.image} alt={article.imageAlt} width={1672} height={941} priority unoptimized/>
+          <Image src={heroImage} alt={article.imageAlt} width={1800} height={900} priority unoptimized/>
         </header>
+        {isFouc && <div className="fouc-asset-story" aria-label="Visual explanation of flicker and experiment validity">
+          {[
+            ["02-recorrido-ocular",1600,430], ["03-timeline-300ms",1800,500], ["04-anotaciones-validity",1200,900],
+            ["05-banner-senal",1400,360], ["06-checklist-papel",1800,600], ["07-check-manuscrito",700,600]
+          ].map(([file,width,height])=><Image key={file} src={`/assets/article-fouc/${file}.svg`} alt="" aria-hidden="true" width={Number(width)} height={Number(height)}/>) }
+        </div>}
         <div className="article-content" dangerouslySetInnerHTML={{ __html:html }}/>
-        <section className="article-takeaway"><b>The takeaway</b><strong>{article.description}</strong><p>Clear thinking, careful implementation and honest measurement produce results that are easier to trust.</p></section>
+        <section className={`article-takeaway ${isFouc ? "fouc-takeaway" : ""}`}><b>The takeaway</b><strong>{article.description}</strong><p>Clear thinking, careful implementation and honest measurement produce results that are easier to trust.</p></section>
         <section className="article-author"><b className="logo">JS.</b><div><strong>Written by Josue Somarribas</strong><p>UX Engineer and CRO Developer writing about experimentation, front-end craft and the uncomfortable details between them.</p></div><a className="btn btn-red" href="mailto:hello@josuesomarribas.com">More about Josue →</a></section>
       </article>
     </div>

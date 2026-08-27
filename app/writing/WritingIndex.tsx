@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { ArticleMeta } from "../../lib/content";
+import { editorialImage } from "../../lib/editorial-assets";
 
 type Locale = "en" | "es";
 const copy = {
@@ -41,7 +42,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
             <p>{article.description}</p>
           </div>
           <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span></div>
-          <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${article.image})` }}/>
+          <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(article.slug, article.image)})` }}/>
         </a>;
       })}</div>
       {!shown.length && <p className="empty-notes">{t.empty}</p>}
