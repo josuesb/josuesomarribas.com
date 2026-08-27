@@ -17,21 +17,27 @@ const CapabilityIcon = ({ type }: { type: "research" | "experiment" | "code" | "
   return <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[type]}</svg>;
 };
 
-const experimentLayers = [
-  ["01-sol", "experiment-sun"],
-  ["02-ondas", "experiment-waves"],
-  ["03-marco-navegador", "experiment-window"],
-  ["04-heatmap", "experiment-heatmap"],
-  ["05-ab-test", "experiment-ab"],
-  ["06-codigo", "experiment-code"],
-  ["07-reporte", "experiment-report"],
-] as const;
-
 const ExperimentArtwork = () => (
-  <div className="experiment" role="img" aria-label="Experiment workflow: observe, hypothesize, ship and learn">
-    {experimentLayers.map(([file, className]) => (
-      <Image key={file} className={`experiment-layer ${className}`} src={`/assets/hero-experimentacion/${file}.svg`} alt="" aria-hidden="true" width={1800} height={1100} priority />
-    ))}
+  <div className="experiment technical-window" role="img" aria-label="Code editor showing an optimization experiment">
+    <div className="technical-window-bar">
+      <span className="window-dots" aria-hidden="true"><i /><i /><i /></span>
+      <code>experiment_alpha.tsx</code>
+    </div>
+    <div className="technical-window-body">
+      <code className="hero-code" aria-hidden="true">
+        <span><b>const</b> <i>OptimizationEngine</i> = () =&gt; {'{'}</span>
+        <span>&nbsp;&nbsp;<b>const</b> [friction, setFriction] = <i>useAnalyzeData</i>();</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;&nbsp;<b>if</b> (friction &gt; <strong>0.5</strong>) {'{'}</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> &lt;<em>DeployFix</em> payload={'{'}data{'}'} /&gt;;</span>
+        <span>&nbsp;&nbsp;{'}'}</span>
+        <span>{'}'};</span>
+      </code>
+      <div className="signal-canvas" aria-hidden="true">
+        <span className="signal-diamond" />
+        <span className="signal-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="10" cy="10" r="5"/><path d="m14 14 5 5M7 11l2-3 2 4 2-3"/></svg></span>
+      </div>
+    </div>
   </div>
 );
 
