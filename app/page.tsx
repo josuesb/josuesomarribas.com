@@ -1,5 +1,6 @@
 import SiteFooter from "../components/SiteFooter";
 import SiteNav from "../components/SiteNav";
+import Image from "next/image";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -12,6 +13,24 @@ const Heatmap = () => (
 );
 
 const BrowserDots = () => <div className="browser-dots"><i /><i /><i /></div>;
+
+const experimentLayers = [
+  ["01-sol", "experiment-sun"],
+  ["02-ondas", "experiment-waves"],
+  ["03-marco-navegador", "experiment-window"],
+  ["04-heatmap", "experiment-heatmap"],
+  ["05-ab-test", "experiment-ab"],
+  ["06-codigo", "experiment-code"],
+  ["07-reporte", "experiment-report"],
+] as const;
+
+const ExperimentArtwork = () => (
+  <div className="experiment" role="img" aria-label="Experiment workflow: observe, hypothesize, ship and learn">
+    {experimentLayers.map(([file, className]) => (
+      <Image key={file} className={`experiment-layer ${className}`} src={`/assets/hero-experimentacion/${file}.svg`} alt="" aria-hidden="true" width={1800} height={1100} priority />
+    ))}
+  </div>
+);
 
 export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
   return (
@@ -31,19 +50,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             </div>
           </div>
 
-          <div className="experiment" aria-label="Experiment workflow illustration">
-            <div className="sun" /><div className="waves"><i /><i /><i /></div>
-            <div className="lab-window">
-              <BrowserDots />
-              <div className="lab-nav"><span>OBSERVE</span><b>→</b><span>HYPOTHESIZE</span><b>→</b><span>SHIP</span><b>→</b><span>LEARN</span></div>
-              <div className="lab-cards">
-                <div className="observe"><small>OBSERVE</small><Heatmap /><p /><p /><p /></div>
-                <div className="ab-card"><small>A / B test</small><button>A</button><button>B</button><p /><p /><p /></div>
-                <div className="code-card"><code><b>button.cta</b> {'{'}<br />&nbsp; background: <mark>#FF5830</mark>;<br />&nbsp; color: #FFF;<br />&nbsp; font-weight: 600;<br />&nbsp; border-radius: 8px;<br />{'}'}<br /><br /><span>trackEvent</span>(&apos;cta_click&apos;);</code></div>
-              </div>
-            </div>
-            <div className="chart-card"><b>Illustrative<br />experiment</b><div className="mini-chart">⌁╱⌁╱</div><p /><p /><small>Illustrative only.<br />Not performance data.</small></div>
-          </div>
+          <ExperimentArtwork />
         </div>
         <p className="meta shell">8+ years across UX and web development <b>·</b> Costa Rica → Spain <b>·</b> Working globally</p>
       </section>
@@ -81,7 +88,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <article className="project project-cream">
               <header><span className="number">03</span><small>CLIENT WORK · WEB DEVELOPMENT</small></header>
               <h3>PitchCR</h3><p>A digital home for Costa Rica&apos;s startup and pitch community.</p>
-              <div className="pitch-preview"><div className="pitch-nav"><b>PITCHCR</b><small>Events　 Community　 Resources</small><i>Join</i></div><h4>Where founders<br />connect and grow.</h4><button>See upcoming events</button><div className="pitch-sun" /><div className="steps">▰<br />▰▰<br />▰▰▰</div><div className="palm">✦</div></div>
+              <div className="pitch-preview"><div className="pitch-nav"><b>PITCHCR</b><small>Events　 Community　 Resources</small><i>Join</i></div><h4>Where founders<br />connect and grow.</h4><button>See upcoming events</button><Image className="pitch-asset" src="/assets/summer-complementarios/02-pitchcr-ilustracion-costera.svg" alt="" aria-hidden="true" width={1800} height={1100} /></div>
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
               <a className="btn btn-red" href="mailto:hello@josuesomarribas.com">Visit live site <Arrow /></a>
             </article>
@@ -120,7 +127,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
 
       <section className="quote" id="writing"><div className="shell quote-inner"><span>“</span><blockquote>Josue bridges design decisions<br />and production constraints<br />exceptionally well.<cite>Product collaborator</cite></blockquote><a href="#footer">Read 14 recommendations <Arrow /></a></div></section>
 
-      <section className="contact"><div className="contact-art"><div className="contact-sun" /><div className="contact-waves"><i /><i /><i /></div></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">Start a conversation <Arrow /></a><button className="btn btn-outline" type="button">✉ Copy email</button></div><p>Based in Spain　·　CET　·　English + Spanish</p></div></div></section>
+      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">Start a conversation <Arrow /></a><button className="btn btn-outline" type="button">✉ Copy email</button></div><p>Based in Spain　·　CET　·　English + Spanish</p></div></div></section>
       <div id="footer"><SiteFooter locale={locale}/></div>
     </main>
   );
