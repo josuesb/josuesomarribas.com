@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { MotionObserver } from "./MotionObserver";
+import "../globals.css";
+import { MotionObserver } from "../MotionObserver";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://josuesomarribas.com"),
-  title: "Josue Somarribas — UX Engineer & CRO Developer",
-  description: "UX engineering, experimentation and production front-end—from first signal to shipped experience.",
-  alternates: { canonical: "/", languages: { en: "/", es: "/es", "x-default": "/" } },
+  title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
+  description: "Investigación, experimentación y desarrollo front-end de producción, desde la primera señal hasta una experiencia publicada.",
+  alternates: { canonical: "/es", languages: { en: "/", es: "/es", "x-default": "/" } },
   openGraph: {
-    title: "Josue Somarribas — UX Engineer & CRO Developer",
-    description: "I find why people hesitate—then design and build the fix.",
-    images: [{ url: "/og.png", width: 1792, height: 933, alt: "Josue Somarribas portfolio" }],
+    title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
+    description: "Detecto dónde dudan las personas, diseño la experiencia y construyo la solución.",
+    locale: "es_ES",
+    alternateLocale: ["en_US"],
+    images: [{ url: "/og.png", width: 1792, height: 933, alt: "Portfolio de Josue Somarribas" }],
   },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en">
+export default function SpanishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="es">
     <head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-65JN3HEB8W"/>
       <script dangerouslySetInnerHTML={{ __html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-65JN3HEB8W');` }}/>

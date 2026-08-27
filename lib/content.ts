@@ -25,17 +25,17 @@ function readArticleFile(file: string): Article {
   return { ...metadata, body: match[2].trim() };
 }
 
-export function getAllArticles({ includeDrafts = false } = {}): ArticleMeta[] {
+export function getAllArticles({ includeDrafts = false, locale = "en" as "en" | "es" } = {}): ArticleMeta[] {
   if (!fs.existsSync(articlesRoot)) return [];
   return fs.readdirSync(articlesRoot).flatMap(slug => {
-    const file = path.join(articlesRoot, slug, "en.md");
+    const file = path.join(articlesRoot, slug, `${locale}.md`);
     return fs.existsSync(file) ? [readArticleFile(file)] : [];
   }).filter(article => includeDrafts || !article.draft)
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     .map(article => { const metadata = { ...article } as Article & { body?:string }; delete metadata.body; return metadata; });
 }
 
-export function getArticle(slug: string): Article | null {
-  const file = path.join(articlesRoot, slug, "en.md");
+export function getArticle(slug: string, locale: "en" | "es" = "en"): Article | null {
+  const file = path.join(articlesRoot, slug, `${locale}.md`);
   return fs.existsSync(file) ? readArticleFile(file) : null;
 }

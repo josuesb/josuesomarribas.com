@@ -8,7 +8,7 @@ const labels = {
 
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
 
-export default function SiteNav({ locale="en", current="home" }:{ locale?:Locale; current?:Current }) {
+export default function SiteNav({ locale="en", current="home", articleSlug, hasSpanishTranslation=false }:{ locale?:Locale; current?:Current; articleSlug?:string; hasSpanishTranslation?:boolean }) {
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
   const writing = locale === "es" ? "/es/blog" : "/blog";
@@ -19,9 +19,11 @@ export default function SiteNav({ locale="en", current="home" }:{ locale?:Locale
     <a className={current === "about" ? "current" : undefined} href="/about">{t.about}</a>
     <a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
   </>;
+  const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : "/";
+  const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "writing" ? "/es/blog" : "/es";
   const language = <div className="language-switcher" aria-label="Language selector">
-    <a className={locale === "en" ? "active" : undefined} href={current === "writing" ? "/blog" : current === "about" ? "/about" : "/"} lang="en">EN</a><span>/</span>
-    <a className={locale === "es" ? "active" : undefined} href={current === "writing" ? "/es/blog" : "/es"} lang="es">ES</a>
+    <a className={locale === "en" ? "active" : undefined} href={englishLanguageHref} lang="en">EN</a><span>/</span>
+    <a className={locale === "es" ? "active" : undefined} href={spanishLanguageHref} lang="es" title={articleSlug && !hasSpanishTranslation ? "This article is not yet available in Spanish; view translated articles" : undefined}>ES</a>
   </div>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{links}</div>{language}

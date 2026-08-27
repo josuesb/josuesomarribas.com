@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllArticles, getArticle } from "../../../lib/content";
-import ArticlePage from "../ArticlePage";
+import { getAllArticles, getArticle } from "../../../../lib/content";
+import ArticlePage from "../../../writing/ArticlePage";
 
 export function generateStaticParams(){ return getAllArticles().map(article => ({ slug:article.slug })); }
 export async function generateMetadata({ params }:{ params:Promise<{slug:string}> }):Promise<Metadata>{

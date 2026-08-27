@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const origin = "https://josuesomarribas.com";
@@ -25,6 +25,23 @@ async function publishedArticles() {
   return articles.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 }
 
+async function translatedSlugs() {
+  const directories = await readdir(articlesRoot);
+  const slugs = [];
+  for (const directory of directories) {
+    const file = path.join(articlesRoot, directory, "es.md");
+    try {
+      await access(file);
+      const source = await readFile(file, "utf8");
+      if (!source.match(/^---\n[\s\S]*?\ndraft: false\n[\s\S]*?\n---/)) continue;
+      slugs.push(directory);
+    } catch {
+      // This article has no published Spanish translation yet.
+    }
+  }
+  return new Set(slugs);
+}
+
 function sitemapEntry({ url, lastModified, priority, alternates }) {
   const alternateLinks = alternates
     ? Object.entries(alternates).map(([language, href]) => `<xhtml:link rel="alternate" hreflang="${language}" href="${href}"/>`).join("")
@@ -33,6 +50,7 @@ function sitemapEntry({ url, lastModified, priority, alternates }) {
 }
 
 const articles = await publishedArticles();
+const spanishSlugs = await translatedSlugs();
 const homeAlternates = { en: origin, es: `${origin}/es`, "x-default": origin };
 const blogAlternates = { en: `${origin}/blog`, es: `${origin}/es/blog`, "x-default": `${origin}/blog` };
 const sitemapEntries = [
@@ -41,7 +59,8 @@ const sitemapEntries = [
   { url: `${origin}/about`, priority: "0.8" },
   { url: `${origin}/blog`, priority: "0.8", alternates: blogAlternates },
   { url: `${origin}/es/blog`, priority: "0.7", alternates: blogAlternates },
-  ...articles.map((article) => ({ url: `${origin}/blog/${article.slug}`, lastModified: article.date, priority: "0.6" })),
+  ...articles.map((article) => ({ url: `${origin}/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates: spanishSlugs.has(article.slug) ? { en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } : undefined })),
+  ...articles.filter((article) => spanishSlugs.has(article.slug)).map((article) => ({ url: `${origin}/es/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates:{ en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } })),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${sitemapEntries.map(sitemapEntry).join("")}</urlset>\n`;
 const rssItems = articles.map((article) => {

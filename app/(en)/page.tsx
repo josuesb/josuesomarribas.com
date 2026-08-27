@@ -1,6 +1,6 @@
-import SiteFooter from "../components/SiteFooter";
-import SiteNav from "../components/SiteNav";
-import CopyEmailButton from "../components/CopyEmailButton";
+import SiteFooter from "../../components/SiteFooter";
+import SiteNav from "../../components/SiteNav";
+import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;

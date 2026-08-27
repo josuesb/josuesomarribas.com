@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
-import Home from "../page";
+import Home from "../../(en)/page";
 
 export const dynamic = "force-static";
 
