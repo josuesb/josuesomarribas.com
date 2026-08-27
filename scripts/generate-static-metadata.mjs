@@ -1,7 +1,7 @@
 import { access, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const origin = "https://josuesomarribas.com";
+const origin = "https://www.josuesomarribas.com";
 const articlesRoot = path.join(process.cwd(), "content", "articles");
 const outputRoot = path.join(process.cwd(), "dist", "client");
 
@@ -49,7 +49,16 @@ function sitemapEntry({ url, lastModified, priority, alternates }) {
   return `<url><loc>${url}</loc>${lastModified ? `<lastmod>${new Date(lastModified).toISOString()}</lastmod>` : ""}<changefreq>${lastModified ? "yearly" : "weekly"}</changefreq><priority>${priority}</priority>${alternateLinks}</url>`;
 }
 
+function assertValidArticleDate(article) {
+  const timestamp = Date.parse(article.date);
+  const year = new Date(timestamp).getUTCFullYear();
+  if (!Number.isFinite(timestamp) || year < 2000 || year > new Date().getUTCFullYear()) {
+    throw new Error(`Invalid sitemap date for ${article.slug}: ${article.date}`);
+  }
+}
+
 const articles = await publishedArticles();
+articles.forEach(assertValidArticleDate);
 const spanishSlugs = await translatedSlugs();
 const homeAlternates = { en: origin, es: `${origin}/es`, "x-default": origin };
 const blogAlternates = { en: `${origin}/blog`, es: `${origin}/es/blog`, "x-default": `${origin}/blog` };

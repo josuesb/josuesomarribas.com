@@ -3,7 +3,7 @@ slug: "picasso-s-library-native-android-ios-design-concept"
 locale: "en"
 title: "Picasso’s Library – Native Android & iOS Design Concept"
 description: "Picasso’s Library is a native mobile app concept for Android & iOS, designed to help designers and artists collect, organize, and export assets from e-books and PDFs. Discover how this innovative tool enhances creative research."
-date: "0202-11-14T00:00:00.000Z"
+date: "2020-11-14T00:00:00.000Z"
 draft: false
 type: "Projects"
 cluster: "portfolio-projects-case-studies"
