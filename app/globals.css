@@ -473,3 +473,8 @@ footer .footer-email{display:none}
 @media(max-width:520px){
   .writing-hero h1{font-size:clamp(2.75rem,13vw,3.7rem)}.notebook-art{height:270px}.writing-index-v2 .writing-tools{padding-top:24px}.featured-articles{padding-top:30px}.featured-card,.featured-card:first-child{grid-template-columns:1fr;grid-template-rows:190px auto}.featured-card .featured-cover{grid-column:1;grid-row:1;background-size:cover}.featured-card>div{grid-column:1;grid-row:2}.writing-index-v2 .note-row,.writing-index-v2 .note-row:nth-child(even){grid-template-columns:44px minmax(0,1fr);gap:12px;padding:16px 12px}.note-number{font-size:2rem}.writing-index-v2 .article-cover{display:none}.writing-index-v2 .note-copy p{display:none}.writing-page .newsletter h2,.writing-contact h2{font-size:1.7rem}
 }
+
+:where(a, button, input, textarea, select):focus-visible{
+  outline:3px solid #ff5a40;
+  outline-offset:3px;
+}
