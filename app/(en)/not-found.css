@@ -16,7 +16,8 @@
 .not-found-diagram{position:relative;padding:14px 50px 28px 50px}
 .not-found-diagram img{display:block;width:100%;height:auto;box-shadow:0 13px 24px #082b6840;transform:rotate(-.15deg)}
 .not-found-diagram>p{position:absolute;right:-7px;bottom:72px;margin:0;color:#ef3625;font:600 1.35rem/1.15 "Comic Sans MS",cursive;transform:rotate(-7deg)}
-.not-found-footer{min-height:74px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #11192066;font:500 .75rem var(--font-mono)}
+.not-found-footer{width:100%;min-height:74px;background:#111920;color:#f7f0df;border-top:1px solid #111920;font:500 .75rem var(--font-mono)}
+.not-found-footer>.shell{min-height:74px;display:flex;align-items:center;justify-content:space-between}
 
 @media(max-width:1050px){
   .not-found-hero{grid-template-columns:minmax(300px,.9fr) 130px minmax(310px,1fr)}
@@ -37,7 +38,7 @@
   .not-found-diagram{width:100%;overflow:hidden;padding:0 15px 30px}
   .not-found-diagram img{width:850px;max-width:none;transform:translateX(-18%) rotate(-.15deg)}
   .not-found-diagram>p{display:none}
-  .not-found-footer{width:min(100% - 30px,1180px)}
+  .not-found-footer>.shell{width:min(100% - 30px,1180px)}
 }
 
 @media(max-width:460px){

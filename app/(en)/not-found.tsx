@@ -29,6 +29,6 @@ export default function NotFound() {
       <p aria-hidden="true">Try another<br/>path. ↙</p>
     </section>
 
-    <footer className="not-found-footer shell"><span>© 2026 Josue Somarribas</span><b>J—S</b></footer>
+    <footer className="not-found-footer"><div className="shell"><span>© 2026 Josue Somarribas</span><b>J—S</b></div></footer>
   </main>;
 }
