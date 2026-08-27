@@ -2,6 +2,7 @@ import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -18,26 +19,17 @@ const CapabilityIcon = ({ type }: { type: "research" | "experiment" | "code" | "
 };
 
 const ExperimentArtwork = () => (
-  <div className="experiment technical-window" role="img" aria-label="Code editor showing an optimization experiment">
-    <div className="technical-window-bar">
-      <span className="window-dots" aria-hidden="true"><i /><i /><i /></span>
-      <code>experiment_alpha.tsx</code>
-    </div>
-    <div className="technical-window-body">
-      <code className="hero-code" aria-hidden="true">
-        <span><b>const</b> <i>OptimizationEngine</i> = () =&gt; {'{'}</span>
-        <span>&nbsp;&nbsp;<b>const</b> [friction, setFriction] = <i>useAnalyzeData</i>();</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;&nbsp;<b>if</b> (friction &gt; <strong>0.5</strong>) {'{'}</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> &lt;<em>DeployFix</em> payload={'{'}data{'}'} /&gt;;</span>
-        <span>&nbsp;&nbsp;{'}'}</span>
-        <span>{'}'};</span>
-      </code>
-      <div className="signal-canvas" aria-hidden="true">
-        <span className="signal-diamond" />
-        <span className="signal-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="10" cy="10" r="5"/><path d="m14 14 5 5M7 11l2-3 2 4 2-3"/></svg></span>
-      </div>
-    </div>
+  <div className="hero-signal-flow" role="img" aria-label="Experiment workflow from signal to measurable result">
+    <div className="hero-flow-line" aria-hidden="true" />
+    {[
+      { label:"SIGNAL", number:"01", className:"flow-signal", content:<><small>Conversion rate</small><strong>+18.7%</strong><span className="flow-chart"><i/><i/><i/><i/><i/></span></> },
+      { label:"HYPOTHESIS", number:"02", className:"flow-hypothesis", content:<p>If we <b>reduce friction</b> in the pricing section, more users will complete the upgrade.</p> },
+      { label:"BUILD", number:"03", className:"flow-build", content:<code><span><b>const</b> test = {'{'}</span><span>&nbsp;&nbsp;variant: <i>&apos;B&apos;</i>,</span><span>&nbsp;&nbsp;change: <i>&apos;clarity&apos;</i></span><span>{'}'};</span><em>deploy(test);</em></code> },
+      { label:"MEASURE", number:"04", className:"flow-measure", content:<><small>Result</small><strong>+18.7%</strong><span>Lift</span><hr/><span>Stat. Sig. <b>99%</b></span></> },
+    ].map((step,index)=><section className={`hero-flow-step ${step.className}`} key={step.label} style={{ "--flow-index":index } as CSSProperties}>
+      <header><b>{step.label}</b><span>{step.number}</span><i aria-hidden="true" /></header>
+      <div>{step.content}</div>
+    </section>)}
   </div>
 );
 
@@ -49,10 +41,9 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
 
         <div className="hero-grid shell" id="top">
           <div className="hero-copy">
-            <p className="name">Josue Somarribas</p>
-            <p className="eyebrow">UX ENGINEER × CRO DEVELOPER</p>
-            <h1>I find why people<br />hesitate—then design<br />and <em>build the fix.</em></h1>
-            <p className="lead">Research, interface design, front-end implementation and experimentation—from first signal to a measurable, shipped experience.</p>
+            <div className="hero-identity"><p className="name">Josue Somarribas</p><p className="eyebrow">UX ENGINEER × CRO DEVELOPER</p></div>
+            <h1>I turn hesitation into<br /><em>experiences that ship.</em></h1>
+            <p className="lead">Research, interface design, front-end implementation and experimentation—from signal to measurable outcome.</p>
             <div className="actions">
               <a className="btn btn-red" href="#work">View selected work <span>↓</span></a>
               <a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Discuss a project <Arrow /></a>
@@ -61,7 +52,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
 
           <ExperimentArtwork />
         </div>
-        <p className="meta shell">8+ years across UX and web development <b>·</b> Costa Rica → Spain <b>·</b> Available for remote collaboration</p>
+        <p className="meta shell"><i aria-hidden="true" />8+ years <b>·</b> Spain <b>·</b> Working globally</p>
       </section>
 
       <section className="capabilities">
