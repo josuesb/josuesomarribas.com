@@ -77,21 +77,21 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <article className="project project-cream">
               <header><span className="number">01</span><small>INDEPENDENT PRODUCT · RESEARCH + FRONT-END</small></header>
               <h3>5 Seconds Tester</h3><p>A live tool for testing whether a value proposition is understood in five seconds.</p>
-              <Image className="project-preview-image" src="/assets/project-previews/5-seconds-tester.png" alt="5 Seconds Tester upload and test interface" width={937} height={720} sizes="(max-width: 900px) 100vw, 33vw" />
+              <Image className="project-preview-image" src="/assets/project-previews/5-seconds-tester.png" alt="5 Seconds Tester upload and test interface" width={937} height={720} sizes="(max-width: 900px) 100vw, 33vw" unoptimized />
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>Research workflow</span></div>
               <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer">Try the tool <Arrow /></a><a href="#process">Read the story →</a></div>
             </article>
             <article className="project project-blue">
               <header><span className="number">02</span><small>EXPERIMENT · UX ENGINEERING</small></header>
               <h3>Font Tester</h3><p>A browser-based experiment exploring how typography changes perception and trust.</p>
-              <Image className="project-preview-image" src="/assets/project-previews/font-tester.png" alt="Font Tester comparison between a modern grotesk and a humanist serif" width={486} height={480} sizes="(max-width: 900px) 100vw, 33vw" />
+              <Image className="project-preview-image" src="/assets/project-previews/font-tester.png" alt="Font Tester comparison between a modern grotesk and a humanist serif" width={486} height={480} sizes="(max-width: 900px) 100vw, 33vw" unoptimized />
               <div className="tags"><span>Interactive prototype</span><span>Behavioral comparison</span><span>Front-end build</span></div>
               <a className="bottom-link" href="#process">Explore prototype <Arrow /></a>
             </article>
             <article className="project project-cream">
               <header><span className="number">03</span><small>CLIENT WORK · WEB DEVELOPMENT</small></header>
               <h3>PitchCR</h3><p>A digital home for Costa Rica&apos;s startup and pitch community.</p>
-              <Image className="project-preview-image" src="/assets/project-previews/pitchcr.png" alt="Current homepage displayed at pitchcr.com" width={937} height={720} sizes="(max-width: 900px) 100vw, 33vw" />
+              <Image className="project-preview-image" src="/assets/project-previews/pitchcr.png" alt="Current homepage displayed at pitchcr.com" width={937} height={720} sizes="(max-width: 900px) 100vw, 33vw" unoptimized />
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
               <a className="btn btn-red" href="https://www.pitchcr.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
             </article>
@@ -102,14 +102,14 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <article className="project project-cream project-secondary">
               <header><span className="number">04</span><small>CLIENT WORK · WEB DESIGN + DEVELOPMENT</small></header>
               <h3>Rofka Projects</h3><p>A digital presence for a Costa Rican construction company—from planning and design to finished spaces.</p>
-              <Image className="project-preview-image" src="/assets/project-previews/rofka-projects.png" alt="Rofka Projects homepage featuring its construction portfolio" width={937} height={720} sizes="(max-width: 900px) 100vw, 50vw" />
+              <Image className="project-preview-image" src="/assets/project-previews/rofka-projects.png" alt="Rofka Projects homepage featuring its construction portfolio" width={937} height={720} sizes="(max-width: 900px) 100vw, 50vw" unoptimized />
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Platform:</dt><dd>Framer</dd></div><div><dt>Focus:</dt><dd>Brand presence · Responsive UI</dd></div></dl>
               <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
             </article>
             <article className="project project-blue project-secondary">
               <header><span className="number">05</span><small>CLIENT WORK · CREATIVE WEB DEVELOPMENT</small></header>
               <h3>Andrés Tenor</h3><p>A distinctive artist website for opera and bolero tenor Andrés Rodríguez, based in Barcelona.</p>
-              <Image className="project-preview-image" src="/assets/project-previews/andres-tenor.png" alt="Andrés Rodríguez tenor website homepage" width={937} height={720} sizes="(max-width: 900px) 100vw, 50vw" />
+              <Image className="project-preview-image" src="/assets/project-previews/andres-tenor.png" alt="Andrés Rodríguez tenor website homepage" width={937} height={720} sizes="(max-width: 900px) 100vw, 50vw" unoptimized />
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Location:</dt><dd>Barcelona · Europe</dd></div><div><dt>Focus:</dt><dd>Artist identity · Performance</dd></div></dl>
               <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
             </article>
