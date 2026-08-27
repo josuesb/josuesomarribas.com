@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ArticleMeta } from "../../lib/content";
 
@@ -32,18 +31,19 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     </div>
     <section className="latest">
       <div className="latest-head"><h2>{t.latest}</h2></div>
-      <div className="notes-list visual">{shown.map((article, index) =>
-        <article className="note-row" key={article.slug}>
+      <div className="notes-list visual">{shown.map((article, index) => {
+        const href = `${locale === "es" ? "/es" : ""}/writing/${article.slug}`;
+        return <a className="note-row" href={href} key={article.slug} aria-label={article.title}>
           <span className="note-number">{String(index + 1).padStart(2, "0")}</span>
           <div className="note-copy">
             <small>{article.cluster || article.tags.slice(0, 2).join(" · ")}</small>
-            <h3><Link href={`${locale === "es" ? "/es" : ""}/writing/${article.slug}`}>{article.title}</Link></h3>
+            <h3>{article.title}</h3>
             <p>{article.description}</p>
           </div>
           <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span></div>
-          <Link className="article-cover" href={`${locale === "es" ? "/es" : ""}/writing/${article.slug}`} aria-label={article.title} style={{ backgroundImage:`url(${article.image})` }}/>
-        </article>
-      )}</div>
+          <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${article.image})` }}/>
+        </a>;
+      })}</div>
       {!shown.length && <p className="empty-notes">{t.empty}</p>}
     </section>
   </>;

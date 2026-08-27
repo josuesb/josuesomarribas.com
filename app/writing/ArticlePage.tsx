@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Article } from "../../lib/content";
+import SiteFooter from "../../components/SiteFooter";
+import SiteNav from "../../components/SiteNav";
 import ArticleTools from "./ArticleTools";
 
 function plainText(value:string) { return value.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, " ").trim(); }
@@ -19,7 +20,6 @@ function prepareBody(body:string) {
 
 export default function ArticlePage({ article, locale }:{ article:Article; locale:"en"|"es" }) {
   const indexHref = locale === "es" ? "/es/writing" : "/writing";
-  const home = locale === "es" ? "/es" : "/";
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
   const labels = locale === "es"
@@ -28,7 +28,7 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
   const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, datePublished:article.date, image:`https://josuesomarribas.com${article.image}`, author:{ "@type":"Person", name:"Josue Somarribas", url:"https://josuesomarribas.com" }, mainEntityOfPage:`https://josuesomarribas.com/writing/${article.slug}` };
 
   return <main className="article-page" lang="en">
-    <nav className="article-topnav"><div className="shell"><Link className="logo" href={home}>JS.</Link><div><Link href={`${home}#work`}>Work</Link><Link href={`${home}#process`}>Experiments</Link><Link className="current" href={indexHref}>{labels.writing}</Link><Link href={`${home}#about`}>About</Link><Link href={`${home}#footer`}>Résumé</Link></div><a className="btn btn-red" href="mailto:hello@josuesomarribas.com">{labels.talk} ↗</a></div></nav>
+    <SiteNav locale={locale} current="writing" variant="article"/>
     <ArticleTools title={article.title} mode="progress"/>
     <div className="article-layout shell">
       <aside className="article-sidebar">
@@ -51,8 +51,8 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
         <section className="article-author"><b className="logo">JS.</b><div><strong>Written by Josue Somarribas</strong><p>UX Engineer and CRO Developer writing about experimentation, front-end craft and the uncomfortable details between them.</p></div><a className="btn btn-red" href="mailto:hello@josuesomarribas.com">More about Josue →</a></section>
       </article>
     </div>
-    <section className="article-cta"><div className="shell"><h2>{labels.compare}</h2><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">{labels.conversation} ↗</a><Link className="btn btn-outline" href={indexHref}>{labels.back} ↑</Link></div></section>
-    <footer className="article-footer"><div className="shell"><Link className="logo" href={home}>JS.</Link><div><Link href={`${home}#work`}>Work</Link><Link href={`${home}#process`}>Experiments</Link><Link href={indexHref}>{labels.writing}</Link><Link href={`${home}#about`}>About</Link></div></div></footer>
+    <section className="article-cta"><div className="shell"><h2>{labels.compare}</h2><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">{labels.conversation} ↗</a><a className="btn btn-outline" href={indexHref}>{labels.back} ↑</a></div></section>
+    <div className="article-footer"><SiteFooter locale={locale} current="writing"/></div>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/>
   </main>;
 }

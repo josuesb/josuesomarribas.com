@@ -41,4 +41,4 @@ function translate(node: ReactNode): ReactNode {
   return cloneElement(element, props, translate(element.props.children as ReactNode));
 }
 
-export default function SpanishHome() { return <div lang="es">{translate(Home())}</div>; }
+export default function SpanishHome() { return <div lang="es">{translate(Home({ locale:"es" }))}</div>; }

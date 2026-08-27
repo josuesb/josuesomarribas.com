@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import SiteFooter from "../../components/SiteFooter";
+import SiteNav from "../../components/SiteNav";
 
 export const metadata: Metadata = {
   title: "About — Josue Somarribas",
@@ -6,17 +8,6 @@ export const metadata: Metadata = {
 };
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-
-const Nav = () => (
-  <nav className="nav shell" aria-label="Primary navigation">
-    <a className="logo" href="/">JS.</a>
-    <div className="nav-links">
-      <a href="/#work">Work</a><a href="/#process">Experiments</a><a href="/writing">Writing</a><a className="current" href="/about">About</a><a href="#route">Résumé</a>
-    </div>
-    <div className="language-switcher"><a className="active" href="/about">EN</a><span>/</span><a href="/es">ES</a></div>
-    <a className="btn btn-red nav-cta" href="mailto:hello@josuesomarribas.com">Let&apos;s talk <Arrow /></a>
-  </nav>
-);
 
 export default function AboutPage() {
   const beliefs = [
@@ -36,7 +27,7 @@ export default function AboutPage() {
 
   return <main className="about-page">
     <section className="about-hero">
-      <Nav />
+      <SiteNav current="about" />
       <div className="shell about-hero-grid">
         <div>
           <p className="about-label">ABOUT × THE PERSON BETWEEN THE PIXELS</p>
@@ -76,6 +67,6 @@ export default function AboutPage() {
     <section className="currently"><div className="shell"><h2>Currently<br/><b>curious about</b></h2><p>Experiment validity　〰　Behavioral design　〰　Accessible interaction　〰　Browser quirks　〰　Typography　〰　Useful side projects</p></div></section>
 
     <section className="about-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><a className="btn btn-red" href="mailto:hello@josuesomarribas.com">Start a conversation <Arrow /></a><button className="btn btn-outline">✉ Copy email</button></div></div></section>
-    <footer><div className="shell"><a className="logo" href="/">JS.</a><p>© 2026 Josue Somarribas. All rights reserved.</p><div><a href="#">in</a><a href="mailto:hello@josuesomarribas.com">✉</a></div></div></footer>
+    <SiteFooter current="about" />
   </main>;
 }

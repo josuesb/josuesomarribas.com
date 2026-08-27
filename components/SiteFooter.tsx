@@ -1,0 +1,10 @@
+export default function SiteFooter({ locale="en", current }:{ locale?:"en"|"es"; current?:"writing"|"about" }) {
+  const home = locale === "es" ? "/es" : "/";
+  const writing = locale === "es" ? "/es/writing" : "/writing";
+  const t = locale === "es" ? { work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí" } : { work:"Work", experiments:"Experiments", writing:"Writing", about:"About" };
+  return <footer><div className="shell">
+    <a className="logo" href={home}>JS.</a>
+    <p>© 2026 Josue Somarribas.</p>
+    <div><a href={`${home}#work`}>{t.work}</a><a href={`${home}#process`}>{t.experiments}</a><a className={current === "writing" ? "current" : undefined} href={writing}>{t.writing}</a><a className={current === "about" ? "current" : undefined} href="/about">{t.about}</a><a href="mailto:hello@josuesomarribas.com" aria-label="Email">✉</a></div>
+  </div></footer>;
+}

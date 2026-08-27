@@ -1,3 +1,6 @@
+import SiteFooter from "../components/SiteFooter";
+import SiteNav from "../components/SiteNav";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export const dynamic = "force-static";
@@ -10,18 +13,11 @@ const Heatmap = () => (
 
 const BrowserDots = () => <div className="browser-dots"><i /><i /><i /></div>;
 
-export default function Home() {
+export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
   return (
     <main>
       <section className="hero" id="about">
-        <nav className="nav shell" aria-label="Primary navigation">
-          <a className="logo" href="#top" aria-label="Josue Somarribas home">JS.</a>
-          <div className="nav-links">
-            <a href="#work">Work</a><a href="#process">Experiments</a><a href="/writing">Writing</a><a href="/about">About</a><a href="#footer">Résumé</a>
-          </div>
-          <div className="language-switcher" aria-label="Language selector"><a className="active" href="/" lang="en">EN</a><span>/</span><a href="/es" lang="es">ES</a></div>
-          <a className="btn btn-red nav-cta" href="mailto:hello@josuesomarribas.com">Let&apos;s talk <Arrow /></a>
-        </nav>
+        <SiteNav locale={locale}/>
 
         <div className="hero-grid shell" id="top">
           <div className="hero-copy">
@@ -125,7 +121,7 @@ export default function Home() {
       <section className="quote" id="writing"><div className="shell quote-inner"><span>“</span><blockquote>Josue bridges design decisions<br />and production constraints<br />exceptionally well.<cite>Product collaborator</cite></blockquote><a href="#footer">Read 14 recommendations <Arrow /></a></div></section>
 
       <section className="contact"><div className="contact-art"><div className="contact-sun" /><div className="contact-waves"><i /><i /><i /></div></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:hello@josuesomarribas.com">Start a conversation <Arrow /></a><button className="btn btn-outline" type="button">✉ Copy email</button></div><p>Based in Spain　·　CET　·　English + Spanish</p></div></div></section>
-      <footer id="footer"><div className="shell"><a className="logo" href="#top">JS.</a><p>© 2026 Josue Somarribas. All rights reserved.</p><div><a href="#" aria-label="GitHub">◉</a><a href="#" aria-label="LinkedIn">in</a><a href="mailto:hello@josuesomarribas.com" aria-label="Email">✉</a></div></div></footer>
+      <div id="footer"><SiteFooter locale={locale}/></div>
     </main>
   );
 }
