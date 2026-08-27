@@ -3,5 +3,11 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/writing", "destination": "/blog", "permanent": true },
+    { "source": "/writing/:slug", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/es/writing", "destination": "/es/blog", "permanent": true },
+    { "source": "/es/writing/:slug", "destination": "/es/blog/:slug", "permanent": true }
+  ]
 }

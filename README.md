@@ -24,8 +24,15 @@ Vercel to publish that directory with clean URLs.
 
 - `/`
 - `/es`
-- `/writing`
-- `/es/writing`
+- `/about`
+- `/blog`
+- `/es/blog`
+- `/blog/<slug>`
+- `/es/blog/<slug>` (English-content fallback, `noindex`)
+- `/robots.txt`, `/sitemap.xml`, `/rss.xml`
+
+Legacy `/writing` URLs redirect permanently to their `/blog` equivalents on
+Vercel.
 
 ## Useful Commands
 
@@ -43,4 +50,8 @@ Blog articles are file-backed and live in `content/articles/<slug>/en.md`. Each 
 
 Run `npm run content:migrate` to re-import the Framer CSV backups. The importer preserves all 82 records, including drafts, normalizes slugs for static hosting, strips scripts and inline event handlers, and assigns `/images/blog/default-cover.png` as the temporary cover. Drafts remain on disk but are excluded from the index, sitemap, RSS, and generated public routes.
 
-The public content routes are `/writing/<slug>` and the English-content fallback `/es/writing/<slug>`. Spanish fallback pages are `noindex` until real `es.md` translations are added.
+The canonical public content routes are `/blog/<slug>`. The corresponding
+`/es/blog/<slug>` pages are English-content fallbacks and remain `noindex`
+until real `es.md` translations are added. The build's metadata step writes
+the production `robots.txt`, `sitemap.xml`, and `rss.xml` files into
+`dist/client` after vinext finishes exporting the HTML.

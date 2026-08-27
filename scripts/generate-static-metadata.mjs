@@ -1,0 +1,59 @@
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+
+const origin = "https://josuesomarribas.com";
+const articlesRoot = path.join(process.cwd(), "content", "articles");
+const outputRoot = path.join(process.cwd(), "dist", "client");
+
+const escapeXml = (value) => value.replace(/[<>&'"]/g, (character) => ({
+  "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;",
+})[character]);
+
+async function publishedArticles() {
+  const directories = await readdir(articlesRoot);
+  const articles = [];
+  for (const directory of directories) {
+    const source = await readFile(path.join(articlesRoot, directory, "en.md"), "utf8");
+    const frontmatter = source.match(/^---\n([\s\S]*?)\n---/)?.[1];
+    if (!frontmatter) throw new Error(`Invalid article frontmatter: ${directory}/en.md`);
+    const metadata = Object.fromEntries(frontmatter.split("\n").filter(Boolean).map((line) => {
+      const separator = line.indexOf(":");
+      return [line.slice(0, separator), JSON.parse(line.slice(separator + 1).trim())];
+    }));
+    if (!metadata.draft) articles.push(metadata);
+  }
+  return articles.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+}
+
+function sitemapEntry({ url, lastModified, priority, alternates }) {
+  const alternateLinks = alternates
+    ? Object.entries(alternates).map(([language, href]) => `<xhtml:link rel="alternate" hreflang="${language}" href="${href}"/>`).join("")
+    : "";
+  return `<url><loc>${url}</loc>${lastModified ? `<lastmod>${new Date(lastModified).toISOString()}</lastmod>` : ""}<changefreq>${lastModified ? "yearly" : "weekly"}</changefreq><priority>${priority}</priority>${alternateLinks}</url>`;
+}
+
+const articles = await publishedArticles();
+const homeAlternates = { en: origin, es: `${origin}/es`, "x-default": origin };
+const blogAlternates = { en: `${origin}/blog`, es: `${origin}/es/blog`, "x-default": `${origin}/blog` };
+const sitemapEntries = [
+  { url: origin, priority: "1.0", alternates: homeAlternates },
+  { url: `${origin}/es`, priority: "1.0", alternates: homeAlternates },
+  { url: `${origin}/about`, priority: "0.8" },
+  { url: `${origin}/blog`, priority: "0.8", alternates: blogAlternates },
+  { url: `${origin}/es/blog`, priority: "0.7", alternates: blogAlternates },
+  ...articles.map((article) => ({ url: `${origin}/blog/${article.slug}`, lastModified: article.date, priority: "0.6" })),
+];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${sitemapEntries.map(sitemapEntry).join("")}</urlset>\n`;
+const rssItems = articles.map((article) => {
+  const url = `${origin}/blog/${article.slug}`;
+  return `<item><title>${escapeXml(article.title)}</title><link>${url}</link><guid isPermaLink="true">${url}</guid><pubDate>${new Date(article.date).toUTCString()}</pubDate><description>${escapeXml(article.description)}</description></item>`;
+}).join("");
+const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Josue Somarribas — Blog</title><link>${origin}/blog</link><description>Field notes on UX, experimentation, CRO and front-end engineering.</description><language>en</language>${rssItems}</channel></rss>\n`;
+const robots = `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`;
+
+await mkdir(outputRoot, { recursive: true });
+await Promise.all([
+  writeFile(path.join(outputRoot, "robots.txt"), robots),
+  writeFile(path.join(outputRoot, "sitemap.xml"), sitemap),
+  writeFile(path.join(outputRoot, "rss.xml"), rss),
+]);
