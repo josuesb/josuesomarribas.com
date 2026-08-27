@@ -2,6 +2,9 @@ import WritingIndex from "./WritingIndex";
 import type { ArticleMeta } from "../../lib/content";
 import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
+import Image from "next/image";
+
+const writingArtwork = ["01-libro-base", "02-pagina-codigo", "03-pagina-notas", "04-marcador-rojo", "05-cursor"];
 
 const C={
   en:{work:"Work",experiments:"Experiments",writing:"Writing",about:"About",resume:"Résumé",talk:"Let's talk",label:"WRITING · NOTES FROM THE WORK",h1a:"Things I’m learning,",h1b:"building and",h1em:"questioning.",lead:"Field notes on UX, experimentation, front-end craft and the messy thinking behind better digital products.",by:"Written by Josue Somarribas　·　Costa Rica → Spain",featured:"FEATURED NOTE",title:"The Cost of FOUC: How Flicker Kills A/B Test Validity",desc:"When an experiment flashes the original experience before the variant, the damage is more than visual. It changes behavior—and the validity of what you measure.",read:"Read the note",quote:"Not everything worth publishing begins as a case study.",quote2:"Some ideas start as a bug, a failed test, a browser quirk or a question I couldn’t leave alone.",follow:"Follow the rabbit hole.",follow2:"Occasional notes. No content calendar. No growth-hack theatre.",email:"Email address",send:"Send me new notes",rss:"RSS feed",compare:"Want to compare notes?",start:"Start a conversation",base:"Based in Spain　·　CET　·　English + Spanish"},
@@ -10,7 +13,7 @@ const C={
 
 export default function WritingPage({locale,articles}:{locale:"en"|"es";articles:ArticleMeta[]}){const t=C[locale];return <main className="writing-page" lang={locale}>
   <section className="writing-hero"><SiteNav locale={locale} current="writing"/>
-    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art"><div className="writing-sun"/><div className="writing-waves"><i/><i/><i/></div><div className="book"><div className="book-code">{"</>"}<p/><p/><p/><p/><p/><p/></div><div className="book-page"><b>test idea</b><p/><p/><div className="book-heat"><i/><i/></div><span>⌁</span></div><div className="bookmark"/></div></div></div>
+    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art" role="img" aria-label="Open notebook with code and experiment notes"><Image className="writing-decor writing-sun-asset" src="/assets/global/sol-rojo-texturizado.svg" alt="" aria-hidden="true" width={1024} height={1024}/><Image className="writing-decor writing-waves-asset" src="/assets/global/ondas-marfil-3-lineas.svg" alt="" aria-hidden="true" width={1400} height={360}/>{writingArtwork.map((file,index)=><Image key={file} className={`writing-art-layer writing-art-${index+1}`} src={`/assets/writing-hero/${file}.png`} alt="" aria-hidden="true" width={3600} height={2200} priority={index<2}/>)}</div></div>
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>
   </section>
