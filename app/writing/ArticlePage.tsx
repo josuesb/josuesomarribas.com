@@ -20,7 +20,9 @@ function prepareBody(body:string) {
 }
 
 export default function ArticlePage({ article, locale }:{ article:Article; locale:"en"|"es" }) {
-  const indexHref = locale === "es" ? "/es/writing" : "/writing";
+  const indexHref = locale === "es" ? "/es/blog" : "/blog";
+  const articlePath = `${locale === "es" ? "/es" : ""}/blog/${article.slug}`;
+  const articleUrl = `https://josuesomarribas.com${articlePath}`;
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
   const isFouc = /fouc/i.test(article.slug);
@@ -28,7 +30,8 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
   const labels = locale === "es"
     ? { writing:"Artículos", back:"Volver a artículos", note:"Este artículo todavía está disponible únicamente en inglés.", talk:"Hablemos", compare:"¿Comparamos notas?", conversation:"Iniciar conversación", contents:"EN ESTE ARTÍCULO", share:"COMPARTIR" }
     : { writing:"Writing", back:"Back to Writing", note:"", talk:"Let’s talk", compare:"Want to compare notes?", conversation:"Start a conversation", contents:"IN THIS NOTE", share:"SHARE" };
-  const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, datePublished:article.date, image:`https://josuesomarribas.com${article.image}`, author:{ "@type":"Person", name:"Josue Somarribas", url:"https://josuesomarribas.com" }, mainEntityOfPage:`https://josuesomarribas.com/writing/${article.slug}` };
+  const schemaImage = article.image.startsWith("http") ? article.image : `https://josuesomarribas.com${article.image}`;
+  const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, image:schemaImage, datePublished:article.date, dateModified:article.date, author:{ "@type":"Person", name:"Josué Somarribas", url:"https://www.linkedin.com/in/josuesb/" }, url:articleUrl, mainEntityOfPage:{ "@type":"WebPage", "@id":articleUrl }, inLanguage:locale };
 
   return <main className="article-page" lang="en">
     <div className="article-nav"><SiteNav locale={locale} current="writing"/></div>
@@ -37,7 +40,7 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
       <aside className="article-sidebar">
         <b>{labels.contents}</b>
         <nav>{headings.slice(0, 7).map(heading => <a key={heading.id} href={`#${heading.id}`}>{heading.label}</a>)}</nav>
-        <div className="article-share"><b>{labels.share}</b><div><a href={`mailto:?subject=${encodeURIComponent(article.title)}&body=https://josuesomarribas.com/writing/${article.slug}`}>✉</a><a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://josuesomarribas.com/writing/${article.slug}`)}`}>in</a><a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://josuesomarribas.com/writing/${article.slug}`)}&text=${encodeURIComponent(article.title)}`}>𝕏</a></div></div>
+        <div className="article-share"><b>{labels.share}</b><div><a href={`mailto:?subject=${encodeURIComponent(article.title)}&body=${encodeURIComponent(articleUrl)}`}>✉</a><a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`}>in</a><a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(article.title)}`}>𝕏</a></div></div>
       </aside>
       <article className="article-shell">
         {labels.note && <p className="translation-note">{labels.note}</p>}

@@ -47,7 +47,7 @@ function clusterLabel(cluster: string, locale: Locale) {
 }
 
 function articleHref(article: ArticleMeta, locale: Locale) {
-  return `${locale === "es" ? "/es" : ""}/writing/${article.slug}`;
+  return `${locale === "es" ? "/es" : ""}/blog/${article.slug}`;
 }
 
 export default function WritingIndex({ locale, articles }:{ locale:Locale; articles:ArticleMeta[] }) {
