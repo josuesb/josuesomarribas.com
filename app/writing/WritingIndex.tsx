@@ -8,15 +8,20 @@ type Locale = "en" | "es";
 
 const INITIAL_ARCHIVE_SIZE = 7;
 const LOAD_MORE_SIZE = 8;
+const FEATURED_SLUGS = [
+  "the-cost-of-fouc-how-content-flicker-kills-test-validity",
+  "json-ld-for-case-studies-specific-schema-for-ux-portfolios",
+  "the-squircle-in-mobile-cro-superellipses-and-cognitive-friction",
+];
 
 const copy = {
   en: {
-    search:"Search articles", all:"All topics", featured:"Start here", archive:"Explore the archive",
+    search:"Search articles", all:"All topics", featured:"Start here", archive:"Latest notes",
     notes:"articles", updated:"New notes, published irregularly", min:"min read",
     empty:"No articles match your search.", more:"Load more articles", showing:"Showing",
   },
   es: {
-    search:"Buscar artículos", all:"Todos los temas", featured:"Empieza aquí", archive:"Explora el archivo",
+    search:"Buscar artículos", all:"Todos los temas", featured:"Empieza aquí", archive:"Últimas notas",
     notes:"artículos", updated:"Nuevas notas, sin calendario fijo", min:"min de lectura",
     empty:"No hay artículos que coincidan con la búsqueda.", more:"Cargar más artículos", showing:"Mostrando",
   },
@@ -56,8 +61,9 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     (filter === "All" || article.cluster === filter) &&
     `${article.title} ${article.description} ${article.tags.join(" ")}`.toLowerCase().includes(query.toLowerCase())
   ), [articles, filter, query]);
-  const featured = isBrowsing ? [] : articles.slice(0, 3);
-  const archive = isBrowsing ? matches : matches.slice(3);
+  const featured = isBrowsing ? [] : FEATURED_SLUGS.map(slug => articles.find(article => article.slug === slug)).filter((article): article is ArticleMeta => Boolean(article));
+  const featuredSlugs = new Set(featured.map(article => article.slug));
+  const archive = isBrowsing ? matches : matches.filter(article => !featuredSlugs.has(article.slug));
   const visible = archive.slice(0, visibleCount);
 
   const chooseFilter = (value: string) => {
@@ -81,11 +87,12 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     </section>}
 
     <section className="latest" aria-labelledby="archive-heading">
-      <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div><small>{t.showing} {Math.min(visible.length, archive.length)} / {archive.length}</small></div>
-      <div className="notes-list">{visible.map(article => <a className="note-row" href={articleHref(article, locale)} key={article.slug} aria-label={article.title}>
-        <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(article.slug, article.image)})` }}/>
+      <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div><div className="archive-view" aria-hidden="true"><span>List</span><i>/</i><span>Visual</span></div></div>
+      <div className="notes-list">{visible.map((article, index) => <a className="note-row" href={articleHref(article, locale)} key={article.slug} aria-label={article.title}>
+        <span className="note-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
         <div className="note-copy"><small>{clusterLabel(article.cluster, locale)}</small><h3>{article.title}</h3><p>{article.description}</p></div>
         <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span><b aria-hidden="true">↗</b></div>
+        <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(article.slug, article.image)})` }}/>
       </a>)}</div>
       {visible.length < archive.length && <button className="load-more" type="button" onClick={() => setVisibleCount(count => count + LOAD_MORE_SIZE)}>{t.more} <span aria-hidden="true">↓</span></button>}
       {!archive.length && <p className="empty-notes">{t.empty}</p>}
