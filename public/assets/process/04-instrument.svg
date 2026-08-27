@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140">
+  <rect width="240" height="140" fill="#0d0d0d" stroke="#5b403b"/>
+  <text x="18" y="32" fill="#bb75ce" font-family="monospace" font-size="10">trackEvent(<tspan fill="#58be79">'cta_click'</tspan>, {</text>
+  <text x="30" y="63" fill="#777" font-family="monospace" font-size="10">variant: <tspan fill="#58be79">'A'</tspan>,</text>
+  <text x="30" y="86" fill="#777" font-family="monospace" font-size="10">location: <tspan fill="#58be79">'hero'</tspan></text>
+  <text x="18" y="110" fill="#777" font-family="monospace" font-size="10">});</text>
+</svg>
