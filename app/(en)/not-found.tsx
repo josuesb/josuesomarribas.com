@@ -1,5 +1,7 @@
 import Image from "next/image";
 import SiteNav from "../../components/SiteNav";
+import brokenSun from "../../public/assets/404/broken-sun.png";
+import routeBlueprint from "../../public/assets/404/route-blueprint.png";
 import "./not-found.css";
 
 export default function NotFound() {
@@ -7,10 +9,10 @@ export default function NotFound() {
     <SiteNav />
     <section className="not-found-hero shell" aria-labelledby="not-found-title">
       <div className="not-found-code" aria-hidden="true">
-        <span>404</span>
+        <span data-text="404">404</span>
         <small>PX<br/>REF</small>
       </div>
-      <Image className="not-found-sun" src="/assets/404/broken-sun.png" alt="" aria-hidden="true" width={1200} height={1200} priority />
+      <Image className="not-found-sun" src={brokenSun} alt="" aria-hidden="true" priority />
       <div className="not-found-copy">
         <p className="not-found-label">FIELD NOTE · 404—EX</p>
         <h1 id="not-found-title">Signal lost.</h1>
@@ -23,7 +25,7 @@ export default function NotFound() {
     </section>
 
     <section className="not-found-diagram shell" aria-label="The observed route stopped before reaching its expected destination">
-      <Image src="/assets/404/route-blueprint.png" alt="Expected route reaches its destination; observed route ends without a match" width={1942} height={809} priority />
+      <Image src={routeBlueprint} alt="Expected route reaches its destination; observed route ends without a match" priority />
       <p aria-hidden="true">Try another<br/>path. ↙</p>
     </section>
 
