@@ -122,3 +122,60 @@ body{background-color:var(--paper);background-image:url('/assets/global/textura-
   .route-line i{margin-bottom:14px}
   .route-line span{display:none}
 }
+
+/* WCAG 2.1 AA: preserve the visual design while raising small-text contrast. */
+.cap h2{font-size:var(--text-base);letter-spacing:normal;margin:4px 0 5px}
+.tester aside strong{color:#246b2d}
+.font-options>div:last-child button,.pitch-nav i,.prototype span b{background:#b42318}
+.quote cite{color:#a5291e}
+
+/* Home refinement: preserve the editorial mockup hierarchy in code and PDF exports. */
+.hero>.nav{display:grid;grid-template-columns:90px minmax(480px,1fr) auto auto;gap:26px;justify-content:initial}
+.hero>.nav .nav-links{justify-content:center}
+.hero>.nav .language-switcher{margin:0}
+.hero-grid{grid-template-columns:.92fr 1.08fr;gap:46px;min-height:550px}
+.hero-copy{position:relative;z-index:2}
+.hero h1{font-size:clamp(3.2rem,5vw,4.55rem);line-height:1.08;max-width:610px}
+.hero .lead{max-width:530px}
+.hero>.meta{font-weight:500;color:#e4dfd1}
+.cap-icon svg{width:30px;height:30px;display:block}
+.more-work-heading{display:flex;align-items:baseline;gap:24px;margin:34px 0 15px;padding-top:28px;border-top:1px solid var(--line)}
+.more-work-heading p{margin:0;font:700 var(--text-lg) Georgia,serif}
+.more-work-heading span{font-size:var(--text-sm);color:#4f5961}
+.more-projects{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tester .fake-label{display:block;font-size:var(--text-micro);margin:8px 88px 3px 0}
+.tester .fake-input{margin-right:88px}
+.project-secondary{min-height:510px}
+.project-secondary>p{max-width:600px}
+.lock svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.process{padding:42px 0 38px}
+.process-intro{margin:5px 0 26px;color:#4b555d;font-size:var(--text-sm)}
+.process-grid{gap:0;margin-top:0;overflow:visible}
+.process article,.process article:first-child,.process article:last-child{min-height:260px;padding:8px 24px 8px 20px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent}
+.process article:first-child{padding-left:8px}
+.process article:last-child{border-right:0}
+.process article:not(:last-child)::after{content:"→";position:absolute;z-index:2;right:-13px;top:42%;width:26px;height:26px;display:grid;place-items:center;background:#faf6ec;font-size:var(--text-xl)}
+.process article:hover{transform:none}
+.qa-list{display:grid;gap:5px}
+.qa-list span{display:block}
+.process-loop{height:38px;margin:5px 13px 0 55px;display:flex;align-items:flex-end;gap:12px;color:#59616a;font:var(--text-micro) var(--font-mono)}
+.process-loop i{height:31px;flex:1;border:1px solid var(--ink);border-top:0;border-radius:0 0 10px 10px;position:relative}
+.process-loop i::before{content:"↑";position:absolute;left:-5px;top:-9px;color:var(--ink);font:var(--text-base) var(--font-geist)}
+.quote-inner{grid-template-columns:110px minmax(300px,1fr) auto;gap:30px}
+.quote blockquote{font-size:var(--text-lg)}
+.contact-grid{min-height:190px;grid-template-columns:.85fr 1.15fr;gap:70px}
+.contact h2{font-size:var(--text-3xl)}
+.contact .actions{position:relative;z-index:3}
+.contact .btn-outline{border-color:#a8c6ff}
+footer .footer-url,footer .footer-email{font-size:var(--text-xs);font-weight:500;color:#d7d3c8}
+footer .footer-email{display:none}
+
+@media(max-width:1050px){
+  .hero>.nav{grid-template-columns:70px 1fr auto auto;gap:18px}.hero>.nav .nav-links{gap:24px}.more-projects{grid-template-columns:1fr 1fr}.nda-copy{padding-left:45px}footer .footer-url{display:none}
+}
+@media(max-width:900px){
+  .hero>.nav{display:flex}.hero-grid{grid-template-columns:1fr}.more-projects{grid-template-columns:1fr}.project-secondary{min-height:auto}.process-grid{grid-template-columns:1fr 1fr;gap:16px}.process article,.process article:first-child,.process article:last-child{padding:18px;border:1px solid var(--line);border-radius:8px}.process article:not(:last-child)::after,.process-loop{display:none}.more-work-heading{align-items:flex-start;flex-direction:column;gap:6px}
+}
+@media(max-width:600px){
+  .hero h1{font-size:clamp(2.45rem,12vw,3.1rem)}.hero-grid{gap:8px}.more-projects{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.quote-inner{grid-template-columns:55px minmax(0,1fr);gap:8px}.quote blockquote{font-size:var(--text-base);min-width:0}.contact-grid{gap:20px}.contact .actions{display:grid}.contact .btn{width:100%}footer .footer-email{display:block;width:100%;order:4}footer div div{gap:18px;flex-wrap:wrap}
+}
