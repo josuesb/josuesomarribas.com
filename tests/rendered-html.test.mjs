@@ -2,27 +2,47 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const routes = [
-  ["../dist/client/index.html", /Josue Somarribas/],
-  ["../dist/client/es.html", /Ingeniero UX/],
-  ["../dist/client/writing.html", /Writing/],
-  ["../dist/client/es/writing.html", /Artículos/],
-];
+const output = (path) => new URL(`../dist/client/${path}`, import.meta.url);
 
-test("exports every public route as static HTML", async () => {
+test("exports canonical public pages as static HTML", async () => {
+  const routes = [
+    ["index.html", /Josue Somarribas/],
+    ["es.html", /Ingeniero UX/],
+    ["about.html", /Designer by instinct/],
+    ["blog.html", /Things I’m learning/],
+    ["es/blog.html", /Cosas que estoy aprendiendo/],
+  ];
   for (const [path, expectedContent] of routes) {
-    const html = await readFile(new URL(path, import.meta.url), "utf8");
+    const html = await readFile(output(path), "utf8");
     assert.match(html, /^<!doctype html>/i, path);
     assert.match(html, expectedContent, path);
   }
 });
 
-test("configures Vercel to serve only the static client output", async () => {
-  const config = JSON.parse(
-    await readFile(new URL("../vercel.json", import.meta.url), "utf8"),
-  );
+test("emits robots, sitemap and RSS into the deployed static directory", async () => {
+  const [robots, sitemap, rss] = await Promise.all([
+    readFile(output("robots.txt"), "utf8"),
+    readFile(output("sitemap.xml"), "utf8"),
+    readFile(output("rss.xml"), "utf8"),
+  ]);
+  assert.match(robots, /Sitemap: https:\/\/josuesomarribas\.com\/sitemap\.xml/);
+  for (const route of ["/about", "/blog", "/es/blog"]) assert.match(sitemap, new RegExp(`<loc>https://josuesomarribas\\.com${route}</loc>`));
+  assert.match(sitemap, /<loc>https:\/\/josuesomarribas\.com\/blog\/the-cost-of-fouc-how-content-flicker-kills-test-validity<\/loc>/);
+  assert.doesNotMatch(sitemap, /<loc>[^<]*\/writing/);
+  assert.match(rss, /<link>https:\/\/josuesomarribas\.com\/blog<\/link>/);
+  assert.match(rss, /<guid isPermaLink="true">https:\/\/josuesomarribas\.com\/blog\//);
+  assert.doesNotMatch(rss, /josuesomarribas\.com\/writing/);
+});
 
+test("configures Vercel static output and permanent legacy redirects", async () => {
+  const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
   assert.equal(config.framework, null);
   assert.equal(config.outputDirectory, "dist/client");
   assert.equal(config.cleanUrls, true);
+  assert.deepEqual(config.redirects, [
+    { source: "/writing", destination: "/blog", permanent: true },
+    { source: "/writing/:slug", destination: "/blog/:slug", permanent: true },
+    { source: "/es/writing", destination: "/es/blog", permanent: true },
+    { source: "/es/writing/:slug", destination: "/es/blog/:slug", permanent: true },
+  ]);
 });

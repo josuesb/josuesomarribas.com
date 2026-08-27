@@ -110,7 +110,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>5 Seconds Tester</h3><p>A live tool for testing whether a value proposition is understood in five seconds.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/5-seconds-tester.png" alt="5 Seconds Tester upload and test interface" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>Research workflow</span></div>
-              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer">Try the tool <Arrow /></a><a href="#process">Read the story →</a></div>
+              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer">Try the tool <Arrow /></a><a href="#process">See how I work →</a></div>
             </article>
             <article className="project project-blue project-secondary">
               <header><span className="number">05</span><small>EXPERIMENT · UX ENGINEERING</small></header>

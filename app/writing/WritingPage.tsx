@@ -6,6 +6,7 @@ import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
 
 const writingArtwork = ["01-libro-base", "02-pagina-codigo", "03-pagina-notas", "04-marcador-rojo", "05-cursor"];
+const mailchimpAction = "https://josuesomarribas.us10.list-manage.com/subscribe/post?u=a0e13242fe65e96acc0169bef&id=b6eb284256&f_id=00addce1f0";
 
 const C={
   en:{work:"Work",experiments:"Experiments",writing:"Writing",about:"About",resume:"Résumé",talk:"Let's talk",label:"WRITING · NOTES FROM THE WORK",h1a:"Things I’m learning,",h1b:"building and",h1em:"questioning.",lead:"Field notes on UX, experimentation, front-end craft and the messy thinking behind better digital products.",by:"Written by Josue Somarribas　·　Costa Rica → Spain",featured:"FEATURED NOTE",title:"The Cost of FOUC: How Flicker Kills A/B Test Validity",desc:"When an experiment flashes the original experience before the variant, the damage is more than visual. It changes behavior—and the validity of what you measure.",read:"Read the note",quote:"Not everything worth publishing begins as a case study.",quote2:"Some ideas start as a bug, a failed test, a browser quirk or a question I couldn’t leave alone.",follow:"Follow the rabbit hole.",follow2:"Occasional notes. No content calendar. No growth-hack theatre.",email:"Email address",send:"Get new notes",rss:"RSS feed",compare:"Want to compare notes?",start:"Start a conversation",base:"Based in Spain　·　CET　·　English + Spanish"},
@@ -18,7 +19,7 @@ export default function WritingPage({locale,articles}:{locale:"en"|"es";articles
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>
   </section>
-  <section className="newsletter"><div className="shell"><div><h2>{t.follow}</h2><p>{t.follow2}</p></div><form><div><input type="email" placeholder={t.email} aria-label={t.email}/><button type="button">{t.send}</button></div><a href="/rss.xml">{t.rss} ↗</a></form><div className="newsletter-art"><i/><b>≋</b></div></div></section>
+  <section className="newsletter"><div className="shell"><div><h2>{t.follow}</h2><p>{t.follow2}</p></div><form action={mailchimpAction} method="post" target="_blank"><div><input type="email" name="EMAIL" id={`newsletter-email-${locale}`} placeholder={t.email} aria-label={t.email} autoComplete="email" required/><button type="submit" name="subscribe">{t.send}</button></div><div className="newsletter-honeypot" aria-hidden="true"><input type="text" name="b_a0e13242fe65e96acc0169bef_b6eb284256" tabIndex={-1} defaultValue="" autoComplete="off"/></div><a href="/rss.xml">{t.rss} ↗</a></form><div className="newsletter-art"><i/><b>≋</b></div></div></section>
   <section className="writing-contact"><div className="shell"><h2>{t.compare}</h2><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">{t.start} ↗</a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/><p>{t.base}</p></div></section>
   <SiteFooter locale={locale} current="writing"/>
   </main>}

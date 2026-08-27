@@ -6,6 +6,8 @@ const labels = {
   es:{ work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", resume:"Currículum", talk:"Hablemos" },
 };
 
+const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
+
 export default function SiteNav({ locale="en", current="home" }:{ locale?:Locale; current?:Current }) {
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
@@ -15,7 +17,7 @@ export default function SiteNav({ locale="en", current="home" }:{ locale?:Locale
     <a href={`${home}#process`}>{t.experiments}</a>
     <a className={current === "writing" ? "current" : undefined} href={writing}>{t.writing}</a>
     <a className={current === "about" ? "current" : undefined} href="/about">{t.about}</a>
-    <a href="/about#route">{t.resume}</a>
+    <a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
   </>;
   const language = <div className="language-switcher" aria-label="Language selector">
     <a className={locale === "en" ? "active" : undefined} href={current === "writing" ? "/blog" : current === "about" ? "/about" : "/"} lang="en">EN</a><span>/</span>

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
+const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
 const aboutHeroLayers = ["01-cuaderno-field-kit", "02-mapa-costa-rica-spain", "03-ventana-experimento", "04-tarjeta-ab", "05-reloj-madrid", "06-nota-investigacion", "07-sello-curious"];
 const beliefImages:Record<string,string> = { ship:"02-idea-ship-learn", results:"03-resultados-planos", details:"04-detalle-ui-confianza" };
 
@@ -37,7 +38,7 @@ export default function AboutPage() {
           <p className="about-label">ABOUT × THE PERSON BETWEEN THE PIXELS</p>
           <h1>Designer by instinct.<br />Engineer by practice.<br />Experimenter by <em>curiosity.</em></h1>
           <p className="about-lead">I&apos;m Josue Somarribas, a UX Engineer and CRO Developer connecting human behavior, interface craft and production code.</p>
-          <div className="actions"><a className="btn btn-red" href="#route">Explore career path ↓</a><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a></div>
+          <div className="actions"><a className="btn btn-red" href={resumeHref} download>Download résumé ↓</a><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a></div>
           <p className="about-meta">8+ years across UX and web development · Based in Spain · Born in Costa Rica</p>
         </div>
         <div className="about-collage" role="img" aria-label="Research, experimentation and a journey from Costa Rica to Spain">
@@ -55,7 +56,7 @@ export default function AboutPage() {
 
     <section className="beliefs shell"><h2>A few things I believe</h2><div className="belief-grid">{beliefs.map(([n,t,d,c])=><article className={c === "ship" ? "featured" : ""} key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p>{beliefImages[c] ? <Image className="belief-asset" src={`/assets/about-secundarios/${beliefImages[c]}.svg`} alt="" aria-hidden="true" width={1100} height={700}/> : <Image className="belief-arrow" src="/assets/global/flecha-manuscrita-roja.svg" alt="" aria-hidden="true" width={800} height={500}/>}</article>)}</div></section>
 
-    <section className="route shell" id="route"><div className="route-head"><h2>Career path</h2><a className="btn btn-dark" href="mailto:josuesomarribasb@gmail.com?subject=Résumé%20request">Request résumé <Arrow /></a></div><div className="route-line">{route.map(([icon,title,text])=><article key={title}><i aria-hidden="true">{icon}</i><span/><h3>{title}</h3><p>{text}</p></article>)}</div><p className="industries">Enterprise software · Education · E-commerce · Finance · Health · Travel</p></section>
+    <section className="route shell" id="route"><div className="route-head"><h2>Career path</h2><a className="btn btn-dark" href={resumeHref} target="_blank" rel="noreferrer">View résumé <Arrow /></a></div><div className="route-line">{route.map(([icon,title,text])=><article key={title}><i aria-hidden="true">{icon}</i><span/><h3>{title}</h3><p>{text}</p></article>)}</div><p className="industries">Enterprise software · Education · E-commerce · Finance · Health · Travel</p></section>
 
     <section className="team"><div className="shell"><h2>What I bring to a team</h2><Image className="team-icons-asset" src="/assets/about-secundarios/06-iconos-aporte-equipo.svg" alt="" aria-hidden="true" width={1350} height={460}/><div className="team-grid"><article><div><h3>See the problem</h3><p>Research, synthesis, journey friction, hypothesis framing.</p></div></article><article><div><h3>Shape the experience</h3><p>Flows, interaction design, prototypes, design systems.</p></div></article><article><div><h3>Make it real</h3><p>Front-end, responsive behavior, accessibility, analytics and experiment QA.</p></div></article></div><p className="team-flow">OBSERVE → FRAME → PROTOTYPE → INSTRUMENT → SHIP → LEARN</p></div></section>
 

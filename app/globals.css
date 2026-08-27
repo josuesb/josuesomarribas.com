@@ -478,3 +478,11 @@ footer .footer-email{display:none}
   outline:3px solid #ff5a40;
   outline-offset:3px;
 }
+
+.newsletter-honeypot{
+  position:absolute;
+  left:-5000px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
