@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100">
-  <rect x="1320" y="512" width="303" height="455" rx="20" fill="#f7f0df" stroke="#e0d7c3" stroke-width="2"/>
-  <g fill="#17222b" font-family="Arial,sans-serif" font-weight="700"><text x="1352" y="594" font-size="27">Illustrative</text><text x="1352" y="641" font-size="27">experiment</text></g>
-  <path d="M1362 770l42 24 54-111 34 94 55-119" fill="none" stroke="#064fc5" stroke-width="13"/>
-  <path d="M1353 816h238" stroke="#a9a08d" stroke-width="3"/>
-  <g fill="#91a8cd"><rect x="1353" y="850" width="238" height="14" rx="7"/><rect x="1353" y="881" width="238" height="14" rx="7"/></g>
-  <g fill="#77766f" font-family="Arial,sans-serif" font-size="16"><text x="1353" y="932">Illustrative only.</text><text x="1353" y="962">Not performance data.</text></g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100"><rect x="1308" y="480" width="330" height="500" rx="20" fill="#f7f0df" stroke="#d8cfbc" stroke-width="2"/><g fill="#17222b" font-family="Arial,sans-serif" font-weight="700"><text x="1342" y="558" font-size="25">Illustrative</text><text x="1342" y="600" font-size="25">experiment</text></g><path d="M1350 760l40 24 54-115 38 102 60-135" fill="none" stroke="#064fc5" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter"/><path d="M1342 810h260" stroke="#a9a08d" stroke-width="3"/><g fill="#91a8cd"><rect x="1342" y="843" width="260" height="13" rx="7"/><rect x="1342" y="873" width="225" height="13" rx="7"/></g><g fill="#6e706d" font-family="Arial,sans-serif" font-size="15"><text x="1342" y="927">Illustrative only.</text><text x="1342" y="955">Not performance data.</text></g></svg>
