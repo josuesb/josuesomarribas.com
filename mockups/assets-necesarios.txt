@@ -140,8 +140,8 @@ ABOUT — FRENCH DEEP TECH V1
 40. about-tarjeta-ab.png [CAPA]
     Tarjeta crema pequeña con opciones A y B.
 
-41. about-reloj-madrid.png [CAPA]
-    Nota crema pequeña con reloj analógico y texto Madrid/CET.
+41. about-reloj-barcelona.png [CAPA]
+    Nota crema pequeña con reloj analógico y texto Barcelona/CET.
 
 42. about-nota-investigacion.png [CAPA]
     Hoja cuadriculada inclinada con pregunta manuscrita de investigación.

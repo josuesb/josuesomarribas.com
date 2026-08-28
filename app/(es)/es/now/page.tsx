@@ -20,7 +20,7 @@ export default function NowPage() {
     <section className="now-hero shell">
       <Image className="now-ruler" src="/assets/now/ruler.svg" alt="" aria-hidden="true" width={72} height={280} unoptimized/>
       <h1>NOW</h1>
-      <div className="now-hero-copy"><Image className="now-hero-arrow" src="/assets/now/hero-arrow.svg" alt="" aria-hidden="true" width={82} height={36} unoptimized/><h2>En qué estoy<br/>enfocado<br/>ahora.</h2><p>Actualizado en agosto de 2026 · Madrid</p></div>
+      <div className="now-hero-copy"><Image className="now-hero-arrow" src="/assets/now/hero-arrow.svg" alt="" aria-hidden="true" width={82} height={36} unoptimized/><h2>En qué estoy<br/>enfocado<br/>ahora.</h2><p>Actualizado en agosto de 2026 · Barcelona</p></div>
       <div className="now-hero-note"><Image src="/assets/global/sol-rojo-texturizado.svg" alt="" width={180} height={180} unoptimized/><p>Crear mejores<br/>experiencias.<br/>Medir lo que<br/>importa.</p></div>
     </section>
 
@@ -43,6 +43,6 @@ export default function NowPage() {
     </section>
 
     <section className="now-cta shell"><h2>¿Tienes un problema<br/>de producto difícil?</h2><p>Ayudo a equipos a crear mejores experiencias combinando ingeniería UX, experimentación y decisiones basadas en datos.</p><a href="mailto:josuesomarribasb@gmail.com">Iniciar una conversación <Arrow/></a></section>
-    <footer className="now-footer"><div className="shell"><a className="logo" href="/es">JS.</a><p>Madrid, España<br/>Disponible internacionalmente</p><nav><a href="/es#work">Proyectos</a><a href="/es#process">Experimentos</a><a href="/es/blog">Artículos</a></nav><nav><a href="/about">Sobre mí</a><a href="/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf">Currículum</a><a href="/es/now">Ahora</a></nav><p><a href="mailto:josuesomarribasb@gmail.com">josuesomarribasb@gmail.com</a><br/>+34 600 123 456</p><b>HECHO<br/>CON CUIDADO<br/>Y CURIOSIDAD</b></div><div className="shell now-legal"><span>© 2026 Josue Somarribas</span><span>Privacidad · Términos · Cookies</span></div></footer>
+    <footer className="now-footer"><div className="shell"><a className="logo" href="/es">JS.</a><p>Barcelona, España<br/>Disponible internacionalmente</p><nav><a href="/es#work">Proyectos</a><a href="/es#process">Experimentos</a><a href="/es/blog">Artículos</a></nav><nav><a href="/about">Sobre mí</a><a href="/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf">Currículum</a><a href="/es/now">Ahora</a></nav><p><a href="mailto:josuesomarribasb@gmail.com">josuesomarribasb@gmail.com</a><br/>+34 600 123 456</p><b>HECHO<br/>CON CUIDADO<br/>Y CURIOSIDAD</b></div><div className="shell now-legal"><span>© 2026 Josue Somarribas</span><span>Privacidad · Términos · Cookies</span></div></footer>
   </main>;
 }

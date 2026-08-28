@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
-const aboutHeroLayers = ["01-cuaderno-field-kit", "02-mapa-costa-rica-spain", "03-ventana-experimento", "04-tarjeta-ab", "05-reloj-madrid", "06-nota-investigacion", "07-sello-curious"];
+const aboutHeroLayers = ["01-cuaderno-field-kit", "02-mapa-costa-rica-spain", "03-ventana-experimento", "04-tarjeta-ab", "05-reloj-barcelona", "06-nota-investigacion", "07-sello-curious"];
 const beliefImages:Record<string,string> = { ship:"02-idea-ship-learn", results:"03-resultados-planos", details:"04-detalle-ui-confianza" };
 
 export default function AboutPage() {

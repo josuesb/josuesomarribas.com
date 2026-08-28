@@ -304,9 +304,9 @@ footer .footer-email{display:none}
 }
 .hero .nav{border-bottom-color:#5b403b}
 .hero-grid{
-  width:min(1400px,calc(100% - 72px));
-  grid-template-columns:minmax(430px,.82fr) minmax(650px,1.18fr);
-  gap:clamp(44px,5vw,84px);
+  width:min(1180px,calc(100% - 48px));
+  grid-template-columns:minmax(400px,.88fr) minmax(600px,1.12fr);
+  gap:clamp(36px,4vw,56px);
   align-items:center;
   min-height:510px;
   padding-block:42px 38px;
@@ -322,7 +322,7 @@ footer .footer-email{display:none}
 .hero-copy .btn-red{background:var(--hero-coral);box-shadow:none}
 .hero-copy .btn-outline{border-color:#ffffff38}
 .hero-copy .btn-outline:hover{border-color:#fff;background:#ffffff0d}
-.hero>.meta{width:min(1400px,calc(100% - 72px));margin:0 auto;padding:17px 0 19px;border-top:1px solid #5b403b55;color:#bfa09a;font:600 .68rem/1.5 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
+.hero>.meta{width:min(1180px,calc(100% - 48px));margin:0 auto;padding:17px 0 19px;border-top:1px solid #5b403b55;color:#bfa09a;font:600 .68rem/1.5 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
 .hero>.meta i{display:inline-block;width:8px;height:8px;margin-right:14px;border-radius:50%;background:var(--hero-coral);box-shadow:0 0 16px #ff5b3d}
 
 .hero-signal-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-top:54px;color:#ddd}
