@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Framer", "Vercel", "Static site", "AI-assisted development", "Portfolio", "Web development"]
 audio: ""
-sourceImage: ""
-imageAlt: ""
-image: "/images/blog/default-cover.png"
+sourceImage: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel.png"
+imageAlt: "Editorial collage showing a fragmented visual canvas transforming through a version-control graph into an ordered stack of static web pages."
+image: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel.png"
 canonical: ""
 featured: false
 downloadUrl: ""
