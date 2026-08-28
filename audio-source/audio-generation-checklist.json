@@ -50,6 +50,56 @@
       "output": "public/audio/blog/en/ai-mentions-without-clicks.mp3",
       "archived_source": "audio-source/en/done/ai-mentions-without-clicks.txt",
       "generated_at": "2026-08-28T16:56:50.139052+00:00"
+    },
+    "en/airbnb-as-a-product-what-hosting-taught-me-about-user-experience.txt": {
+      "fingerprint": "f0ce6d45cf69bdc3ae19ca4f035d3107ec16e542ccfb6866f747bfa08ad1e5b3",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/airbnb-as-a-product-what-hosting-taught-me-about-user-experience.mp3",
+      "archived_source": "audio-source/en/done/airbnb-as-a-product-what-hosting-taught-me-about-user-experience.txt",
+      "generated_at": "2026-08-28T17:01:28.892460+00:00"
+    },
+    "en/alex-an-user-persona-based-on-user-research.txt": {
+      "fingerprint": "c74e16fc100413fe582292b270629df66e61d0b93dd153e35ea90e5ba964fd68",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/alex-an-user-persona-based-on-user-research.mp3",
+      "archived_source": "audio-source/en/done/alex-an-user-persona-based-on-user-research.txt",
+      "generated_at": "2026-08-28T17:02:47.465403+00:00"
+    },
+    "en/avoiding-haunted-house-tag-managers.txt": {
+      "fingerprint": "5f800fb9143e32fccd4c3ae5248fa3616ceeb7620d37637d2c7d8474d12df5a7",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/avoiding-haunted-house-tag-managers.mp3",
+      "archived_source": "audio-source/en/done/avoiding-haunted-house-tag-managers.txt",
+      "generated_at": "2026-08-28T17:04:00.252581+00:00"
+    },
+    "en/bitely-responsive-recipe-app-design.txt": {
+      "fingerprint": "9206539f4fd33cb563aede5837663ea704986a0fddc2a99f523f8a207a01db3c",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/bitely-responsive-recipe-app-design.mp3",
+      "archived_source": "audio-source/en/done/bitely-responsive-recipe-app-design.txt",
+      "generated_at": "2026-08-28T17:04:45.620829+00:00"
+    },
+    "en/building-a-travel-app-a-work-in-progress.txt": {
+      "fingerprint": "cedf95986471084a2b8fa64a46ebf60fc86e6f4f5ff5d649fc8a734dcf2ffd44",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/building-a-travel-app-a-work-in-progress.mp3",
+      "archived_source": "audio-source/en/done/building-a-travel-app-a-work-in-progress.txt",
+      "generated_at": "2026-08-28T17:05:35.824298+00:00"
     }
   }
 }

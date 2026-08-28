@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ArticleTools({ title, locale = "en", audioSrc, mode = "actions" }:{ title:string; locale?:"en"|"es"; audioSrc?:string; mode?:"actions"|"progress"|"sidebar-progress" }) {
   const [progress, setProgress] = useState(0);
-  const [copied, setCopied] = useState(false);
-  const [large, setLarge] = useState(false);
   const [listening, setListening] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -27,10 +25,6 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   }, []);
 
-  const copy = async () => {
-    await navigator.clipboard.writeText(window.location.href); setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
-  };
   const speakWithBrowser = () => {
     if (!("speechSynthesis" in window)) return;
     window.speechSynthesis.cancel();
@@ -73,10 +67,8 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
   };
 
   if (mode === "progress") return <div className="article-progress-line" aria-hidden="true"><i style={{ width:`${progress}%` }}/></div>;
-  if (mode === "sidebar-progress") return <div className="sidebar-progress"><b>READING PROGRESS</b><span>{progress}%</span><i><em style={{ width:`${progress}%` }}/></i></div>;
+  if (mode === "sidebar-progress") return <div className="sidebar-progress"><b>{locale === "es" ? "PROGRESO DE LECTURA" : "READING PROGRESS"}</b><span>{progress}%</span><i><em style={{ width:`${progress}%` }}/></i></div>;
   return <div className="article-actions" aria-label="Article tools">
-      <button onClick={copy}>↗ <span>{copied ? "Copied" : "Copy link"}</span></button>
       <button onClick={listen} aria-pressed={listening}>◉ <span>{listening ? (locale === "es" ? "Pausar" : "Pause") : (locale === "es" ? "Escuchar" : "Listen")}</span></button>
-      <button onClick={() => { setLarge(value => !value); document.documentElement.classList.toggle("large-article-text"); }} aria-pressed={large}>A <span>Text size</span></button>
     </div>;
 }
