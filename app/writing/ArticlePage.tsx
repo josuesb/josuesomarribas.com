@@ -1,4 +1,6 @@
 import Image from "next/image";
+import fs from "node:fs";
+import path from "node:path";
 import type { Article } from "../../lib/content";
 import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
@@ -19,6 +21,15 @@ function prepareBody(body:string) {
   return { html, headings };
 }
 
+function availableAudio(article:Article, locale:"en"|"es") {
+  const generatedUrl = `/audio/blog/${locale}/${article.slug}.mp3`;
+  const publicFile = (url:string) => path.join(process.cwd(), "public", url.replace(/^\//, ""));
+  if (fs.existsSync(publicFile(generatedUrl))) return generatedUrl;
+  if (!article.audio) return undefined;
+  if (article.audio.startsWith("/") && !fs.existsSync(publicFile(article.audio))) return undefined;
+  return article.audio;
+}
+
 export default function ArticlePage({ article, locale, hasSpanishTranslation=false }:{ article:Article; locale:"en"|"es"; hasSpanishTranslation?:boolean }) {
   const indexHref = locale === "es" ? "/es/blog" : "/blog";
   const articlePath = `${locale === "es" ? "/es" : ""}/blog/${article.slug}`;
@@ -27,6 +38,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
   const isFouc = /fouc/i.test(article.slug);
   const heroImage = isFouc ? "/assets/article-fouc/01-hero-diagrama.svg" : editorialImage(article.slug, article.image);
+  const audioSrc = availableAudio(article, locale);
   const labels = locale === "es"
     ? { writing:"Artículos", back:"Volver a artículos", note:"", talk:"Hablemos", compare:"¿Comparamos notas?", conversation:"Iniciar conversación", contents:"EN ESTE ARTÍCULO", share:"COMPARTIR", by:"Por Josue Somarribas", minRead:"min de lectura", updated:"Actualizado", takeaway:"La idea clave", takeawayText:"El pensamiento claro, una implementación cuidadosa y una medición honesta producen resultados más fiables.", author:"Escrito por Josue Somarribas", authorText:"UX Engineer y desarrollador CRO. Escribo sobre experimentación, desarrollo front-end y los detalles incómodos que existen entre ambos.", more:"Más sobre Josue" }
     : { writing:"Writing", back:"Back to Writing", note:"", talk:"Let’s talk", compare:"Want to compare notes?", conversation:"Start a conversation", contents:"IN THIS NOTE", share:"SHARE", by:"By Josue Somarribas", minRead:"min read", updated:"Updated", takeaway:"The takeaway", takeawayText:"Clear thinking, careful implementation and honest measurement produce results that are easier to trust.", author:"Written by Josue Somarribas", authorText:"UX Engineer and CRO Developer writing about experimentation, front-end craft and the uncomfortable details between them.", more:"More about Josue" };
@@ -50,7 +62,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
           <h1>{article.title}</h1>
           <p className="article-description">{article.description}</p>
           <div className="article-meta"><span>{labels.by}</span><span>•</span><span>{minutes} {labels.minRead}</span><span>•</span><time dateTime={article.date}>{labels.updated} {new Intl.DateTimeFormat(locale, { month:"short", year:"numeric" }).format(new Date(article.date))}</time></div>
-          <ArticleTools title={article.title}/>
+          <ArticleTools title={article.title} locale={locale} audioSrc={audioSrc}/>
           <Image src={heroImage} alt={article.imageAlt} width={1800} height={900} priority unoptimized/>
         </header>
         {isFouc && <div className="fouc-asset-story" aria-label="Visual explanation of flicker and experiment validity">

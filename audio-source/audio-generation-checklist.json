@@ -20,6 +20,16 @@
       "output": "public/audio/blog/en/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable.mp3",
       "archived_source": "audio-source/en/done/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable.txt",
       "generated_at": "2026-08-28T16:46:19.147393+00:00"
+    },
+    "en/ai-assisted-ui-design-faster-yes-better-not-always.txt": {
+      "fingerprint": "99114f0b7716814d85c682e8f6ed59b4f0a6a59623aea74319fa200566359998",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/ai-assisted-ui-design-faster-yes-better-not-always.mp3",
+      "archived_source": "audio-source/en/done/ai-assisted-ui-design-faster-yes-better-not-always.txt",
+      "generated_at": "2026-08-28T16:49:40.616622+00:00"
     }
   }
 }
