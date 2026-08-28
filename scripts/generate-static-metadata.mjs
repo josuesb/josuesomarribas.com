@@ -66,6 +66,8 @@ const sitemapEntries = [
   { url: origin, priority: "1.0", alternates: homeAlternates },
   { url: `${origin}/es`, priority: "1.0", alternates: homeAlternates },
   { url: `${origin}/about`, priority: "0.8" },
+  { url: `${origin}/now`, priority: "0.7", alternates: { en: `${origin}/now`, es: `${origin}/es/now` } },
+  { url: `${origin}/es/now`, priority: "0.7", alternates: { en: `${origin}/now`, es: `${origin}/es/now` } },
   { url: `${origin}/blog`, priority: "0.8", alternates: blogAlternates },
   { url: `${origin}/es/blog`, priority: "0.7", alternates: blogAlternates },
   ...articles.map((article) => ({ url: `${origin}/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates: spanishSlugs.has(article.slug) ? { en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } : undefined })),

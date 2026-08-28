@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   { url:origin, changeFrequency:"monthly", priority:1, alternates:{languages:{en:origin,es:`${origin}/es`}} },
   { url:`${origin}/es`, changeFrequency:"monthly", priority:1, alternates:{languages:{en:origin,es:`${origin}/es`}} },
   { url:`${origin}/about`, changeFrequency:"monthly", priority:.8 },
+  { url:`${origin}/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
+  { url:`${origin}/es/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
   { url:`${origin}/blog`, changeFrequency:"weekly", priority:.8, alternates:{languages:{en:`${origin}/blog`,es:`${origin}/es/blog`}} },
   { url:`${origin}/es/blog`, changeFrequency:"weekly", priority:.7, alternates:{languages:{en:`${origin}/blog`,es:`${origin}/es/blog`}} },
   ...getAllArticles().map(article => ({ url:`${origin}/blog/${article.slug}`, lastModified:new Date(article.date), changeFrequency:"yearly" as const, priority:.6, ...(spanishSlugs.has(article.slug) ? { alternates:{ languages:{ en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } } } : {}) })),

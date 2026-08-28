@@ -18,8 +18,6 @@ export default function WritingPage({locale,articles}:{locale:"en"|"es";articles
       <span className="notebook-layer notebook-halo" aria-hidden="true"/>
       <span className="notebook-layer notebook-blueprint" aria-hidden="true"/>
       <Image className="writing-art-editorial" src="/assets/writing-hero/editorial-notebook-v2.webp" alt="" aria-hidden="true" width={1392} height={830} priority unoptimized sizes="(max-width: 760px) 100vw, 52vw"/>
-      <span className="notebook-layer notebook-orbit" aria-hidden="true"/>
-      <Image className="notebook-layer notebook-cursor" src="/assets/writing-hero/cursor-accent.svg" alt="" aria-hidden="true" width={130} height={175} unoptimized/>
     </div></div>
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>

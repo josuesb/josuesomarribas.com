@@ -7,6 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Now — Josue Somarribas",
   description: "What Josue Somarribas is building, learning, exploring and reading right now.",
+  alternates: { canonical: "/now", languages: { en: "/now", es: "/es/now", "x-default": "/now" } },
 };
 
 const Arrow = () => <span aria-hidden="true">→</span>;
@@ -37,7 +38,7 @@ export default function NowPage() {
     <section className="now-board shell">
       <article className="now-building">
         <div className="now-section-intro"><b>01</b><h2>Building</h2><p>Things I’m actively building<br/>and shipping.</p><a href="/#process">View all experiments <Arrow/></a></div>
-        <div className="blueprint"><div><small>PRIMARY FOCUS</small><h3>Editorial CRO Framework</h3><p>A field-tested framework for turning<br/>ethical, insight-led experiments that<br/>improve experience and drive outcomes.</p><ul><li>Experiment design</li><li>Implementation patterns</li><li>Measurement &amp; analysis</li><li>Case studies</li></ul><label>Progress <span>65%</span><i/></label></div><FocusDiagram/><em>fig. 01</em></div>
+        <div className="blueprint"><div><small>PRIMARY FOCUS</small><h3>Editorial CRO Framework</h3><p>A field-tested framework for turning<br/>ethical, insight-led experiments that<br/>improve experience and drive outcomes.</p><ul><li>Experiment design</li><li>Implementation patterns</li><li>Measurement &amp; analysis</li><li>Case studies</li></ul><div className="blueprint-progress">Progress <span>65%</span><i/></div></div><FocusDiagram/><em>fig. 01</em></div>
       </article>
 
       <article className="now-card learning"><b>02</b><h2>Learning</h2><p>Topics I’m diving deep into.</p><ul><li>Advanced Statistics for A/B Testing</li><li>Bayesian Thinking for Product Decisions</li><li>Web Performance in 2026</li><li>Design Systems at Scale</li></ul><div className="bell-curve" aria-hidden="true"><span>reduce<br/>uncertainty</span><svg viewBox="0 0 180 105"><path d="M6 85C52 85 48 20 90 20s38 65 84 65M6 85h168M90 15v76"/><text x="10" y="102">−2σ</text><text x="58" y="102">−1σ</text><text x="88" y="102">μ</text><text x="120" y="102">+1σ</text><text x="157" y="102">+2σ</text></svg></div><a href="/blog">Notes &amp; takeaways <Arrow/></a></article>
