@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Framer migration", "Vercel", "Static export", "React", "AI-assisted development", "Technical SEO"]
 audio: ""
-sourceImage: ""
-imageAlt: ""
-image: "/images/blog/default-cover.png"
+sourceImage: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
+imageAlt: "Top-down editorial migration kit showing content cards, route maps, assets, a build pipeline, version branches, and a final stack of static pages."
+image: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
 canonical: ""
 featured: false
 downloadUrl: ""

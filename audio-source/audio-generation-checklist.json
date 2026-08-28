@@ -310,6 +310,146 @@
       "output": "public/audio/blog/en/how-to-import-content-into-framer-automatically.mp3",
       "archived_source": "audio-source/en/done/how-to-import-content-into-framer-automatically.txt",
       "generated_at": "2026-08-28T18:13:54.572891+00:00"
+    },
+    "en/how-to-send-a-new-batch-of-blog-posts-to-google-search-console.txt": {
+      "fingerprint": "0cdd3511571482308d7d24b0205f1a27813f25f3cad248a9ad00d7729a3b4504",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-send-a-new-batch-of-blog-posts-to-google-search-console.mp3",
+      "archived_source": "audio-source/en/done/how-to-send-a-new-batch-of-blog-posts-to-google-search-console.txt",
+      "generated_at": "2026-08-28T18:17:18.711011+00:00"
+    },
+    "en/how-to-track-ai-visibility.txt": {
+      "fingerprint": "ad078d5d9f3f7d1a2e0ca7990d1cabf46207d111959f519ef6115a71baa9c816",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-track-ai-visibility.mp3",
+      "archived_source": "audio-source/en/done/how-to-track-ai-visibility.txt",
+      "generated_at": "2026-08-28T18:17:54.474746+00:00"
+    },
+    "en/how-to-write-guest-messages-that-prevent-problems-before-they-happen.txt": {
+      "fingerprint": "ec67849a8d72232d7870fbad943b437df45ef653cd138d9ad9339233d72198a7",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-write-guest-messages-that-prevent-problems-before-they-happen.mp3",
+      "archived_source": "audio-source/en/done/how-to-write-guest-messages-that-prevent-problems-before-they-happen.txt",
+      "generated_at": "2026-08-28T18:20:00.200797+00:00"
+    },
+    "en/how-user-research-shaped-my-travel-platform.txt": {
+      "fingerprint": "f51a589511cf353cf65d9ddab886301e421d9e909252ed8d35c6d3ccaee4664d",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-user-research-shaped-my-travel-platform.mp3",
+      "archived_source": "audio-source/en/done/how-user-research-shaped-my-travel-platform.txt",
+      "generated_at": "2026-08-28T18:21:16.133434+00:00"
+    },
+    "en/idempotency-for-mortals-javascript-snippets-rerenders.txt": {
+      "fingerprint": "689f9084b0fc2eb5c67fe547984db5b18b108a9ca5570262819cf953ee4828e7",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/idempotency-for-mortals-javascript-snippets-rerenders.mp3",
+      "archived_source": "audio-source/en/done/idempotency-for-mortals-javascript-snippets-rerenders.txt",
+      "generated_at": "2026-08-28T18:22:06.446044+00:00"
+    },
+    "en/increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization.txt": {
+      "fingerprint": "b003167b998b022f5e7987d8aa1c019378abcb00f2824fe6bf335aeb1756ed1a",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization.mp3",
+      "archived_source": "audio-source/en/done/increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization.txt",
+      "generated_at": "2026-08-28T18:23:30.047645+00:00"
+    },
+    "en/javascript-i-write-every-week-in-an-a-b-testing-role.txt": {
+      "fingerprint": "582aac11b3badf2b3102cdbf4c8e48a4f63a1d4ea0962c2c9bf6ccd8990b3e64",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/javascript-i-write-every-week-in-an-a-b-testing-role.mp3",
+      "archived_source": "audio-source/en/done/javascript-i-write-every-week-in-an-a-b-testing-role.txt",
+      "generated_at": "2026-08-28T18:24:10.626892+00:00"
+    },
+    "en/json-ld-for-case-studies-specific-schema-for-ux-portfolios.txt": {
+      "fingerprint": "dd5ab2847a716c8cec0bb4bc498580ebabb5bc5c115a8aeb70f6e3b5851674e6",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/json-ld-for-case-studies-specific-schema-for-ux-portfolios.mp3",
+      "archived_source": "audio-source/en/done/json-ld-for-case-studies-specific-schema-for-ux-portfolios.txt",
+      "generated_at": "2026-08-28T18:25:00.887110+00:00"
+    },
+    "en/l10n-is-not-translation-market-tone-urgency.txt": {
+      "fingerprint": "391421d4f4249fb9a1fedcae960ad7c1c5364521d020b8fc1b3e4967594fc0e0",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/l10n-is-not-translation-market-tone-urgency.mp3",
+      "archived_source": "audio-source/en/done/l10n-is-not-translation-market-tone-urgency.txt",
+      "generated_at": "2026-08-28T18:25:56.988258+00:00"
+    },
+    "en/llms-txt-json-ld-framer-setup.txt": {
+      "fingerprint": "5dc0ab45ad6b5e6ee5ae44edac6968ad7d5a540d8e493529c0320e50fccff13e",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/llms-txt-json-ld-framer-setup.mp3",
+      "archived_source": "audio-source/en/done/llms-txt-json-ld-framer-setup.txt",
+      "generated_at": "2026-08-28T18:27:18.999842+00:00"
+    },
+    "en/make-blog-posts-ai-readable.txt": {
+      "fingerprint": "15745aa94a86a57ca2073666b1c899e308254aa94fa7d387e4e932e8307b9fde",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/make-blog-posts-ai-readable.mp3",
+      "archived_source": "audio-source/en/done/make-blog-posts-ai-readable.txt",
+      "generated_at": "2026-08-28T18:27:53.013188+00:00"
+    },
+    "en/micro-semiotics-forms-ambiguous-labels-checkout.txt": {
+      "fingerprint": "f34d9c3b36c42830e8911215c0faad5194de0828b3e60fbbf32a70871097569e",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/micro-semiotics-forms-ambiguous-labels-checkout.mp3",
+      "archived_source": "audio-source/en/done/micro-semiotics-forms-ambiguous-labels-checkout.txt",
+      "generated_at": "2026-08-28T18:28:34.382018+00:00"
+    },
+    "en/moosic-smart-music-app-for-android.txt": {
+      "fingerprint": "55d9e6b5f4b0e6bbfee12f2b97c2bdedb153d213bab48fbab90d4d168f4129a2",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/moosic-smart-music-app-for-android.mp3",
+      "archived_source": "audio-source/en/done/moosic-smart-music-app-for-android.txt",
+      "generated_at": "2026-08-28T18:29:03.186961+00:00"
+    },
+    "en/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing.txt": {
+      "fingerprint": "657580fedcba8ba6574bc6b3ef30d3af83d244c4115cce6b266535ba9d0b854d",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing.mp3",
+      "archived_source": "audio-source/en/done/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing.txt",
+      "generated_at": "2026-08-28T18:30:05.117464+00:00"
     }
   }
 }
