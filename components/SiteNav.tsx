@@ -23,8 +23,8 @@ export default function SiteNav({ locale="en", current="home", articleSlug, hasS
   const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : current === "now" ? "/now" : "/";
   const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "writing" ? "/es/blog" : current === "now" ? "/es/now" : "/es";
   const language = <div className="language-switcher" aria-label="Language selector">
-    <a className={locale === "en" ? "active" : undefined} href={englishLanguageHref} lang="en">EN</a><span>/</span>
-    <a className={locale === "es" ? "active" : undefined} href={spanishLanguageHref} lang="es" title={articleSlug && !hasSpanishTranslation ? "This article is not yet available in Spanish; view translated articles" : undefined}>ES</a>
+    <a className={locale === "en" ? "active" : undefined} href={englishLanguageHref} lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><span>/</span>
+    <a className={locale === "es" ? "active" : undefined} href={spanishLanguageHref} lang="es" aria-current={locale === "es" ? "page" : undefined} title={articleSlug && !hasSpanishTranslation ? "This article is not yet available in Spanish; view translated articles" : undefined}>ES</a>
   </div>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{navigationLinks()}</div>{language}
