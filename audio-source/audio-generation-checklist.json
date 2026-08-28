@@ -230,6 +230,76 @@
       "output": "public/audio/blog/en/google-search-console-for-chatgpt.mp3",
       "archived_source": "audio-source/en/done/google-search-console-for-chatgpt.txt",
       "generated_at": "2026-08-28T17:54:07.219837+00:00"
+    },
+    "en/guerrilla-research-low-traffic-validation.txt": {
+      "fingerprint": "e0c228edbce6db629bf74e19ef5f164665e61bd6ac0c67421e2e3dd6bbd403dc",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/guerrilla-research-low-traffic-validation.mp3",
+      "archived_source": "audio-source/en/done/guerrilla-research-low-traffic-validation.txt",
+      "generated_at": "2026-08-28T17:55:41.461112+00:00"
+    },
+    "en/handling-complaints-is-basically-user-research-with-higher-stakes.txt": {
+      "fingerprint": "4c9255f7cad6ff3e81bb301e4a5fd537ee7a7fa32209de6801128162305e56b4",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/handling-complaints-is-basically-user-research-with-higher-stakes.mp3",
+      "archived_source": "audio-source/en/done/handling-complaints-is-basically-user-research-with-higher-stakes.txt",
+      "generated_at": "2026-08-28T17:59:14.590386+00:00"
+    },
+    "en/how-an-a-b-test-really-looks-when-you-don-t-have-enough-data.txt": {
+      "fingerprint": "b2c9b2a99c6ee3b7173728c653c19ff84d3317adee59768f2ba935b5394797b8",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-an-a-b-test-really-looks-when-you-don-t-have-enough-data.mp3",
+      "archived_source": "audio-source/en/done/how-an-a-b-test-really-looks-when-you-don-t-have-enough-data.txt",
+      "generated_at": "2026-08-28T18:01:49.642274+00:00"
+    },
+    "en/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer.txt": {
+      "fingerprint": "caa35a979eb68ed941fd2a414a8bd972549f324cf698a3a40baf13dbe87988ae",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer.mp3",
+      "archived_source": "audio-source/en/done/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer.txt",
+      "generated_at": "2026-08-28T18:03:54.110403+00:00"
+    },
+    "en/how-i-applied-ux-design-principles-to-improve-my-airbnb-hosting-experience.txt": {
+      "fingerprint": "2744d51ab200c9b43a9432843858b555308b68015cd208f125d7348c01ab55d0",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-i-applied-ux-design-principles-to-improve-my-airbnb-hosting-experience.mp3",
+      "archived_source": "audio-source/en/done/how-i-applied-ux-design-principles-to-improve-my-airbnb-hosting-experience.txt",
+      "generated_at": "2026-08-28T18:06:11.722968+00:00"
+    },
+    "en/how-i-qa-an-a-b-test-before-it-goes-live.txt": {
+      "fingerprint": "ef61d5b2bf6e2ad659fe41a30b51dcbc0e41bf4fdc11c314d7011a4fb2e4a50d",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-i-qa-an-a-b-test-before-it-goes-live.mp3",
+      "archived_source": "audio-source/en/done/how-i-qa-an-a-b-test-before-it-goes-live.txt",
+      "generated_at": "2026-08-28T18:08:51.639144+00:00"
+    },
+    "en/how-to-do-user-research-for-travelers-the-complete-guide.txt": {
+      "fingerprint": "e32ed12fff40cf4a1d16d58c66480412675354444b226a793603fcda97e984bf",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-do-user-research-for-travelers-the-complete-guide.mp3",
+      "archived_source": "audio-source/en/done/how-to-do-user-research-for-travelers-the-complete-guide.txt",
+      "generated_at": "2026-08-28T18:11:52.445909+00:00"
     }
   }
 }
