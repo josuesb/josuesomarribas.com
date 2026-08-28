@@ -1,0 +1,65 @@
+Idempotency for Mortals: JavaScript Snippets That Survive Re-renders.
+
+Idempotent JavaScript is code you can run more than once without creating duplicate UI, duplicate listeners, or stale DOM leftovers. In A/B testing, personalization, and tag-manager work, that is not a nice-to-have. It is the difference between a snippet that survives a React re-render and one that quietly turns the page into confetti.
+
+The problem usually appears in boring places: a banner injected twice, a CTA wrapped three times, a modal listener attached on every route change, or a “temporary” node that never gets removed. The fix is not a bigger script. The fix is a pattern.
+
+Why re-renders break simple snippets
+
+Many experimentation snippets are written as if the DOM were stable. It rarely is. Modern pages update sections after API responses, route changes, personalization rules, consent banners, or framework hydration. If your snippet only says “find this element and append that block,” it will probably work once and embarrass you later.
+
+A safe snippet has three habits: it checks before adding, it marks what it owns, and it knows how to clean up.
+
+Pattern 1: add an ownership marker
+
+Every injected element should carry a recognizable marker. A class can work, but a data attribute is cleaner because it says “this belongs to the experiment,” not “this is visual styling.”
+
+That small guard prevents the classic duplicate-banner problem. It also gives you a reliable selector when the experiment needs to remove its own work.
+
+Pattern 2: clean before writing
+
+Some snippets should replace their output every time because the content depends on state: route, language, currency, passenger type, or selected product. In that case, a guard is not enough. Clean first, then render again.
+
+This pattern is blunt, but useful. It treats the DOM as disposable output rather than a sacred object you keep patching forever.
+
+Pattern 3: make event listeners removable
+
+Duplicated click handlers are harder to notice than duplicated UI. The button still works, but now one click sends two analytics events or opens a modal twice. That is how reports start lying with a straight face.
+
+Use named handlers and register them once. If you need to rebind after DOM changes, remove the old listener before adding the new one.
+
+For injected elements, you can also use event delegation on a stable parent. That usually survives re-renders better than attaching listeners to nodes that may disappear.
+
+Pattern 4: store state outside the DOM, carefully
+
+A small global registry can help when several functions need to know whether a script has already initialized. Keep it boring and namespaced.
+
+Do not turn this into a second application state layer. You only need enough memory to prevent repeated initialization and keep references for cleanup.
+
+Pattern 5: expose a destroy function
+
+A snippet that can initialize should also be able to destroy itself. This matters in QA, single-page apps, and experiments that may be toggled without a full page reload.
+
+This is the part many snippets skip because nothing is visibly broken during the first test. Then a re-render happens, QA finds ghosts in the DOM, and suddenly the “quick fix” has a small haunted house attached to it.
+
+A practical idempotency checklist
+
+Use one unique test ID per snippet.
+
+Mark every injected node with a data attribute.
+
+Check before adding static UI.
+
+Clean before re-rendering dynamic UI.
+
+Use named event handlers, not anonymous listeners you cannot remove.
+
+Disconnect observers when the target is found or when the test ends.
+
+Expose a destroy function for QA and rollback.
+
+The practical answer
+
+Idempotency sounds academic, but the daily use case is simple: your code should survive being called again. If a snippet cannot handle that, it is fragile by design.
+
+Start with ownership markers, cleanup, removable listeners, and a destroy function. That small structure keeps your experiments readable, testable, and far less likely to leave trash in the DOM after the page changes under your feet.

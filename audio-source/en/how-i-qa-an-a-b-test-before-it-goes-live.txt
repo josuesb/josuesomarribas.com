@@ -1,0 +1,79 @@
+How I QA an A/B Test Before It Goes Live.
+
+How I QA an A/B Test Before It Goes Live
+
+Launching a broken test is worse than not running one at all. A broken test pollutes your data, confuses users, and sometimes breaks the page it is running on. Getting QA right before launch is not optional.
+
+Here is the process I follow every time, regardless of the tool.
+
+Start with the basics: does the variant actually render?
+
+This sounds obvious. It is not. The variant might render in the tool's preview mode and fail in production because of a timing issue, a CSS conflict, or a selector that does not exist on that page anymore.
+
+I always QA in an actual browser session, not just the preview panel. I load the page, confirm the variant appears, and check the browser console for errors. If there are errors that were not there before the test, I investigate before moving forward.
+
+Check every device and breakpoint
+
+Most tests target desktop and mobile. The variant might look fine at 1440px and completely broken at 375px. I check both. If the test is desktop-only, I still verify that the exclusion is working correctly on mobile, meaning mobile users see the control without issues.
+
+I also check the most common browsers your audience uses. GA4 data on your site will tell you which ones those are. At minimum, I test Chrome, Safari, and Firefox.
+
+Whitelist your team's IPs so they can see the variant
+
+This is the step most people skip when they are in a hurry. Instead of sharing the variant through preview links that expire or require tool access, I add the team's IP addresses to the targeting conditions. That way anyone on the team can visit the live URL and see the correct variant without affecting the general population.
+
+It also means your team is testing on the real page, not a sandboxed preview environment.
+
+How to do it in Adobe Target:
+
+Go to your activity, click on the audience for the variant, and add a new rule under the "Network" category. Select "IP Address" and add each IP as a condition. You can add multiple addresses using the "OR" operator. Save the audience, and anyone visiting from those IPs will be bucketed into the variant automatically.
+
+If your team works from different locations or uses VPNs, ask them for their current IP before you set this up. A quick way to check is to have them visit whatismyip.com .
+
+How to do it in Monetate:
+
+In Monetate, targeting is handled through rules at the experience level. Go to your experience, open the targeting section, and add a condition using the "IP Address" attribute. You can enter individual IPs or CIDR ranges if your team uses a consistent network block. Set the condition to match any of the listed IPs and save.
+
+One thing to keep in mind with Monetate: make sure the IP rule is combined correctly with any other targeting conditions you have. If you are using AND logic between rules, the IP condition needs to be satisfied alongside all others. If you want team members to bypass other targeting conditions entirely, consider creating a separate QA experience that only runs for whitelisted IPs.
+
+Verify the analytics events are firing
+
+The test can look perfect visually and still collect bad data. I open the browser's network tab, or use the GA4 DebugView, and confirm that the experiment exposure event fires when the variant is seen, and that any interaction events tied to test goals are triggering correctly.
+
+If you are using custom events, check that the event name, parameters, and values match exactly what is set up in GA4. A typo in an event name means you will spend a week analyzing data that never existed.
+
+Test the control too
+
+This is easy to forget. The control should look exactly like the page did before the test. If you are injecting CSS or JavaScript at the experiment level, it can affect the control even when no visual changes are intended. I always load a session that is bucketed into the control and verify nothing has changed.
+
+Check flicker
+
+Flicker happens when the page loads in its default state for a moment before the variant renders. Users see a flash of the original content before it switches. It is a bad experience and it can bias your results, because users who notice it may behave differently.
+
+To test for flicker, throttle your connection in Chrome DevTools to Slow 3G and reload the page. If you can see the original version for even a fraction of a second before the variant appears, the implementation needs to be adjusted. The fix is usually moving the experiment script higher in the page or using the tool's anti-flicker snippet correctly.
+
+Get a second set of eyes
+
+I have a standing habit of asking at least one other person to QA a test before it goes live, specifically someone who did not build it. They will click things you did not think to click. They will try it on a device you did not use. They will catch the thing you were too close to see.
+
+With IP whitelisting in place this is easy to set up. You send the live URL, they confirm what they see, and you are done.
+
+One last check before activating
+
+Before I activate, I go through this list one more time:
+
+Variant renders correctly in production
+
+No console errors introduced by the test
+
+Mobile and desktop both verified
+
+Analytics events fire with correct values
+
+Control is untouched
+
+No visible flicker on slow connections
+
+At least one other person has confirmed the variant on their end
+
+It takes maybe fifteen minutes. It has saved me from launching broken tests more times than I want to count.

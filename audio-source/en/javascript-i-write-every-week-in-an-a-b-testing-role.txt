@@ -1,0 +1,45 @@
+JavaScript I Write Every Week in an A/B Testing Role.
+
+Most A/B testing tutorials show you a toggle. Variant A or variant B, one element changes, done. That is not what the job looks like in practice.
+
+In a real CRO or experimentation role, you write JavaScript constantly. Not complex framework code, but practical, sometimes ugly, often clever scripts that need to run fast, not break anything, and stay invisible to users. Here is what actually shows up in my week.
+
+Waiting for elements that are not there yet
+
+This is probably the most common thing I write. You need to modify an element, but the page renders it asynchronously. If you try to grab it immediately, it does not exist.
+
+I use more than for this. MutationObserver is cleaner in theory, but the polling approach is easier to debug when something goes wrong, and something always goes wrong.
+
+Pushing events to the dataLayer
+
+Every test needs measurement. Most of the time that means sending something to GA4 through the dataLayer.
+
+This looks simple, but the part nobody talks about is timing. If you push the event before the GTM container is ready, it queues correctly. If you push it after a user action, you need to make sure the element listener was attached in the right moment. I have lost more test data to timing issues than to bad hypotheses.
+
+Reading URL parameters for targeting
+
+Sometimes the targeting logic lives in the tool, Monetate or Adobe Target. Sometimes you need to do it yourself, inside the script.
+
+I also use this to force variants during QA. Sharing a URL with is faster than explaining to a stakeholder how to access the testing tool's preview mode.
+
+Modifying elements without breaking event listeners
+
+You want to change a button's text. Easy. But if someone else's code is listening to that button with a delegated event, and you replace the element entirely instead of just updating it, you will break things silently.
+
+The difference between and also matters. If the original button has a child span for an icon, will destroy it. might open an XSS issue if the content is dynamic. Neither option is always right.
+
+Persisting variant assignment across pages
+
+Tests that span multiple pages need some way to remember what variant a user saw. Cookies are the standard approach.
+
+The tool usually handles this, but sometimes you are running something lightweight outside of it, or you need the assignment to persist for longer than the session.
+
+One thing I have stopped doing
+
+I used to write the variant logic directly inside the test script with a lot of branching. Multiple if statements, one per element, all in sequence. It works, but it becomes impossible to read after a week.
+
+Now I separate the logic into small functions with clear names, even when the total script is 40 lines. It makes QA faster and makes handing off the code to someone else much less painful.
+
+None of this is advanced JavaScript. It does not have to be. The discipline in this role is not about the code being clever, it is about the code being reliable at the exact moment a real user triggers it, on a page you did not build, loaded in a browser you cannot control.
+
+That constraint makes even simple scripts more interesting to write than they look.

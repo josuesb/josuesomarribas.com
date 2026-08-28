@@ -1,0 +1,93 @@
+Guerrilla Research: Validating Ideas When Traffic Does Not Cooperate.
+
+Guerrilla research is a lightweight way to validate ideas with qualitative signals when you do not have enough traffic for clean experimentation. Instead of waiting months for statistical confidence, you use session recordings, short interviews, hallway tests, and five-user usability tests to find friction fast.
+
+This is especially useful for small websites, early products, personal portfolios, and niche funnels. Low traffic does not mean no insight. It means you need a different kind of evidence.
+
+Why low traffic breaks classic CRO
+
+A/B testing needs volume. If your site gets a few conversions per month, a split test can run for ages and still tell you very little. The dashboard may look official, but the signal is often too weak to trust.
+
+That is where qualitative research earns its keep. It does not prove that variant B wins by 7.3 percent. It shows you where users hesitate, misunderstand, rage-click, scroll past the important section, or abandon because the offer is not clear.
+
+Start with session recordings
+
+Session recordings are useful because they show behavior in context. You can see where people stop, what they ignore, which elements look clickable but are not, and where the page creates unnecessary effort.
+
+For a low-traffic site, review recordings manually and tag patterns:
+
+Users pause near the pricing section.
+
+Users scroll past the primary CTA.
+
+Users open the menu but do not choose anything.
+
+Users return to the hero copy after reading the page.
+
+Users abandon after reaching a form field.
+
+One recording is anecdote. Five similar recordings are a smoke signal. You still need judgment, but you are no longer guessing from a blank screen.
+
+Run five-user usability tests
+
+Nielsen Norman Group’s classic guidance says qualitative usability testing can produce strong practical findings with around five users, especially when the goal is to identify usability problems rather than measure precise benchmarks. The point is not statistical perfection. The point is fast learning.
+
+A simple test can use three tasks:
+
+Find what service this site offers.
+
+Decide whether the person behind it seems credible.
+
+Try to contact or hire them.
+
+Ask users to think aloud. Do not defend the page while they struggle. That part hurts a little, which is usually how you know it is working.
+
+Use interviews when the offer is unclear
+
+If people understand the interface but still do not convert, the issue may be positioning. Short interviews help you understand what buyers think they are buying, what risks they perceive, and which words feel natural to them.
+
+Ask questions like:
+
+What do you think this person does?
+
+Who do you think this service is for?
+
+What would make you trust this offer more?
+
+What feels vague or missing?
+
+What would you search for if you needed this?
+
+Those answers often become better headlines than anything you write alone at 1 a.m. with too much coffee and too much confidence.
+
+Turn qualitative signals into testable changes
+
+Guerrilla research should still produce decisions. After reviewing recordings or tests, write each insight as a simple pattern:
+
+This keeps research from becoming a folder of interesting sadness. Each finding should point to a copy, layout, offer, or interaction change.
+
+What guerrilla research can and cannot prove
+
+Guerrilla research is excellent for finding problems, language gaps, and behavioral clues. It is weaker for proving exact uplift. Five users can tell you that a checkout step is confusing. They cannot tell you with confidence that a redesign increased conversion by 12 percent.
+
+That distinction matters. Use qualitative research to decide what to fix. Use analytics and experiments to measure what happened after the fix when traffic allows it.
+
+A practical low-traffic validation plan
+
+Review 20 to 30 session recordings, if available.
+
+Tag repeated moments of hesitation, confusion, and abandonment.
+
+Run five usability tests with realistic tasks.
+
+Interview two or three target users about the offer and language.
+
+Turn findings into specific page changes.
+
+Measure directional changes after publishing.
+
+The practical answer
+
+When traffic is low, waiting for a perfect A/B test is often just procrastination in a lab coat. Use guerrilla research to gather human evidence quickly.
+
+You will not get a neat winner label, but you can get something more useful at this stage: a sharper sense of what is confusing real people, and a short list of changes worth making next.

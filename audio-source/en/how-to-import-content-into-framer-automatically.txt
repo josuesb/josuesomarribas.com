@@ -1,0 +1,117 @@
+How to Import Content into Framer Automatically.
+
+You can import content into Framer automatically by preparing a CSV file that matches your CMS fields, formatting rich text as HTML, and importing it as draft content before publishing. For a simple Framer blog, this is usually the cleanest workflow: AI writes the post, a spreadsheet stores the fields, and Framer handles the CMS import.
+
+That sounds less glamorous than a full API pipeline, but it is also harder to break. If you are running a personal portfolio, a freelance site, or a small content operation, CSV import gives you most of the automation you need without turning your blog into a tiny engineering department with commitment issues.
+
+Where this fits in a Framer CMS blog setup
+
+Framer’s CMS is built around collections, items, and fields. A blog collection usually has fields like title, slug, date, category, cover image, description, and rich text content. When those fields are stable, you can generate new posts outside Framer and import them in batches.
+
+The practical version looks like this:
+
+Create or export your Framer CMS collection.
+
+Use that export as your source of truth for column names.
+
+Generate new rows with the same structure.
+
+Keep new articles as drafts.
+
+Review formatting, images, links, SEO settings, and localization before publishing.
+
+The important part is not the spreadsheet itself. The important part is that the spreadsheet mirrors your real CMS structure. Guessing field names is how imports get messy.
+
+The CSV fields you need for a Framer blog
+
+A Framer blog import does not need to be complicated. For most articles, these fields are enough:
+
+Slug , the URL-friendly version of the article title.
+
+Draft status , so imported posts do not go live by accident.
+
+Title , the visible article title.
+
+Description , often reused as the excerpt or meta description.
+
+Date , usually the publication or draft date.
+
+Image , if your template uses a cover image.
+
+Image alt text , because accessibility and SEO should not be optional.
+
+Category , to keep your blog organized.
+
+Content , the article body.
+
+In the Framer CSV export I use for this workflow, the body field is called Content , and rich text is stored as HTML. That means headings, paragraphs, links, lists, and inline formatting should be written with HTML tags rather than Markdown.
+
+Use HTML for the article body, not Markdown
+
+Framer supports formatted rich text during CSV import, but the safest format for blog bodies is HTML. A paragraph should be wrapped in a tag, a section heading in , and lists in or .
+
+A simple content cell can look like this:
+
+This is less pleasant to read inside a spreadsheet, sure. But it is predictable, and predictable beats elegant when you are importing content into a live CMS.
+
+A simple AI-to-Framer workflow
+
+The workflow I recommend is intentionally boring:
+
+Plan the article around one search intent, not five.
+
+Generate the article in clean HTML.
+
+Create the CSV row using your exported Framer columns.
+
+Set the post as draft before import.
+
+Import into Framer CMS and map the columns to the correct fields.
+
+Review the page visually inside Framer before publishing.
+
+Add or verify SEO settings , including title, description, slug, image alt text, and schema where relevant.
+
+Localize the Spanish version manually if your CSV export does not include localized fields.
+
+This gives you a repeatable content system without depending on the Framer API, custom plugins, or fragile automations. For a Basic Framer plan, that matters.
+
+What about automatic localization in Framer?
+
+Framer supports localization, including localized page paths and CMS content workflows. The catch is that CSV import and localized content are not always the same workflow. If your exported CSV only contains the default language fields, you should not assume that adding Spanish columns will magically create localized CMS versions.
+
+The safer process is to import the default-language post first, then add the Spanish localized version inside Framer’s Localization view. It is slower than full automation, but it preserves the relationship between the original article and its localized version.
+
+For bilingual sites, I would avoid creating separate English and Spanish blog collections unless you have a strong reason. Separate collections can work, but they create more maintenance: duplicate categories, duplicate templates, separate internal links, and a higher chance that one language quietly drifts away from the other.
+
+Framer SEO settings to check before publishing
+
+Importing content is only half the job. Before publishing, check the SEO layer as if it were part of the article, because it is.
+
+The slug should be readable and keyword-aligned.
+
+The title should say what the article actually solves.
+
+The meta description should make the click feel specific.
+
+The cover image needs useful alt text.
+
+Internal links should point to related Framer, SEO, CRO, or UX articles.
+
+Schema markup should be added when the article benefits from Article, FAQ, or HowTo structure.
+
+For this article, the search intent is practical: people want to know whether Framer can import content automatically and what format the CMS expects. The article should answer that quickly, then show the workflow.
+
+When CSV import is enough, and when it is not
+
+CSV import is enough when you publish a few posts per week, review drafts manually, and want a low-risk workflow. It is also a good fit when AI helps create drafts, but a human still checks voice, links, formatting, and factual accuracy.
+
+CSV import starts to feel limited when you need scheduled publishing, editorial approvals, multi-author workflows, complex localization sync, or content updates across hundreds of pages. At that point, you are asking Framer to behave more like a headless CMS. That can be done in some setups, but it is a different project.
+
+The practical answer
+
+If your goal is to publish content faster in Framer, start with CSV import. Export your current CMS structure, generate one clean test row, import it as a draft, and check what survives: headings, links, lists, images, descriptions, and categories.
+
+Once that test works, you have a repeatable system. AI can prepare the article, the CSV can carry the CMS fields, and Framer can stay focused on what it does well: making the page look good without forcing you to rebuild the same layout every time.
+
+The boring workflow wins here. Not because it is fancy, but because you will actually use it next week.

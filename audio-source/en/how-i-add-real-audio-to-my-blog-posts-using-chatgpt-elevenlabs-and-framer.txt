@@ -1,0 +1,147 @@
+How I Add Real Audio to My Blog Posts using ChatGPT, ElevenLabs and Framer.
+
+I like writing. I also like not being glued to a screen 24/7. So I started adding audio versions to my blog posts.
+
+Not the “robot voice reads my CSS” kind. I mean audio that’s actually pleasant to listen to, and doesn’t ignore accessibility basics like image descriptions.
+
+Here’s the exact workflow I use, end to end.
+
+What you’re building
+
+A pipeline that looks like this:
+
+Write the blog post
+
+Add images and write alt text (so the content still makes sense without visuals)
+
+Generate a narration-ready script with ChatGPT (adapted for speech)
+
+Create the audio in ElevenLabs Studio (Text to Speech)
+
+Embed the audio in Framer manually (on purpose)
+
+Step 1: Write the blog post normally, but keep it speakable
+
+Write for reading first, yes. But don’t write like you’re trying to win a “Longest Sentence” award.
+
+A few things that make audio smoother:
+
+Keep paragraphs short. Audio listeners can’t “scan” like readers do.
+
+Avoid stacking three ideas into one sentence.
+
+If you use acronyms, define them once. Out loud, “GA4” can sound like a sneeze.
+
+If the post is very technical, that’s fine. Just don’t punish people for caring.
+
+Step 2: Add images, then write alt text that’s actually useful
+
+Alt text is not decoration. It’s the stand-in for the image when someone can’t see it.
+
+My rule is simple: write alt text like you’re explaining the image to a friend, and you want them to understand why it’s in the post.
+
+Bad alt text: “Laptop”
+
+Better alt text: “Image settings panel with an “Alt Text” field being filled in, next to a preview of a laptop photo showing a dark-theme code editor.”
+
+If an image is purely decorative, say so (or leave alt empty depending on your CMS). If it’s carrying information, describe the information.
+
+Step 3: Convert the post into a narration script (this is the secret sauce)
+
+A blog post is not a voice script. If you paste your post into TTS as-is, you’ll get audio that sounds… like someone reading a blog post.
+
+When I adapt a post for narration, I change three things:
+
+Links
+
+No one wants a voice reading a URL. It’s audio torture.
+
+Instead of raw links, I use a short spoken description like: “There’s a link to Framer’s documentation about structured data.”
+
+Code blocks
+
+Never read code out loud. Nobody wins.
+
+Replace code with 1–2 sentences explaining what it does and why it’s there. Example: “This CSS hides the last card in the list, so the UI doesn’t duplicate the user’s current selection.”
+
+Images
+
+For each image, I insert a spoken line right where the image appears, something like: “In this article, there’s an image of…” followed by a short description based on the alt text.
+
+That keeps the narration coherent for people who are only listening.
+
+Step 4: Generate the script with ChatGPT 5.2 (my folder setup)
+
+I use ChatGPT 5.2 on the Pro plan , and I keep things organized using Projects.
+
+I create one folder per blog post , and inside it I keep:
+
+Final blog text
+
+Image list + alt text (in order)
+
+The prompt template
+
+The final script output
+
+This makes the workflow repeatable, and it keeps me from “prompt improvising” my way into inconsistency.
+
+Prompt template (paste this into ChatGPT)
+
+Now produce the final narration script.
+
+Step 5: Create the audio in ElevenLabs Studio (Text to Speech)
+
+Now take the narration script into ElevenLabs Studio .
+
+My workflow:
+
+Create a new project named after the blog post
+
+Choose Text to Speech
+
+Paste the script
+
+Pick the voice
+
+Listen once at 1x speed, then fix the obvious problems:
+
+weird pronunciations (brand names, acronyms)
+
+awkward rhythm (sentences that are too long)
+
+repeated phrases that sound “generated”
+
+TTS is not “set it and forget it.” It’s “set it, then do one human pass.”
+
+Step 6: Add the audio to Framer manually (on purpose)
+
+I embed the audio manually in Framer because I want the experience to feel intentional, and I want the quality to stay consistent.
+
+A simple approach:
+
+Add a “Listen to this article” button near the top of the post
+
+Embed an audio player (or your preferred audio component) using the final MP3
+
+Don’t autoplay. Seriously. Don’t.
+
+If you want tracking, track the play action (and optionally 25%, 50%, 75%, 100% progress). Otherwise you’ll have no clue if people actually use the feature. Oh, and please set up the download button so it only shows if there is a file set on the entry, you won't want all your blog posts showing empty download buttons.
+
+Quick QA checklist before publishing
+
+Links are described, not read as URLs
+
+Code is explained, not spoken
+
+Each image has an alt, and the script mentions the image where it appears
+
+The audio sounds good at normal speed
+
+No weird repeated phrases or “perfectly uniform” rhythm
+
+The “Listen” entry point is visible, but not screaming for attention
+
+The PDF at the end of this article
+
+Below please find a PDF with the exact prompt, formatting rules, and a couple short examples (links, code, images) so you can reuse the workflow without rethinking it every time. I recommend uploading it to your LLM (like ChatPGT, Claude, etc) so they can act as needed.

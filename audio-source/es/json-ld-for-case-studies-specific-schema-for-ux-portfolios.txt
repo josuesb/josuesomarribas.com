@@ -1,0 +1,29 @@
+JSON-LD para casos de estudio: schema para portfolios UX.
+
+Los casos de estudio son las páginas de mayor riesgo en el sitio de una persona que diseña. Un recruiter o cliente llega, decide en minutos y se marcha. Sin embargo, suelen ser también las páginas menos legibles para las máquinas: largos recorridos de imágenes y texto sin nada que explique qué se creó, quién lo hizo, con qué herramientas o para obtener qué resultado. Los datos estructurados solucionan esa mitad del problema, aunque un portfolio UX presenta una complicación inmediata.
+
+La complicación: no existe el tipo CaseStudy
+
+Schema.org no define un tipo CaseStudy. Hay que elegir dentro del vocabulario existente y Google restringe todavía más la elección: para el marcado de artículos, el objeto debe basarse en Article, NewsArticle o BlogPosting .
+
+También conviene ajustar las expectativas. De los cientos de tipos que define Schema.org, sólo una pequeña parte puede producir resultados enriquecidos visibles en Google. Para un portfolio, el valor principal del schema no es decorar la SERP, sino aportar claridad de entidades: ayudar a las máquinas a entender quién eres y qué creaste. Esto ha ganado importancia ahora que los asistentes de IA también funcionan como canal de descubrimiento.
+
+La receta: un Article sobre un CreativeWork, creado por una Person
+
+El modelo adecuado es por capas: la propia página es un BlogPosting o Article; el proyecto descrito es un CreativeWork anidado; y tú eres una Person vinculada a ambos. Esta última entidad importa especialmente porque fija la identidad que el portfolio pretende demostrar.
+
+Los campos que justifican su peso en un portfolio son about , que representa el proyecto como entidad propia; sameAs en Person, que une el sitio con tu perfil público; keywords , alineado con tus capacidades reales; e inLanguage , especialmente útil en una web bilingüe. Evita valoraciones, ofertas o cualquier dato que no aparezca de forma visible en la página.
+
+Implementación en Framer
+
+Framer no genera JSON-LD de forma nativa. El script se añade mediante un code embed en la plantilla CMS y las variables del CMS rellenan los campos dinámicos. Los casos y los artículos pueden compartir un script de plantilla cambiando el @type según la colección. En un sitio localizado, inLanguage y las URLs deben seguir el idioma activo.
+
+Valida el resultado con la prueba de resultados enriquecidos de Google después de publicar y vuelve a validarlo cuando cambie la plantilla: renombrar un solo campo CMS puede romper silenciosamente todas las páginas.
+
+Qué evitaría
+
+No intentes marcarlo todo. AggregateRating sin valoraciones visibles, HowTo sobre cualquier proceso o preguntas frecuentes añadidas sólo para el schema van desde lo inútil hasta lo arriesgado. Un grafo pequeño y verdadero que las máquinas puedan confiar supera a uno ambicioso que deban descontar.
+
+La implicación
+
+En un portfolio UX hay un efecto adicional: los datos estructurados son también una muestra de trabajo. Un caso impecablemente marcado demuestra, desde el propio código fuente, el pensamiento sistémico que el texto afirma tener. Poca gente mira el código, pero esa audiencia se solapa bastante con la que contrata.

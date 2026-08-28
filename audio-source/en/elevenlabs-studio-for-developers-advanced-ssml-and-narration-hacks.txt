@@ -1,0 +1,39 @@
+ElevenLabs for Developers: Advanced SSML Narration Hacks.
+
+In how I add real audio to my blog posts I documented the pipeline: script the post, generate the narration in ElevenLabs, host the file, wire it into Framer. That post gets you a working audio version. This one is about the layer underneath, the one you reach for when the narration is functional but flawed: a brand name mispronounced, a pause missing where the argument turns, a number read three different ways in the same file. All of it is controllable, and most of the controls are model-dependent, which is the first thing the docs won't shout at you.
+
+Hack zero: the model support matrix decides everything
+
+SSML support in ElevenLabs is not uniform across models, and choosing the wrong model silently disables your markup. From ElevenLabs' own support documentation : every model except Eleven v3 supports SSML break tags, while v3 instead uses its own expressive tags like [pause], [short pause], and [long pause]; and phoneme tags are supported only on Eleven English v1, Flash v2, and Turbo v2, in English only. "Silently" is the operative word: unsupported tags don't error, they just get skipped.
+
+The practical rule: pick the model for the control you need, not for the novelty. If your narration depends on forced pronunciations, you're choosing among the phoneme-capable models; if you've moved to v3 for its expressiveness, your pause vocabulary changes with it.
+
+Pauses: punctuation first, break tags second
+
+The official guidance is precise: use break tags for natural pauses up to three seconds, and use too many in one generation and the model can destabilize, speeding up or introducing audio artifacts .
+
+So break tags are punctuation of last resort. Sentence structure, commas, and paragraph breaks carry most of the rhythm; I reserve explicit breaks for two places where blog narration genuinely needs them: the beat after a section heading, and the beat before a conclusion's turn. A script peppered with breaks every other sentence is the audio equivalent of bolding half a paragraph.
+
+Pronunciation: phonemes where supported, aliases everywhere else
+
+For English content on a phoneme-capable model, you can force exact pronunciations with IPA or CMU Arpabet notation, and ElevenLabs themselves note that CMU has proven more predictable and consistent than IPA in their implementation . The same support article documents the unglamorous fallback that works on every model: respell the word phonetically, using capitals, dashes, or apostrophes to steer stress.
+
+The fallback matters more than it looks for a bilingual site. Phoneme tags are English-only, so a Spanish proper noun inside an English narration (a city, a client name, a product like Bemobile) gets handled by alias-style respelling rather than IPA. This is the audio version of a point I made in L10n is not translation : language boundaries show up in places you didn't plan for, and pronunciation is one of them.
+
+Scale: pronunciation dictionaries as your brand lexicon
+
+Inline fixes stop scaling around the third post. The durable tool is a pronunciation dictionary: an XML-based .pls file of word-to-pronunciation rules, supporting both IPA and CMU, applied to generations via the API , with the same model restrictions as inline phoneme tags. Mine is effectively a brand lexicon: my own name, recurring tool names (GA4, Adobe Target), and the CRO jargon that models love to mangle. Build it once, and every future narration inherits the fixes instead of repeating them.
+
+The normalization pass: fix the text before the voice sees it
+
+A whole class of narration bugs (numbers, dates, currencies, acronyms read inconsistently) is best solved before TTS, as a deterministic step in the pipeline between draft and generation. Mine does four things: strips markdown and link syntax, expands figures into words where ambiguity exists ("a 12% lift" becomes "a twelve percent lift"), spells out acronyms on first use, and inserts the two structural break tags mentioned above. It's twenty lines of script and it removes the most common reason to regenerate a file. If you're automating the publishing side anyway (the approach from how to import content into Framer automatically ), this pass slots naturally into the same workflow.
+
+The QA loop that respects your credit balance
+
+Generation costs credits, so the loop is: generate once, listen specifically for entity names and numbers (the two failure categories), fix via lexicon or respelling, and regenerate only the affected sections rather than the whole file. A narration is a publishable asset with a defect list, and the defect list is short and predictable once you know the categories.
+
+The implication
+
+The gap between "AI voice as gimmick" and "audio as a real distribution surface" is exactly this unglamorous layer: support matrices, lexicons, normalization. None of it is creative work, which is why most blogs with narration never do it, and why doing it is a differentiator. The voice was never the product; the editorial control over the voice is.
+
+Related reads: how I add real audio to my blog posts , L10n is not translation , and importing content into Framer automatically .

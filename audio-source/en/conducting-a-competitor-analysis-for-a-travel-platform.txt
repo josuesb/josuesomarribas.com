@@ -1,0 +1,97 @@
+Conducting a Competitor Analysis for a Travel Platform.
+
+Working a design portfolio can be a difficult task. From choosing the topic for a new project to make it a reality. In this article, I'll guide you to one of the first steps you need to take when you are starting a new project: making a competitor analysis.
+
+For this example, I chose this topic:
+
+An app/site that help travelers discover hidden places
+
+Investigate the Competitors
+
+To find your competitors, search for apps and websites that offer similar features to yours. For example:
+
+If your app is about hidden travel spots, check out Atlas Obscura and Like A Local Guide.
+
+If you focus on real-time travel advice, look at Reddit, Facebook Groups, and Couchsurfing Hangouts.
+
+If your app is a trip planner, analyze TripIt, Google Trips, and Kayak.
+
+Grouping competitors by their main function helps you see where your app fits and how it can stand out.
+
+Identify Your Direct and Indirect Competitors
+
+Now, the objective is to organize the results of the findings - it’s essential to analyze both direct and indirect competitors.
+
+Direct Competitors
+
+These are companies that solve the same problem the platform aims to address.
+
+Atlas Obscura – A platform dedicated to uncovering unusual and hidden destinations.
+
+Like A Local Guide – Provides travel recommendations curated by locals.
+
+Spotted by Locals – Offers city guides created by local contributors to highlight lesser-known experiences.
+
+Indirect Competitors
+
+These are platforms that may not focus on hidden gems but still provide travel recommendations and trip planning features.
+
+Google Maps – Used by travelers for navigation and discovering places.
+
+TripAdvisor – Offers reviews and rankings for popular travel destinations.
+
+Reddit (r/travel, r/solotravel) – A community where travelers exchange real-time advice.
+
+Airbnb Experiences – Connects travelers with local hosts for unique experiences.
+
+Analyze Their Value Proposition
+
+For this example, I have focused on the direct competitors to make a competitor analysis. For this, I answered 3 questions:
+
+Unique Value Proposition - What makes this company unique?
+
+Company Advantages - What are the things that provide a leg up?
+
+Company disadvantages - Where might drawbacks exist?
+
+These three questions are essential in competitor analysis because they help break down how each competitor operates, what makes them successful, and where there are opportunities for differentiation. Here’s how each question contributes to the analysis:
+
+1. Unique Value Proposition - What makes this company unique?
+
+This question helps you identify the core appeal of a competitor and understand what makes them stand out in the market. The unique value proposition (UVP) is what attracts users to a platform over others.
+
+Why it matters: Knowing a competitor’s UVP helps you determine what gap they are filling and whether you can provide something better, different, or more targeted.
+
+How to use it: Compare competitors’ UVPs to find common themes or unmet user needs. If all competitors focus on hidden places, maybe your advantage is real-time travel advice or budget-based planning.
+
+2. Company Advantages - What are the things that provide a leg up?
+
+This question highlights why a competitor is successful and what strengths they leverage.
+
+Why it matters: It shows what users value most in that platform, helping you decide whether to adopt similar strategies or improve on their features.
+
+How to use it: If a competitor’s strength is a large community of contributors, consider how you can build an even more engaged community or offer better incentives for contributions.
+
+3. Company Disadvantages - Where might drawbacks exist?
+
+This question uncovers gaps and weaknesses in competitors that you can exploit to create a better user experience.
+
+Why it matters: Every platform has shortcomings, and identifying them helps you position your product as a better alternative by solving those pain points.
+
+How to use it: If users complain about lack of real-time updates, consider integrating live travel advice features. If navigation is difficult, focus on a superior UX/UI design.
+
+Similarities
+
+Differences
+
+Learnings
+
+Opportunities
+
+Conclusion: Turning Insights into Action
+
+This competitor analysis has given a clear view of the travel platform market, showing what is standard, what is missing, and where there are opportunities. I identified both direct and indirect competitors, looking at their strengths and weaknesses. Then analyzed what makes each competitor unique and found common features that users expect. From this, I learned about common user frustrations and areas that need improvement. Finally, I discovered opportunities to innovate, such as offering real-time travel advice, AI-powered trip planning, and more interactive experiences.
+
+This analysis is not just about knowing the competition—it’s about finding the right market position. The real takeaway is that differentiation is key. By focusing on real-time, user-driven interactions, smarter planning, and seamless offline capabilities, a new travel platform can deliver true value to travelers in ways that existing platforms do not.
+
+Moving forward, the next step is to translate these insights into action—prioritizing the most impactful features, refining the user experience, and building a travel tool that stands out in a competitive market.

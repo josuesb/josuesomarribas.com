@@ -1,0 +1,231 @@
+AI In UX Design: Faster, But Are We Getting Lazier?
+
+There’s a moment that keeps repeating in design teams.
+
+Someone says, “Let’s try Figma AI.” Two minutes later we have 10 screens, a full design system, and a smug little feeling that the project is “half done.”
+
+Except it isn’t. We just skipped the part where we actually think.
+
+I like AI tools. I use them. They save time. But lately I keep asking the same question: are we getting better at designing, or just better at accepting suggestions with less effort?
+
+This post is less about the tools and more about us, the humans behind them.
+
+Faster output is not the same as better design
+
+AI is fantastic at one thing: speed.
+
+It can generate layouts, color palettes, headlines, even full landing pages before your coffee cools down. A lot of recent work on AI for UI/UX shows exactly that: faster workflows, more variations, and smoother handoffs.
+
+—Theseus+1
+
+The problem is what happens after that first burst of speed.
+
+If your process looks like this:
+
+Prompt the tool.
+
+Pick one of the options.
+
+Polish a bit.
+
+Ship.
+
+You’re not doing UX design. You’re doing quality control on auto-generated guesses.
+
+Good design is slow in very specific places. You need time for research, time to compare options, time to ask “what happens if the user is tired, distracted, stressed, on a bad network?”. Speed helps reach those points. It doesn’t replace them.
+
+The new “blank canvas”: prompts instead of sketches
+
+Before AI, the scary moment was the empty artboard. Now the scary moment is the empty prompt.
+
+We tell the tool something like:
+
+“Design a clean, modern checkout for a fashion brand. Mobile first.”
+
+And boom, we get something that looks… fine. Buttons in the right place. Cards. Shadows. Slightly rounded corners. Everything looks familiar and “correct.”
+
+Studies around creativity and AI are starting to show the cost of this comfort. People who rely heavily on AI tend to produce more similar ideas, with less mental effort, and their work starts to converge around the same patterns.
+
+— The New Yorker
+
+In other words, the more we accept default suggestions, the more our work starts to feel like the average of the internet.
+
+That’s not “inspired by best practices.” That’s design on autopilot.
+
+Three flavors of AI-driven laziness in UX
+
+Let’s call things by their name. Here’s where I see laziness sneaking in, both in my own work and in other teams.
+
+1. Lazy research
+
+Instead of: Talking to users, listening to complaints, reading tickets, looking at analytics…
+
+We do this:
+
+“Give me 5 main pain points for users booking flights online.”
+
+“Write 3 personas for a fashion e-commerce in Europe.”
+
+The tool gives plausible answers. They sound right. They match every generic article on the topic.
+
+Studies on AI in graphic and interaction design point out this risk: the more we reuse generic patterns, the more we lose contact with the real context, constraints, and culture of our users.
+
+— ScienceDirect+1
+
+You don’t need a PhD to see the issue. If your “research” fits any random project, it probably doesn’t fit yours.
+
+2. Lazy interaction design
+
+AI-generated flows in Figma or similar tools have a pattern:
+
+Cards with rounded corners.
+
+Big hero, centered text, one primary button.
+
+Steps broken into tidy little wizard screens.
+
+Nothing is wrong , but nothing is rooted in your product either.
+
+Recent work on AI in design workflows shows designers love the speed, but struggle to keep their own voice and push back against “good enough” AI suggestions
+
+— Premier Science+1
+
+If you accept the first layout that “looks like a SaaS homepage,” you’re not designing. You’re approving a template.
+
+Ask yourself:
+
+Would I have designed this layout before AI existed?
+
+Do I know why this screen is structured like this, or just that it “looks familiar”?
+
+Does this flow solve a real pain we’ve seen in tests, or just mirror a pattern from another app?
+
+If you can’t answer, that’s laziness, not efficiency.
+
+3. Lazy UX writing and microcopy
+
+This one hurts because the tools are really good at sounding confident.
+
+You ask:
+
+“Write friendly, clear microcopy for a payment error.”
+
+You get something like:
+
+“Oops! Something went wrong while processing your payment. Please double-check your details or try another card.”
+
+Is it wrong? No. Does it match your brand, culture, and users? Usually not.
+
+The risk is that we stop doing the hard part of UX writing:
+
+Picking words that match how your users actually talk.
+
+Explaining what exactly went wrong.
+
+Telling people what will happen next, not just “please try again.”
+
+AI is great for first drafts. But when those drafts ship untouched, you can feel it in the product. Everything sounds like a UI kit that learned English from a design system.
+
+What the research actually says (in simple terms)
+
+A recent thesis on AI tools in web UI/UX design found exactly what many of us feel in practice: AI raises efficiency, helps with routine tasks, and can improve consistency, but still depends heavily on human judgment to avoid bias and weak design decisions.
+
+__ Theseus
+
+Other studies show that:
+
+Designers feel more “productive” with AI, but also less in control of the final result.— Premier Science
+
+Generative tools push work toward a more uniform style, which is nice for speed, but bad for originality and differentiation. — ScienceDirect+1
+
+People start to trust AI suggestions too much, and stop questioning whether the idea actually fits the context. — The New Yorker+1
+
+So yes, the tools are powerful. The lazy part comes from us when we stop doing the human bits:
+
+Interpreting the context.
+
+Making trade-offs.
+
+Saying “no, this is pretty but wrong.”
+
+Where AI genuinely helps without turning your brain off
+
+It’s not all doom and gloom. There are areas where AI shines and you can still stay sharp.
+
+Here’s where I think it earns its place.
+
+1. Exploring edges, not picking the answer
+
+Good use: “Give me five risky variations of this hero section that break my layout a bit.” Then you:
+
+Pick one that feels promising.
+
+Strip what doesn’t fit your users.
+
+Keep the tiny detail that moved your thinking forward.
+
+Bad use: “Design a full homepage.” Then tweak colors and call it done.
+
+Use AI to stretch your range, not to close the conversation.
+
+2. Automating things you already understand
+
+If you know what “good” looks like, AI can take the boring parts:
+
+Generating alt text drafts that you polish.
+
+Expanding a clear bullet point into a longer explanation for documentation.
+
+Creating basic variants of CTAs so you can A/B test faster.
+
+You’re still the one setting the direction. The tool just speeds up execution.
+
+3. Cleaning up, not covering up
+
+You can also use AI for:
+
+Summarizing messy workshop notes into a clear list of decisions.
+
+Turning chat logs into a list of user problems.
+
+Generating first-pass release notes for a feature.
+
+Notice the pattern: the raw material comes from real work. AI just cleans it up so you don’t waste an hour formatting.
+
+A quick self-check: am I designing, or just accepting?
+
+Here’s a simple checklist I use on myself. Answer honestly.
+
+Did I look at any real data before asking AI for help?
+
+Is there at least one sketch, flow, or outline I made without AI?
+
+Can I explain why this layout works for this user and this context?
+
+Did I rewrite any AI copy in my own words, based on how users talk?
+
+If the AI tools went down tomorrow, could I still move this project forward?
+
+If most answers are “no,” the problem isn’t the tool. It’s that you outsourced the thinking.
+
+So… are we getting lazier?
+
+In some ways, yes. AI makes it very easy to:
+
+Skip the uncomfortable parts of the process.
+
+Accept “good enough” because it looks polished.
+
+Confuse “I have many options” with “I made a strong decision.”
+
+But laziness is not mandatory. It’s a choice.
+
+If you treat AI like a fast assistant, not a replacement for judgment, you can get the best of both worlds:
+
+More time for real research.
+
+More energy for interaction details and edge cases.
+
+More focus on what actually changes behavior and conversion.
+
+The tools will keep getting faster. Our job is to make sure our thinking doesn’t slow down to match.

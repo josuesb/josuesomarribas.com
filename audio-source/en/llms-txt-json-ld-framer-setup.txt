@@ -1,0 +1,65 @@
+I Added llms.txt and JSON-LD to My Framer Site.
+
+I Added llms.txt and JSON-LD to My Framer Site: Here Is the Setup
+
+AI SEO is no longer a side conversation. The Trends signal you shared says “AI SEO” moved from 28 to 71, “generative engine optimization” tripled, and “what is llms.txt” is rising. That does not mean every new file format deserves a parade. It means site owners are looking for ways to make content easier for AI systems and search engines to understand.
+
+The practical question is not “Will llms.txt magically make ChatGPT cite my site?” That question has too much hope in it. The better question is: can a Framer site expose cleaner machine-readable signals through structured content, JSON-LD, sitemap hygiene, internal links, and a lightweight llms.txt file? Yes. That setup is worth documenting.
+
+This post connects directly with GEO vs SEO , How to Make Blog Posts Easier for AI Tools to Understand , How to Use JSON-LD for Blog Schema in Framer CMS , JSON-LD for Case Studies , and How to Send New Blog Posts to Google Search Console .
+
+First, what llms.txt is and is not
+
+llms.txt is a proposed convention for giving AI systems a clean Markdown-style overview of useful site content. It is usually placed at the root of a site, like /llms.txt. The proposal is not the same as robots.txt. Robots.txt tells crawlers what they may access. An llms.txt file is more like a curated map: important pages, summaries, canonical resources, docs, and context.
+
+That distinction matters. Google has official documentation for robots.txt, sitemaps, structured data, and Search Console. llms.txt is not in that same category of proven, universally adopted search infrastructure. It is an emerging pattern. Useful, maybe. Guaranteed, no. Anyone selling it as an instant ranking button is doing the usual SEO rain dance, now with AI branding.
+
+Why JSON-LD still matters
+
+JSON-LD is structured data. It helps search systems understand entities and page types: Article, BlogPosting, Person, Organization, BreadcrumbList, FAQPage when appropriate, and so on. Google Search Central documents the structured data features Google supports, and Search Console’s URL Inspection tool can show indexed page information, including structured data details when available.
+
+For a Framer blog, JSON-LD is often the cleaner first move because it attaches meaning to pages that already exist. A blog post should identify the headline, description, author, date published, date modified, image, URL, and publisher where possible. A portfolio case study can use CreativeWork or Article-style schema depending on the content. The point is not to spray schema everywhere. The point is to describe the page honestly.
+
+The Framer setup
+
+A practical Framer setup has five layers: content structure, CMS fields, JSON-LD, sitemap checks, and llms.txt. None of these are magical. Together, they reduce ambiguity.
+
+1. Content structure
+
+AI-readable content starts with boring structure. One H1. Descriptive H2s. Clear intros. Internal links with meaningful anchor text. Images with useful alt text. Pages that answer a real query before wandering into opinion. This sounds like old SEO because old SEO did not stop being true just because the interface now talks back.
+
+The HHS Research-Based Web Design & Usability Guidelines put it bluntly: content is one of the most critical elements of a site, and useful content should be relevant and appropriate to the audience. That advice is older than the current AI wave and still more reliable than most “GEO hacks.”
+
+2. CMS fields
+
+In Framer, the CMS should store the pieces needed for both humans and machines: title, slug, meta title, meta description, published date, updated date if available, image, image alt, cluster, tags, and canonical URL. If those fields are inconsistent, every downstream workflow becomes fragile.
+
+This is where CSV import helps. A clean content spreadsheet can create repeatable structure before publishing. It is less glamorous than a fully automated API pipeline, but also less likely to break because one field changed name after midnight. Small mercy.
+
+3. JSON-LD per article
+
+That example is intentionally plain. Use the real page URL, real dates, real image, and real author. Structured data should not invent a fake organization, fake reviews, fake FAQ, or fake awards. Google has been very clear for years that structured data should represent visible page content. The boring honest version is the one less likely to bite later.
+
+4. Sitemap and indexing checks
+
+A sitemap helps search engines discover URLs. Google Search Console lets you submit sitemaps and inspect individual URLs. The URL Inspection tool provides information about Google’s indexed version of a page and can test whether a URL might be indexable. This is not “sending posts to Google” in the sense of forcing indexation. It is giving Google cleaner discovery and diagnostics.
+
+For a new batch of posts, the workflow is: publish, confirm the sitemap contains the URLs, check robots.txt is not blocking the section, inspect a few important URLs, request indexing only where it makes sense, then build internal links from relevant existing posts. Search does not owe you immediate indexing because you clicked a button. Rude, but true.
+
+5. llms.txt
+
+The llms.txt file should be short enough to be useful and curated enough to matter. Do not dump the whole site into it. Highlight the best resources by cluster. Include canonical URLs, short descriptions, and maybe notes about what the site covers.
+
+What to measure after adding it
+
+Do not measure llms.txt like a normal ranking factor. There is no stable “llms.txt performance” report in Search Console. Instead, track a bundle of indicators: AI referrals where visible, branded search movement, citations in Perplexity or other source-heavy AI tools, AI mention tests, GSC impressions for related queries, and whether your own content becomes easier to retrieve and summarize correctly.
+
+That connects with How to Track AI Visibility Without Losing Your Mind and The ROI of AI Search Mentions . Measurement is still awkward because zero-click visibility often does not send clean analytics data. That does not mean it has no value. It means the attribution model is wearing a blindfold and pretending it is strategy.
+
+The realistic conclusion
+
+Add JSON-LD because it is established structured data. Clean your CMS fields because they affect every page. Maintain your sitemap because discovery still matters. Add llms.txt as a low-cost experiment, not as a miracle. Then document what changes.
+
+The point of this setup is not to chase every AI SEO trend. It is to make the site easier to parse, cite, and maintain. If AI systems become better at using llms.txt, you are ready. If they ignore it, you still improved your content map and internal discipline. Not a bad deal for a text file.
+
+Sources: Google Search Central robots.txt documentation ; Google Search Console URL Inspection documentation ; Google structured data gallery ; llms.txt proposal ; Search Engine Land coverage of llms.txt ; Google Trends Help .

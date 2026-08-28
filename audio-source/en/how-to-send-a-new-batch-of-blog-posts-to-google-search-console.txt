@@ -1,0 +1,95 @@
+How to Send New Blog Posts to Google Search Console.
+
+Publishing a batch of blog posts feels more productive than it really is. You hit publish, the CMS behaves, the URLs look clean, and for about twelve seconds it feels like the hard part is over. Then you open Google Search Console and remember the small, annoying truth: publishing is not the same as being discovered.
+
+Google does not need a formal invitation to find your posts. It can discover URLs through internal links, external links, feeds, and normal crawling. But when you publish several posts at once, especially on a Framer site or a small blog that does not get crawled every five minutes, you should make the discovery path boringly obvious. Boring is good here. Boring is how you avoid turning indexing into a superstition hobby.
+
+This is the workflow I would use for a new batch of posts on josuesomarribas.com/blog : publish the posts, confirm the sitemap updated, submit or resubmit the sitemap in Google Search Console, request indexing only for the most important URLs, and then monitor the Page indexing and Performance reports. Not glamorous. Very few good SEO workflows are. That is probably why they work.
+
+First, decide what “send to Google” actually means
+
+People say “send this to Google” as if Search Console had a big upload button where you hand Google your blog like a school assignment. It does not work that way. You are not forcing Google to index anything. You are giving Google a cleaner route to discover, crawl, and evaluate your URLs.
+
+Google’s own documentation is very clear about this. Submitting a sitemap is a hint, not a guarantee. Google may use it to discover URLs, but it still decides what to crawl, what to index, and what to rank based on its own systems and your site quality. The official Build and submit a sitemap guide says you can make a sitemap available through Search Console, the Search Console API, or a sitemap line in robots.txt. That is the real mechanism. Not magic. Not “index instantly.” Just a better map.
+
+This matters because it changes your expectations. Search Console is not a publishing tool. It is a monitoring and debugging tool. Google describes Search Console as a way to measure search traffic, fix issues, and understand how Google sees your site. That sounds less exciting than “rank faster,” but it is the more useful framing.
+
+The clean batch publishing workflow
+
+Before touching Search Console, make sure the posts are actually ready to be found. This sounds obvious, which is usually where mistakes hide. A new post should have a stable URL, a title tag, a meta description, a canonical URL, crawlable content, and internal links from somewhere Google already knows.
+
+For a Framer blog, I would start from the CMS export or import file. If you are already using a CSV workflow like the one I covered in How to Import Content into Framer Automatically , this is where the process becomes useful. Your CSV is not just a content container. It becomes a publishing checklist. Slug, meta title, meta description, canonical URL, tags, image alt text, and the body content should all be checked before the import. Otherwise you are just automating mistakes at scale, which is technically impressive and spiritually depressing.
+
+Once the posts are live, open each URL in a normal browser session. Do not trust the CMS preview. Check the live URL. Make sure it returns a 200 status, loads without weird redirects, and is not hidden behind any draft state. Then inspect the page source or use a browser extension to confirm the canonical tag points to the final URL. If the canonical points somewhere else, Google may treat your shiny new article as a duplicate or a polite suggestion it can ignore.
+
+After that, check the sitemap. For most sites, it will be something like . In Framer, the sitemap is usually generated for you, but “generated for you” does not mean “correct forever.” Open it and search for one or two of the new slugs. If they are missing, Search Console submission will not fix the problem. You would be submitting an incomplete map, which is like handing someone directions and forgetting to mention the street.
+
+Submit the sitemap, not every URL like a maniac
+
+For a batch of posts, the sitemap is the main move. In Google Search Console, open your property, go to Indexing , then Sitemaps , and submit the sitemap path. Usually that means entering , not the full URL, depending on the property setup. The Sitemaps report lets you tell Google about new sitemaps, see submission history, and review parsing errors.
+
+Third-party SEO guides say the same thing because, for once, the boring consensus is correct. Semrush’s guide on submitting a sitemap to Google walks through the same Sitemaps report flow. Backlinko’s Google Search Console guide also treats GSC as a core place to monitor indexing and performance, not as a magic ranking lever. Ahrefs has older sitemap submission guides too, but be careful with any article that still recommends Google’s old ping endpoint. That endpoint is deprecated. SEO advice ages badly. Like milk, but with more screenshots.
+
+The sitemap submission is useful for batch publishing because it scales cleanly. If you publish ten posts, you should not need to inspect and submit ten URLs manually unless those posts are unusually important. The sitemap gives Google a single structured list of the new or updated URLs. If your site has a sitemap index, submit the sitemap index. If your CMS separates pages, blog posts, and collections into different sitemaps, submit the one that contains the blog URLs.
+
+Add the sitemap to robots.txt
+
+Search Console submission is good. Adding the sitemap to is also good. It is not a replacement for a clean site structure, but it gives crawlers another predictable place to find your sitemap. Google’s sitemap documentation shows the format plainly:
+
+Put that line in the root robots.txt file, not in a random subfolder. Google’s robots.txt documentation explains that robots.txt tells crawlers which URLs they can access, but it is not a reliable way to keep a page out of Google. That distinction matters. If you want a page out of Google, use or protect it properly. If you want Google to find your sitemap, the sitemap directive in robots.txt is fair game.
+
+The trap is treating robots.txt like an SEO control panel. It is not. A bad robots.txt can block useful crawling. A good one mostly stays out of the way. For a small blog, your goal is simple: do not block the blog, do not block important assets, and point to the sitemap. Very humble. Very effective.
+
+Use URL Inspection for priority posts only
+
+The URL Inspection tool is useful, but it is not where you should spend your afternoon submitting every support article one by one. Google’s URL Inspection documentation says the tool shows information about Google’s indexed version of a specific page and lets you test whether a URL might be indexable. It can also be used to request indexing for pages you manage.
+
+Use it for the posts that matter most. In a topic cluster, that usually means the pillar post and maybe one or two support posts that target high-intent queries. For example, if I published this article as part of my SEO and AI visibility cluster, I would manually request indexing for this post and perhaps related pieces like Is There a Google Search Console for ChatGPT? , How to Track AI Visibility Without Losing Your Mind , and GEO vs SEO: What Actually Changes When People Search With AI? if they had major updates.
+
+For everything else, let the sitemap and internal links do their job. Manual URL submission is like calling the waiter every thirty seconds. Sometimes useful. Mostly a sign that the system around you needs work.
+
+Do not use the old sitemap ping endpoint
+
+You will still find tutorials telling you to submit a URL like . Ignore that. Google announced the deprecation of the sitemap ping endpoint in 2023 and explained that the endpoint was no longer useful enough to keep around. The official post, Sitemaps ping endpoint is going away , also recommends being honest with . If your page changed seven years ago, do not mark it as updated yesterday. Google can notice patterns, tragically.
+
+This is especially important when you publish through automation. If your Framer CSV import or CMS workflow updates every value every time you touch the file, you may be creating noise. A good should reflect meaningful content changes, not “I opened the spreadsheet and panicked.”
+
+Internal links are part of submission
+
+A sitemap helps discovery, but internal links help meaning. They tell Google which pages belong together, which pages are important, and how the site is structured. They also help actual humans, which is still legal in SEO.
+
+When I publish a batch, I like to map the posts into a small cluster before pushing them live. This post would naturally link to How to Use JSON-LD for Blog Schema in Framer CMS , because schema is part of making content easier to understand. It should also link to Structural SEO: JSON-LD in Framer Beyond Meta Tags , because submitting a URL is only step one. Helping Google understand the entity, author, breadcrumbs, article structure, and related topics is the next layer.
+
+I would also connect it to The New Analytics Problem: When AI Mentions You but Nobody Clicks and The ROI of AI Search Mentions . Why? Because indexing is no longer just about blue links. Search results and AI answers increasingly summarize, cite, and reuse information in ways that may not send the same clean referral traffic we used to expect. That does not make technical SEO obsolete. It makes structure and measurement more important.
+
+What to check after submission
+
+After submitting the sitemap, do not sit there refreshing Search Console like it owes you money. Give it time, then check the reports that actually tell you something. Start with the Sitemaps report. Look for a successful submission, discovered URLs, and parsing errors. If Google cannot read the sitemap, fix that before worrying about rankings.
+
+Then check the Page indexing report. Google’s Page indexing report shows the indexing status of URLs Google knows about in your property. This is where you can separate discovery problems from quality or duplication problems. A URL that is not discovered is a different issue from a URL that is discovered but not indexed. A URL that is indexed but not getting impressions is another problem entirely.
+
+For a new batch, I would track four basic states: submitted and discovered, crawled but not indexed, indexed with no impressions yet, and indexed with impressions. Those states tell a rough story. Discovery means the sitemap and links are working. Crawled but not indexed may mean the content looks thin, duplicate, weak, or not worth adding yet. Indexed with no impressions means the page exists in Google, but does not yet have demand, relevance, or authority. Indexed with impressions is where normal SEO work begins.
+
+The batch publishing checklist I would actually use
+
+Here is the practical version I would keep beside the Framer import file. Before publishing, confirm that every post has a final slug, meta title, meta description, canonical URL, useful image alt text, and at least two internal links. Check that the body uses proper headings, not fake visual headings created with random styled paragraphs. Google’s SEO Starter Guide still emphasizes helping search engines crawl, index, and understand your content. Clean HTML is old-school, but so are doors, and we still use those.
+
+After publishing, open the live URLs, confirm they return the correct page, and check the sitemap. If the new URLs appear in the sitemap, submit the sitemap in Search Console. If the new URLs do not appear, fix the CMS or sitemap first. Do not submit broken evidence.
+
+Then request indexing for the pillar posts only. For support posts, rely on the sitemap, internal links, and normal crawling. Finally, come back to Search Console later and check the Sitemaps report, Page indexing report, and Performance report. The Performance report will be slow at first, especially for new posts, but it eventually gives you the only metrics that matter for search: queries, impressions, clicks, CTR, and average position.
+
+What this does not solve
+
+Submitting a sitemap does not fix thin content. It does not fix a messy information architecture. It does not fix ten posts targeting the same keyword with slightly different titles. It does not make Google care about a post that says the same thing as five hundred other posts already indexed.
+
+This is where a lot of content workflows fall apart. Teams obsess over submission because submission feels controllable. Content quality is messier. Internal linking is messier. Topical focus is messier. But those are the things that decide whether the URL deserves to exist in Google’s index in the first place.
+
+For my own site, I would rather publish fewer posts with clearer relationships than dump twenty disconnected articles into the sitemap and call it a strategy. A batch should feel like a small library shelf, not a junk drawer. The posts should point to each other, build on each other, and avoid repeating the same intro with different furniture.
+
+A simple workflow for josuesomarribas.com
+
+For this site, the most sensible setup is a repeatable Framer CMS workflow. Prepare the posts in CSV. Import them as drafts. Review the metadata and body formatting. Publish the batch. Confirm the sitemap. Submit the sitemap in Search Console. Request indexing for the pillar pieces. Track indexing and impressions over the next few weeks.
+
+That connects nicely with the larger system I have been building around SEO, GEO, structured data, and AI visibility. The Framer import workflow handles publishing. The schema posts handle machine-readable structure. The AI visibility posts handle measurement beyond classic clicks. And Search Console sits in the middle as the sober, slightly unfriendly dashboard that tells you whether Google has even noticed your work.
+
+That is the real point. Search Console is not where SEO starts. It is where your assumptions go to be mildly humiliated. Use it well.

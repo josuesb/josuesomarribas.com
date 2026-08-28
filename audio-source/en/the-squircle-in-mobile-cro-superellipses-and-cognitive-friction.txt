@@ -1,0 +1,41 @@
+The Squircle in Mobile CRO: Superellipses and Friction.
+
+There's a category of design decision that's too small to debate in a meeting and too pervasive to be neutral: the exact curvature of a button's corner. Over the last decade, mobile platforms have quietly converged on an answer that isn't the standard rounded rectangle, and the CRO question is whether that convergence carries any conversion weight, or whether it's pure aesthetics riding on Apple's coattails.
+
+I covered the geometry itself in the geometry behind modern UI: squircles, Apple, and Framer's update . This post is the follow-up for the conversion side: what's plausible, what's proven, and how you'd test it without fooling yourself.
+
+Thirty seconds of geometry
+
+A standard rounded rectangle joins a straight edge to a circular arc. At the joint, curvature jumps instantly from zero to a fixed value, a discontinuity your visual system can register as a faint hardness even when you can't name it. A squircle (a superellipse-family shape) ramps curvature up gradually, so edge flows into corner with no seam. Apple moved iOS to this construction with iOS 7 in 2013, and the most readable technical account of why it's hard to replicate is Figma's "Desperately seeking squircles" , written when they reverse-engineered the shape to build corner smoothing into their tool. As a reference point, Apple's icon shape corresponds to roughly 60% corner smoothing in Figma's terms , the value many design systems now copy.
+
+The web is catching up: there's an active CSS Working Group discussion on adding corner smoothing to border-radius , and in Framer it's already a slider. Implementation cost on a modern stack is close to zero, which matters for the cost-benefit math later.
+
+The cognitive-friction hypothesis, stated carefully
+
+The argument for squircles in conversion contexts runs through processing fluency: smoother contours are easier for the visual system to trace, lower perceived harshness, and read as more refined, and elements that feel effortless to parse get a small trust dividend. Every step of that chain is plausible. None of it, to my knowledge, has been demonstrated as a measurable conversion lift in a public, controlled experiment. I've found no published A/B test isolating corner smoothing on a CTA, and given the effect size such a change could realistically have, that absence is expected rather than suspicious.
+
+So intellectual honesty requires stating the claim at its real strength: squircles are a defensible refinement with a coherent perceptual rationale and no demonstrated standalone ROI. Anyone selling you more than that is selling.
+
+Why you probably shouldn't A/B test it in isolation
+
+Here's where this connects to testing discipline. A corner-smoothing change is the textbook example of a cosmetic micro-variation, exactly the kind of test I argued against running on thin traffic in CRO when you don't have the traffic . If the true effect exists, it's almost certainly small, and detecting a small effect demands sample sizes that most sites can't fund. Run it anyway and you'll get a noisy result, and noisy results get over-interpreted, a failure mode I broke down in how an A/B test really looks when you don't have enough data .
+
+The rational ways to adopt squircles are instead:
+
+As part of a bundled visual-refresh test. Ship the coherent refinement (corners, spacing, contrast, type) as one variant. You're testing the direction, not attributing credit to each pixel, and the bundle might actually clear your detectable-effect threshold.
+
+As a design-system decision justified on coherence. If your product lives inside iOS conventions, matching the platform's corner language reduces one tiny source of visual dissonance. That's a judgment call, the kind teams make hundreds of times without a test, and pretending otherwise is ceremony.
+
+The semiotic angle: corners are signs too
+
+There's a second-order effect that's easier to defend than raw fluency. Corner treatment is part of an interface's sign system: sharp corners signal technical/dense/serious, large radii signal friendly/casual, and smoothed corners currently signal native, current, cared-for, because that's what the dominant platforms trained users to associate them with. Signals like that don't convert on their own, but they set the prior a user brings to your CTA. I developed this reading of interfaces in UX is semiotics , and the same logic at form-field scale in the micro-semiotics of forms .
+
+Through that lens, the question stops being "does this corner lift CVR?" and becomes "does this corner agree with everything else my interface is claiming about itself?" A meticulous squircle on a page with inconsistent spacing and three button styles is a contradiction, and users read contradictions as carelessness faster than they admire curvature.
+
+What I'd actually do
+
+Adopt corner smoothing as a system token, apply it everywhere at once, spend zero traffic proving it in isolation, and bank the testing budget for changes with plausible effect sizes: hierarchy, copy, structure, steps removed. Geometry earns its keep as part of a coherent whole, and the coherent whole is the thing worth testing.
+
+The wider implication is about where refinement belongs in a CRO program. Polish is a floor, not a lever: it removes reasons to distrust you rather than adding reasons to convert. Budget it like a floor, and reserve the experiments for the levers.
+
+Related reads: the geometry behind modern UI , UX is semiotics , and CRO when you don't have the traffic .

@@ -1,0 +1,59 @@
+Text-Only Landing Page.
+
+Introducing the Design Lab
+
+Welcome to the Design Lab, a space where I explore creative solutions to everyday design challenges. This section of my website is dedicated to bite-sized UI/UX experiments, where I tackle common problems and rethink solutions using limited time frames.
+
+No, I’m not saying that sometimes "there is no time for design"…
+
+Now jokes aside, the goal is to push creativity, efficiency, and problem-solving skills, testing different tools and approaches along the way.
+
+The Challenge
+
+For this challenge, I’m creating a text-only landing page. The topic? My professional profile tailored for a UX position. The main objective is to design a page that helps recruiters quickly understand why I’m a great fit for their UX design roles.
+
+I’ll be using Figma and Framer for this exercise. Figma will handle the research phase and low-to-mid-fidelity designs, while Framer will bring it all to life with a responsive, production-ready build.
+
+Competitor Analysis
+
+For this case, I conducted a quick research session—keeping in mind that these exercises are meant to be completed within a few hours. If you’re looking for a deeper dive, I have a more detailed Competitor Analysis post that walks through the full process step by step.
+
+I’ve divided the research into two parts: text-only landing pages and exceptional portfolios from other designers for inspiration.
+
+I came across three portfolios from other designers.
+
+Alexander Vilinskyy - Digital designer and founder of Super Clear
+
+Very clean and direct, with a strong focus on clear messaging (which fits his “Super Clear” brand). The balance between typography and white space makes it easy to scan. Feels like a modern agency site.
+
+Francesco Fagioli , A Senior Product Designer at SubbyX
+
+A more personal, storytelling-driven approach. It has a friendly tone and showcases work with enough detail without being overwhelming. The project pages feel thoughtful and well-structured.
+
+Hanson Wu , Principal Product Designer at Yahoo Sports
+
+A mix of personality and professionalism. The layout is clean but has subtle touches that make it unique. Feels polished but not generic, which is hard to pull off.
+
+Low Fidelity Wireframes
+
+For the Low-Fidelity Wireframes, I focused on structuring the content in a clear and digestible way, ensuring recruiters can quickly understand my profile. The wireframes prioritize hierarchy, readability, and key information placement without distractions. Since this is a text-only landing page, I experimented with different layouts to guide the reader’s attention effectively. At this stage, the goal is to establish a solid framework before refining the design further in higher fidelity stages.
+
+High Fidelity Wireframes
+
+For the High-Fidelity Wireframes, I am skipping the color and font selection since this page will be part of an existing website with established styles. Instead, I am focusing on refining the layout, typography hierarchy, and spacing to ensure a seamless integration with the current design system. The goal is to create a polished, structured page that maintains consistency while effectively communicating my professional profile to recruiters.
+
+From Figma to Framer
+
+With the design structured in Figma, it’s time to bring it to life in Framer. This step is where the static wireframes evolve into a fully responsive, interactive landing page. Using Framer’s intuitive layout tools, I ensure that the design adapts seamlessly across different screen sizes while maintaining the intended hierarchy and readability.
+
+Since this is a text-only landing page, I focus on precise spacing, typography, and responsiveness to create a smooth experience without relying on heavy visuals. The transition from Figma to Framer allows for real-time adjustments, ensuring that the final page feels just as polished in production as it does in the design phase.
+
+Check out the result here
+
+Wrapping Up
+
+This Design Lab challenge pushed me to create a clear, structured, and effective text-only landing page within a limited time frame. From quick research and wireframing in Figma to bringing it to life in Framer, the goal was to ensure recruiters can quickly grasp why my profile is a strong fit for UX roles.
+
+By focusing on content hierarchy, readability, and responsiveness, I crafted a page that aligns with an existing design system while delivering a seamless user experience. This exercise reinforces how even the simplest designs require thoughtful structure and execution.
+
+Now, onto the next challenge!

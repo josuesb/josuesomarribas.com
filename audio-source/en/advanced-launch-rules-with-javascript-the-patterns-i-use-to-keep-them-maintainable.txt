@@ -1,0 +1,133 @@
+Advanced Launch Rules with JavaScript: The Patterns I Use to Keep Them Maintainable.
+
+If you’ve done serious work in Adobe Launch (Adobe Experience Platform Data Collection), you’ve felt it: custom code rules start as “just a quick snippet” and slowly become… a haunted house. Stuff fires twice, breaks only in production, and nobody remembers why Rule 38 depends on a CSS class from 2019.
+
+This post is basically my attempt to keep Launch code boring. Predictable. Maintainable. The kind of boring that doesn’t page you at 2am.
+
+And yes, a lot of this also applies to Monetate experiments and JS actions. Different platform, same problems.
+
+What “advanced rules” really means in Launch
+
+For me, “advanced” isn’t clever. It’s when your code has to survive reality:
+
+Rules can fire more than once (SPA navigations, re-rendered components, “helpful” observers).
+
+The DOM is not ready when you want it to be.
+
+Other tags are racing you, or mutating the page after you run.
+
+You need to debug, but you don’t want to spam the console for every user.
+
+You need performance discipline because Launch is often running on already-heavy pages.
+
+So the goal is not “more JavaScript.” It’s fewer surprises.
+
+Pattern 1: A tiny shared utility layer (on purpose)
+
+If you copy-paste helpers into every custom code action, you’ll drift. One rule uses a 200ms timeout, another uses 800ms, one handles errors, one doesn’t.
+
+Instead, I like a single shared utility object that gets loaded once, then reused.
+
+Best case: you build a small Launch extension, version it, and import it cleanly.
+
+More common case: you create one “Library” rule that runs early and defines (namespaced), then every other rule uses it.
+
+That shared layer becomes your “standard library.” Boring, consistent, testable-ish.
+
+Pattern 2: Idempotency, or “don’t do the same thing twice”
+
+Idempotency just means: running the same rule twice doesn’t double-inject UI, double-bind events, or double-track.
+
+In Launch and Monetate, this is the difference between “works in QA” and “why are we tracking 14 clicks per click.”
+
+Things I do constantly:
+
+Mark DOM nodes I’ve already touched (via ).
+
+Store a one-time flag in memory ( ) keyed by rule name.
+
+For event listeners, prefer event delegation so you bind once to a stable parent instead of binding to elements that keep re-rendering.
+
+Pattern 3: Error handling that doesn’t hide problems
+
+Custom code rules love failing silently. That feels nice until you need to know why conversions dropped.
+
+My preference:
+
+Wrap rule entry points in a .
+
+Log an error with context (rule name, variant, page type).
+
+Optionally report it somewhere lightweight (even just Adobe Analytics as an event, if that’s your setup), but only if you have a clean way to do it.
+
+Key idea: errors should be visible during QA and discoverable in production , without turning the site into a Christmas tree of console logs.
+
+Pattern 4: Observability, but keep it sane
+
+You don’t need a full telemetry platform to get value. You need a switch.
+
+I usually add a debug flag like:
+
+Then logging only happens when that flag is on. That means:
+
+QA can debug quickly.
+
+Production users don’t get noise.
+
+You can ask someone, “turn the flag on, reproduce, send me the logs.”
+
+Bonus: I prefix logs with something consistent, so filtering is easy.
+
+Pattern 5: Performance rules, because Launch runs on real sites
+
+Some practical habits:
+
+Cache selectors. Don’t query the same element 10 times.
+
+Avoid aggressive setups unless you debounce and disconnect.
+
+Prefer / for non-critical work.
+
+Keep polling ( ) as a last resort, and always set a timeout.
+
+In other words, act like you’re paying for milliseconds. Because your users are.
+
+Pattern 6: Avoid dependencies you can’t control
+
+It’s tempting to paste in a helper library, or depend on whatever jQuery version the site happens to have. That’s how you inherit chaos.
+
+My rule:
+
+No external libs in rule code unless they’re first-party, versioned, and owned.
+
+No “site already has X” assumptions unless that’s contractually true.
+
+If you need shared capability, build it into your utility layer.
+
+Mini starter kit: utilities I actually reuse in Launch rules
+
+Here’s a small “starter kit” you can drop into a single early-running Launch rule (or an extension). Then other rules call .
+
+That’s not fancy, but it’s consistent. And consistency is what keeps “Adobe Launch custom code” from turning into a pile of mystery meat.
+
+Quick checklist I use before shipping a rule
+
+Can this run twice without breaking anything?
+
+Are event listeners bound once, ideally via delegation?
+
+If it fails, will I notice? (at least in QA)
+
+Can I debug it without editing code? (debug flag)
+
+Did I avoid heavy DOM polling and expensive observers?
+
+Did I avoid sketchy dependencies?
+
+Is the rule name and keying consistent across Launch and Monetate workflows?
+
+Closing thought
+
+Maintainability in Launch rules is mostly about humility. You’re not writing “a snippet.” You’re writing software that will live inside a tag manager, on a site you don’t fully control, next to other scripts that also think they’re the main character.
+
+So I optimize for boring: small utilities, idempotency, defensive code, and just enough observability to explain what happened when something inevitably does happen.

@@ -1,0 +1,159 @@
+How User Research Shaped My Travel Platform.
+
+When building a product, it’s easy to guess what users want. However, that often leads to wasted time and effort. This is why in this article I explained how I used User-Centered Design (UCD) to create a travel platform that actually solves real problems for travelers. My goal is to help travelers discover hidden places with useful recommendations and real-time advice. To do this, I ran a survey to learn directly from travelers.
+
+In this post, I’ll share the questions I asked to understand travelers’ needs, the insights I discovered from their answers, the features I designed to solve real problems, and what’s next for my project.
+
+Step 1: Asking the Right Questions
+
+Before designing anything, I needed to understand how people plan their trips, the problems they face when looking for travel information, and what features would improve their experience.
+
+So, I created a survey using Typeform and asked these key questions:
+
+1. How often do you travel? - This helped me understand how engaged my audience is with travel.
+
+2. What type of trips do you prefer? - I gave people multiple choices, like:
+
+Adventure (hiking, trekking, extreme sports)
+
+Relaxation (beaches, resorts, wellness retreats)
+
+Cultural (museums, historical sites, local traditions)
+
+Backpacking (budget-friendly, long-term, multiple destinations)
+
+Gastronomic (food tours, local cuisine experiences)
+
+Nature & Eco-Tourism (wildlife, sustainable travel)
+
+Party & Nightlife (festivals, clubs, social events)
+
+Road Trips (exploring by car, campervan, or motorcycle)
+
+Staycation (exploring your own city or nearby places)
+
+3. How do you usually plan your trips?
+
+People could choose multiple answers, including:
+
+Travel blogs and websites
+
+Recommendations from friends and family
+
+Social media (Instagram, TikTok, Facebook groups)
+
+Travel apps (Google Maps, TripAdvisor, Airbnb Experiences)
+
+Guidebooks and printed travel guides
+
+Online forums and communities (Reddit, Lonely Planet)
+
+Travel agencies and tour operators
+
+Spontaneous (no planning at all)
+
+4. How important is finding hidden or unique spots to you? (Scale 1-10) - I wanted to see if people cared about discovering lesser-known places.
+
+5. What’s the best hidden place you’ve discovered? - This helped me find examples of unique locations travelers love.
+
+6. What do you enjoy most about traveling? - I wanted to know what makes travel exciting for them.
+
+7. What apps or platforms do you use for travel planning? - This showed me what tools people already trust and more importantly, what features people use for when planning a trip.
+
+8. What features would improve your trip planning experience? - I wanted people to tell me what they felt was missing.
+
+9. What frustrates you the most when searching for travel information? - This helped me understand the biggest pain points.
+
+10. What’s missing in current travel platforms? - This revealed what people wish existed.
+
+Step 2: What I Learned from the Survey Results
+
+I collected responses and analyzed the data. Here’s what I found:
+
+1. Travel Frequency
+
+Most travelers in the survey travel a few times a year. This means they are not full-time travelers but still travel often enough to care about better planning tools.
+
+2. Popular Travel Styles
+
+Many prefer Relaxation (beaches, resorts, wellness retreats) and Cultural trips (museums, historical sites, local traditions).
+
+Backpacking, Gastronomic travel, and Eco-Tourism were also common choices.
+
+Some mix multiple styles (e.g., Adventure + Relaxation + Cultural).
+
+3. How People Plan Their Trips
+
+Most-used methods:
+
+Travel apps (Google Maps, TripAdvisor, Airbnb Experiences).
+
+Recommendations from friends & family.
+
+Social media (Instagram, TikTok, Facebook groups).
+
+Least-used method: Travel agencies and tour operators.
+
+4. Importance of Hidden Places
+
+The average score was 7.9/10, meaning many travelers love discovering unique places. This enforces the needs of creating a travel app or website that focuses on unique experiences.
+
+5. Most Used Travel Apps
+
+Most common: Google Maps, Booking, Airbnb.
+
+Surprise mentions: Grindr 😱 (for social connections while traveling), ChatGPT (for recommendations).
+
+6. Biggest Frustrations When Planning Trips
+
+Lack of up-to-date or complete information.
+
+Too many touristy places, not enough hidden gems.
+
+Security concerns when exploring lesser-known spots.
+
+Limited options for solo travelers.
+
+7. What’s Missing in Current Travel Platforms?
+
+More interactive and real-time travel advice.
+
+Better filters & ways to display accommodations.
+
+Local contacts to help tourists in each area.
+
+A platform that allows deeper conversations, not just reviews.
+
+Step 3: Features Inspired by Real User Needs
+
+Using these insights, I designed features to solve the problems travelers face:
+
+1. Hidden Gems Map
+
+A map of lesser-known places, recommended by travelers.
+
+Filters to find food spots, nature, culture, and adventure.
+
+2. Smart Trip Planner
+
+Personalized itineraries based on budget, interests, and travel style.
+
+Budget tracker to help stay within spending limits.
+
+3. Real-Time Travel Community
+
+Chat groups for solo travelers, local recommendations, and meetups.
+
+Travelers can ask locals for real-time advice.
+
+4. AI-Powered Travel Assistant
+
+Instant travel questions answered with AI.
+
+Translation & cultural tips for smoother travel.
+
+Final Thoughts
+
+Using User-Centered Design (UCD) helped me move from assumptions to real insights, allowing me to create a travel platform that truly solves problems for travelers. By conducting surveys, analyzing responses, and identifying key frustrations, I was able to design features that focus on hidden travel spots, real-time advice, and smart trip planning.
+
+This process showed me that the best products come from listening to users first. Instead of guessing what people want, I built a solution based on real needs and pain points. Now, the next steps are to test the design, gather feedback, and refine the experience before launching.

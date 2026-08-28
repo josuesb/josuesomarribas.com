@@ -1,0 +1,45 @@
+Framer Localization Workflow: Hreflang & Multi-Language CMS.
+
+This site runs in English and Spanish using Framer's native localization, with the Spanish version living under /es/. Setting that up takes an afternoon. Running it well, in a way that Google indexes both versions correctly and each language actually earns its own traffic, is an ongoing workflow with specific failure points. This post documents that workflow: what the platform automates, what it quietly leaves to you, and the QA steps that catch the gap between the two.
+
+What Framer automates (and does well)
+
+The technical layer of international SEO is the part Framer handles with almost no input from you. According to Framer's own documentation, the lang attribute switches automatically to match the selected locale, and an hreflang tag is added to indicate when a page is a duplicate in another language . Both tags are managed in the backend and are not editable through the UI, which removes a whole class of human error.
+
+This matters because hreflang is famously easy to get wrong by hand. Google's documentation on localized versions requires the annotations to be reciprocal: if your English page points to the Spanish one, the Spanish page must point back, and each must reference itself. Manual implementations break this constantly. Framer generating both sides from one source of truth is the strongest argument for using the native feature over duct-taping it yourself.
+
+Two more pieces of automation are worth knowing about. Automatic Locale redirects visitors using their browser language preferences and device timezone, not geolocation , and it only operates on your canonical domain. And as of this year, Framer translates URL paths for any page, not just CMS content , which removes the old workaround of duplicating pages to get localized slugs.
+
+What stays manual: the part that decides whether /es/ ranks
+
+Everything above is plumbing. The work that determines whether the Spanish version earns traffic is still on you:
+
+Localized metadata. Meta titles and descriptions don't translate themselves, and machine-translated ones read like machine translation in the SERP, where CTR is decided. Each locale needs metadata written against the queries people actually type in that language, which are rarely literal translations of the English ones.
+
+Content quality per locale. Auto-translate is a drafting tool. An independent review of Framer multilingual setups reached the same conclusion: the automatic technical layer only works when each locale has reviewed content, localized metadata, and a clean URL structure . My own approach goes further: the Spanish version of a post opens differently and argues differently, because it's written for a different reader, and that's a deliberate editorial decision rather than extra cost.
+
+Structured data. Framer doesn't generate JSON-LD natively, so any schema you inject via code embeds has to account for locale. I covered the base setup in how to use JSON-LD for blog schema in Framer CMS and the broader reasoning in structural SEO: JSON-LD in Framer beyond meta tags .
+
+The CMS workflow, including the catch nobody documents
+
+Localized CMS content in Framer lives as translations attached to the default-locale item: same collection, same item, per-locale field values. Day to day this is convenient. You edit one item and switch locales in the same view.
+
+The catch appears the moment you build any workflow on top of CSV. Export a collection and you get the default locale only; the Spanish field values do not travel with the file. I confirmed this on this site's own export while building an import pipeline (the pipeline itself is documented in how to import content into Framer automatically ). The practical consequences:
+
+CSV import/export is an English-only (default-locale-only) channel. Treat it as the backbone for the primary language and nothing else.
+
+Spanish content has to enter through the localization UI, which means your content-ops checklist needs an explicit second step per post, or the locale silently falls behind.
+
+Your off-platform backup of localized content is whatever you keep outside Framer. Keep the source documents.
+
+The QA pass that catches drift
+
+After publishing or restructuring, a five-minute check per locale: view source on a key page and confirm the hreflang pairs are present and reciprocal; confirm the localized URL resolves and isn't falling back to the default language mid-page (fallback text is easy to miss in long posts); check the sitemap includes both locales; and in Search Console, segment performance by page path so /es/ gets read as its own property-within-a-property rather than disappearing into the site average. Mixed-language pages, where a missed string renders in English inside a Spanish post, are the most common drift and the most damaging to trust, a theme I expanded on in L10n is not translation .
+
+When native localization stops being enough
+
+For a site like this one (two locales, one author, content-led), native localization is the right tool, and it's a real advantage over the platforms I compared in my website builder breakdown . The honest boundary: high content volume, many locales, or a team workflow with translation review stages pushes you toward a dedicated service layered on top, with its own tradeoffs in cost and control. Below that boundary, the native feature plus the manual discipline above covers everything that matters.
+
+The takeaway worth keeping is the division of labor. Framer owns the tags; you own the language. A site can pass every hreflang validator and still have a second locale nobody searches for, because the metadata and the content were translated instead of written. The tooling solved the part that used to be hard so that the editorial part could become the whole job.
+
+Related reads: importing content into Framer automatically , JSON-LD blog schema in Framer , and adapting tone and urgency by market .

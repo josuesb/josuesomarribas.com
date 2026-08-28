@@ -1,0 +1,81 @@
+Alex, an User Persona Based on User Research.
+
+When designing a product, it's tempting to assume what users want. But creating designs on real data really makes the difference . This is why to create something truly valuable, I needed real data. That's why I conducted a survey to understand travelers' needs before designing my travel platform. In this article, I’ll explain how I used that research to create an accurate user persona.
+
+Step 1: Conducting the Survey
+
+To collect insights, I designed a survey using Typeform and asked travelers key questions about their habits, frustrations, and expectations. Some of the most important questions were:
+
+How often do you travel? – To understand travel frequency.
+
+What type of trips do you prefer? – To identify different traveler profiles.
+
+How do you usually plan your trips? – To see what sources people trust.
+
+What’s missing in current travel platforms? – To discover gaps in the market.
+
+What frustrates you the most when planning trips? – To learn about common pain points.
+
+Step 2: Analyzing the Data
+
+After collecting responses, I analyzed trends and patterns. Some key insights included:
+
+Most travelers take 3-4 trips per year.
+
+Many prefer cultural and relaxation-based travel.
+
+Hidden places are important, with an average interest score of 7.9/10.
+
+Travelers rely on Google Maps, Instagram, and Booking.com for trip planning.
+
+The biggest frustrations include outdated travel information, a lack of hidden gems, and safety concerns.
+
+Step 3: Creating the User Persona
+
+Using this information, I developed Alex – The Hidden Gem Seeker, a persona that represents a key type of traveler who would benefit from my platform.
+
+Alex – The Hidden Gem Seeker
+
+Age: 31
+
+Location: Mexico City
+
+Occupation: Freelance Graphic Designer
+
+Pronouns: They/Them
+
+Travel Style: Solo and Cultural Explorer
+
+Background & Travel Habits
+
+Travels 3-4 times a year, often solo or in small groups.
+
+Loves exploring beyond touristy areas and seeks unique, local experiences.
+
+Uses Google Maps, Booking, and Instagram for trip planning.
+
+Looks for budget-friendly stays but prioritizes safety and authenticity.
+
+Pain Points
+
+Struggles to find truly hidden places without spending hours researching.
+
+Feels most travel guides are repetitive and lack local perspectives.
+
+Worries about safety when traveling alone.
+
+Finds queer-friendly travel information limited in many destinations.
+
+Needs & Expectations
+
+A reliable source for discovering underrated travel spots.
+
+Real-time travel advice from locals and experienced travelers.
+
+A smart trip planner that helps them stay on budget.
+
+A community to connect with solo travelers and find inclusive spaces.
+
+Final Thoughts
+
+By using real user research, I was able to develop a user persona that represents my target audience’s true needs. This process helped me design features that directly address common frustrations and improve the travel experience. Instead of guessing, I built a solution informed by real travelers, ensuring a stronger connection between my platform and its users.

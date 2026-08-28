@@ -9,9 +9,11 @@ Put source text in the folder matching its language:
 ```text
 audio-source/
 ├── en/
-│   └── my-article.txt
+│   ├── my-article.txt
+│   └── done/
 └── es/
-    └── mi-articulo.txt
+    ├── mi-articulo.txt
+    └── done/
 ```
 
 Generated files are written to the public folder using the same filename:
@@ -34,7 +36,15 @@ From the project root, run:
 npm run audio:generate
 ```
 
-The command processes every supported file under `audio-source/en` and `audio-source/es`. Existing MP3 files are skipped when they are newer than their source text.
+The command processes every supported file under `audio-source/en` and `audio-source/es`. After a successful generation, the source text is moved into that language's `done` subfolder.
+
+The script records every completed job in:
+
+```text
+audio-source/audio-generation-checklist.json
+```
+
+The checklist stores a fingerprint of the text, model, voice, language and speed. Files inside `done` are never scanned. If the same source is placed in the queue again, the checklist prevents a duplicate generation and moves that copy to `done` as well. If the text, voice or speed changes, a new MP3 is generated.
 
 Generate only one file:
 
@@ -42,7 +52,7 @@ Generate only one file:
 npm run audio:generate -- audio-source/en/my-article.txt
 ```
 
-Regenerate an existing recording:
+Regenerate an existing recording by copying its text out of `done` and using `--force`:
 
 ```bash
 npm run audio:generate -- --force audio-source/en/my-article.txt
@@ -56,7 +66,7 @@ npm run audio:generate -- --voice bm_george --speed 0.92 audio-source/en/my-arti
 
 ## Default voices
 
-- English: `am_michael` (American male)
+- English: `bm_george` (British male)
 - Spanish: `em_alex` (Spanish male)
 - Default speed: `0.95`
 
@@ -86,5 +96,7 @@ Generated MP3 files are normal public assets and can be committed when they shou
 - `ffmpeg is missing`: run `brew install ffmpeg`.
 - `.venv-tts/bin/python` is missing: repeat the one-time setup above.
 - The audio was skipped: use `--force` or edit the source file.
+- A completed source disappeared from the queue: look inside `audio-source/en/done` or `audio-source/es/done`.
+- To audit previous generations, open `audio-source/audio-generation-checklist.json`.
 - A word is pronounced badly: spell it phonetically in the source narration file; this does not affect the visible article.
 - Long articles work best when headings and paragraphs end with punctuation.

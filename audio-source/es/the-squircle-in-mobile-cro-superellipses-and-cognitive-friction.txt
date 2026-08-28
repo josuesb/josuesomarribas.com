@@ -1,0 +1,39 @@
+El squircle en CRO móvil: superelipses y fricción cognitiva.
+
+Existe una categoría de decisiones de diseño demasiado pequeña para debatirla en una reunión y demasiado extendida para ser neutral: la curvatura exacta de la esquina de un botón. Durante la última década, las plataformas móviles han convergido discretamente en una forma que no es el rectángulo redondeado tradicional. La pregunta desde CRO es si esa convergencia afecta a la conversión o si se trata de estética siguiendo la influencia de Apple.
+
+Treinta segundos de geometría
+
+Un rectángulo redondeado estándar conecta una línea recta con un arco circular. En la unión, la curvatura salta de cero a un valor fijo, una discontinuidad que el sistema visual puede percibir como cierta dureza aunque no sepamos nombrarla. Un squircle —una forma de la familia de las superelipses— aumenta la curvatura gradualmente, de modo que el borde fluye hacia la esquina sin una unión visible.
+
+Apple adoptó esta construcción en iOS y Figma documentó la dificultad de reproducirla cuando desarrolló el suavizado de esquinas para su herramienta. Como referencia, la forma de los iconos de Apple equivale aproximadamente a un 60 % de suavizado en Figma, un valor que muchos sistemas de diseño han copiado.
+
+La web también avanza en esa dirección. Existe una discusión activa en el CSS Working Group para añadir suavizado de esquinas a border-radius , mientras que herramientas como Framer ya lo ofrecen mediante un control. En un stack moderno el coste de implementación es casi cero, algo relevante para valorar su utilidad.
+
+La hipótesis de fricción cognitiva, formulada con cuidado
+
+El argumento a favor de los squircles pasa por la fluidez de procesamiento: los contornos suaves son más fáciles de seguir visualmente, se perciben menos agresivos y parecen más refinados. Los elementos fáciles de interpretar podrían recibir un pequeño beneficio de confianza. Cada paso de esa cadena es plausible. Sin embargo, no conozco ningún experimento público y controlado que haya demostrado una mejora medible de conversión causada únicamente por suavizar las esquinas.
+
+La afirmación honesta es ésta: los squircles son un refinamiento defendible, con una justificación perceptiva coherente, pero sin un ROI independiente demostrado. Quien prometa más está vendiendo una certeza que los datos no sostienen.
+
+Por qué probablemente no deberías probarlo de forma aislada
+
+Cambiar el suavizado de una esquina es el ejemplo perfecto de una microvariación cosmética. Si existe un efecto real, seguramente será pequeño; detectar efectos pequeños exige muestras que la mayoría de sitios no puede financiar. Probarlo de todos modos produce resultados ruidosos, y los resultados ruidosos suelen interpretarse en exceso.
+
+Hay dos formas más racionales de adoptar los squircles:
+
+Como parte de una renovación visual conjunta. Publica esquinas, espaciado, contraste y tipografía como una variante coherente. Estás probando la dirección completa, no intentando asignar mérito a cada píxel, y el conjunto puede superar el umbral de efecto detectable.
+
+Como decisión del sistema de diseño basada en coherencia. Si el producto vive dentro de las convenciones de iOS, compartir su lenguaje de esquinas elimina una pequeña disonancia visual. Es una decisión de criterio, como cientos de otras que un equipo toma sin experimento.
+
+El ángulo semiótico: las esquinas también son signos
+
+El tratamiento de las esquinas forma parte del sistema de signos de una interfaz. Las esquinas agudas pueden comunicar precisión técnica o seriedad; los radios grandes, cercanía e informalidad; las esquinas suavizadas comunican ahora una experiencia nativa, actual y cuidada porque las plataformas dominantes han enseñado a reconocerlas así.
+
+Estas señales no convierten por sí solas, pero condicionan la expectativa con la que una persona interpreta el CTA. La pregunta deja de ser “¿esta esquina aumenta el CVR?” y pasa a ser “¿esta esquina coincide con todo lo demás que mi interfaz afirma sobre sí misma?”. Un squircle meticuloso dentro de una página con espaciado inconsistente y tres estilos de botón es una contradicción.
+
+Lo que haría en la práctica
+
+Adoptaría el suavizado como un token del sistema, lo aplicaría de forma consistente y no gastaría tráfico intentando demostrar su efecto aislado. Reservaría el presupuesto experimental para cambios con un tamaño de efecto plausible: jerarquía, copy, estructura o pasos eliminados.
+
+La conclusión más amplia trata sobre el lugar del refinamiento dentro de CRO. El acabado es un mínimo, no una palanca: elimina motivos para desconfiar, pero no añade por sí solo motivos para convertir. Presupuéstalo como mínimo y reserva los experimentos para las palancas.

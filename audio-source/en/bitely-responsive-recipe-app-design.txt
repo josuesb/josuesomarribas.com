@@ -1,0 +1,39 @@
+Bitely – Responsive Recipe App Design.
+
+Bitely is a modern, user-friendly recipe app designed to work seamlessly across multiple devices. This project explores how thoughtful UX research and a mobile-first approach can enhance the cooking experience for users.
+
+Understanding the User
+
+To create an intuitive and engaging experience, extensive research was conducted, including:
+
+Competitive analysis to identify gaps in existing recipe apps.
+
+User psychology insights to understand cooking habits and motivations.
+
+User interviews & personas to define key pain points and expectations.
+
+User flows & prototyping to ensure a smooth, frustration-free experience.
+
+A Seamless Multi-Device Experience
+
+Cooking isn’t limited to just one screen—Bitely adapts to any device, allowing users to access their favorite recipes anywhere. With a clean, distraction-free design, the app keeps the focus on what matters most: the recipes.
+
+A Modern Yet Simple Look
+
+Bitely’s UI embraces:
+
+Minimalist typography for readability.
+
+Bright, high-quality imagery to make recipes visually appealing.
+
+A focused color palette (White, Black, Red, and Pink) where red and pink highlight key actions in the user’s workflow.
+
+Final Thoughts
+
+Bitely proves that good UX and responsive design can make everyday tasks—like cooking—more enjoyable and efficient. By prioritizing usability, accessibility, and a seamless experience across devices, this project showcases a thoughtful, research-driven approach to app design.
+
+See the Full Case Study
+
+Explore the complete project on Behance:
+
+Bitely on Behance

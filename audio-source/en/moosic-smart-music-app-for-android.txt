@@ -1,0 +1,33 @@
+Moosic – Smart Music App for Android.
+
+Moosic is a music streaming app designed for those moments when you just don’t know what to listen to. With its Mood feature, the app intelligently suggests the perfect soundtrack for any situation—whether you’re working, relaxing, or on a road trip.
+
+A Music Experience Tailored to Your Mood
+
+Finding the right song has never been easier. Moosic’s Mood feature analyzes emotions to curate playlists that match your feelings. Inspired by the PANAS model by Watson and Tellegen (1985), this feature lets users search for music based on moods and emotions—something unique in the world of music apps.
+
+Key Features
+
+Smart Mood Selection – Get song recommendations based on how you feel.
+
+Personalized Playlists – Discover new artists, albums, and tracks tailored to your taste.
+
+Seamless Navigation – A clean UI following Google’s Material Design System for intuitive interaction.
+
+Social Hub – Connect with friends, explore their music tastes, and build a community.
+
+Advanced Search – Find songs using text or recording a snippet of a track.
+
+My Library – Save, download, and manage all your favorite music in one place.
+
+Designed for a Seamless User Experience
+
+Moosic follows a structured Atomic Design approach, ensuring a consistent and scalable UI. The color-coded navigation helps users easily explore different sections, making music discovery effortless. Built using Adobe XD, the design embraces Google’s Material Design guidelines, ensuring a smooth, Android-native experience.
+
+Final Thoughts
+
+Moosic is more than just another music app—it’s a personalized experience that understands you. With its intelligent mood-based search, clean UI, and social features, it redefines how people connect with music.
+
+See the Full Case Study
+
+Explore the complete project on Behance

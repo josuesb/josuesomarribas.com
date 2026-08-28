@@ -1,0 +1,31 @@
+JSON-LD for Case Studies: Schema for UX Portfolios.
+
+Case studies are the highest-stakes pages on a designer's site. A recruiter or client lands there, decides in minutes, and leaves. Yet they're usually the least machine-readable pages too: long scrolls of images and prose with nothing telling a crawler what was made, by whom, with what tools, for what outcome. Structured data fixes the machine-readable half, and for a UX portfolio it has one immediate complication worth addressing first.
+
+The complication: there is no CaseStudy type
+
+Schema.org doesn't define a CaseStudy type. You're choosing from the existing vocabulary, and Google constrains the choice further: for article markup, the object must be based on Article, NewsArticle, or BlogPosting , with no required properties, just recommended ones that apply to your content.
+
+Expectations should be set honestly alongside that. Of the 800+ types schema.org defines, only around 30 are eligible for visual rich results in Google's Search Gallery, FAQ rich results were restricted in 2023 to authoritative government and health sites, and How-To results were deprecated on mobile . So for a portfolio, schema's payoff is mostly entity clarity (helping machines understand who you are and what you made) rather than SERP decoration. That payoff has grown, not shrunk, now that AI assistants are a discovery channel; extraction-friendly structure is the theme of GEO vs SEO , and schema is its most literal form.
+
+The recipe: an Article about a CreativeWork, by a Person
+
+The model that fits a case study is layered: the page itself is a BlogPosting (or Article), the project it describes is a nested CreativeWork , and you are a Person connected to both. That last entity matters more than it looks: in the adoption data Google and Schema.org published, Person and Organization sit among the most widely deployed types on the entire web , precisely because they anchor identity, which is the thing a portfolio exists to establish.
+
+The fields that earn their bytes for a portfolio specifically: about (the project as its own entity), sameAs on the Person (binding the site to your LinkedIn so machines consolidate you into one identity), keywords mapped to your actual skills, and inLanguage , which does real work on a bilingual site. Skip ratings, offers, and anything your page doesn't visibly contain; markup that doesn't match visible content is the one way to turn schema from neutral into harmful.
+
+Implementation in Framer, briefly
+
+Framer doesn't generate JSON-LD natively, so this travels in a code embed on the CMS template, with CMS variables filling the dynamic fields, exactly the mechanism I documented in how to use JSON-LD for blog schema in Framer CMS and extended in structural SEO: JSON-LD in Framer beyond meta tags . Two portfolio-specific notes on top of those guides: case-study pages and blog posts can share one template-level script with the @type switched per collection, and on a localized site the inLanguage value and localized URLs need to track the locale, the workflow from my Framer localization post .
+
+Validate with Google's Rich Results Test after deploying, as their documentation recommends , and re-validate when you change the template, since one renamed CMS field silently breaks every page at once.
+
+What I'd skip
+
+Resist the urge to mark up everything. AggregateRating without visible ratings, HowTo on a process write-up, FAQ blocks added purely for markup: these range from useless to risky given the eligibility restrictions above. A small, truthful graph that machines can trust beats an ambitious one they have to discount.
+
+The implication
+
+For a UX portfolio there's a second-order effect worth naming: structured data is itself a work sample. A case study that's impeccably marked up demonstrates, in the page source, the systems thinking the case study claims in prose. The audience that views source is small, but it overlaps heavily with the audience that hires.
+
+Related reads: JSON-LD blog schema in Framer , structural SEO in Framer , and the travel platform case study this post's example describes.

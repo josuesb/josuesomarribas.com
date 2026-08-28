@@ -1,0 +1,77 @@
+The Micro-Semiotics of Forms.
+
+Tiny labels in forms carry more meaning than teams usually admit. A button that says “Apply” can create uncertainty because the user has to infer what will be applied, where, and whether it changes the final price.
+
+That moment is small, but checkout abandonment is often built from small doubts stacked together.
+
+Why “Apply” is not always clear
+
+“Apply” is common in forms because it is short. Short is not the same as clear.
+
+In a checkout, “Apply” could mean apply a promo code, apply a voucher, apply a discount, apply a change, apply a filter, apply points, or apply a selection to the booking. The label depends on nearby context to make sense.
+
+If the surrounding UI is crowded, that context gets weaker.
+
+Micro-semiotics sounds fancy, but the issue is simple
+
+Every label is a sign. Users interpret it based on placement, wording, visual hierarchy, and what they expect to happen next.
+
+When a label is ambiguous, users slow down. They check the field again. They wonder if clicking will submit the whole page. They hesitate because the cost of a wrong click feels higher than the effort of stopping.
+
+The checkout problem
+
+Checkout is a fragile place for vague language. Users are comparing prices, scanning fees, entering personal details, and trying not to make a mistake.
+
+A button label should reduce interpretation work, not add another tiny puzzle.
+
+Weak labels
+
+Apply
+
+Continue
+
+Submit
+
+Confirm
+
+Proceed
+
+Stronger labels
+
+Apply discount code
+
+Use voucher
+
+Save passenger details
+
+Continue to seats
+
+Confirm payment
+
+The stronger labels are longer, yes. They also tell the user what will happen.
+
+Ambiguity is expensive on mobile
+
+Mobile screens remove context. Fields stack, helper text gets hidden, buttons move below the fold, and users often interact with one thumb while distracted.
+
+A label that seemed acceptable on desktop can become vague on mobile because the surrounding explanation is no longer visible.
+
+How to audit form labels
+
+Take each button and read it out of context. If the action is unclear, the label is relying too much on the layout.
+
+What will happen after the click?
+
+Will the user stay on the page or move forward?
+
+Will price, availability, or booking details change?
+
+Does the label still make sense when translated?
+
+Does the label make sense on mobile when nearby copy is hidden?
+
+The rule
+
+A form label should be as specific as the consequence of the action.
+
+If the click changes money, identity, booking details, or availability, the label deserves more than one vague verb. Clarity may take a few extra characters, but abandonment is rarely caused by a button being too understandable.

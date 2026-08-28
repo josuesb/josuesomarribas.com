@@ -4,21 +4,25 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
+import json
 import re
 import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SOURCE_ROOT = PROJECT_ROOT / "audio-source"
 OUTPUT_ROOT = PROJECT_ROOT / "public" / "audio" / "blog"
+CHECKLIST_PATH = SOURCE_ROOT / "audio-generation-checklist.json"
 MODEL = "mlx-community/Kokoro-82M-bf16"
 LANGUAGES = {
-    "en": {"voice": "am_michael", "lang_code": "a"},
+    "en": {"voice": "bm_george", "lang_code": "b"},
     "es": {"voice": "em_alex", "lang_code": "e"},
 }
 SUPPORTED_EXTENSIONS = {".txt", ".md", ".html", ".htm"}
@@ -36,6 +40,7 @@ def clean_text(raw: str, suffix: str) -> str:
         text = re.sub(r"^\s{0,3}(?:#{1,6}|>|[-*+]\s|\d+[.)]\s)\s*", "", text, flags=re.MULTILINE)
         text = re.sub(r"[*_~]", "", text)
     text = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<(pre|code)\b[^>]*>.*?</\1>", " ", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"</(?:p|h[1-6]|li|blockquote|section|article|div)>", "\n\n", text, flags=re.IGNORECASE)
     text = re.sub(r"<br\s*/?>", "\n", text, flags=re.IGNORECASE)
     text = re.sub(r"<[^>]+>", " ", text)
@@ -48,8 +53,12 @@ def find_sources(requested: list[str]) -> list[Path]:
     if requested:
         paths = [(PROJECT_ROOT / item).resolve() for item in requested]
     else:
-        paths = sorted(path for path in SOURCE_ROOT.rglob("*") if path.suffix.lower() in SUPPORTED_EXTENSIONS)
+        paths = sorted(
+            path for path in SOURCE_ROOT.rglob("*")
+            if path.suffix.lower() in SUPPORTED_EXTENSIONS and "done" not in path.relative_to(SOURCE_ROOT).parts
+        )
     invalid = [path for path in paths if not path.is_file() or path.suffix.lower() not in SUPPORTED_EXTENSIONS]
+    invalid += [path for path in paths if "done" in path.relative_to(SOURCE_ROOT).parts]
     if invalid:
         raise ValueError("Invalid input: " + ", ".join(str(path) for path in invalid))
     return paths
@@ -70,13 +79,42 @@ def run(command: list[str]) -> None:
     subprocess.run(command, cwd=PROJECT_ROOT, check=True)
 
 
-def generate(source: Path, force: bool, voice_override: str | None, speed: float) -> Path | None:
+def load_checklist() -> dict:
+    if not CHECKLIST_PATH.exists():
+        return {"version": 1, "items": {}}
+    try:
+        data = json.loads(CHECKLIST_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as error:
+        raise ValueError(f"Cannot read checklist {CHECKLIST_PATH}: {error}") from error
+    if not isinstance(data.get("items"), dict):
+        raise ValueError(f"Invalid checklist format in {CHECKLIST_PATH}")
+    return data
+
+
+def save_checklist(checklist: dict) -> None:
+    CHECKLIST_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = CHECKLIST_PATH.with_suffix(".tmp")
+    temporary.write_text(json.dumps(checklist, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(CHECKLIST_PATH)
+
+
+def archive_source(source: Path, language: str) -> Path:
+    relative = source.relative_to(SOURCE_ROOT / language)
+    destination = SOURCE_ROOT / language / "done" / relative
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if destination.exists():
+        stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        destination = destination.with_name(f"{destination.stem}-{stamp}{destination.suffix}")
+    shutil.move(str(source), str(destination))
+    print(f"MOVE  {source.relative_to(PROJECT_ROOT)} -> {destination.relative_to(PROJECT_ROOT)}")
+    return destination
+
+
+def generate(source: Path, checklist: dict, force: bool, voice_override: str | None, speed: float) -> bool:
     language = language_for(source)
-    relative = source.relative_to(SOURCE_ROOT / language).with_suffix(".mp3")
-    destination = OUTPUT_ROOT / language / relative
-    if destination.exists() and not force and destination.stat().st_mtime >= source.stat().st_mtime:
-        print(f"SKIP  {source.relative_to(PROJECT_ROOT)} (audio is current)")
-        return None
+    source_relative = source.relative_to(SOURCE_ROOT)
+    relative = source.relative_to(SOURCE_ROOT / language)
+    destination = OUTPUT_ROOT / language / relative.with_suffix(".mp3")
 
     text = clean_text(source.read_text(encoding="utf-8"), source.suffix.lower())
     if not text:
@@ -84,6 +122,19 @@ def generate(source: Path, force: bool, voice_override: str | None, speed: float
 
     settings = LANGUAGES[language]
     voice = voice_override or settings["voice"]
+    fingerprint = hashlib.sha256(
+        f"{MODEL}\0{language}\0{voice}\0{speed}\0{text}".encode("utf-8")
+    ).hexdigest()
+    checklist_key = source_relative.as_posix()
+    previous = checklist["items"].get(checklist_key, {})
+    if not force and previous.get("fingerprint") == fingerprint and destination.exists():
+        print(f"SKIP  {source_relative} (found in checklist)")
+        archived = archive_source(source, language)
+        previous["archived_source"] = archived.relative_to(PROJECT_ROOT).as_posix()
+        previous["checked_at"] = datetime.now(timezone.utc).isoformat()
+        save_checklist(checklist)
+        return False
+
     destination.parent.mkdir(parents=True, exist_ok=True)
     print(f"VOICE {source.relative_to(PROJECT_ROOT)} -> {voice} ({language})")
 
@@ -114,13 +165,25 @@ def generate(source: Path, force: bool, voice_override: str | None, speed: float
             str(destination),
         ])
     print(f"DONE  {destination.relative_to(PROJECT_ROOT)}")
-    return destination
+    archived = archive_source(source, language)
+    checklist["items"][checklist_key] = {
+        "fingerprint": fingerprint,
+        "language": language,
+        "voice": voice,
+        "speed": speed,
+        "model": MODEL,
+        "output": destination.relative_to(PROJECT_ROOT).as_posix(),
+        "archived_source": archived.relative_to(PROJECT_ROOT).as_posix(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+    }
+    save_checklist(checklist)
+    return True
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate static MP3 narration for blog articles.")
     parser.add_argument("files", nargs="*", help="Optional source paths. Without paths, processes audio-source/en and audio-source/es.")
-    parser.add_argument("--force", action="store_true", help="Regenerate audio even when the MP3 is newer than its source.")
+    parser.add_argument("--force", action="store_true", help="Regenerate audio even when the checklist already contains the same source.")
     parser.add_argument("--voice", help="Override the configured Kokoro voice for this run.")
     parser.add_argument("--speed", type=float, default=0.95, help="Narration speed (default: 0.95).")
     args = parser.parse_args()
@@ -129,11 +192,12 @@ def main() -> int:
         print("ffmpeg is missing. Install it with: brew install ffmpeg", file=sys.stderr)
         return 1
     try:
+        checklist = load_checklist()
         sources = find_sources(args.files)
         if not sources:
             print(f"No input files found. Add .txt, .md or .html files under {SOURCE_ROOT}")
             return 0
-        generated = sum(generate(source, args.force, args.voice, args.speed) is not None for source in sources)
+        generated = sum(generate(source, checklist, args.force, args.voice, args.speed) for source in sources)
     except (ValueError, RuntimeError, subprocess.CalledProcessError) as error:
         print(f"ERROR {error}", file=sys.stderr)
         return 1

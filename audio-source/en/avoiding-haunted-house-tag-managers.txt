@@ -1,0 +1,77 @@
+Avoiding the Haunted House in Tag Managers.
+
+A tag manager becomes a haunted house when nobody knows which custom JavaScript rules are alive, which ones are dead, and which one just moved the furniture in production.
+
+The first few snippets always feel harmless. Hide a label here, inject a banner there, patch a checkout message for one market. Six months later, every page load is carrying a small museum of urgent decisions.
+
+Why tag managers get messy
+
+Tag managers are built to move fast. That is their strength and their trap.
+
+When a team can ship custom code without touching the main application, the tag manager slowly becomes a second front-end codebase. The difference is that it often has weaker versioning, weaker ownership, weaker testing, and stronger pressure to publish quickly.
+
+The warning signs
+
+Rules named “test final final new”.
+
+Multiple snippets targeting the same element.
+
+Code that depends on brittle text selectors.
+
+No expiry date for campaign logic.
+
+No rollback notes.
+
+No owner listed.
+
+No clear difference between experiment code and permanent personalization.
+
+Once those patterns appear, the risk is not theoretical. A small DOM change can break a rule. A stale rule can reappear on a new flow. A selector can match the wrong market. Very spooky, very avoidable.
+
+Give every rule an identity
+
+A custom JavaScript rule should have a name that explains what it does without opening the code.
+
+A useful naming pattern includes the ticket, area, and action:
+
+The description should start with a verb and say the actual behavior:
+
+This is not bureaucracy. It is future debugging.
+
+Make custom code idempotent
+
+A rule should survive re-renders without duplicating content or leaving junk behind. Before injecting a banner, check whether the banner already exists. Before adding a class, check whether the target is still valid. Before observing the DOM, define when the observer should stop.
+
+The more dynamic the site, the more important this becomes.
+
+Add expiration dates
+
+Every temporary rule needs an end date or removal condition. Campaign banners, one-market legal copy, route-specific alerts, and emergency checkout patches should not live forever by accident.
+
+A tag manager without cleanup is not agile. It is just storage with consequences.
+
+Test the boring cases
+
+Most tag manager bugs hide in boring states:
+
+Page reloads.
+
+Back button navigation.
+
+Language changes.
+
+Currency changes.
+
+Mobile layout changes.
+
+Slow network rendering.
+
+Multiple passengers or repeated form sections.
+
+If your rule works only on the exact screen you tested once, it is not done.
+
+The standard
+
+A healthy tag manager has fewer surprises. Rules are named clearly, scoped tightly, tested in real states, documented with owners, and removed when their job is done.
+
+That does not make the work glamorous. It makes it survivable. In production, survivable is underrated.

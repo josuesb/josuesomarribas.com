@@ -1,0 +1,43 @@
+Designing for Attention Degradation: UX in the Real World.
+
+Every design review I've seen happens under the same conditions: a large calibrated monitor, office lighting, fiber internet, and a person whose only task is to look at the screen. Almost no real usage of the product happens under those conditions. The user is on a sidewalk with a coffee in one hand, the sun is hitting the screen at the worst angle, and the connection is whatever the network felt like giving them between two buildings.
+
+The gap between those two contexts has a name in HCI research, and it has design consequences specific enough to act on. This post collects both.
+
+Situational impairments: the research frame
+
+The academic term is situationally-induced impairments and disabilities (SIIDs), describing how context and activity can degrade an able-bodied user's capabilities to the point where they interact like a user with a motor or visual impairment. Jacob Wobbrock's research program at the University of Washington has studied these conditions directly, covering walking, hand grips, divided attention, distraction, inebriation, and even rainwater on screens , and proposes that devices and interfaces should sense and adapt to them.
+
+The frame is useful because it converts vague empathy ("design for busy users") into named, testable conditions. A user with one hand occupied has a motor constraint. A user in direct sunlight has a vision constraint. A user on 3G has a bandwidth constraint. Each one has a known design response.
+
+Constraint one: the occupied hand
+
+The classic field study here is Steven Hoober's: across more than 1,300 street observations, 49% of people held their phone one-handed, 36% cradled it and tapped with the other hand, and 15% used two thumbs , switching grips constantly depending on what else their hands were doing. The one-handed half of your audience is operating the entire interface with a thumb whose comfortable reach covers maybe two thirds of the screen.
+
+Design responses: primary actions in the lower half of the viewport, touch targets sized for a moving thumb rather than a resting cursor, and no critical interaction that requires precision at the top corners. If your conversion-critical CTA sits in the top-right because the desktop mockup looked balanced that way, half your mobile users are paying a physical tax to convert.
+
+Constraint two: glare and degraded vision
+
+Sunlight on a screen is functionally a low-vision condition: contrast collapses, thin type disappears, and subtle gray-on-white UI becomes invisible. This reframes contrast ratios from a compliance checkbox into a robustness feature. WCAG minimums are calibrated for controlled viewing; outdoors, the interfaces that survive are the ones that exceeded the minimum with room to spare. I made a related argument in what "accessible enough" really means : accessibility work and situational-robustness work are largely the same work, which is the strongest business case for doing it.
+
+Concretely: body text contrast comfortably above 4.5:1, no information carried by color alone, and a skeptical eye on ultra-light font weights that look refined on a studio monitor and vanish on a phone at 50% brightness in the sun.
+
+Constraint three: the connection you don't test on
+
+The numbers on slow networks are old enough to be famous and current enough to still hurt. Google's research found that 53% of mobile visits are likely to be abandoned if a page takes longer than 3 seconds to load, while the average mobile site at the time took 19 seconds over 3G . Their follow-up analysis put a curve on it: as load time goes from one second to seven, the probability of a bounce increases 113% .
+
+The design response is a performance budget treated as a UX requirement: image weight caps, fonts that fall back gracefully, and a page that renders something useful before everything has arrived. The cheapest test in this whole post is throttling your own site to Slow 3G in DevTools and watching what the first five seconds actually show. On this site that exercise is what pushed me to keep pages text-first.
+
+Constraint four: attention in fragments
+
+The walking, interrupted user doesn't read flows; they re-enter them. Wobbrock's SIID work lists divided attention and distraction alongside the physical constraints, and the design implications mirror each other: state that survives an interruption (a form that keeps its values when the user switches apps), steps that are individually completable in seconds, and copy that assumes the reader skims. That last principle shows up everywhere once you look for it; I wrote about its hospitality version in your guest doesn't read everything, design for that , and the same selective attention governs a checkout form on a moving bus.
+
+Testing under degradation, not just in the lab
+
+A protocol you can run this week, without budget: take your most important flow and run it one-handed, outdoors, on throttled 3G, while walking somewhere you actually need to go. Note every moment you have to stop walking, switch grips, or shade the screen. Each note is a friction point that your desk-based QA structurally cannot find. This pairs naturally with the cheap qualitative methods from guerrilla research when traffic does not cooperate , and it directly feeds the mobile-conversion question I dug into in why mobile gets 83% of your traffic but desktop converts 2x better : part of that gap is attention degradation that desktop simply doesn't suffer.
+
+The implication
+
+Designing for the degraded case is not designing for an edge case; given how phones are actually used, the degraded case is closer to the median than the design review is. The interfaces that win under a bag, a glare, and a weak signal are simpler, faster, higher-contrast, and more forgiving, which means they also win in the lab. The reverse is not true, and that asymmetry is the entire argument. The context for this thinking sits in designing for real-world context .
+
+Related reads: designing for real-world context , the mobile/desktop conversion gap , and what "accessible enough" really means .

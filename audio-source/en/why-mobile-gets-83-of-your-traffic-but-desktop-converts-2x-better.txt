@@ -1,0 +1,181 @@
+Why Mobile Gets 83% of Your Traffic But Desktop Converts 2x Better.
+
+I have a number that's probably going to sting: your mobile site gets 82.9% of all traffic. But desktop converts twice as well.
+
+Let me translate that into actual money. If you get 10,000 visits per month:
+
+8,290 come from mobile (82.9%)
+
+1,710 come from desktop (17.1%)
+
+If desktop converts at 4% and mobile at 2%:
+
+Desktop generates: 1,710 × 4% = 68 conversions
+
+Mobile generates: 8,290 × 2% = 166 conversions
+
+Total: 234 conversions.
+
+Now imagine you raise mobile conversion to just 3% (still half of desktop):
+
+Mobile would generate: 8,290 × 3% = 249 conversions
+
+You just found 83 extra conversions. If each conversion is worth $200, that's $16,600 monthly sitting on the table. Annualized: $199,200.
+
+And that's only getting mobile to 3%. Desktop converts at 4%. The gap is still massive.
+
+Why This Isn't Your Fault (But It Is Your Problem)
+
+Baymard Institute analyzed over 5,200 online shopping sessions and found that cart abandonment is systematically higher on mobile: 78.74% on mobile vs. 66.74% on desktop . The difference isn't random.
+
+Their research documents that 18% of online shoppers abandon specifically due to a checkout process that's "too long or complicated." The problem: the average site has 23.48 form elements, when extensive testing shows the ideal flow can be reduced to 12-14 elements. Each additional field you add reduces conversion by 4-6%.
+
+Translation: it's not that people on mobile are "just browsing." It's that your mobile site is objectively harder to use.
+
+Nielsen Norman Group documented in their mobile usability studies that the success rate for completing tasks on mobile is 62%, compared to 84% on desktop. Their research found that small screens force users to rely on short-term memory to understand the information space, which makes almost all interactions harder.
+
+The problem isn't user intent. It's your interface.
+
+The 5 Reasons Desktop Converts Better (And How to Fix Them)
+
+1. Mobile Forms Are Torture
+
+Desktop has a full keyboard, mouse to jump between fields, and autocomplete that works well. Mobile has a touch keyboard where switching from lowercase to numbers requires two taps, tiny input fields, and autocomplete that covers half the screen.
+
+Baymard's research shows that each additional field on mobile reduces conversion by 7-10% vs. 3-5% on desktop. The problem compounds.
+
+What to do:
+
+Delete fields. Literally. "Company" is optional. "Apartment/Floor" is optional. "Middle name" is optional. If it's not legally or technically required, kill it.
+
+Use correct input types: for phone, for email. The right keyboard appears automatically.
+
+Native autofill: mark your fields with , , etc. Mobile browsers can fill everything in one tap.
+
+Real-time validation, NOT at the end. If the email is wrong, tell them when they leave the field, not after they submit.
+
+Real case: Expedia removed the "Company" field from their mobile checkout. They made $12 million annually . One field.
+
+2. Mobile CTAs Are Invisible or Unreachable
+
+Desktop buttons have a minimum 200px width, are centered, have clear hover states. Mobile buttons have 44px (if you're lucky), are at the bottom of the page, and compete with the virtual keyboard for space.
+
+Apple's design guidelines clearly specify: tappable elements on iPhone should be at least 44pt × 44pt. Google's Material Design is even more strict: it recommends 48×48dp minimum. The reason: Nielsen Norman Group studies show users can tap targets with 99%+ accuracy when they're 10mm (approximately 39 pixels) or larger. Anything smaller dramatically increases error rates.
+
+What to do:
+
+Sticky CTAs. Your primary button must be visible always, even while scrolling. Don't force users to remember where it was.
+
+Minimum size: 48×48px. Non-negotiable.
+
+Space between buttons: minimum 8px. If two buttons are close together, users will tap the wrong one.
+
+AAA contrast: the button must stand out. Light background, dark button. Or vice versa. But make it visible.
+
+3. Mobile Speed Is a Lie
+
+Desktop loads in 2.3 seconds average. Mobile loads in 6.9 seconds. Users expect less wait time on mobile, not more.
+
+Google's research with SOASTA in 2017, analyzing 11 million mobile landing pages, found brutal data about speed impact:
+
+From 1s to 3s load time: bounce probability increases 32%
+
+From 1s to 5s load time: bounce probability increases 90%
+
+From 1s to 10s load time: bounce probability increases 123%
+
+And here's the killer: 53% of mobile users abandon sites that take over 3 seconds to load . If your mobile takes 7 seconds to load, you lost 90% of users before they saw your content.
+
+What to do:
+
+Lazy load everything: images, videos, iframes. Load only what's in viewport.
+
+Compress images: WebP or AVIF, not giant JPEG/PNG. 80% quality is invisible to users and weighs 60% less.
+
+Use CDN for static assets. Cloudflare is free.
+
+Measure on real mobile, not simulated DevTools. PageSpeed Insights → Mobile → Field Data. Those are your actual users.
+
+4. Mobile Menus Are Labyrinths
+
+Desktop has a horizontal menu with 6-8 options always visible. Mobile has a hamburger menu with dropdown submenus that require 3 taps to get where you wanted.
+
+Nielsen Norman Group's research on mobile navigation found that users are 60% less likely to discover content if it requires opening a hamburger menu. The most successful mobile sites use persistent bottom navigation for key actions.
+
+What to do:
+
+Bottom navigation for the 3-4 main actions. Always visible.
+
+Eliminate navigation levels. If your desktop has 3 menu levels, mobile should have 1, maximum 2.
+
+Visible search. If you have more than 20 products/articles, the search bar must always be accessible. Mobile users prefer to search rather than navigate.
+
+5. Mobile Content Is Buried
+
+Desktop shows hero + 3 sections above the fold. Mobile shows hero... and that's it. Everything else requires infinite scrolling.
+
+What to do:
+
+Above-the-fold must include: headline + value prop + CTA. Period. If users only see that, they should be able to convert.
+
+Reduce hero image on mobile. On desktop it can occupy 70vh. On mobile, 40vh maximum.
+
+Slim sticky header: maximum 60px. If your mobile header occupies 120px, you're stealing screen real estate from your content.
+
+Stop Designing "Mobile First" and Start Designing "Mobile Actually"
+
+The problem isn't that your mobile is "worse than desktop." The problem is that your mobile is desktop compressed.
+
+That's not optimization. That's castration.
+
+Real mobile optimization means:
+
+Fewer fields, not smaller fields
+
+Fewer options, not collapsed menus
+
+Less content, not infinite scroll
+
+More speed, not "responsive images" at 2MB
+
+Measure this today:
+
+Open Google Analytics
+
+Go to Reports → Engagement → Conversions
+
+Segment by device (mobile vs. desktop vs. tablet)
+
+Look at conversion rate for each
+
+If desktop converts 2x better, you have work to do.
+
+If desktop converts 3x better, you have an emergency.
+
+What Comes Next
+
+You're going to do this in two phases:
+
+Phase 1 (this week):
+
+Identify your main conversion page
+
+Measure mobile vs. desktop conversion rate
+
+Record 10 mobile user sessions with Hotjar or Clarity
+
+Find the 3 most common abandonment points
+
+Phase 2 (next 2 weeks):
+
+Cut mobile form fields in half
+
+Sticky CTA on mobile, always visible
+
+Lazy load everything except above-the-fold
+
+Measure again
+
+If you don't gain at least 15% mobile conversion in 30 days, something is being measured wrong or implemented wrong. The gap is there. You just need to close it.
+
+Is your mobile converting half of desktop? Reply to this email and I'll tell you exactly where the problem is. Free. Seriously.

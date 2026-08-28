@@ -1,0 +1,145 @@
+How I Applied UX Design Principles to Improve My Airbnb Hosting Experience.
+
+UX isn’t limited to screens — at its core, it’s about designing for people, wherever they are.
+
+When we think of Airbnb and user experience, it’s easy to focus on their globally acclaimed platform — seamless booking flows, intuitive interfaces, and a frictionless digital ecosystem connecting millions of travelers and hosts worldwide.
+
+But this is not that story.
+
+This is the story of how, as a UX Designer, I applied user-centered design principles far beyond the screen — transforming the physical experience inside my own Airbnb property in Costa Rica. Because UX doesn’t end at product interfaces — it extends into every interaction where humans meet systems.
+
+Framing the Problem: Market Gaps as UX Opportunities
+
+Before welcoming my first guest, I approached my hosting venture as any design challenge — beginning with research.
+
+A detailed review of local listings revealed several consistent patterns:
+
+Most accommodations were shared rooms or private rooms within family homes.
+
+Few offered fully independent units.
+
+Virtually none provided digital-first, autonomous check-in processes.
+
+From a UX perspective, these patterns indicated clear pain points for potential guests — unmet needs that could directly inform my approach to designing the experience.
+
+The Shift in Guest Behavior
+
+Post-pandemic travel introduced a new set of expectations:
+
+Guests sought greater autonomy .
+
+Contactless check-ins became the norm, not a luxury .
+
+Flexibility, privacy, and self-service processes became key decision factors.
+
+Globally, Airbnb reports that self check-in is now among the top 10 most searched amenities. Many travelers even filter for properties that guarantee autonomous arrivals.
+
+For me, this represented a clear opportunity: Design an experience optimized for autonomy, safety, and effortless arrival — long before the guest ever steps through the door.
+
+Applying UX Thinking: The Solutions
+
+1. Autonomous Access: Smart Locks + Home Assistant
+
+I installed a smart lock system , fully integrated with Home Assistant , my home automation hub. This allowed:
+
+Self check-in at any hour.
+
+Automated welcome routines (e.g. porch lights activating upon late-night arrivals).
+
+Real-time entry notifications for operational visibility.
+
+This eliminated a major friction point: key exchanges. From a UX lens, the onboarding experience — the critical first interaction — became seamless and self-driven.
+
+2. Intuitive Entry Codes: Designing for Memory
+
+Rather than relying on random or complex access codes, I implemented personalized codes derived from each guest’s own phone number (last 4 digits).
+
+This small adjustment offered major cognitive benefits:
+
+High memorability.
+
+No need to search messages or notes upon arrival.
+
+Natural alignment with mental models (using personal data that’s instantly familiar).
+
+UX insight: when users don't need to “learn” something new, adoption becomes frictionless.
+
+3. Visual Arrival Guides: Anticipating Real-World Questions
+
+I crafted step-by-step visual guides illustrating:
+
+How to locate the property entrance.
+
+Navigating the driveway with a vehicle.
+
+Operating the smart lock.
+
+Key visual markers guests would encounter en route.
+
+These guides were shared via Airbnb's platform (leveraging their photo-based check-in instructions) and sent directly through messaging channels prior to arrival.
+
+By proactively answering questions before they’re even asked, guests arrived more confident and stress-free.
+
+4. Geolocation Optimization: Removing Navigational Anxiety
+
+In early iterations, a few guests struggled with Costa Rica's often ambiguous address system.
+
+In response:
+
+I registered the exact location on Google Maps .
+
+Shared direct map links with every reservation.
+
+Since implementing this, zero guests have reported difficulty finding the property — a testament to how location-based UX design translates to real-world ease.
+
+5. Feedback Loops: Continuous User-Centered Improvement
+
+Beyond public Airbnb reviews, I created a dedicated feedback system embedded into the stay itself:
+
+Each guest receives a welcome gift featuring a QR code leading to a custom feedback form hosted on higueron179.com .
+
+The form captures both satisfaction metrics and open suggestions.
+
+This lightweight, opt-in loop yields highly actionable insights that might not surface in formal reviews — allowing for continuous iteration , much like product design cycles.
+
+Real Outcomes: Evidence That UX Works
+
+Navigational Stress Eliminated
+
+One early guest, arriving after dark, struggled with finding the entrance due to traditional address ambiguity. Their experience directly informed my enhanced geolocation mapping and visual guidance.
+
+Since that iteration, arrival confusion has been eliminated — and many guests now proactively comment on how easy it was to locate the property.
+
+Seamless Entry, Memorable First Impressions
+
+Guest feedback frequently highlights the simplicity and intuitiveness of the entry process , with comments such as:
+
+"We arrived very late, but check-in was incredibly easy — the personalized door code was simple to remember, and the instructions were crystal clear."
+
+In UX terms, this is the invisible success metric: guests focus on enjoying their stay rather than navigating operational hurdles.
+
+Closing Reflection: Hospitality as UX in Practice
+
+At its core, both UX Design and hospitality share the same principles:
+
+Anticipate needs before they surface.
+
+Simplify every interaction.
+
+Design for real people in real-world contexts.
+
+While my “product” isn’t software, my guests are still users navigating systems — physical, digital, and emotional. Their journey doesn’t start when they open the door; it begins long before, from booking to parking, from arrival to checkout.
+
+UX principles offered the framework to design hospitality as a service experience — one that removes friction, inspires confidence, and ultimately earns trust.
+
+For me, applying UX thinking has yielded:
+
+Happier guests.
+
+Stronger reviews.
+
+Reduced operational overhead.
+
+And a hosting experience that feels both scalable and deeply personal.
+
+Because whether designing an interface or an arrival experience: We are always designing for humans.

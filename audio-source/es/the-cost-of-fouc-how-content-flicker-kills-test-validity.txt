@@ -1,0 +1,41 @@
+El coste del FOUC: cómo el parpadeo invalida un test A/B.
+
+Si grabas a cámara lenta la carga de uno de tus experimentos, a menudo verás algo que el dashboard nunca muestra: aparece el titular original, permanece unos cientos de milisegundos y, de pronto, la variante ocupa su lugar. A esto se le llama parpadeo o FOUC ( flash of original content ) y suele tratarse como una molestia estética. No lo es. Es un problema de validez y merece la misma gravedad que una métrica rota.
+
+Por qué el parpadeo contamina los datos, no sólo la estética
+
+La definición es sencilla: el efecto de parpadeo ocurre cuando la persona ve brevemente el control antes de que cargue el tratamiento . CXL lo incluye entre las amenazas habituales para la validez interna de un experimento. El daño ocurre por tres mecanismos distintos:
+
+Contaminación de la exposición. La lógica del experimento presupone que cada persona vivió una sola versión. Quien ve el parpadeo experimentó ambas, así que la comparación limpia de la que dependen las estadísticas ya no describe lo que ocurrió en esa sesión.
+
+Una subvención de atención. El movimiento atrae la mirada. Un elemento que cambia visiblemente recibe una atención que el control estático nunca obtuvo. Parte de cualquier mejora medida puede deberse al propio parpadeo y desaparecer cuando se publique correctamente la variante ganadora.
+
+Erosión de la confianza. Una página que se reorganiza delante de la persona parece defectuosa. El análisis de Kameleoon señala que el parpadeo puede reducir las conversiones por debajo del punto de partida : el simple acto de experimentar empeora la web para parte del tráfico.
+
+De dónde viene el parpadeo
+
+Las causas son de infraestructura, no de mala suerte. La herramienta de testing carga de forma asíncrona y pierde la carrera contra el renderizado; el snippet pasa por un gestor de etiquetas y añade un salto que no controlas; demasiados scripts se ejecutan antes; el propio sitio es lento; o el código de la variante espera un elemento mediante una estrategia de detección lenta. Todos estos retrasos amplían la ventana en la que el control queda visible.
+
+El snippet antiparpadeo es un intercambio, no una solución
+
+La contramedida habitual consiste en ocultar la página —normalmente todo el body— hasta que la herramienta decide qué variante mostrar. Evita que la persona vea el cambio, pero lo paga la experiencia de carga. El snippet predeterminado de Google Optimize podía dejar la página en blanco hasta cuatro segundos si la herramienta tardaba en responder. El análisis de rendimiento de DebugBear llega al mismo punto: ocultar el body perjudica directamente las métricas de velocidad .
+
+Por tanto, el snippet no elimina el problema: convierte un parpadeo visible en una espera invisible. A veces es el intercambio correcto, pero debe ser consciente.
+
+La jerarquía de soluciones reales
+
+1. Gana la carrera desde la estructura. Carga el snippet de testing directamente en el head y tan pronto como sea posible, no a través del gestor de etiquetas. Es el cambio con mayor impacto.
+
+2. Limita lo que ocultas. Si necesitas esconder algo mientras llega la decisión, oculta el elemento que cambia y no toda la página. Un hero vacío durante 200 ms cuesta mucho menos que una página completa en blanco.
+
+3. Haz que la variante sea rápida y resistente a rerenders. Los cambios basados en CSS se aplican antes que una reconstrucción del DOM, la detección mediante observers reduce la latencia frente al polling y las funciones idempotentes evitan que el cambio se revierta y se aplique otra vez.
+
+4. Mídelo. Graba la carga con una conexión limitada y cuenta los frames entre el primer paint y la aplicación de la variante. Si puedes ver el cambio a velocidad 3G, una parte relevante de tus usuarios móviles también lo ve.
+
+Disciplina de QA y reporting
+
+La comprobación del parpadeo debe formar parte de la lista previa al lanzamiento, incluyendo una prueba con red limitada. Si descubres un parpadeo importante durante el experimento, la decisión incómoda pero correcta es arreglarlo y reiniciar el test. La exposición ya fue contaminada y ningún filtro puede conseguir que las personas dejen de haber visto el control.
+
+La implicación
+
+El parpadeo vive en la intersección entre calidad de ingeniería y calidad estadística. Esa es la lección: la validez no aparece en el motor estadístico al final, sino en la mecánica de entrega desde el principio. Un equipo que considera los detalles de renderizado inferiores a su programa de experimentación seguirá obteniendo resultados precisos sobre datos contaminados. Y la precisión aplicada a la contaminación es la forma más cara de equivocarse.

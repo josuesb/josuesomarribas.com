@@ -1,0 +1,45 @@
+MutationObservers vs Polling: A Shootout for A/B Testing.
+
+Every client-side experiment starts with the same problem: the element you want to change doesn't exist yet when your code runs. Two strategies dominate the solutions. You can poll, asking the DOM every hundred milliseconds whether the element has arrived, or you can observe, registering a callback that the browser fires when the DOM actually changes. Both work. The interesting question is what each one costs, and the answer is less one-sided than the conventional wisdom suggests.
+
+I've defended polling before. In the JavaScript I write every week in an A/B testing role , the waitForElement helper uses setInterval, and I stand by it for the cases it was written for: it's simple, predictable, and hard to break. This post is the longer answer, with numbers, about where that simplicity stops being free.
+
+The benchmark, read fairly
+
+The most quotable comparison comes from Alex MacArthur, who measured attaching a listener to a late-mounted element with both strategies: polling with a zero-delay setTimeout came out around 88 times slower than a MutationObserver , on top of the observer's simpler cleanup story.
+
+Read that number fairly, though. Nobody polls at zero delay in production; a realistic 100ms interval costs a few dozen querySelector calls before the element shows up, which is negligible CPU on any modern device. The honest framing is that polling's cost is not throughput but latency and granularity:
+
+Latency. With a 100ms interval, your change lands on average 50ms after the element appears, and in the worst case a full interval later. That window is exactly where visible flicker lives, because the user can see the original element before your variant replaces it.
+
+One-shot blindness. The typical polling helper stops after the first match. If the framework re-renders and replaces your modified node two seconds later, the test silently reverts and nobody is notified.
+
+A MutationObserver fires in the same event-loop turn as the change, per the MDN specification of the API , and it keeps firing for as long as you keep it connected. Those two properties are the whole case for it.
+
+Where observers earn their keep
+
+Single-page applications are the decisive environment. Frameworks create and destroy DOM constantly, and an Accenture front-end team working on exactly this problem documented the core trap: if the element you observe is destroyed by the SPA, mutations stop firing even when it's recreated, so the observer must watch the app's stable main container instead . Combine a container-level observer with idempotent apply functions and your variant survives re-renders indefinitely, the pattern I detailed in idempotency for mortals .
+
+The canonical shape, including the disconnect-mutate-reconnect step that prevents your own changes from re-triggering the callback:
+
+Where observers cost you
+
+The API's reputation for danger comes from real incidents, and they share a profile: a subtree observer on a huge, busy page with an expensive callback. Mixmax, whose product lives inside Gmail's DOM, found their global subtree MutationObservers to be a significant performance problem and re-architected away from them . Gmail mutates constantly; if your callback runs querySelector over a large tree on every batch, you've built a busy-loop with extra steps.
+
+The mitigations are mechanical, and I covered them in depth in MutationObservers without panic : observe the narrowest stable container, keep the callback to a cheap existence check, disconnect as soon as your work is done, and always pair the observer with a timeout so a selector that never matches doesn't leave machinery running for the whole session.
+
+The decision table I actually use
+
+Static page, element present at or shortly after load, change below the fold: polling. The latency doesn't matter, the code is three lines, and a junior teammate can debug it at a glance.
+
+SPA, or any page where the target re-renders: observer on a stable container plus idempotent apply. Polling here produces the silent-revert bug, which is worse than slow because it corrupts the test without failing it.
+
+Above-the-fold change where flicker is the risk: observer, because the latency budget is effectively zero. The flicker problem deserves its own discussion of validity, which is the subject of the cost of FOUC.
+
+Hostile or unknown page (third-party widgets, heavy mutation): observer with strict scoping and a timeout, or reconsider whether the change belongs client-side at all.
+
+The implication
+
+The shootout framing undersells the real lesson: these are tools for different failure modes. Polling fails loud and cheap (the change just doesn't apply); observers fail quiet and expensive (the page slows down for everyone). Pick based on which failure your test can afford, and write the choice into your QA checklist, the same one I walk through in how I QA an A/B test before it goes live , so the next person inherits a reason instead of a habit.
+
+Related reads: MutationObservers without panic , idempotency for mortals , and the JavaScript I write every week .

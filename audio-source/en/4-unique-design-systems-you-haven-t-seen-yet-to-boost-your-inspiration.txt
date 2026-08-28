@@ -1,0 +1,31 @@
+4 Unique Design Systems You Haven’t Seen Yet to Boost Your Inspiration.
+
+In order to elevate my work as a designer, I'm always searching for new resources and ideas. In the last days as part of my portfolio redesign, I've been exploring some amazing design systems lately, and there's a ton of useful information to be found.Four design systems caught my attention and I wanted to share them. Regardless of your level of experience, I believe there is something here for everyone, regardless of how novice you are to designing systems. Let's get started.
+
+1. Mews Design
+
+👉 Check it out here
+
+Mews is a design system that not only works as a visual reference, but also it can be integrated on you projects as it delivers Figma and code resources for those who want to integrate it on their projects. Mews is clean, and effortlessly sophisticated thanks to its extensive documentation site. It’s built with scalability in mind, which makes it perfect for SaaS or multi-product platforms. They also prioritize accessibility, which is always a win.
+
+2. Vibe by Monday.com
+
+👉 See it here
+
+Vibe is vibrant, vivid, and full of personality—as the name suggests. This Design System has made for large-scale collaboration solutions like Monday.com, it is nevertheless useful and functional despite all of its entertaining aspects. Just as the previous design system, Vibe provides Figma , Github and Animation style guide resources.
+
+3. Backpack by Skyscanner
+
+👉 Explore it here
+
+Backpack is all about travel-friendly design. It is clear, and made to meet the demands of a worldwide audience who is the Skyscanner users. There's a lot to learn here, from responsive layouts to localization advice. However, Backpack is not available for use, so take this one as a really good reference only.
+
+4. Dell Design System
+
+👉 Take a look here
+
+With a significant emphasis on consistency across expansive ecosystems, this system is accurate and well-designed. You'll value the amount of structure and detail here if you've ever worked on enterprise-level projects. This is a reference-only design system as this is not available for use people outside Dell. however, their documentation is public so there is a good place for reference as well.
+
+Bonus Resource
+
+If you’re as curious about design systems as well, I highly recommend checking out this site . It’s a goldmine of design systems from a wide range of companies, perfect for inspiration and practical insights.

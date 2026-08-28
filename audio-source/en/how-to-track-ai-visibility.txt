@@ -1,0 +1,41 @@
+How to Track AI Visibility Without Losing Your Mind.
+
+How to Track AI Visibility Without Losing Your Mind
+
+AI visibility sounds like a clean metric. It is not. It is a messy mix of prompts, citations, brand mentions, source quality, and a bit of luck wearing a nice jacket.
+
+Still, it is worth tracking. More people are using AI tools to ask questions that used to happen in Google. If your site depends on discovery, ignoring that shift is not exactly a brave strategy.
+
+Start with the questions your audience actually asks
+
+Do not begin with keywords. Begin with questions. There is a difference.
+
+A keyword might be “CRO portfolio”. A real AI prompt might be “What should a CRO specialist include in a portfolio?” That second version is much closer to how people use ChatGPT or Perplexity.
+
+Create a small prompt set
+
+Pick 20 to 30 prompts that matter to your site. Group them by theme. For example, a web designer could track prompts about UX portfolios, A/B testing case studies, Framer templates, WordPress development, or AI search optimization.
+
+Keep the list boring and useful. This is not the place for cleverness. Clever tracking systems become abandoned tracking systems.
+
+Track four simple things
+
+For each prompt, check whether your brand appears, whether your site is cited, which competitors appear, and what kind of answer the AI gives.
+
+You can also track sentiment, but be careful. A neutral mention is not always bad. Sometimes being mentioned plainly is better than being wrapped in enthusiastic nonsense.
+
+Use GA4 for referral traffic
+
+In GA4, build a report or exploration for AI referral sources. Look for domains like chatgpt.com, perplexity.ai, gemini.google.com, and copilot.microsoft.com.
+
+This tells you who clicked through. It does not tell you how many people saw you in an answer. That gap matters.
+
+Review changes monthly
+
+Weekly tracking can be noisy. Monthly tracking is usually enough unless you are managing a large brand or a serious content program.
+
+The goal is to notice trends. Are you appearing more often? Are competitors being cited instead of you? Are your best posts too vague to be useful? That last one hurts, but it is usually fixable.
+
+Conclusion
+
+AI visibility tracking does not need to become a monster. Start small, track the prompts that matter, and look for useful patterns. The goal is not perfect certainty. The goal is better decisions.

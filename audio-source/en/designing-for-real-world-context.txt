@@ -1,0 +1,79 @@
+Designing for Real-World Context.
+
+Real users do not interact with products inside a clean Figma frame. They use them with one hand free, under sunlight, with bad connection, while holding luggage, managing stress, or trying not to miss a check-in window.
+
+Design that ignores context often looks fine in review and fails quietly in use.
+
+The screen is not the situation
+
+A mobile screen tells you what fits. It does not tell you what the user is carrying, whether they are outside, whether the connection is unstable, or whether they have the patience to read a polite paragraph before finding the next action.
+
+That gap is where many polished interfaces break.
+
+Travel makes context visible
+
+Travel flows are good stress tests because the user’s environment changes constantly. Booking, check-in, boarding, hotel access, maps, cancellations, and support all happen under imperfect conditions.
+
+A traveler may need to read a confirmation code in bright sun. A guest may need door instructions while standing outside with bags. A customer may need to change a booking while switching between airport Wi-Fi and mobile data.
+
+In those moments, “nice to have” details become survival details.
+
+Design for degraded attention
+
+A stressed user does not read like a relaxed user. They scan for proof that they are in the right place and for the next safe action.
+
+That means interfaces need:
+
+Clear page titles.
+
+Visible status messages.
+
+Obvious primary actions.
+
+Short recovery instructions.
+
+Readable text in outdoor conditions.
+
+Layouts that do not depend on perfect scroll behavior.
+
+Design for one-handed use
+
+One-handed use is not a niche case. It is common when someone is walking, commuting, holding a bag, carrying a child, or standing in a queue.
+
+This affects tap targets, sticky buttons, form length, and where critical actions sit on the screen. A button may be visually clear and still physically annoying to reach.
+
+Design for poor connection
+
+Poor connection changes trust. If the user taps a button and nothing seems to happen, they may tap again, leave, refresh, or assume the product failed.
+
+Good interfaces acknowledge uncertainty: loading states, disabled duplicate actions, saved progress, retry paths, and plain-language errors.
+
+Hosting teaches the same lesson
+
+A guest reading instructions at home behaves differently from a guest reading instructions outside the property at night. The content can be technically complete and still fail if the important detail is buried.
+
+That is a useful design lesson: information should be sequenced according to the moment of use, not according to how tidy it looks in a document.
+
+The practical test
+
+Before shipping a critical mobile flow, test it in bad conditions on purpose.
+
+Use it outdoors.
+
+Use it with one hand.
+
+Use it on a slow connection.
+
+Use it while walking slowly.
+
+Use it after switching language.
+
+Use it with the screen brightness low.
+
+It sounds crude because it is. It also reveals problems a desktop review will politely ignore.
+
+The point
+
+Designing for real-world context means accepting that the user’s environment is part of the interface.
+
+The best flows do not only look good when conditions are perfect. They stay understandable when life gets inconvenient, which is usually when users need them most.

@@ -1,0 +1,57 @@
+The ROI of AI Search Mentions: Valuing Zero-Click Awareness.
+
+Your analytics show a flat line. Meanwhile, someone messages you saying ChatGPT recommended your article when they asked about A/B testing on low-traffic sites. Both things are true at the same time, and your measurement stack only sees one of them.
+
+This is the accounting problem of AI search. The funnel we built our reporting around assumed a chain: impression, click, session, conversion. AI assistants break the chain at the second link. They read your content, synthesize it, cite you (sometimes), and the user gets what they needed without ever creating a session in your GA4 property. The value didn't disappear. It just stopped leaving a receipt.
+
+This post is an attempt to put numbers on that invisible value: what a zero-click mention is plausibly worth, how to estimate it with the data you already have, and where the estimate honestly breaks down.
+
+The scale of the problem, with current data
+
+First, the baseline. SparkToro's research using Datos clickstream panels found that in 2024, 58.5% of US Google searches and 59.7% of EU searches ended without any click . Out of every 1,000 searches, only 360 clicks (US) or 374 (EU) reached the open web.
+
+Their 2026 follow-up shows the trend accelerating, not stabilizing. Less than one third of Google searches now send a click anywhere, AI Overviews appear on more than 20% of all searches, and when they appear they reduce CTR by nearly 60% . The same report notes that Google's AI Mode surpassed one billion monthly users according to statements at I/O 2026. Layer on consumer behavior: Bain & Company's research found roughly 80% of consumers now rely on AI-generated summaries for at least 40% of their searches .
+
+So the question is no longer whether zero-click visibility matters. It's whether you can assign it a value rigorous enough to justify (or kill) the content work behind it. I covered the measurement side of this in the new analytics problem: when AI mentions you but nobody clicks ; this post is about the valuation side.
+
+What a mention actually buys you
+
+A citation inside an AI answer is an impression with editorial weight. The assistant didn't show your link because you bid on it; it surfaced your content because the model judged it relevant and extractable. That has three downstream effects you can reason about:
+
+Branded demand. Some fraction of people who see your name in an answer later search for you directly or type your URL. This shows up as branded queries in Search Console and as direct traffic in GA4, both deliberately vague channels.
+
+Assistant referrals. A smaller fraction clicks the citation itself. These arrive with referrers like chatgpt.com or perplexity.ai and are trackable today, which makes them the only hard number in this whole exercise.
+
+Authority compounding. Being cited makes you more likely to be cited again, because assistants lean on sources that already answer questions cleanly. This one resists quantification, so treat it as direction, not magnitude.
+
+A three-layer valuation framework
+
+Build the estimate from hardest data to softest, and label each layer accordingly.
+
+Layer 1: measured referrals (hard)
+
+Count sessions where the source contains an AI assistant domain. Multiply by your average value per session. If you haven't defined a value per session yet, that's the prerequisite, and it's the same prerequisite classic CRO has: you need a conversion event and a value attached to it. No conversion tracking, no ROI math, in any channel.
+
+Layer 2: branded search lift (medium)
+
+In Search Console, isolate queries containing your name or your site's name. Plot the trend for the months before and after your content started appearing in AI answers. The delta, valued at your average session value, is a defensible estimate of demand the mentions created. It's not airtight, because PR, LinkedIn activity, and word of mouth move the same number. State that in the report instead of hiding it.
+
+Layer 3: equivalent media value (soft, label it)
+
+If you wanted that visibility through paid channels, what would it cost? The formula is simple: estimated answer impressions, times the CPC you actually pay (or would pay) for that topic, times an assumed CTR. Every input is an estimate, which is why this layer belongs at the bottom of the report with its assumptions printed next to it. Used honestly, it answers one question only: is this probably worth more than zero, and roughly what order of magnitude?
+
+Where the data comes from
+
+There is no official console for assistant visibility yet, a gap I wrote about in is there a Google Search Console for ChatGPT? . What you can assemble today: referral segments in GA4, branded query trends in GSC, and periodic manual prompting of the major assistants with the questions your content targets, logged in a spreadsheet with dates. It's artisanal. It also takes about an hour a month, which is proportionate to the decision it informs. The full tooling rundown is in how to track AI visibility without losing your mind .
+
+The honest limits of this math
+
+Three caveats belong in any report you build on this framework. Panel-based studies like SparkToro's measure behavior on Google, not inside ChatGPT or Perplexity, so the zero-click percentages are a floor for the broader phenomenon, not a ceiling. Branded lift is confounded by everything else you do in public. And assistants don't disclose impression counts, so Layer 3 rests on an input you cannot verify. An estimate with stated error bars is still more useful than a dashboard that reports zero because it can only count clicks.
+
+What this changes in practice
+
+If mentions carry value, then citability becomes a content requirement, on par with readability. That means self-contained definitions, claims backed by linked sources, and structure an extraction model can parse, the mechanics I covered in how to make blog posts easier for AI tools to understand and, at the strategy level, in GEO vs SEO: what actually changes when people search with AI .
+
+The deeper shift is in what you report upward (or to yourself, if you're the whole department). Clicks were never the goal; they were a convenient proxy for influence. Now that the proxy is decaying, the work is to build a slightly less convenient one. The sites that do this will keep investing in content the dashboard undervalues, and they'll be right.
+
+If you're building out this measurement layer, the companion pieces are when AI mentions you but nobody clicks , how to track AI visibility , and GEO vs SEO .
