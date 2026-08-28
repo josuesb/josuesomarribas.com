@@ -14,7 +14,13 @@ const C={
 
 export default function WritingPage({locale,articles}:{locale:"en"|"es";articles:ArticleMeta[]}){const t=C[locale];return <main className="writing-page" lang={locale}>
   <section className="writing-hero"><SiteNav locale={locale} current="writing"/>
-    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art" role="img" aria-label={locale === "es" ? "Cuaderno editorial con wireframes, código y una comparación A/B" : "Editorial notebook with wireframes, code and an A/B comparison"}><Image className="writing-art-editorial" src="/assets/writing-hero/editorial-notebook-v2.webp" alt="" aria-hidden="true" width={1392} height={830} priority sizes="(max-width: 760px) 100vw, 52vw"/></div></div>
+    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art" role="img" aria-label={locale === "es" ? "Cuaderno editorial con wireframes, código y una comparación A/B" : "Editorial notebook with wireframes, code and an A/B comparison"}>
+      <span className="notebook-layer notebook-halo" aria-hidden="true"/>
+      <span className="notebook-layer notebook-blueprint" aria-hidden="true"/>
+      <Image className="writing-art-editorial" src="/assets/writing-hero/editorial-notebook-v2.webp" alt="" aria-hidden="true" width={1392} height={830} priority unoptimized sizes="(max-width: 760px) 100vw, 52vw"/>
+      <span className="notebook-layer notebook-orbit" aria-hidden="true"/>
+      <Image className="notebook-layer notebook-cursor" src="/assets/writing-hero/cursor-accent.svg" alt="" aria-hidden="true" width={130} height={175} unoptimized/>
+    </div></div>
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>
   </section>
