@@ -30,6 +30,26 @@
       "output": "public/audio/blog/en/ai-assisted-ui-design-faster-yes-better-not-always.mp3",
       "archived_source": "audio-source/en/done/ai-assisted-ui-design-faster-yes-better-not-always.txt",
       "generated_at": "2026-08-28T16:49:40.616622+00:00"
+    },
+    "en/ai-in-ux-design-faster-but-are-we-getting-lazier.txt": {
+      "fingerprint": "700ad8fbb8e413d19ab932e3911847845fb2102aebb4480152aa656e84d6798f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/ai-in-ux-design-faster-but-are-we-getting-lazier.mp3",
+      "archived_source": "audio-source/en/done/ai-in-ux-design-faster-but-are-we-getting-lazier.txt",
+      "generated_at": "2026-08-28T16:54:35.476471+00:00"
+    },
+    "en/ai-mentions-without-clicks.txt": {
+      "fingerprint": "516291f9a0791aaef065fad36c5bdf96183998b2e550d821f4357251241ce19f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/ai-mentions-without-clicks.mp3",
+      "archived_source": "audio-source/en/done/ai-mentions-without-clicks.txt",
+      "generated_at": "2026-08-28T16:56:50.139052+00:00"
     }
   }
 }
