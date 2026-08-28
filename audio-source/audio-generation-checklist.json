@@ -520,6 +520,26 @@
       "output": "public/audio/blog/en/text-only-landing-page.mp3",
       "archived_source": "audio-source/en/done/text-only-landing-page.txt",
       "generated_at": "2026-08-28T18:37:33.032807+00:00"
+    },
+    "en/the-cost-of-fouc-how-content-flicker-kills-test-validity.txt": {
+      "fingerprint": "f106a19b74956bd3ba118525a99733e4524bd1bf43e806646c6ffcca84072f44",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-cost-of-fouc-how-content-flicker-kills-test-validity.mp3",
+      "archived_source": "audio-source/en/done/the-cost-of-fouc-how-content-flicker-kills-test-validity.txt",
+      "generated_at": "2026-08-28T18:38:59.842738+00:00"
+    },
+    "en/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page.txt": {
+      "fingerprint": "c770f56cf6c621a018cb2bf3e93ebd8074032cecb57dc0f67bae5a7db4cd850c",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page.mp3",
+      "archived_source": "audio-source/en/done/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page.txt",
+      "generated_at": "2026-08-28T18:41:41.440787+00:00"
     }
   }
 }
