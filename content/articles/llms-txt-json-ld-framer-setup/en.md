@@ -4,7 +4,7 @@ locale: "en"
 title: "I Added llms.txt and JSON-LD to My Framer Site"
 description: "A practical Framer setup for AI-readable content using llms.txt, JSON-LD, sitemap checks, internal links, and Google Search Console."
 date: "2026-06-12T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["llms.txt","JSON-LD","Framer SEO","GEO","AI SEO","structured data","Search Console"]

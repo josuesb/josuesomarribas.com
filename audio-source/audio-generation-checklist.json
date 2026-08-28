@@ -100,6 +100,116 @@
       "output": "public/audio/blog/en/building-a-travel-app-a-work-in-progress.mp3",
       "archived_source": "audio-source/en/done/building-a-travel-app-a-work-in-progress.txt",
       "generated_at": "2026-08-28T17:05:35.824298+00:00"
+    },
+    "en/complete-guide-to-ab-testing-cro-experimentation.txt": {
+      "fingerprint": "54bb8f0c1fa15d68f0b7cf0e8c973bafd3e9bea7ff8f09a0e4c9b659b1b21045",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/complete-guide-to-ab-testing-cro-experimentation.mp3",
+      "archived_source": "audio-source/en/done/complete-guide-to-ab-testing-cro-experimentation.txt",
+      "generated_at": "2026-08-28T17:19:13.701301+00:00"
+    },
+    "en/conducting-a-competitor-analysis-for-a-travel-platform.txt": {
+      "fingerprint": "b72c4745df41cd4e6d91f167692e7f55fab646cd7adc206b17d54cfa6b939cf4",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/conducting-a-competitor-analysis-for-a-travel-platform.mp3",
+      "archived_source": "audio-source/en/done/conducting-a-competitor-analysis-for-a-travel-platform.txt",
+      "generated_at": "2026-08-28T17:21:38.941561+00:00"
+    },
+    "en/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet.txt": {
+      "fingerprint": "3820324b959b3cf70a2d201163520887baca1d8250e6160fb95466ed107469d0",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet.mp3",
+      "archived_source": "audio-source/en/done/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet.txt",
+      "generated_at": "2026-08-28T17:24:30.073276+00:00"
+    },
+    "en/damage-claims-bad-reviews-and-the-emotional-side-of-hosting.txt": {
+      "fingerprint": "120249f4595727c878d73e014bad8881996d5accfbe778d974b593b06f2e1c8f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/damage-claims-bad-reviews-and-the-emotional-side-of-hosting.mp3",
+      "archived_source": "audio-source/en/done/damage-claims-bad-reviews-and-the-emotional-side-of-hosting.txt",
+      "generated_at": "2026-08-28T17:28:11.693556+00:00"
+    },
+    "en/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.txt": {
+      "fingerprint": "1e3ec4ea292a8e6265a95cc7e0654852620e8fd8339d9b6f30e706caeff2c992",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.mp3",
+      "archived_source": "audio-source/en/done/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.txt",
+      "generated_at": "2026-08-28T17:31:03.941521+00:00"
+    },
+    "en/designing-for-real-world-context.txt": {
+      "fingerprint": "008e20fc3c7f65e0e6887bce9f70fe839b8e726e9444fa259951066f124d6c94",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/designing-for-real-world-context.mp3",
+      "archived_source": "audio-source/en/done/designing-for-real-world-context.txt",
+      "generated_at": "2026-08-28T17:32:17.041902+00:00"
+    },
+    "en/digital-sous-chef-ai-design-judgment.txt": {
+      "fingerprint": "388b476411f637ab392276c76570add1d3fb6bc523847fdda775108749633aa5",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/digital-sous-chef-ai-design-judgment.mp3",
+      "archived_source": "audio-source/en/done/digital-sous-chef-ai-design-judgment.txt",
+      "generated_at": "2026-08-28T17:33:14.088876+00:00"
+    },
+    "en/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks.txt": {
+      "fingerprint": "64c62a12db373b500071d4070268dd8f3e70da9a5da880713a2fed9147b5adeb",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks.mp3",
+      "archived_source": "audio-source/en/done/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks.txt",
+      "generated_at": "2026-08-28T17:34:37.886481+00:00"
+    },
+    "en/framer-localization-workflow-hreflang-and-multi-language-cms.txt": {
+      "fingerprint": "02157e2cd80d574ae54a9c7cafd801908e6d17bc668991b479f391ecf2df61a5",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/framer-localization-workflow-hreflang-and-multi-language-cms.mp3",
+      "archived_source": "audio-source/en/done/framer-localization-workflow-hreflang-and-multi-language-cms.txt",
+      "generated_at": "2026-08-28T17:36:54.603240+00:00"
+    },
+    "en/framer-mcp-ai-workflows-useful-now.txt": {
+      "fingerprint": "19fcebb9a6cb9ce961484b31f56f5d5d0ee1b1952b2aae19848f984d0653e99e",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/framer-mcp-ai-workflows-useful-now.mp3",
+      "archived_source": "audio-source/en/done/framer-mcp-ai-workflows-useful-now.txt",
+      "generated_at": "2026-08-28T17:40:01.516604+00:00"
+    },
+    "en/geo-vs-seo-ai-search.txt": {
+      "fingerprint": "6a4b3de77fc7918d5486c53f7dc17d3d9d139be2781c83434fac4550c2eba044",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/geo-vs-seo-ai-search.mp3",
+      "archived_source": "audio-source/en/done/geo-vs-seo-ai-search.txt",
+      "generated_at": "2026-08-28T17:49:00.124564+00:00"
     }
   }
 }

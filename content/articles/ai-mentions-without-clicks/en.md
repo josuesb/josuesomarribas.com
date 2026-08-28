@@ -4,7 +4,7 @@ locale: "en"
 title: "The New Analytics Problem: When AI Mentions You but Nobody Clicks"
 description: "AI search can mention your brand without sending traffic. Here is why that breaks normal analytics and how to think about measurement differently."
 date: "2026-07-08T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["AI analytics","zero-click search","GEO","ChatGPT","brand visibility"]

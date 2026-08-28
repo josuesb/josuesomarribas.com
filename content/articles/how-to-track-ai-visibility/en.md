@@ -4,7 +4,7 @@ locale: "en"
 title: "How to Track AI Visibility Without Losing Your Mind"
 description: "A simple framework to track brand and content visibility across ChatGPT, Perplexity, Gemini, Copilot, and Google AI experiences."
 date: "2026-06-04T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["AI visibility","GEO","ChatGPT","Perplexity","Gemini","SEO analytics"]

@@ -4,7 +4,7 @@ locale: "en"
 title: "Alex, an User Persona Based on User Research"
 description: "Discover how user research shaped the creation of a data-driven traveler persona. Learn the step-by-step process of conducting surveys, analyzing insights, and designing a user-centered travel platform."
 date: "2025-02-05T00:00:00.000Z"
-draft: false
+draft: true
 type: "Projects"
 cluster: "ux-research-product-thinking"
 tags: []

@@ -4,7 +4,7 @@ locale: "en"
 title: "Bitely – Responsive Recipe App Design"
 description: "Bitely is a modern recipe app designed with a mobile-first approach, ensuring a seamless experience across all devices. Explore the UX research and design process behind this responsive cooking companion."
 date: "2020-11-14T00:00:00.000Z"
-draft: false
+draft: true
 type: "Projects"
 cluster: "portfolio-projects-case-studies"
 tags: []

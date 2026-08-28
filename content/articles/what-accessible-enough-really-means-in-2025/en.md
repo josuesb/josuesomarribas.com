@@ -4,7 +4,7 @@ locale: "en"
 title: "What “Accessible Enough” Really Means in 2025"
 description: "“Accessibility in 2025 isn’t about passing WCAG checklists. It’s about real usability, clear hierarchy, adaptive interfaces, and designing for people with different mental models. Here’s what ‘accessible enough’ actually means today.”"
 date: "2025-12-06T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []

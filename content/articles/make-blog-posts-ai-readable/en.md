@@ -4,7 +4,7 @@ locale: "en"
 title: "How to Make Blog Posts Easier for AI Tools to Understand"
 description: "A practical guide to writing blog posts that are clearer for readers, search engines, and AI answer tools without turning the content into robotic sludge."
 date: "2026-07-04T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["AI-readable content","GEO","blog writing","content structure","SEO"]

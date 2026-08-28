@@ -4,7 +4,7 @@ locale: "en"
 title: "How I Add Real Audio to My Blog Posts using ChatGPT, ElevenLabs and Framer"
 description: "A practical, repeatable workflow to turn a blog post into a natural-sounding audio version using ChatGPT and ElevenLabs Studio, then embed it in Framer without making the UX weird."
 date: "2025-12-16T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []

@@ -4,7 +4,7 @@ locale: "en"
 title: "Is There a Google Search Console for ChatGPT?"
 description: "A practical look at whether ChatGPT has a Search Console equivalent, what can be measured today, and how to track AI visibility without pretending the data is cleaner than it is."
 date: "2026-06-08T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["ChatGPT","GEO","AI search","analytics","SEO","visibility"]

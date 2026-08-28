@@ -4,7 +4,7 @@ locale: "en"
 title: "How to Use JSON-LD for Blog Schema in Framer CMS"
 description: "Learn how to set up SEO Schema in Framer using JSON-LD, avoid common mistakes, and ensure Google reads your blog posts correctly. A practical, step-by-step guide based on real implementation experience."
 date: "2025-12-01T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []

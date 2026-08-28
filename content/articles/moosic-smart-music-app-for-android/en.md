@@ -4,7 +4,7 @@ locale: "en"
 title: "Moosic – Smart Music App for Android"
 description: "Moosic is an Android-native music app that curates playlists based on your mood. Explore the UI/UX process behind this smart music experience."
 date: "2020-11-14T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "portfolio-projects-case-studies"
 tags: []

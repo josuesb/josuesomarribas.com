@@ -4,7 +4,7 @@ locale: "en"
 title: "MutationObservers vs Polling: A Shootout for A/B Testing"
 description: "Polling is simple, MutationObservers are fast. A practical comparison of both element-detection strategies for experimentation code, with benchmark data."
 date: "2026-07-19T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []

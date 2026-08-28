@@ -4,7 +4,7 @@ locale: "en"
 title: "Fable 5 and Mythos 5 Pulled by US Government Order"
 description: ""
 date: "2026-06-13T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: []

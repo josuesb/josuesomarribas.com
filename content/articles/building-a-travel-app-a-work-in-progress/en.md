@@ -4,7 +4,7 @@ locale: "en"
 title: "Building a Travel App: A Work in Progress"
 description: "Discover hidden gems around the world with a travel app designed to help explorers find unique, off-the-beaten-path locations. Curated by locals and real travelers, this platform makes uncovering secret spots easier than ever."
 date: "2025-12-20T00:00:00.000Z"
-draft: false
+draft: true
 type: "Projects"
 cluster: "portfolio-projects-case-studies"
 tags: []
