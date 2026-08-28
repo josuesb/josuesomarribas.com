@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-export default function ArticleTools({ title, mode = "actions" }:{ title:string; mode?:"actions"|"progress" }) {
+export default function ArticleTools({ title, mode = "actions" }:{ title:string; mode?:"actions"|"progress"|"sidebar-progress" }) {
   const [progress, setProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [large, setLarge] = useState(false);
 
   useEffect(() => {
-    if (mode !== "progress") return;
+    if (mode === "actions") return;
     const update = () => {
       const article = document.querySelector<HTMLElement>(".article-content");
       if (!article) return;
@@ -31,10 +31,8 @@ export default function ArticleTools({ title, mode = "actions" }:{ title:string;
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));
   };
 
-  if (mode === "progress") return <>
-    <div className="article-progress-line" aria-hidden="true"><i style={{ width:`${progress}%` }}/></div>
-    <div className="sidebar-progress"><b>READING PROGRESS</b><span>{progress}%</span><i><em style={{ width:`${progress}%` }}/></i></div>
-  </>;
+  if (mode === "progress") return <div className="article-progress-line" aria-hidden="true"><i style={{ width:`${progress}%` }}/></div>;
+  if (mode === "sidebar-progress") return <div className="sidebar-progress"><b>READING PROGRESS</b><span>{progress}%</span><i><em style={{ width:`${progress}%` }}/></i></div>;
   return <div className="article-actions" aria-label="Article tools">
       <button onClick={copy}>↗ <span>{copied ? "Copied" : "Copy link"}</span></button>
       <button onClick={listen}>◉ <span>Listen</span></button>

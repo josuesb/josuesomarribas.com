@@ -41,6 +41,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
         <b>{labels.contents}</b>
         <nav>{headings.slice(0, 7).map(heading => <a key={heading.id} href={`#${heading.id}`}>{heading.label}</a>)}</nav>
         <div className="article-share"><b>{labels.share}</b><div><a href={`mailto:?subject=${encodeURIComponent(article.title)}&body=${encodeURIComponent(articleUrl)}`}>✉</a><a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`}>in</a><a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(article.title)}`}>𝕏</a></div></div>
+        <ArticleTools title={article.title} mode="sidebar-progress"/>
       </aside>
       <article className="article-shell">
         {labels.note && <p className="translation-note">{labels.note}</p>}
