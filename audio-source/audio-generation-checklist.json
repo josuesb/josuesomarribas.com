@@ -450,6 +450,76 @@
       "output": "public/audio/blog/en/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing.mp3",
       "archived_source": "audio-source/en/done/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing.txt",
       "generated_at": "2026-08-28T18:30:05.117464+00:00"
+    },
+    "en/mutationobservers-without-panic-performance-guide.txt": {
+      "fingerprint": "888700627962017fdacf9ffeef9ebfbeeedbba3247586890ee33a289f88fa1b3",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/mutationobservers-without-panic-performance-guide.mp3",
+      "archived_source": "audio-source/en/done/mutationobservers-without-panic-performance-guide.txt",
+      "generated_at": "2026-08-28T18:31:01.838101+00:00"
+    },
+    "en/picasso-s-library-native-android-ios-design-concept.txt": {
+      "fingerprint": "e4eff215f8bf00c5094784c19889be55d6271b2eef9b46a222b99f4cde170e44",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/picasso-s-library-native-android-ios-design-concept.mp3",
+      "archived_source": "audio-source/en/done/picasso-s-library-native-android-ios-design-concept.txt",
+      "generated_at": "2026-08-28T18:31:34.496542+00:00"
+    },
+    "en/reviews-are-not-just-feedback-they-are-public-ux-research.txt": {
+      "fingerprint": "af68612c64564186c8afa3313923d62f6cd85fc9c2eed0ea9c9a5e2bf008b03f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/reviews-are-not-just-feedback-they-are-public-ux-research.mp3",
+      "archived_source": "audio-source/en/done/reviews-are-not-just-feedback-they-are-public-ux-research.txt",
+      "generated_at": "2026-08-28T18:33:27.841122+00:00"
+    },
+    "en/seo-schema-in-framer.txt": {
+      "fingerprint": "36771f7c45cba27993f84e04bea41e9d2892639aa78951b625f142bd82bbf54e",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/seo-schema-in-framer.mp3",
+      "archived_source": "audio-source/en/done/seo-schema-in-framer.txt",
+      "generated_at": "2026-08-28T18:34:52.734171+00:00"
+    },
+    "en/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.txt": {
+      "fingerprint": "028503ff30c2dfe014bd8afd7179cb0698d85aaaacdd05c1811809dd67470dd9",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.mp3",
+      "archived_source": "audio-source/en/done/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.txt",
+      "generated_at": "2026-08-28T18:35:51.798807+00:00"
+    },
+    "en/structural-seo-json-ld-framer.txt": {
+      "fingerprint": "06f6de84fd3b25f8b8b61618f0a4daf963a06bebf4357096ac7f2453a3306c73",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/structural-seo-json-ld-framer.mp3",
+      "archived_source": "audio-source/en/done/structural-seo-json-ld-framer.txt",
+      "generated_at": "2026-08-28T18:36:43.550998+00:00"
+    },
+    "en/text-only-landing-page.txt": {
+      "fingerprint": "7e7fd41847c1a9fb5ed1799ddb2c798f98449adfd78c6e0998938b9054684d17",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/text-only-landing-page.mp3",
+      "archived_source": "audio-source/en/done/text-only-landing-page.txt",
+      "generated_at": "2026-08-28T18:37:33.032807+00:00"
     }
   }
 }
