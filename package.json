@@ -11,6 +11,7 @@
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "audio:generate": ".venv-tts/bin/python scripts/tts/generate_audio.py",
     "content:migrate": "node scripts/migrate-framer-content.mjs",
     "db:generate": "drizzle-kit generate"
   },

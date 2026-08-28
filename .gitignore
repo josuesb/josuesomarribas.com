@@ -12,6 +12,13 @@
 
 # testing
 /coverage
+/.venv-tts/
+
+# Local Python tooling
+*.py
+*.pyc
+__pycache__/
+!scripts/tts/generate_audio.py
 
 # next.js
 /.next/
