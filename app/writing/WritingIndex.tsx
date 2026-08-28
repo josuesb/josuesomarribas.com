@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ArticleMeta } from "../../lib/content";
 import { editorialImage } from "../../lib/editorial-assets";
 
@@ -18,12 +18,12 @@ const copy = {
   en: {
     search:"Search articles", all:"All topics", featured:"Start here", archive:"Latest notes",
     notes:"articles", updated:"New notes, published irregularly", min:"min read",
-    empty:"No articles match your search.", more:"Load more articles", showing:"Showing",
+    empty:"No articles match your search.",
   },
   es: {
     search:"Buscar artículos", all:"Todos los temas", featured:"Empieza aquí", archive:"Últimas notas",
     notes:"artículos", updated:"Nuevas notas, sin calendario fijo", min:"min de lectura",
-    empty:"No hay artículos que coincidan con la búsqueda.", more:"Cargar más artículos", showing:"Mostrando",
+    empty:"No hay artículos que coincidan con la búsqueda.",
   },
 };
 
@@ -55,6 +55,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(INITIAL_ARCHIVE_SIZE);
+  const loadSentinel = useRef<HTMLDivElement>(null);
   const filters = useMemo(() => ["All", ...Array.from(new Set(articles.map(article => article.cluster).filter(Boolean)))], [articles]);
   const isBrowsing = filter !== "All" || query.trim().length > 0;
   const matches = useMemo(() => articles.filter(article =>
@@ -65,6 +66,22 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
   const featuredSlugs = new Set(featured.map(article => article.slug));
   const archive = isBrowsing ? matches : matches.filter(article => !featuredSlugs.has(article.slug));
   const visible = archive.slice(0, visibleCount);
+
+  useEffect(() => {
+    const sentinel = loadSentinel.current;
+    if (!sentinel || visible.length >= archive.length) return;
+    if (!("IntersectionObserver" in window)) {
+      const fallback = window.setTimeout(() => setVisibleCount(archive.length), 0);
+      return () => window.clearTimeout(fallback);
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setVisibleCount(count => Math.min(count + LOAD_MORE_SIZE, archive.length));
+      }
+    }, { rootMargin:"500px 0px" });
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [archive.length, visible.length]);
 
   const chooseFilter = (value: string) => {
     setFilter(value);
@@ -89,12 +106,11 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     <section className="latest" aria-labelledby="archive-heading">
       <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div><div className="archive-view" aria-hidden="true"><span>List</span><i>/</i><span>Visual</span></div></div>
       <div className="notes-list">{visible.map((article, index) => <a className="note-row" href={articleHref(article, locale)} key={article.slug} aria-label={article.title}>
-        <span className="note-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-        <div className="note-copy"><small>{clusterLabel(article.cluster, locale)}</small><h3>{article.title}</h3><p>{article.description}</p></div>
+        <div className="note-copy"><div className="note-eyebrow"><span className="note-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><small>{clusterLabel(article.cluster, locale)}</small></div><h3>{article.title}</h3><p>{article.description}</p></div>
         <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span><b aria-hidden="true">↗</b></div>
         <span className="article-cover" aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(article.slug, article.image)})` }}/>
       </a>)}</div>
-      {visible.length < archive.length && <button className="load-more" type="button" onClick={() => setVisibleCount(count => count + LOAD_MORE_SIZE)}>{t.more} <span aria-hidden="true">↓</span></button>}
+      {visible.length < archive.length && <div className="archive-load-sentinel" ref={loadSentinel} aria-hidden="true"/>}
       {!archive.length && <p className="empty-notes">{t.empty}</p>}
     </section>
   </div>;
