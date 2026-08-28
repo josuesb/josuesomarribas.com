@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 280">
+  <g fill="none" stroke="#fff" stroke-width="1.6">
+    <path d="M25 35h215v55l-46 50v58l-40 42h-44l-40-42v-58L25 90Z"/><path d="M25 90h215M70 140h124M110 198h44M110 240h44"/><path d="M18 25v75M247 80v125M4 25h28M4 100h28M233 80h28M233 205h28"/>
+  </g>
+  <g fill="#fff" font-family="ui-monospace,monospace" font-size="8" text-anchor="middle">
+    <text x="132" y="65">HIPÓTESIS</text><text x="132" y="119">EXPERIMENTO</text><text x="132" y="174">ANÁLISIS</text><text x="132" y="224">IMPACTO</text><text x="12" y="18">80</text><text x="248" y="73">50</text>
+  </g>
+</svg>

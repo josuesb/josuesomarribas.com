@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 280">
+  <g fill="none" stroke="#07141d" stroke-width="1">
+    <path d="M10 13h26M23 0v26M10 267h26M23 254v26"/>
+    <path d="M52 44v192"/>
+    <path d="M39 44h13M44 51h8M44 58h8M44 65h8M44 72h8M39 79h13M44 86h8M44 93h8M44 100h8M44 107h8M39 114h13M44 121h8M44 128h8M44 135h8M44 142h8M39 149h13M44 156h8M44 163h8M44 170h8M44 177h8M39 184h13M44 191h8M44 198h8M44 205h8M44 212h8M39 219h13M44 226h8M44 233h8"/>
+  </g>
+  <g fill="#07141d" font-family="ui-monospace,monospace" font-size="8" font-weight="700">
+    <text x="30" y="17">08</text><text x="10" y="61">06</text><text x="30" y="61">04</text><text x="10" y="105">02</text><text x="30" y="105">00</text>
+  </g>
+</svg>

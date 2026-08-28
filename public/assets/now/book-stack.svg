@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 230">
+  <rect x="3" y="3" width="144" height="224" fill="#eee7d8" stroke="#777"/>
+  <path d="M3 69h144M3 167h144" stroke="#777"/>
+  <rect x="3" y="69" width="144" height="98" fill="#0950bd"/>
+  <g font-family="Georgia,serif" font-weight="700"><text x="13" y="25" fill="#07141d" font-size="14">Noise</text><text x="13" y="87" fill="#fff" font-size="15">Designing</text><text x="13" y="105" fill="#fff" font-size="15">Data-Intensive</text><text x="13" y="123" fill="#fff" font-size="15">Applications</text><text x="13" y="190" fill="#07141d" font-size="14">The Mom Test</text></g>
+  <g font-family="Georgia,serif" font-size="8"><text x="13" y="42" fill="#07141d">Daniel Kahneman</text><text x="13" y="145" fill="#fff">Martin Kleppmann</text><text x="13" y="207" fill="#07141d">Rob Fitzpatrick</text></g>
+</svg>

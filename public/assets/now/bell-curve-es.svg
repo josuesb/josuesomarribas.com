@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 135">
+  <text x="6" y="20" fill="#07141d" font-family="Georgia,serif" font-size="16" font-style="italic" transform="rotate(-5 6 20)">reducir la</text>
+  <text x="6" y="38" fill="#07141d" font-family="Georgia,serif" font-size="16" font-style="italic" transform="rotate(-5 6 38)">incertidumbre</text>
+  <g fill="none" stroke="#07141d" stroke-width="1.4"><path d="M10 105c46 0 42-67 88-67s42 67 88 67"/><path d="M10 105h176M98 31v82"/></g>
+  <g fill="#07141d" font-family="ui-monospace,monospace" font-size="8"><text x="12" y="124">−2σ</text><text x="58" y="124">−1σ</text><text x="95" y="124">μ</text><text x="130" y="124">+1σ</text><text x="170" y="124">+2σ</text></g>
+</svg>
