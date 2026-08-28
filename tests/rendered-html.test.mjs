@@ -40,7 +40,7 @@ test("emits robots, sitemap and RSS into the deployed static directory", async (
 
 test("publishes only genuinely translated articles under the Spanish blog", async () => {
   const files = (await readdir(output("es/blog"))).filter((file) => file.endsWith(".html"));
-  assert.equal(files.length, 3);
+  assert.equal(files.length, 4);
   for (const file of files) {
     const html = await readFile(output(`es/blog/${file}`), "utf8");
     assert.match(html, /<html lang="es"/);

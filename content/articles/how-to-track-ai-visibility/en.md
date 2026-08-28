@@ -12,7 +12,7 @@ audio: ""
 sourceImage: "https://framerusercontent.com/images/ADP9utJdIeAfNHLXotZq9PGqA.jpg"
 imageAlt: "Close-up of blue tourist binoculars on an observation deck with a city view."
 image: "/images/blog/default-cover.png"
-canonical: "https://josuesomarribas.com/blog/how-to-track-ai-visibility"
+canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""
 downloadText: "Download Assets of This Post"

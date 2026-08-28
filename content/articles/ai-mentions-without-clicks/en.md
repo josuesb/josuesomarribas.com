@@ -12,7 +12,7 @@ audio: ""
 sourceImage: "https://framerusercontent.com/images/JPr9o9XKnSt8izQAce6SMKfg.jpg"
 imageAlt: "Minimalist image of a robotic hand reaching out on a white background."
 image: "/images/blog/default-cover.png"
-canonical: "https://josuesomarribas.com/blog/ai-mentions-without-clicks"
+canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""
 downloadText: "Download Assets of This Post"

@@ -12,7 +12,7 @@ audio: ""
 sourceImage: "https://framerusercontent.com/images/jmjMKbpfaBGc0ntHpXeKzf8iaM.jpg"
 imageAlt: "Laptop displaying ChatGPT introduction page on a web browser."
 image: "/images/blog/default-cover.png"
-canonical: "https://josuesomarribas.com/blog/google-search-console-for-chatgpt"
+canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""
 downloadText: "Download Assets of This Post"

@@ -12,7 +12,7 @@ audio: ""
 sourceImage: "https://framerusercontent.com/images/9feOreXQpcLbna5FfAJ0q1VBEnc.jpg"
 imageAlt: "Hands typing on a laptop with a blog post visible, cozy indoor setting with colorful screen in background."
 image: "/images/blog/default-cover.png"
-canonical: "https://josuesomarribas.com/blog/make-blog-posts-ai-readable"
+canonical: "https://josuesomarribas.com/blog/structural-seo-json-ld-framer"
 featured: false
 downloadUrl: ""
 downloadText: "Download Assets of This Post"

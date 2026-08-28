@@ -210,6 +210,26 @@
       "output": "public/audio/blog/en/geo-vs-seo-ai-search.mp3",
       "archived_source": "audio-source/en/done/geo-vs-seo-ai-search.txt",
       "generated_at": "2026-08-28T17:49:00.124564+00:00"
+    },
+    "en/good-service-is-clear-before-it-is-friendly.txt": {
+      "fingerprint": "f13f01ad894d529b852bf0e8f08d3aee232db8b461d282dcfb78354a484a28ef",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/good-service-is-clear-before-it-is-friendly.mp3",
+      "archived_source": "audio-source/en/done/good-service-is-clear-before-it-is-friendly.txt",
+      "generated_at": "2026-08-28T17:53:02.427565+00:00"
+    },
+    "en/google-search-console-for-chatgpt.txt": {
+      "fingerprint": "debdd3be1d02ebbc04e651a6ef271357f10ba61594ec53c895f420d3bdbdacde",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/google-search-console-for-chatgpt.mp3",
+      "archived_source": "audio-source/en/done/google-search-console-for-chatgpt.txt",
+      "generated_at": "2026-08-28T17:54:07.219837+00:00"
     }
   }
 }
