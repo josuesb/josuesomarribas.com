@@ -2,13 +2,13 @@
 slug: "how-i-generate-natural-blog-audio-locally-for-free"
 locale: "en"
 title: "How I Generate Natural Blog Audio Locally for Free"
-description: "A practical workflow for generating natural blog narration locally on an Apple Silicon Mac with Kokoro, MLX Audio, automatic MP3 export, and no paid text-to-speech API."
+description: "A complete workflow for natural blog narration using local Kokoro generation, speech-ready scripts, pronunciation QA, MP3 publishing, and a comparison with hosted voices."
 date: "2026-08-28T00:00:00.000Z"
 draft: false
 type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Local TTS", "Kokoro", "Accessibility", "Blog audio"]
-audio: "/audio/blog/en/how-i-generate-natural-blog-audio-locally-for-free.mp3"
+audio: ""
 sourceImage: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free.png"
 imageAlt: "Editorial illustration representing a written blog article being transformed into an audio waveform locally on a computer."
 image: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free.png"
@@ -62,3 +62,19 @@ public/audio/blog/es/article-slug.mp3</code></pre><p>The website can then load t
 <h2>Where this approach works best</h2>
 
 <p>Local static narration is a strong fit for portfolios, documentation, editorial blogs, and relatively stable content. It provides consistent quality without adding a runtime service to the website.</p><p>It is less suitable when text changes constantly, users generate arbitrary content, or audio must be personalized in real time. Those products need a server-side speech system or an API.</p><p>For my blog, static audio is the right tradeoff. I control the voice, review the result once, and keep production simple. The fancy part happens locally. The website just plays a file, which is exactly the kind of boring architecture I trust.</p>
+
+<h2>Local generation versus ElevenLabs</h2>
+
+<p>I previously generated narration with ElevenLabs Studio and uploaded it manually. That workflow is still useful when a project needs a highly polished commercial voice, detailed pronunciation tooling, or multiple collaborators reviewing audio in a hosted interface. It also removes local model setup.</p><p>The tradeoff is recurring usage, another account in the publishing chain, and less control over whether future regeneration behaves exactly like the first render. Local Kokoro generation is a better default for this blog because the articles are stable, the hardware already exists, and every published MP3 can be reviewed and versioned with the site.</p><table><thead><tr><th>Need</th><th>Local Kokoro</th><th>Hosted voice service</th></tr></thead><tbody><tr><td>Cost per regeneration</td><td>No API fee</td><td>Usually metered</td></tr><tr><td>Setup</td><td>Python, model, FFmpeg</td><td>Account and upload</td></tr><tr><td>Voice controls</td><td>Model-dependent</td><td>Usually richer</td></tr><tr><td>Privacy</td><td>Text stays local</td><td>Text is processed remotely</td></tr><tr><td>Repeatability</td><td>Pinned locally</td><td>Depends on service/model changes</td></tr></tbody></table>
+
+<h2>Turning an article into a narration script</h2>
+
+<p>The visible article should remain the canonical source, but it should not be read character for character. Before generation, I create a speech version that keeps the argument while removing visual-only material.</p><ul><li><p>Links become the meaning of the link, not a spoken URL.</p></li><li><p>Code blocks become a short explanation of what the code does.</p></li><li><p>Images get a useful spoken transition only when they carry part of the argument.</p></li><li><p>Tables become comparisons in natural sentences.</p></li><li><p>Headings become transitions, so the listener understands that the subject changed.</p></li></ul><p>This preparation has more influence on naturalness than most voice settings. A clean script with ordinary punctuation usually outperforms an overloaded script covered in synthetic pause commands.</p>
+
+<h2>Pronunciation, pauses, and SSML</h2>
+
+<p>Model support decides which controls are available. Some hosted voices accept SSML break tags, phonemes, aliases, or pronunciation dictionaries. Local models may respond better to punctuation and phonetic rewrites. I keep those rewrites in the private narration source so the published article stays typographically correct.</p><p>My order of operations is simple: fix the sentence, adjust punctuation, add a phonetic alias for the specific word, and use explicit break markup only when the chosen model genuinely supports it. Throwing SSML at an incompatible model does not create nuance; sometimes it reads the markup aloud.</p><p>For recurring names, products, and acronyms, maintain a small pronunciation lexicon beside the generation script. It is cheaper to solve “JSON-LD,” “Framer,” or a person’s surname once than to rediscover the same problem in every article.</p>
+
+<h2>The publishing handoff</h2>
+
+<p>The site should prefer the reviewed MP3 when one exists and fall back to browser speech only when it does not. The audio player must never autoplay, and its controls need keyboard access, visible progress, duration, and an understandable text label.</p><p>Before shipping, listen to the first paragraph, a transition in the middle, every unusual proper noun, and the ending. That compact QA pass catches most failures without turning publishing into a full recording session.</p>
