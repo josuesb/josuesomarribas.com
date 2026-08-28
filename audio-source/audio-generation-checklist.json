@@ -300,6 +300,16 @@
       "output": "public/audio/blog/en/how-to-do-user-research-for-travelers-the-complete-guide.mp3",
       "archived_source": "audio-source/en/done/how-to-do-user-research-for-travelers-the-complete-guide.txt",
       "generated_at": "2026-08-28T18:11:52.445909+00:00"
+    },
+    "en/how-to-import-content-into-framer-automatically.txt": {
+      "fingerprint": "44993d1112eeb2061d7c4df59f16f13c673e25c627526879fa5735339d6a9b15",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-import-content-into-framer-automatically.mp3",
+      "archived_source": "audio-source/en/done/how-to-import-content-into-framer-automatically.txt",
+      "generated_at": "2026-08-28T18:13:54.572891+00:00"
     }
   }
 }
