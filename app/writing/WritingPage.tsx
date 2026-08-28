@@ -5,7 +5,6 @@ import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
 
-const writingArtwork = ["01-libro-base", "02-pagina-codigo", "03-pagina-notas", "04-marcador-rojo", "05-cursor"];
 const mailchimpAction = "https://josuesomarribas.us10.list-manage.com/subscribe/post?u=a0e13242fe65e96acc0169bef&id=b6eb284256&f_id=00addce1f0";
 
 const C={
@@ -15,7 +14,7 @@ const C={
 
 export default function WritingPage({locale,articles}:{locale:"en"|"es";articles:ArticleMeta[]}){const t=C[locale];return <main className="writing-page" lang={locale}>
   <section className="writing-hero"><SiteNav locale={locale} current="writing"/>
-    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art" role="img" aria-label="Open notebook with code and experiment notes"><Image className="writing-decor writing-sun-asset" src="/assets/global/sol-rojo-texturizado.svg" alt="" aria-hidden="true" width={1024} height={1024}/><Image className="writing-decor writing-waves-asset" src="/assets/global/ondas-marfil-3-lineas.svg" alt="" aria-hidden="true" width={1400} height={360}/>{writingArtwork.map((file,index)=><Image key={file} className={`writing-art-layer writing-art-${index+1}`} src={`/assets/writing-hero/${file}.svg`} alt="" aria-hidden="true" width={1800} height={1100} priority={index<2}/>)}</div></div>
+    <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><div className="notebook-art" role="img" aria-label={locale === "es" ? "Cuaderno editorial con wireframes, código y una comparación A/B" : "Editorial notebook with wireframes, code and an A/B comparison"}><Image className="writing-art-editorial" src="/assets/writing-hero/editorial-notebook-v2.webp" alt="" aria-hidden="true" width={1392} height={830} priority sizes="(max-width: 760px) 100vw, 52vw"/></div></div>
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>
   </section>
