@@ -10,7 +10,9 @@ const escapeXml = (value) => value.replace(/[<>&'"]/g, (character) => ({
 })[character]);
 
 async function publishedArticles() {
-  const directories = await readdir(articlesRoot);
+  const directories = (await readdir(articlesRoot, { withFileTypes:true }))
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name);
   const articles = [];
   for (const directory of directories) {
     const source = await readFile(path.join(articlesRoot, directory, "en.md"), "utf8");
@@ -26,7 +28,9 @@ async function publishedArticles() {
 }
 
 async function translatedSlugs() {
-  const directories = await readdir(articlesRoot);
+  const directories = (await readdir(articlesRoot, { withFileTypes:true }))
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name);
   const slugs = [];
   for (const directory of directories) {
     const file = path.join(articlesRoot, directory, "es.md");

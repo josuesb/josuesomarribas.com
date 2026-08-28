@@ -1,0 +1,117 @@
+Cómo genero audio natural para mi blog gratis y en local.
+
+Quería tener un botón Listen de verdad en mi blog, pero no quería que cada clic activara una solicitud de texto a voz de pago. Tampoco quería que el resultado dependiera de la voz robótica que tuviera instalada el navegador de cada visitante.
+
+La solución resultó ser bastante práctica: generar la narración localmente en mi Mac, exportar un MP3 optimizado por artículo y servirlo como un archivo estático normal. La generación no cuesta dinero, la voz se mantiene consistente y la web sólo tiene que reproducir un archivo.
+
+En este artículo explico el flujo exacto que construí con Kokoro, MLX Audio, Python y FFmpeg.
+
+La idea: generar una vez y reproducir todas las veces necesarias
+
+La síntesis de voz del navegador es cómoda, pero ofrece muy poco control. La voz disponible cambia entre sistemas operativos y navegadores. El ritmo, la pronunciación y la calidad también cambian.
+
+Una API de voz con inteligencia artificial aporta más consistencia, pero añade otro servicio, límites de uso, credenciales y un coste recurrente. Puede tener sentido para un producto dinámico. Me parecía innecesario para artículos que apenas cambian.
+
+La narración estática cambia el modelo:
+
+Preparar un texto limpio para narración.
+
+Generar la voz localmente.
+
+Comprimirla en un MP3.
+
+Guardar el audio terminado con la web.
+
+Permitir que todas las personas escuchen la misma grabación revisada.
+
+No existe ningún proceso de texto a voz en producción ni una llamada a una API cuando alguien pulsa Play.
+
+La tecnología local
+
+Utilizo MLX Audio , una biblioteca de voz construida sobre el framework MLX de Apple, junto con el modelo de texto a voz Kokoro. Kokoro es compacto en comparación con muchos modelos modernos y sus pesos están disponibles bajo licencia Apache 2.0. MLX permite ejecutarlo de forma práctica en un Mac con Apple Silicon.
+
+FFmpeg se encarga de la compresión final. Python ejecuta el script de automatización, pero ni Python ni el modelo necesitan existir en Vercel. Sólo se publican los MP3 resultantes.
+
+Para inglés utilizo por defecto George , una voz masculina británica identificada como . Para español utilizo la voz masculina . Ambas funcionan a una velocidad de 0,95, que deja respirar un poco más al contenido técnico sin hacerlo sonar lento.
+
+Instalación inicial
+
+En un Mac con Apple Silicon instalo Python 3.12 y FFmpeg mediante Homebrew:
+
+Después creo un entorno virtual específico para el proyecto e instalo las herramientas locales de voz:
+
+La primera ejecución descarga el modelo y las voces. Las siguientes reutilizan la caché local y arrancan más rápido.
+
+El flujo basado en carpetas
+
+Quería que el proceso fuera lo bastante aburrido como para usarlo de verdad. Los textos de narración entran en carpetas separadas por idioma:
+
+Después ejecuto un solo comando desde la raíz del proyecto:
+
+El generador detecta el idioma por la carpeta, selecciona la voz correcta, crea internamente un WAV, lo convierte en un MP3 de 96 kilobits y escribe el archivo público aquí:
+
+La web puede cargarlo desde como cualquier otro recurso público.
+
+Una cola, una carpeta done y una checklist
+
+Generar decenas de artículos largos lleva tiempo, así que el script trata las carpetas de origen como una cola. Cuando un MP3 se crea correctamente, el texto utilizado se mueve a una subcarpeta llamada .
+
+El script también mantiene una checklist en formato JSON. Registra una huella calculada a partir de la narración, el idioma, la voz, la velocidad y el modelo. Si vuelve a aparecer el mismo archivo con la misma configuración, el generador lo reconoce y no pierde tiempo repitiendo el audio.
+
+Si cambio el texto, la voz o la velocidad, la huella cambia y el artículo puede generarse de nuevo. También puedo forzar una regeneración deliberada:
+
+Esto importa cuando la cola contiene un archivo editorial completo. Una simple fecha de modificación no basta; la checklist hace explícito el historial de generación.
+
+Preparar texto para ser escuchado
+
+Un buen resultado de texto a voz no depende solamente de la voz. Una página y una narración son interfaces distintas.
+
+Mi generador acepta texto plano, Markdown o HTML. Elimina metadatos, etiquetas HTML, imágenes y bloques de código antes de enviar el contenido al modelo. Incluye el título, pero excluye los detalles de implementación que no tienen sentido en voz alta.
+
+Aun así, reviso algunos problemas previsibles:
+
+Los encabezados deben funcionar como transiciones habladas.
+
+Puede ser necesario expandir siglas o escribirlas fonéticamente.
+
+Nunca deberían leerse direcciones URL completas.
+
+Las listas largas necesitan puntuación y espacio para respirar.
+
+El código debe explicarse, no narrarse carácter por carácter.
+
+Ni la voz más natural puede rescatar un texto que nunca fue preparado para escucharse.
+
+Qué significa realmente gratis
+
+La generación es local y no utiliza una API de pago. No existe un coste por carácter, minuto o reproducción. El modelo funciona en un ordenador que ya tengo.
+
+Eso no significa que el audio tenga literalmente cero coste de infraestructura. Los MP3 ocupan espacio en el repositorio o almacenamiento, y las personas utilizan el ancho de banda normal del hosting al escucharlos. Un MP3 de 96 kilobits es suficientemente ligero para este caso, pero continúa siendo un archivo que hay que entregar.
+
+La diferencia importante es que escuchar no activa una inferencia. Cien oyentes y un oyente utilizan el mismo recurso terminado.
+
+Control de calidad antes de publicar
+
+No publico la primera generación a ciegas. Mi checklist de audio es breve:
+
+Escuchar el inicio, una transición entre secciones y el cierre.
+
+Comprobar nombres, siglas, productos y números.
+
+Confirmar que no se lee código ni una URL.
+
+Asegurar que el reproductor nunca comienza automáticamente.
+
+Mantener Play, Pause, duración, progreso y velocidad accesibles mediante teclado.
+
+Conservar el artículo escrito como versión canónica.
+
+Si una palabra suena mal, edito fonéticamente el texto privado para narración sin cambiar el artículo visible. Esa separación es útil: la precisión escrita y la pronunciación hablada no siempre necesitan la misma ortografía.
+
+Dónde funciona mejor este enfoque
+
+La narración estática y local encaja bien en portfolios, documentación, blogs editoriales y contenido relativamente estable. Aporta una calidad consistente sin añadir un servicio de ejecución a la web.
+
+Es menos adecuada cuando el texto cambia constantemente, las personas generan contenido arbitrario o el audio debe personalizarse en tiempo real. Esos productos necesitan un sistema de voz en servidor o una API.
+
+Para mi blog, el audio estático ofrece el equilibrio correcto. Controlo la voz, reviso el resultado una vez y mantengo sencilla la producción. La parte sofisticada sucede localmente. La web solamente reproduce un archivo, que es exactamente el tipo de arquitectura aburrida en la que confío.

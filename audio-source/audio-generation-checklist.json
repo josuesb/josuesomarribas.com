@@ -1,4 +1,25 @@
 {
   "version": 1,
-  "items": {}
+  "items": {
+    "en/4-unique-design-systems-you-haven-t-seen-yet-to-boost-your-inspiration.txt": {
+      "fingerprint": "3c1fc45ca9e43f2f97f0ecfc7680364f6da3ba2237dcfb48ba9633c8fa5bd601",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/4-unique-design-systems-you-haven-t-seen-yet-to-boost-your-inspiration.mp3",
+      "archived_source": "audio-source/en/done/4-unique-design-systems-you-haven-t-seen-yet-to-boost-your-inspiration.txt",
+      "generated_at": "2026-08-28T16:41:46.546338+00:00"
+    },
+    "en/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable.txt": {
+      "fingerprint": "ad21e2ea05974d4432a04bd508ae5e93a271a505ef29016d433ceb18744a2855",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable.mp3",
+      "archived_source": "audio-source/en/done/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable.txt",
+      "generated_at": "2026-08-28T16:46:19.147393+00:00"
+    }
+  }
 }
