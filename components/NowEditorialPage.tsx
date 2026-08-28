@@ -110,6 +110,6 @@ export default function NowEditorialPage({locale="en"}:{locale?:Locale}) {
       <a href="mailto:josuesomarribasb@gmail.com">{t.talk} <span aria-hidden="true">→</span></a>
     </section>
 
-    <footer className="now-editorial-footer shell"><span>© 2026 Josue Somarribas</span><span>41.3851° N, 2.1734° E</span><span>{t.built} <i/></span><a href={home}>JS.</a></footer>
+    <footer className="now-editorial-footer"><div className="shell"><span>© 2026 Josue Somarribas</span><span>41.3851° N, 2.1734° E</span><span>{t.built} <i/></span><a href={home}>JS.</a></div></footer>
   </main>;
 }
