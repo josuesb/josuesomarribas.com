@@ -104,7 +104,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     </section>}
 
     <section className="latest" aria-labelledby="archive-heading">
-      <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div><div className="archive-view" aria-hidden="true"><span>List</span><i>/</i><span>Visual</span></div></div>
+      <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div></div>
       <div className="notes-list">{visible.map((article, index) => <a className="note-row" href={articleHref(article, locale)} key={article.slug} aria-label={article.title}>
         <div className="note-copy"><div className="note-eyebrow"><span className="note-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><small>{clusterLabel(article.cluster, locale)}</small></div><h3>{article.title}</h3><p>{article.description}</p></div>
         <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span><b aria-hidden="true">↗</b></div>

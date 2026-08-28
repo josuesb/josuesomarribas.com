@@ -485,9 +485,6 @@ footer .footer-email{display:none}
 .archive-head{margin-bottom:20px;padding-top:36px;border-top:1px solid #cfc7b8}
 .archive-head h2{font-size:2rem}
 .archive-head p{display:none}
-.archive-view{display:flex;align-items:center;gap:12px;color:#111920;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
-.archive-view span:first-child{color:#ef3625}
-.archive-view i{color:#9c9589;font-style:normal}
 .writing-index-v2 .notes-list{gap:0;border:1px solid #d0c9bb;border-radius:6px;overflow:hidden}
 .writing-index-v2 .note-row,.writing-index-v2 .note-row:nth-child(even){grid-template-columns:minmax(0,1fr) 105px 230px;gap:20px;min-height:150px;padding:14px 18px;background:#fbf7ed;border:0;border-bottom:1px solid #d8d0c3;border-radius:0}
 .writing-index-v2 .note-row:last-child{border-bottom:0}
