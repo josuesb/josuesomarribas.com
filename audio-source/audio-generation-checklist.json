@@ -540,6 +540,266 @@
       "output": "public/audio/blog/en/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page.mp3",
       "archived_source": "audio-source/en/done/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page.txt",
       "generated_at": "2026-08-28T18:41:41.440787+00:00"
+    },
+    "en/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update.txt": {
+      "fingerprint": "dc09e18fa47ae9da6f7ed11d09cbc7e468da42e77efa48153b8e45ce3c341aa6",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update.mp3",
+      "archived_source": "audio-source/en/done/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update.txt",
+      "generated_at": "2026-08-28T18:42:49.593330+00:00"
+    },
+    "en/the-host-is-part-designer-part-support-agent-part-detective.txt": {
+      "fingerprint": "0f94f5c86a3c6772d01b2ddeadda856308234342cdad9b268081ff14b538ed69",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-host-is-part-designer-part-support-agent-part-detective.mp3",
+      "archived_source": "audio-source/en/done/the-host-is-part-designer-part-support-agent-part-detective.txt",
+      "generated_at": "2026-08-28T18:45:19.550050+00:00"
+    },
+    "en/the-metrics-you-re-not-watching-are-the-ones-that-will-hurt-you.txt": {
+      "fingerprint": "7a9c40013d1fd7aae13252f0c7d6ac559039eb5e51e7f88db64f2f05283e3844",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-metrics-you-re-not-watching-are-the-ones-that-will-hurt-you.mp3",
+      "archived_source": "audio-source/en/done/the-metrics-you-re-not-watching-are-the-ones-that-will-hurt-you.txt",
+      "generated_at": "2026-08-28T18:46:33.101218+00:00"
+    },
+    "en/the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right.txt": {
+      "fingerprint": "6f3d707be793daebbc8676e50c361ee8f2c32a1d9ad790e6090cbec28fef741f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right.mp3",
+      "archived_source": "audio-source/en/done/the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right.txt",
+      "generated_at": "2026-08-28T18:48:20.584980+00:00"
+    },
+    "en/the-problem-with-rules-guests-only-see-after-they-break-them.txt": {
+      "fingerprint": "d74f2ed970cd624df99983c5017bf964fa63d133833d69af325f961d3e05a229",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-problem-with-rules-guests-only-see-after-they-break-them.mp3",
+      "archived_source": "audio-source/en/done/the-problem-with-rules-guests-only-see-after-they-break-them.txt",
+      "generated_at": "2026-08-28T18:50:24.846085+00:00"
+    },
+    "en/the-professional-maturity-of-reporting-an-inconclusive-test.txt": {
+      "fingerprint": "4b29b69eb53eb24b23a00d96062bd018276d7b4653dc054dd9fa806a41c7a6cc",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-professional-maturity-of-reporting-an-inconclusive-test.mp3",
+      "archived_source": "audio-source/en/done/the-professional-maturity-of-reporting-an-inconclusive-test.txt",
+      "generated_at": "2026-08-28T18:52:54.189716+00:00"
+    },
+    "en/the-risk-of-ai-visual-homogenization.txt": {
+      "fingerprint": "1649770921862a62cfbcfb9abdc07cc0452487d861dfdab9c2dc269944f1df31",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-risk-of-ai-visual-homogenization.mp3",
+      "archived_source": "audio-source/en/done/the-risk-of-ai-visual-homogenization.txt",
+      "generated_at": "2026-08-28T18:55:33.477252+00:00"
+    },
+    "en/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness.txt": {
+      "fingerprint": "be07dbbb16be4d89ab8ef8739c8f6525546e69d6900e5238080cd988bf871d42",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness.mp3",
+      "archived_source": "audio-source/en/done/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness.txt",
+      "generated_at": "2026-08-28T18:57:20.604211+00:00"
+    },
+    "en/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.txt": {
+      "fingerprint": "7cbc102d33663e6264fdf68e3e48c8a577a884f68c3886c76f48451ddc03805a",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.mp3",
+      "archived_source": "audio-source/en/done/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.txt",
+      "generated_at": "2026-08-28T18:58:51.242675+00:00"
+    },
+    "en/the-tiny-house-as-an-interface-how-space-signs-locks-and-light-guide-behavior.txt": {
+      "fingerprint": "0ca6b419c47fb73207f6d0ab327203896394ec7ddb9a07dd9a6c257dd0018123",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-tiny-house-as-an-interface-how-space-signs-locks-and-light-guide-behavior.mp3",
+      "archived_source": "audio-source/en/done/the-tiny-house-as-an-interface-how-space-signs-locks-and-light-guide-behavior.txt",
+      "generated_at": "2026-08-28T19:01:56.881979+00:00"
+    },
+    "en/the-ux-tools-i-actually-use-as-a-ux-designer.txt": {
+      "fingerprint": "011a00184120032a6598e1a7442d432c7b4b04aaf463719ee75ee646b8f2de25",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/the-ux-tools-i-actually-use-as-a-ux-designer.mp3",
+      "archived_source": "audio-source/en/done/the-ux-tools-i-actually-use-as-a-ux-designer.txt",
+      "generated_at": "2026-08-28T19:07:18.426670+00:00"
+    },
+    "en/trust-is-designed-before-the-guest-arrives.txt": {
+      "fingerprint": "0f5a79a4b21d848f234deffeaa1e8ebf50e6d4970695ab4e1eac251d6727e31d",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/trust-is-designed-before-the-guest-arrives.mp3",
+      "archived_source": "audio-source/en/done/trust-is-designed-before-the-guest-arrives.txt",
+      "generated_at": "2026-08-28T19:10:41.729266+00:00"
+    },
+    "en/us-government-pulls-fable-5-and-mythos-5-offline.txt": {
+      "fingerprint": "86dde0b63b3b84d38bed0b1e4f203d600e1c885d9b2b666eac228b2d4ff9e3bb",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/us-government-pulls-fable-5-and-mythos-5-offline.mp3",
+      "archived_source": "audio-source/en/done/us-government-pulls-fable-5-and-mythos-5-offline.txt",
+      "generated_at": "2026-08-28T19:12:32.414643+00:00"
+    },
+    "en/user-research-building-products-people-actually-need.txt": {
+      "fingerprint": "46d8168d2b82c3bba084bd986badb1d36111c7dc37581499f48ca0889709e6c9",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/user-research-building-products-people-actually-need.mp3",
+      "archived_source": "audio-source/en/done/user-research-building-products-people-actually-need.txt",
+      "generated_at": "2026-08-28T19:17:39.556129+00:00"
+    },
+    "en/ux-is-semiotics-why-an-interface-is-a-system-of-signs.txt": {
+      "fingerprint": "fa0a37289b8cdb65209e987e41e3fa7600d4ddd28a51cf6ecb7886da2806fc76",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/ux-is-semiotics-why-an-interface-is-a-system-of-signs.mp3",
+      "archived_source": "audio-source/en/done/ux-is-semiotics-why-an-interface-is-a-system-of-signs.txt",
+      "generated_at": "2026-08-28T19:21:01.755962+00:00"
+    },
+    "en/website-builders-and-which-one-i-think-is-best-for-you.txt": {
+      "fingerprint": "e8448ae206fcff52d059e5981ea2f732ce842a6941bff6b8239b0a5338cb2e28",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/website-builders-and-which-one-i-think-is-best-for-you.mp3",
+      "archived_source": "audio-source/en/done/website-builders-and-which-one-i-think-is-best-for-you.txt",
+      "generated_at": "2026-08-28T19:22:23.210455+00:00"
+    },
+    "en/what-accessible-enough-really-means-in-2025.txt": {
+      "fingerprint": "76f6026bd75537593b6769dcf86b166379d49ddc6752c03b93b8d4839c2be0b6",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/what-accessible-enough-really-means-in-2025.mp3",
+      "archived_source": "audio-source/en/done/what-accessible-enough-really-means-in-2025.txt",
+      "generated_at": "2026-08-28T19:23:31.997940+00:00"
+    },
+    "en/what-happens-when-guests-don-t-use-things-the-way-you-expected.txt": {
+      "fingerprint": "5b182d6a6e182101f79672c2bbed4b82de5932d08a4d6e4535c6ff0ea3a87819",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/what-happens-when-guests-don-t-use-things-the-way-you-expected.mp3",
+      "archived_source": "audio-source/en/done/what-happens-when-guests-don-t-use-things-the-way-you-expected.txt",
+      "generated_at": "2026-08-28T19:26:28.123695+00:00"
+    },
+    "en/what-hotel-reception-taught-me-about-airbnb-hosting.txt": {
+      "fingerprint": "77882ee3b535961548823ee71b95e61565cf899f152ef5be863ff3618caac25a",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/what-hotel-reception-taught-me-about-airbnb-hosting.mp3",
+      "archived_source": "audio-source/en/done/what-hotel-reception-taught-me-about-airbnb-hosting.txt",
+      "generated_at": "2026-08-28T19:29:39.733988+00:00"
+    },
+    "en/why-hospitality-needs-boundaries-not-just-smiles.txt": {
+      "fingerprint": "bd609e24cc877123d91557e517c56f20d085fb2bd50e76c4137371389e0d475d",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/why-hospitality-needs-boundaries-not-just-smiles.mp3",
+      "archived_source": "audio-source/en/done/why-hospitality-needs-boundaries-not-just-smiles.txt",
+      "generated_at": "2026-08-28T19:32:38.472413+00:00"
+    },
+    "en/why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better.txt": {
+      "fingerprint": "1c0e124df30147fea764500c04f85f6523fed10d20798822768b3678cae92ec1",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better.mp3",
+      "archived_source": "audio-source/en/done/why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better.txt",
+      "generated_at": "2026-08-28T19:35:11.332877+00:00"
+    },
+    "en/why-some-marketing-campaigns-convert-and-others-dont.txt": {
+      "fingerprint": "3d5d6ab41b823fe134b2658408404647d736ed3f914f346ef401507e8a0dbb6f",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/why-some-marketing-campaigns-convert-and-others-dont.mp3",
+      "archived_source": "audio-source/en/done/why-some-marketing-campaigns-convert-and-others-dont.txt",
+      "generated_at": "2026-08-28T19:37:19.587418+00:00"
+    },
+    "en/your-guest-doesn-t-read-everything-design-for-that.txt": {
+      "fingerprint": "2d8a64f4f209ab8b006399f93a7f7f1c3746ca155a3f0b19be5d0bf2ef9241ac",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/your-guest-doesn-t-read-everything-design-for-that.mp3",
+      "archived_source": "audio-source/en/done/your-guest-doesn-t-read-everything-design-for-that.txt",
+      "generated_at": "2026-08-28T19:40:13.130574+00:00"
+    },
+    "es/json-ld-for-case-studies-specific-schema-for-ux-portfolios.txt": {
+      "fingerprint": "c34f658fc27f8bde9be07cedf99a1f4903d436198e0b6cd3e687010b8aa007fb",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/json-ld-for-case-studies-specific-schema-for-ux-portfolios.mp3",
+      "archived_source": "audio-source/es/done/json-ld-for-case-studies-specific-schema-for-ux-portfolios.txt",
+      "generated_at": "2026-08-28T19:41:03.362443+00:00"
+    },
+    "es/the-cost-of-fouc-how-content-flicker-kills-test-validity.txt": {
+      "fingerprint": "2f0e989dd88e2811ca6c50d8416baa830b56ea9047057021c115f04488949597",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/the-cost-of-fouc-how-content-flicker-kills-test-validity.mp3",
+      "archived_source": "audio-source/es/done/the-cost-of-fouc-how-content-flicker-kills-test-validity.txt",
+      "generated_at": "2026-08-28T19:42:12.877004+00:00"
+    },
+    "es/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.txt": {
+      "fingerprint": "b31520846baf0c3638b097ee089b62073a06d7dab48e746d3b8184f8c121073b",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.mp3",
+      "archived_source": "audio-source/es/done/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.txt",
+      "generated_at": "2026-08-28T19:43:24.520736+00:00"
     }
   }
 }
