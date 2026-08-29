@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { trackEvent } from "../../lib/analytics";
 
 export default function ArticleTools({ title, locale = "en", audioSrc, mode = "actions" }:{ title:string; locale?:"en"|"es"; audioSrc?:string; mode?:"actions"|"progress"|"sidebar-progress" }) {
   const [progress, setProgress] = useState(0);
   const [listening, setListening] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const startedRef = useRef(false);
+  const milestonesRef = useRef(new Set<number>());
 
   useEffect(() => {
     if (mode === "actions") return;
@@ -31,13 +34,17 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
     const text = document.querySelector(".article-content")?.textContent ?? title;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = locale === "es" ? "es-ES" : "en-GB";
-    utterance.onend = () => setListening(false);
+    utterance.onend = () => { setListening(false); trackEvent("audio_complete", { article_title:title, language:locale, audio_source:"browser" }); };
     utterance.onerror = () => setListening(false);
     setListening(true);
+    trackEvent(startedRef.current ? "audio_resume" : "audio_start", { article_title:title, language:locale, audio_source:"browser" });
+    startedRef.current = true;
     window.speechSynthesis.speak(utterance);
   };
   const listen = () => {
     if (listening) {
+      const audio = audioRef.current;
+      trackEvent("audio_pause", { article_title:title, language:locale, audio_source:audioSrc ? "mp3" : "browser", audio_time:Math.round(audio?.currentTime ?? 0) });
       audioRef.current?.pause();
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       setListening(false);
@@ -50,8 +57,17 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
     if (!audioRef.current) {
       const audio = new Audio(audioSrc);
       audio.preload = "metadata";
-      audio.onended = () => setListening(false);
+      audio.onended = () => { setListening(false); trackEvent("audio_complete", { article_title:title, language:locale, audio_source:"mp3" }); };
+      audio.ontimeupdate = () => {
+        if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+        const percentage = Math.floor((audio.currentTime / audio.duration) * 100);
+        for (const milestone of [25,50,75]) if (percentage >= milestone && !milestonesRef.current.has(milestone)) {
+          milestonesRef.current.add(milestone);
+          trackEvent("audio_progress", { article_title:title, language:locale, audio_source:"mp3", percent:milestone });
+        }
+      };
       audio.onerror = () => {
+        trackEvent("audio_fallback", { article_title:title, language:locale, failed_source:"mp3" });
         audioRef.current = null;
         setListening(false);
         speakWithBrowser();
@@ -59,7 +75,10 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
       audioRef.current = audio;
     }
     setListening(true);
-    audioRef.current.play().catch(() => {
+    audioRef.current.play().then(() => {
+      trackEvent(startedRef.current ? "audio_resume" : "audio_start", { article_title:title, language:locale, audio_source:"mp3" });
+      startedRef.current = true;
+    }).catch(() => {
       audioRef.current = null;
       setListening(false);
       speakWithBrowser();

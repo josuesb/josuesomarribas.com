@@ -80,28 +80,28 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>What You Carry</h3><p>An immersive bilingual campaign exposing the hidden cost of wildlife trafficking in Costa Rica.</p>
               <div className="project-preview-frame"><Image className="project-preview-image project-preview-wyc" src="/assets/project-previews/what-you-carry.png" alt="What You Carry wildlife conservation campaign homepage" fill sizes="(max-width: 700px) 100vw, 50vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web development</dd></div><div><dt>Location:</dt><dd>Costa Rica</dd></div><div><dt>Focus:</dt><dd>Storytelling · Conservation</dd></div></dl>
-              <a className="btn btn-red" href="https://whatyoucarrycr.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://whatyoucarrycr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="What You Carry">Visit live site <Arrow /></a>
             </article>
             <article className="project project-cream">
               <header><span className="number">02</span><small>CLIENT WORK · CREATIVE WEB DEVELOPMENT</small></header>
               <h3>Andrés Tenor</h3><p>A distinctive artist website for opera and bolero tenor Andrés Rodríguez, based in Barcelona.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/andres-tenor.png" alt="Andrés Rodríguez tenor website homepage" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Location:</dt><dd>Barcelona · Europe</dd></div><div><dt>Focus:</dt><dd>Artist identity · Performance</dd></div></dl>
-              <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Andrés Tenor">Visit live site <Arrow /></a>
             </article>
             <article className="project project-cream">
               <header><span className="number">03</span><small>CLIENT WORK · WEB DESIGN + DEVELOPMENT</small></header>
               <h3>Rofka Projects</h3><p>A digital presence for a Costa Rican construction company—from planning and design to finished spaces.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/rofka-projects.png" alt="Rofka Projects homepage featuring its construction portfolio" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Platform:</dt><dd>Framer</dd></div><div><dt>Focus:</dt><dd>Brand presence · Responsive UI</dd></div></dl>
-              <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Rofka Projects">Visit live site <Arrow /></a>
             </article>
             <article className="project project-cream">
               <header><span className="number">04</span><small>CLIENT WORK · WEB DEVELOPMENT</small></header>
               <h3>PitchCR</h3><p>A digital home for Costa Rica&apos;s startup and pitch community.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/pitchcr.png" alt="Current homepage displayed at pitchcr.com" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
-              <a className="btn btn-red" href="https://www.pitchcr.com/" target="_blank" rel="noreferrer">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://www.pitchcr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="PitchCR">Visit live site <Arrow /></a>
             </article>
           </div>
 
@@ -112,14 +112,14 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>5 Seconds Tester</h3><p>A live tool for testing whether a value proposition is understood in five seconds.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/5-seconds-tester.png" alt="5 Seconds Tester upload and test interface" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>Research workflow</span></div>
-              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer">Try the tool <Arrow /></a><a href="#process">See how I work →</a></div>
+              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="5 Seconds Tester">Try the tool <Arrow /></a><a href="#process">See how I work →</a></div>
             </article>
             <article className="project project-blue project-secondary">
               <header><span className="number">06</span><small>EXPERIMENT · UX ENGINEERING</small></header>
               <h3>Font Tester</h3><p>A browser-based experiment exploring how typography changes perception and trust.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/font-tester.png" alt="Font Tester typography controls and live preview" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Interactive prototype</span><span>Behavioral comparison</span><span>Front-end build</span></div>
-              <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer">Explore prototype <Arrow /></a>
+              <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Font Tester">Explore prototype <Arrow /></a>
             </article>
           </div>
 
