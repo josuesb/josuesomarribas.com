@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/p3hlB0nF5bnLlh7IU8CTGfESUM.jpg"
+sourceImage: "/images/framer-migrated/p3hlB0nF5bnLlh7IU8CTGfESUM.webp"
 imageAlt: "Close-up of a hand placing a 'Do Not Disturb' sign on a hotel door, illustrating privacy and service."
 image: "/images/blog/default-cover.png"
 canonical: ""

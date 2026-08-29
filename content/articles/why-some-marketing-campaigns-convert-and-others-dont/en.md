@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/Kl2GPdAxP74YaKUhhGuiq7DtC9w.png"
+sourceImage: "/images/framer-migrated/Kl2GPdAxP74YaKUhhGuiq7DtC9w.webp"
 imageAlt: "urban billboard scene"
 image: "/images/blog/default-cover.png"
 canonical: ""

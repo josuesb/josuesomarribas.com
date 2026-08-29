@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/nMItpFipRRuEL6hKwnp53s4fNsY.jpg"
+sourceImage: "/images/framer-migrated/nMItpFipRRuEL6hKwnp53s4fNsY.webp"
 imageAlt: "A man and a woman knocking on a door decorated with a wreath, holding flowers."
 image: "/images/blog/default-cover.png"
 canonical: ""

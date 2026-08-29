@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/KuAJ0s4bGFKTfTaVHWjeHNU16vY.jpg"
+sourceImage: "/images/framer-migrated/KuAJ0s4bGFKTfTaVHWjeHNU16vY.webp"
 imageAlt: "Un edificio moderno de líneas curvas contra un cielo azul intenso."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/AVGUqyQHZBPb5YR64XJMHGqNcI.jpeg"
+sourceImage: "/images/framer-migrated/AVGUqyQHZBPb5YR64XJMHGqNcI.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
 image: "/images/blog/default-cover.png"
 canonical: ""

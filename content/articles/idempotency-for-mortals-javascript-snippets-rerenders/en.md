@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/X3FPTwWcfDPTxy548JbItUEg2PI.jpg"
+sourceImage: "/images/framer-migrated/X3FPTwWcfDPTxy548JbItUEg2PI.webp"
 imageAlt: "Charming close-up of smiling twin girls with blonde hair sharing a grey hoodie indoors."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/mv2iQ3dm6xJ93M87irMyRuttk.jpg"
+sourceImage: "/images/framer-migrated/mv2iQ3dm6xJ93M87irMyRuttk.webp"
 imageAlt: "Close-up of a man holding a blank speech bubble card, perfect for mockups and messages."
 image: "/images/blog/default-cover.png"
 canonical: ""

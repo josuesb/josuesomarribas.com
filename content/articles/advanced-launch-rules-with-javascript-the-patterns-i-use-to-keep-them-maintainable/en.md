@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: "https://framerusercontent.com/assets/d8TDQnjuy0xh2TkWr0MtQSjg.mp3"
-sourceImage: "https://framerusercontent.com/images/m5oRpiYYJIjzqsw87K6zY1pPxys.png"
+sourceImage: "/images/framer-migrated/m5oRpiYYJIjzqsw87K6zY1pPxys.webp"
 imageAlt: "Angled view of a laptop displaying a code editor on screen in black and white, with a blurred background."
 image: "/images/blog/default-cover.png"
 canonical: ""

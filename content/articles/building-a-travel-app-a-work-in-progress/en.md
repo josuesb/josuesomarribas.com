@@ -9,7 +9,7 @@ type: "Projects"
 cluster: "portfolio-projects-case-studies"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/EVJeqWpL6pvb2C7lftjpXAYMsz8.jpeg"
+sourceImage: "/images/framer-migrated/EVJeqWpL6pvb2C7lftjpXAYMsz8.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
 image: "/images/blog/default-cover.png"
 canonical: ""

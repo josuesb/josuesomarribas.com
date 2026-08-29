@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/5vCfTT7RRHXayoZQPWe67yfSZeI.jpg"
+sourceImage: "/images/framer-migrated/5vCfTT7RRHXayoZQPWe67yfSZeI.webp"
 imageAlt: "Close-up of a hand showing a thumbs down gesture, symbolizing disapproval or rejection."
 image: "/images/blog/default-cover.png"
 canonical: ""

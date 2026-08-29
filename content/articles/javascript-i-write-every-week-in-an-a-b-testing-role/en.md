@@ -9,7 +9,7 @@ type: "AB Testing"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/R0DRiUTEc9FZizAcccMKy59qjDo.png"
+sourceImage: "/images/framer-migrated/R0DRiUTEc9FZizAcccMKy59qjDo.webp"
 imageAlt: "``` Developer's hands typing on a keyboard in a dark workspace, with code visible on screen"
 image: "/images/blog/default-cover.png"
 canonical: ""

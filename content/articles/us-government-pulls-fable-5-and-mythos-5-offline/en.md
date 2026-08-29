@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/vauJuLs2MPLdH71skKk88T0s6E.png"
+sourceImage: "/images/framer-migrated/vauJuLs2MPLdH71skKk88T0s6E.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
 image: "/images/blog/default-cover.png"
 canonical: ""

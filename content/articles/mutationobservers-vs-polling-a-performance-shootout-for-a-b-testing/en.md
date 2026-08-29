@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/nNfpFcCfJJTv25rkHi6zVIEoBnE.png"
+sourceImage: "/images/framer-migrated/nNfpFcCfJJTv25rkHi6zVIEoBnE.webp"
 imageAlt: "Frantic developer monitoring DOM changes on a vintage computer in a cinematic 90s-style lab."
 image: "/images/blog/default-cover.png"
 canonical: ""

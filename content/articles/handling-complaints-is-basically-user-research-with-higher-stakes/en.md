@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/jEcwOim20tHJErUwtF9XHcbLrs.jpg"
+sourceImage: "/images/framer-migrated/jEcwOim20tHJErUwtF9XHcbLrs.webp"
 imageAlt: "Business professionals engaged in project discussion over a laptop in an office setting."
 image: "/images/blog/default-cover.png"
 canonical: ""

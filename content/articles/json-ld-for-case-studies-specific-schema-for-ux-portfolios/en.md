@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/4iuRiUEdT8mg63cHw6Mew0A8UI.png"
+sourceImage: "/images/framer-migrated/4iuRiUEdT8mg63cHw6Mew0A8UI.webp"
 imageAlt: "Archivist cataloging UX case study artifacts in a pastel museum archive, representing JSON-LD schema for structured portfolio content."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/JonfDb4WmoRt6cIewByQIgGg54.jpg"
+sourceImage: "/images/framer-migrated/JonfDb4WmoRt6cIewByQIgGg54.webp"
 imageAlt: "A dynamic gathering of photographers capturing moments indoors with flash."
 image: "/images/blog/default-cover.png"
 canonical: ""

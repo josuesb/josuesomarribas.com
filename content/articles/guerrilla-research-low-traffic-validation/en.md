@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ux-research-product-thinking"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/colRm0ZzhNCapzHdeLm80B9i4ng.jpg"
+sourceImage: "/images/framer-migrated/colRm0ZzhNCapzHdeLm80B9i4ng.webp"
 imageAlt: "A woman in VR gear surrounded by computers and cables, immersed in a virtual simulation."
 image: "/images/blog/default-cover.png"
 canonical: ""

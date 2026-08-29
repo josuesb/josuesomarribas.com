@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/KuAJ0s4bGFKTfTaVHWjeHNU16vY.jpg"
+sourceImage: "/images/framer-migrated/KuAJ0s4bGFKTfTaVHWjeHNU16vY.webp"
 imageAlt: "A striking image of a modern architectural building with curved lines against a vivid blue sky."
 image: "/images/blog/default-cover.png"
 canonical: ""

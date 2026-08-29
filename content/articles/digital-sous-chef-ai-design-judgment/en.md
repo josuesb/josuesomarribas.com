@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-design-creativity-judgment"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/FF4bB2GyDulSQno2NzBsQlDaI.jpg"
+sourceImage: "/images/framer-migrated/FF4bB2GyDulSQno2NzBsQlDaI.webp"
 imageAlt: "Chefs working diligently in a modern stainless steel kitchen, preparing delicious dishes."
 image: "/images/blog/default-cover.png"
 canonical: ""

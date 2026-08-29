@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/oG4wbYAhmDvjS7K9P1Toou4vDuk.jpg"
+sourceImage: "/images/framer-migrated/oG4wbYAhmDvjS7K9P1Toou4vDuk.webp"
 imageAlt: "A hand opening a smart home door with digital access panel, conveying security and technology."
 image: "/images/blog/default-cover.png"
 canonical: ""

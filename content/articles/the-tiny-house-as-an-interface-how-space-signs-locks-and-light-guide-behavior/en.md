@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/mrkFdb3AgKRHGnyagkUETQnjIE.jpg"
+sourceImage: "/images/framer-migrated/mrkFdb3AgKRHGnyagkUETQnjIE.webp"
 imageAlt: "Colorful tiny cabin surrounded by lush greenery in a serene forest setting."
 image: "/images/blog/default-cover.png"
 canonical: ""

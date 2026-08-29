@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["AI visibility","GEO","ChatGPT","Perplexity","Gemini","SEO analytics"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/ADP9utJdIeAfNHLXotZq9PGqA.jpg"
+sourceImage: "/images/framer-migrated/ADP9utJdIeAfNHLXotZq9PGqA.webp"
 imageAlt: "Close-up of blue tourist binoculars on an observation deck with a city view."
 image: "/images/blog/default-cover.png"
 canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"

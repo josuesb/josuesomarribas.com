@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ux-research-product-thinking"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/lGeKZgZlOmFCmzvZn3b3iOZ2Ko.jpg"
+sourceImage: "/images/framer-migrated/lGeKZgZlOmFCmzvZn3b3iOZ2Ko.webp"
 imageAlt: "A young man rests on a bed, surrounded by luggage, reflecting a travel or moving theme."
 image: "/images/blog/default-cover.png"
 canonical: ""

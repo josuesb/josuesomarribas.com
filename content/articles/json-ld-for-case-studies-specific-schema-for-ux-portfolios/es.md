@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/4iuRiUEdT8mg63cHw6Mew0A8UI.png"
+sourceImage: "/images/framer-migrated/4iuRiUEdT8mg63cHw6Mew0A8UI.webp"
 imageAlt: "Una archivista cataloga piezas de un caso de estudio UX, como metáfora del schema JSON-LD para portfolios."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-design-creativity-judgment"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A.jpg"
+sourceImage: "/images/framer-migrated/plcKPCYLZhAfjWW0kptAgom89A.webp"
 imageAlt: "A human hand reaching towards a robotic hand symbolizing technology and connection."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/ga3216AweXkfridfebgYVq0Q.jpg"
+sourceImage: "/images/framer-migrated/ga3216AweXkfridfebgYVq0Q.webp"
 imageAlt: "Mobile gets 83% of your traffic but desktop converts 2x better. That gap costs you $199K yearly. 5 CRO fixes you can ship this week to close it."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/y0v96qbUwoYWA6eZpXLNmTb8A.jpg"
+sourceImage: "/images/framer-migrated/y0v96qbUwoYWA6eZpXLNmTb8A.webp"
 imageAlt: "Airbnb Guest Guidebook on a modern table in Kavala, Greece home."
 image: "/images/blog/default-cover.png"
 canonical: ""

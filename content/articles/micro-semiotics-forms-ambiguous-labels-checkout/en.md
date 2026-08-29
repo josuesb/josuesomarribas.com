@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/nh2t1MEHpdXg6F6U3awYmTMYBgg.jpg"
+sourceImage: "/images/framer-migrated/nh2t1MEHpdXg6F6U3awYmTMYBgg.webp"
 imageAlt: "A solitary silhouette walks through a bright, high-contrast doorway, evoking mystery and isolation."
 image: "/images/blog/default-cover.png"
 canonical: ""

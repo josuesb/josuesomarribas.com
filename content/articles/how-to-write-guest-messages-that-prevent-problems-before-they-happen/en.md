@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/RjZVXUUVNLXStgc70Kim1KNB4U.jpg"
+sourceImage: "/images/framer-migrated/RjZVXUUVNLXStgc70Kim1KNB4U.webp"
 imageAlt: "A laptop covered with sticky notes and a prominent \"Help\" sign, conveying urgency."
 image: "/images/blog/default-cover.png"
 canonical: ""

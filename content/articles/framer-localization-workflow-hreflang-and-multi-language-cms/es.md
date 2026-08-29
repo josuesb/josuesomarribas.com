@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/OvgXQWCFn4WRmsTWgzyXYCsJG8.jpg"
+sourceImage: "/images/framer-migrated/OvgXQWCFn4WRmsTWgzyXYCsJG8.webp"
 imageAlt: "Primer plano de una pantalla con un mapa interactivo utilizado para planificación y navegación."
 image: "/images/blog/default-cover.png"
 canonical: ""

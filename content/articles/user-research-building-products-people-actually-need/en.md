@@ -9,7 +9,7 @@ type: "Projects"
 cluster: "ux-research-product-thinking"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/91CKJAfCkjMnSfEZM5Zhf1dk.jpeg"
+sourceImage: "/images/framer-migrated/91CKJAfCkjMnSfEZM5Zhf1dk.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
 image: "/images/blog/default-cover.png"
 canonical: ""

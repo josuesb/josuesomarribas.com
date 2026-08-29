@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/VQYOYD8DchYJbiHDdK2DsZu588.jpg"
+sourceImage: "/images/framer-migrated/VQYOYD8DchYJbiHDdK2DsZu588.webp"
 imageAlt: "Bellboy with a mustache leaning on a hotel trolley in a hallway. Elegant and vintage style."
 image: "/images/blog/default-cover.png"
 canonical: ""

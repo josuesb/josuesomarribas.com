@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/y0leytJsxAPSTaDAeGuz1z5rzw.jpg"
+sourceImage: "/images/framer-migrated/y0leytJsxAPSTaDAeGuz1z5rzw.webp"
 imageAlt: "Stylish minimalist workspace featuring a laptop, notebooks, and potted plant on a white desk."
 image: "/images/blog/default-cover.png"
 canonical: ""

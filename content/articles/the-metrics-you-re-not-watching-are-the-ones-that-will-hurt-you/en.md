@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/VcAVzGo1T4TP91HNbXaazHHCdU.jpg"
+sourceImage: "/images/framer-migrated/VcAVzGo1T4TP91HNbXaazHHCdU.webp"
 imageAlt: "Eggs and milk spilled on a kitchen counter next to a stove and dishrack."
 image: "/images/blog/default-cover.png"
 canonical: ""

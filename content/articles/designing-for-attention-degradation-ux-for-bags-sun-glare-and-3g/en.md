@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ux-research-product-thinking"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/lP2cC0GviVQwqboY3s3K3O8cTA.jpg"
+sourceImage: "/images/framer-migrated/lP2cC0GviVQwqboY3s3K3O8cTA.webp"
 imageAlt: "Silhouette of a person against a vibrant sunset in Aoulef, Algeria."
 image: "/images/blog/default-cover.png"
 canonical: ""

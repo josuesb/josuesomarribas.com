@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/GakhqQQfUNlnCWDJnQ9NEifQBs.jpg"
+sourceImage: "/images/framer-migrated/GakhqQQfUNlnCWDJnQ9NEifQBs.webp"
 imageAlt: "A dark, moody photograph of a Gothic-style house with ominous skies in London, Ohio."
 image: "/images/blog/default-cover.png"
 canonical: ""

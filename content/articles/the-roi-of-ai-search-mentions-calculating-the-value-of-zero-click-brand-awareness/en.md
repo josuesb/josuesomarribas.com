@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["GEO","AI search","zero-click","brand awareness","analytics","ROI"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/bukBxBLSL4PQYT8tZXUc9F68U.jpg"
+sourceImage: "/images/framer-migrated/bukBxBLSL4PQYT8tZXUc9F68U.webp"
 imageAlt: "Overhead view of financial charts, laptop, and magnifying glass, ideal for business analysis themes."
 image: "/images/blog/default-cover.png"
 canonical: "https://josuesomarribas.com/blog/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness"

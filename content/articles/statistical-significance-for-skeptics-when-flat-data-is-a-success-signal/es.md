@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/TYUoX187SQ5fKCAzvkBa39zRlw.jpg"
+sourceImage: "/images/framer-migrated/TYUoX187SQ5fKCAzvkBa39zRlw.webp"
 imageAlt: "Ilustración editorial abstracta sobre diseño de producto digital y experimentación."
 image: "/images/blog/default-cover.png"
 canonical: ""

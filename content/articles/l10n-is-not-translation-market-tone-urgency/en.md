@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/LsSCOziQyw0QqfRCfJktRzoheQ.jpg"
+sourceImage: "/images/framer-migrated/LsSCOziQyw0QqfRCfJktRzoheQ.webp"
 imageAlt: "Detailed close-up view of a dictionary page highlighting the word 'dictionary' and its definition."
 image: "/images/blog/default-cover.png"
 canonical: ""

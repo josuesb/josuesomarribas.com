@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/pEaCHglCAO0Uu1uwoyr0ba2E.jpg"
+sourceImage: "/images/framer-migrated/pEaCHglCAO0Uu1uwoyr0ba2E.webp"
 imageAlt: "Elegant black and white photo of Lady Justice statue, symbolizing fairness and law."
 image: "/images/blog/default-cover.png"
 canonical: ""

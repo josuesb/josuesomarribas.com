@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["llms.txt","JSON-LD","Framer SEO","GEO","AI SEO","structured data","Search Console"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/6WdGMzZqllqWL6YJho9UmxQAYi8.png"
+sourceImage: "/images/framer-migrated/6WdGMzZqllqWL6YJho9UmxQAYi8.webp"
 imageAlt: " A designer’s hand stamps a small ‘digital passport’ for a website, represented by a neat folder of printed web pages, structured data cards, CMS cards, tiny sitemap diagrams, and two official-looking blank documents with abstract symbols only."
 image: "/images/blog/default-cover.png"
 canonical: ""

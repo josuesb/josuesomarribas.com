@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ux-research-product-thinking"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/s9ESVTY53N09jIBoFPZuDGplXz4.jpg"
+sourceImage: "/images/framer-migrated/s9ESVTY53N09jIBoFPZuDGplXz4.webp"
 imageAlt: "Man and Woman Having a Conversation"
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: ""
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/MrP66dKjNfPt1g7FqWrTMyhxGo.png"
+sourceImage: "/images/framer-migrated/MrP66dKjNfPt1g7FqWrTMyhxGo.webp"
 imageAlt: "Dramatic A/B testing concept image with concrete blocks, magnifying glass, and experiment mockup"
 image: "/images/blog/default-cover.png"
 canonical: ""

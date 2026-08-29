@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/OvgXQWCFn4WRmsTWgzyXYCsJG8.jpg"
+sourceImage: "/images/framer-migrated/OvgXQWCFn4WRmsTWgzyXYCsJG8.webp"
 imageAlt: "Close-up of a laptop screen displaying an interactive map, ideal for travel planning and navigation."
 image: "/images/blog/default-cover.png"
 canonical: ""

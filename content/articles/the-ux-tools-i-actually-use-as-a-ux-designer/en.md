@@ -9,7 +9,7 @@ type: "Pro Tips"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/H2V7B61m1qlFoA3nfrbcKQfgywA.jpeg"
+sourceImage: "/images/framer-migrated/H2V7B61m1qlFoA3nfrbcKQfgywA.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
 image: "/images/blog/default-cover.png"
 canonical: ""

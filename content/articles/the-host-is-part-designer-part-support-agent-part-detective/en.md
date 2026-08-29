@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/joAKXvuiKvMkH8XUMuW82RO9PU.jpg"
+sourceImage: "/images/framer-migrated/joAKXvuiKvMkH8XUMuW82RO9PU.webp"
 imageAlt: "A silhouette of a man wearing a fedora in a backlit alley at sunrise."
 image: "/images/blog/default-cover.png"
 canonical: ""

@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/lEpVpE5WlFR2o86breUO0kJOns.jpg"
+sourceImage: "/images/framer-migrated/lEpVpE5WlFR2o86breUO0kJOns.webp"
 imageAlt: "Close-up of a hotel receptionist receiving a credit card from a guest, highlighting a transaction at check-in."
 image: "/images/blog/default-cover.png"
 canonical: ""

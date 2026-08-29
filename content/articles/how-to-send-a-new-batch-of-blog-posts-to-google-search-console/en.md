@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["SEO","Google Search Console","Framer","Sitemap","Indexing","Content Workflow","GEO"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/iyDnHUqjGqecV1z0cGk8wUMV6Q.jpg"
+sourceImage: "/images/framer-migrated/iyDnHUqjGqecV1z0cGk8wUMV6Q.webp"
 imageAlt: "Detailed view of fiber optic cables connected to a patch panel in a data center."
 image: "/images/blog/default-cover.png"
 canonical: "https://josuesomarribas.com/blog/how-to-send-a-new-batch-of-blog-posts-to-google-search-console"

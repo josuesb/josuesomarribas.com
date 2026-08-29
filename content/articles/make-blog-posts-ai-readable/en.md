@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "ai-search-geo-visibility"
 tags: ["AI-readable content","GEO","blog writing","content structure","SEO"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/9feOreXQpcLbna5FfAJ0q1VBEnc.jpg"
+sourceImage: "/images/framer-migrated/9feOreXQpcLbna5FfAJ0q1VBEnc.webp"
 imageAlt: "Hands typing on a laptop with a blog post visible, cozy indoor setting with colorful screen in background."
 image: "/images/blog/default-cover.png"
 canonical: "https://josuesomarribas.com/blog/structural-seo-json-ld-framer"

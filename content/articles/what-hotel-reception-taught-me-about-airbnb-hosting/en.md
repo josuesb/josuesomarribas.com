@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/vqk5JRarr9bGqPmLsLELY6pvCbs.jpg"
+sourceImage: "/images/framer-migrated/vqk5JRarr9bGqPmLsLELY6pvCbs.webp"
 imageAlt: "A shiny metal hotel bell on a polished wooden counter, ideal for hospitality themes."
 image: "/images/blog/default-cover.png"
 canonical: ""

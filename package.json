@@ -12,6 +12,7 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "audio:generate": ".venv-tts/bin/python scripts/tts/generate_audio.py",
+    "images:migrate-framer": "node scripts/migrate-framer-images.mjs",
     "content:migrate": "node scripts/migrate-framer-content.mjs",
     "db:generate": "drizzle-kit generate"
   },
@@ -36,6 +37,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "globals": "16.4.0",
     "react-server-dom-webpack": "19.2.6",
+    "sharp": "^0.34.5",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "typescript-eslint": "8.59.3",

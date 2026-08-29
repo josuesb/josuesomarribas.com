@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/a2GbRdIvEtNjVDv6HL71XeP2rk.png"
+sourceImage: "/images/framer-migrated/a2GbRdIvEtNjVDv6HL71XeP2rk.webp"
 imageAlt: "Retro dubbing studio with technicians adjusting analog voice controls while a narrator records in a central booth, representing advanced SSML narration design."
 image: "/images/blog/default-cover.png"
 canonical: ""

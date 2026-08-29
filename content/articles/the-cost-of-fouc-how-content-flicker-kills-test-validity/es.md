@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/ALNTo3RT6llQXg7V7ZRc6lFPGNk.png"
+sourceImage: "/images/framer-migrated/ALNTo3RT6llQXg7V7ZRc6lFPGNk.webp"
 imageAlt: "Un mago revela por accidente el mecanismo oculto de un truco fallido, como metáfora de una variante A/B expuesta demasiado tarde."
 image: "/images/blog/default-cover.png"
 canonical: ""

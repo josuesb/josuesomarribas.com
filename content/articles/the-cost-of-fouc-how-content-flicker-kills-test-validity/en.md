@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/ALNTo3RT6llQXg7V7ZRc6lFPGNk.png"
+sourceImage: "/images/framer-migrated/ALNTo3RT6llQXg7V7ZRc6lFPGNk.webp"
 imageAlt: "Magician accidentally revealing the hidden mechanism behind a failed trick, symbolizing how flicker exposes an A/B test variant too early."
 image: "/images/blog/default-cover.png"
 canonical: ""

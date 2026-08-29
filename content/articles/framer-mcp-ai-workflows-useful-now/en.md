@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Framer MCP","Framer AI","AI workflows","CMS automation","Model Context Protocol","web design"]
 audio: ""
-sourceImage: "https://framerusercontent.com/images/C3UIMOL60HMJI9RFr8CaWh5LRZY.png"
+sourceImage: "/images/framer-migrated/C3UIMOL60HMJI9RFr8CaWh5LRZY.webp"
 imageAlt: "Designer’s desk with connected workflow modules, representing practical Framer MCP and AI-assisted web design workflows."
 image: "/images/blog/default-cover.png"
 canonical: ""

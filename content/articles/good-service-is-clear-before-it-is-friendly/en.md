@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/vw4PHAaYl433UcXNBVErBtoQdXQ.jpg"
+sourceImage: "/images/framer-migrated/vw4PHAaYl433UcXNBVErBtoQdXQ.webp"
 imageAlt: "A cheerful bakery employee serves a customer a fresh pastry in a cozy café."
 image: "/images/blog/default-cover.png"
 canonical: ""

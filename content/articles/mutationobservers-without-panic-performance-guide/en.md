@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/xrKCD7BOwRYKgAJmk1KBULtE5o.jpg"
+sourceImage: "/images/framer-migrated/xrKCD7BOwRYKgAJmk1KBULtE5o.webp"
 imageAlt: "A creative representation of a DNA helix with blooming pastel roses, blending nature and science."
 image: "/images/blog/default-cover.png"
 canonical: ""

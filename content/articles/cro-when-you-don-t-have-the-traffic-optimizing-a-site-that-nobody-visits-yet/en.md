@@ -9,7 +9,7 @@ type: "Blog"
 cluster: "cro-ab-testing-experimentation"
 tags: []
 audio: ""
-sourceImage: "https://framerusercontent.com/images/lRSy8JBqQOmtmOM3UORQYUETLQ.jpg"
+sourceImage: "/images/framer-migrated/lRSy8JBqQOmtmOM3UORQYUETLQ.webp"
 imageAlt: "A glimpse into the past in Bodie, California's historic ghost town, showcasing its wooden buildings and desert landscape."
 image: "/images/blog/default-cover.png"
 canonical: ""
