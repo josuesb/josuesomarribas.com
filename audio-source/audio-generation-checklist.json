@@ -820,6 +820,76 @@
       "output": "public/audio/blog/es/how-i-generate-natural-blog-audio-locally-for-free.mp3",
       "archived_source": "audio-source/es/done/how-i-generate-natural-blog-audio-locally-for-free.txt",
       "generated_at": "2026-08-29T04:45:19.126409+00:00"
+    },
+    "en/how-to-migrate-from-framer-to-a-static-site-on-vercel.md": {
+      "fingerprint": "c96dd30e968d37d08369e901333889edfd9d9b8f4c0c8f5ad8cdf705147f2b27",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-to-migrate-from-framer-to-a-static-site-on-vercel.mp3",
+      "archived_source": "audio-source/en/done/how-to-migrate-from-framer-to-a-static-site-on-vercel.md",
+      "generated_at": "2026-08-29T10:18:28.785853+00:00"
+    },
+    "en/why-i-left-framer-for-a-static-site-on-vercel.md": {
+      "fingerprint": "08924df171a74a8a4b017462baa1620093a00fb94f53a40c1ea8b1ecddf38f0b",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/why-i-left-framer-for-a-static-site-on-vercel.mp3",
+      "archived_source": "audio-source/en/done/why-i-left-framer-for-a-static-site-on-vercel.md",
+      "generated_at": "2026-08-29T10:20:51.430740+00:00"
+    },
+    "es/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.md": {
+      "fingerprint": "87854d0988a73b557777aba563c62c9a2c1d084c35cf799ee32f818ee35c5ee0",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.mp3",
+      "archived_source": "audio-source/es/done/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g.md",
+      "generated_at": "2026-08-29T10:22:11.630808+00:00"
+    },
+    "es/framer-localization-workflow-hreflang-and-multi-language-cms.md": {
+      "fingerprint": "90150db59d6df54c1cf3a90b38a90a9f87b8a9bf585808dc82fb839ea7170f1a",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/framer-localization-workflow-hreflang-and-multi-language-cms.mp3",
+      "archived_source": "audio-source/es/done/framer-localization-workflow-hreflang-and-multi-language-cms.md",
+      "generated_at": "2026-08-29T10:23:19.908604+00:00"
+    },
+    "es/how-to-migrate-from-framer-to-a-static-site-on-vercel.md": {
+      "fingerprint": "ab2eb82fc626af17fb81be57543d64c6c8cf85cae7f60b9beacfc0f70e966a1c",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/how-to-migrate-from-framer-to-a-static-site-on-vercel.mp3",
+      "archived_source": "audio-source/es/done/how-to-migrate-from-framer-to-a-static-site-on-vercel.md",
+      "generated_at": "2026-08-29T10:25:19.683355+00:00"
+    },
+    "es/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.md": {
+      "fingerprint": "2b478e0cfb53af196135396e414f8c36cdf05ab9b140013ddc540cc50bb4edb2",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.mp3",
+      "archived_source": "audio-source/es/done/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal.md",
+      "generated_at": "2026-08-29T10:26:32.661522+00:00"
+    },
+    "es/why-i-left-framer-for-a-static-site-on-vercel.md": {
+      "fingerprint": "18708fa99dbd69d54dd8a2a546edbdacc83c960688c3832255096c8f1e5d578e",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/why-i-left-framer-for-a-static-site-on-vercel.mp3",
+      "archived_source": "audio-source/es/done/why-i-left-framer-for-a-static-site-on-vercel.md",
+      "generated_at": "2026-08-29T10:28:38.623109+00:00"
     }
   }
 }

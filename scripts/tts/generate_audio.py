@@ -32,6 +32,16 @@ def clean_text(raw: str, suffix: str) -> str:
     """Turn simple Markdown or HTML source into narration-friendly plain text."""
     text = raw
     if suffix == ".md":
+        frontmatter = re.match(r"\A---\s*\n(.*?)\n---\s*\n", text, flags=re.DOTALL)
+        title = ""
+        if frontmatter:
+            title_match = re.search(r'^title:\s*(.+)$', frontmatter.group(1), flags=re.MULTILINE)
+            if title_match:
+                raw_title = title_match.group(1).strip()
+                try:
+                    title = json.loads(raw_title)
+                except json.JSONDecodeError:
+                    title = raw_title.strip('"\'')
         text = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", text, flags=re.DOTALL)
         text = re.sub(r"```.*?```", " ", text, flags=re.DOTALL)
         text = re.sub(r"`([^`]+)`", r"\1", text)
@@ -39,9 +49,12 @@ def clean_text(raw: str, suffix: str) -> str:
         text = re.sub(r"\[([^]]+)]\([^)]*\)", r"\1", text)
         text = re.sub(r"^\s{0,3}(?:#{1,6}|>|[-*+]\s|\d+[.)]\s)\s*", "", text, flags=re.MULTILINE)
         text = re.sub(r"[*_~]", "", text)
+        if title:
+            text = f"{title}.\n\n{text}"
     text = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<(pre|code)\b[^>]*>.*?</\1>", " ", text, flags=re.DOTALL | re.IGNORECASE)
-    text = re.sub(r"</(?:p|h[1-6]|li|blockquote|section|article|div)>", "\n\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"</(?:p|h[1-6]|li|blockquote|section|article|div|tr)>", "\n\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"</(?:td|th)>", ". ", text, flags=re.IGNORECASE)
     text = re.sub(r"<br\s*/?>", "\n", text, flags=re.IGNORECASE)
     text = re.sub(r"<[^>]+>", " ", text)
     text = html.unescape(text)
