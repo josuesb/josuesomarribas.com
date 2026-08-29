@@ -13,7 +13,8 @@ function headingId(value:string) { return plainText(value).normalize("NFKD").rep
 function prepareBody(body:string) {
   const headings:{ id:string; label:string }[] = [];
   const used = new Set<string>();
-  const html = rewriteMergedArticleLinks(body).replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_match, attributes, content) => {
+  const normalizedLinks = rewriteMergedArticleLinks(body).replace(/href="https:\/\/josuesomarribas\.com(\/[^"]*)"/g, 'href="$1"');
+  const html = normalizedLinks.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_match, attributes, content) => {
     let id = headingId(content) || "section"; let suffix = 2;
     while (used.has(id)) id = `${id}-${suffix++}`; used.add(id);
     headings.push({ id, label:plainText(content) });
@@ -45,7 +46,7 @@ function ArticleNavCard({ article, locale, label }:{ article:ArticleMeta; locale
 export default function ArticlePage({ article, locale, hasSpanishTranslation=false }:{ article:Article; locale:"en"|"es"; hasSpanishTranslation?:boolean }) {
   const indexHref = locale === "es" ? "/es/blog" : "/blog";
   const articlePath = `${locale === "es" ? "/es" : ""}/blog/${article.slug}`;
-  const articleUrl = `https://josuesomarribas.com${articlePath}`;
+  const articleUrl = `https://www.josuesomarribas.com${articlePath}`;
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
   const isFouc = /fouc/i.test(article.slug);
@@ -60,7 +61,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const labels = locale === "es"
     ? { note:"", contents:"EN ESTE ARTÍCULO", by:"Por Josue Somarribas", minRead:"min de lectura", updated:"Actualizado", all:"TODOS LOS ARTÍCULOS", next:"SIGUIENTE ARTÍCULO", previous:"ARTÍCULO ANTERIOR", moreTopic:"Más sobre este tema" }
     : { note:"", contents:"IN THIS NOTE", by:"By Josue Somarribas", minRead:"min read", updated:"Updated", all:"ALL WRITING", next:"NEXT NOTE", previous:"PREVIOUS NOTE", moreTopic:"More from this topic" };
-  const schemaImage = article.image.startsWith("http") ? article.image : `https://josuesomarribas.com${article.image}`;
+  const schemaImage = article.image.startsWith("http") ? article.image : `https://www.josuesomarribas.com${article.image}`;
   const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, image:schemaImage, datePublished:article.date, dateModified:article.date, author:{ "@type":"Person", name:"Josué Somarribas", url:"https://www.linkedin.com/in/josuesb/" }, url:articleUrl, mainEntityOfPage:{ "@type":"WebPage", "@id":articleUrl }, inLanguage:locale };
 
   return <main className="article-page" lang={locale}>

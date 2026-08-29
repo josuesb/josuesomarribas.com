@@ -9,7 +9,7 @@ const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://josuesomarribas.com"),
+  metadataBase: new URL("https://www.josuesomarribas.com"),
   title: "Josue Somarribas — Ingeniero UX y desarrollador CRO",
   description: "Investigación, experimentación y desarrollo front-end de producción, desde la primera señal hasta una experiencia publicada.",
   alternates: { canonical: "/es", languages: { en: "/", es: "/es", "x-default": "/" } },

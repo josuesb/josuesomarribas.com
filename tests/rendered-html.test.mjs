@@ -3,6 +3,7 @@ import { readdir, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const output = (path) => new URL(`../dist/client/${path}`, import.meta.url);
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 test("exports canonical public pages as static HTML", async () => {
   const routes = [
@@ -85,4 +86,19 @@ test("configures Vercel static output and permanent legacy redirects", async () 
   assert.ok(config.redirects.some(redirect => redirect.source === "/blog/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update" && redirect.destination === "/blog/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction"));
   assert.ok(config.redirects.some(redirect => redirect.source === "/blog/designing-for-real-world-context" && redirect.destination === "/blog/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g"));
   assert.ok(config.redirects.some(redirect => redirect.source === "/blog/digital-sous-chef-ai-design-judgment" && redirect.destination === "/blog/ai-assisted-ui-design-faster-yes-better-not-always"));
+});
+
+test("consolidates every merged article into one indexable canonical URL", async () => {
+  const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
+  const sitemap = await readFile(output("sitemap.xml"), "utf8");
+  const blogRedirects = config.redirects.filter((redirect) => redirect.source.startsWith("/blog/"));
+  for (const redirect of blogRedirects) {
+    const sourceUrl = `https://www.josuesomarribas.com${redirect.source}`;
+    const destinationUrl = `https://www.josuesomarribas.com${redirect.destination}`;
+    assert.doesNotMatch(sitemap, new RegExp(`<loc>${escapeRegExp(sourceUrl)}</loc>`), redirect.source);
+    assert.match(sitemap, new RegExp(`<loc>${escapeRegExp(destinationUrl)}</loc>`), redirect.destination);
+    const html = await readFile(output(`${redirect.destination.slice(1)}.html`), "utf8");
+    assert.match(html, new RegExp(`<link rel="canonical" href="${escapeRegExp(destinationUrl)}"`), redirect.destination);
+    assert.doesNotMatch(html, /<meta name="robots" content="noindex/i, redirect.destination);
+  }
 });
