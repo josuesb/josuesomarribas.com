@@ -4,7 +4,7 @@ locale: "en"
 title: "How an A/B Test Really Looks When You Don’t Have Enough Data"
 description: "Learn how to run meaningful A/B tests when traffic is limited. This guide explains when testing makes sense, when it doesn’t, and how to use qualitative insights, high-impact changes, and real-world evidence to keep optimizing without waiting for impossible sample sizes."
 date: "2025-12-05T00:00:00.000Z"
-draft: false
+draft: true
 type: "AB Testing"
 cluster: "cro-ab-testing-experimentation"
 tags: []

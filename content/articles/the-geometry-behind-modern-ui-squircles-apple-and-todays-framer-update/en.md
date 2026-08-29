@@ -5,7 +5,7 @@ locale: "en"
 title: "The Geometry Behind Modern UI: Squircles, Apple, and Today’s Framer Update"
 description: "Squircles are the quiet geometry behind modern UI. See how Apple uses superellipses, what Framer’s new support means, and how to build them in CSS."
 date: "2025-12-10T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []

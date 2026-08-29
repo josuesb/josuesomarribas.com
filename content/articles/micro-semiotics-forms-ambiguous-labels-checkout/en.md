@@ -4,7 +4,7 @@ locale: "en"
 title: "The Micro-Semiotics of Forms"
 description: "How ambiguous labels like Apply create interpretive uncertainty in checkout forms and quietly increase abandonment."
 date: "2026-06-16T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ui-ux-writing-interface-clarity"
 tags: []

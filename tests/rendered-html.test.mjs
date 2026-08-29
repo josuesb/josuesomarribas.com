@@ -53,7 +53,7 @@ test("configures Vercel static output and permanent legacy redirects", async () 
   assert.equal(config.framework, null);
   assert.equal(config.outputDirectory, "dist/client");
   assert.equal(config.cleanUrls, true);
-  assert.deepEqual(config.redirects, [
+  const requiredRedirects = [
     { source: "/writing", destination: "/blog", permanent: true },
     { source: "/writing/:slug", destination: "/blog/:slug", permanent: true },
     { source: "/es/writing", destination: "/es/blog", permanent: true },
@@ -67,5 +67,12 @@ test("configures Vercel static output and permanent legacy redirects", async () 
     { source: "/blog/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing", destination: "/blog/mutationobservers-without-panic-performance-guide", permanent: true },
     { source: "/blog/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer", destination: "/blog/how-i-generate-natural-blog-audio-locally-for-free", permanent: true },
     { source: "/blog/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks", destination: "/blog/how-i-generate-natural-blog-audio-locally-for-free", permanent: true },
-  ]);
+  ];
+  for (const redirect of requiredRedirects) {
+    assert.ok(config.redirects.some(item => JSON.stringify(item) === JSON.stringify(redirect)), `Missing redirect ${redirect.source}`);
+  }
+  assert.ok(config.redirects.every(redirect => redirect.permanent === true));
+  assert.ok(config.redirects.some(redirect => redirect.source === "/blog/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update" && redirect.destination === "/blog/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction"));
+  assert.ok(config.redirects.some(redirect => redirect.source === "/blog/designing-for-real-world-context" && redirect.destination === "/blog/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g"));
+  assert.ok(config.redirects.some(redirect => redirect.source === "/blog/digital-sous-chef-ai-design-judgment" && redirect.destination === "/blog/ai-assisted-ui-design-faster-yes-better-not-always"));
 });

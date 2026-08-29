@@ -4,7 +4,7 @@ locale: "en"
 title: "How I Applied UX Design Principles to Improve My Airbnb Hosting Experience"
 description: ""
 date: "2025-12-15T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []

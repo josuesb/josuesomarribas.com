@@ -4,7 +4,7 @@ locale: "en"
 title: "What Happens When Guests Don’t Use Things the Way You Expected"
 description: "A practical look at Airbnb hosting, hospitality UX, guest messages, service boundaries, and the small details that shape trust."
 date: "2026-07-05T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []

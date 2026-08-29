@@ -17,6 +17,26 @@
     { "source": "/blog/make-blog-posts-ai-readable", "destination": "/blog/structural-seo-json-ld-framer", "permanent": true },
     { "source": "/blog/mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing", "destination": "/blog/mutationobservers-without-panic-performance-guide", "permanent": true },
     { "source": "/blog/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer", "destination": "/blog/how-i-generate-natural-blog-audio-locally-for-free", "permanent": true },
-    { "source": "/blog/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks", "destination": "/blog/how-i-generate-natural-blog-audio-locally-for-free", "permanent": true }
+    { "source": "/blog/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks", "destination": "/blog/how-i-generate-natural-blog-audio-locally-for-free", "permanent": true },
+    { "source": "/blog/the-geometry-behind-modern-ui-squircles-apple-and-todays-framer-update", "destination": "/blog/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction", "permanent": true },
+    { "source": "/blog/designing-for-real-world-context", "destination": "/blog/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g", "permanent": true },
+    { "source": "/blog/ai-in-ux-design-faster-but-are-we-getting-lazier", "destination": "/blog/ai-assisted-ui-design-faster-yes-better-not-always", "permanent": true },
+    { "source": "/blog/digital-sous-chef-ai-design-judgment", "destination": "/blog/ai-assisted-ui-design-faster-yes-better-not-always", "permanent": true },
+    { "source": "/blog/how-i-applied-ux-design-principles-to-improve-my-airbnb-hosting-experience", "destination": "/blog/airbnb-as-a-product-what-hosting-taught-me-about-user-experience", "permanent": true },
+    { "source": "/blog/what-hotel-reception-taught-me-about-airbnb-hosting", "destination": "/blog/airbnb-as-a-product-what-hosting-taught-me-about-user-experience", "permanent": true },
+    { "source": "/blog/the-tiny-house-as-an-interface-how-space-signs-locks-and-light-guide-behavior", "destination": "/blog/airbnb-as-a-product-what-hosting-taught-me-about-user-experience", "permanent": true },
+    { "source": "/blog/the-host-is-part-designer-part-support-agent-part-detective", "destination": "/blog/airbnb-as-a-product-what-hosting-taught-me-about-user-experience", "permanent": true },
+    { "source": "/blog/what-happens-when-guests-don-t-use-things-the-way-you-expected", "destination": "/blog/airbnb-as-a-product-what-hosting-taught-me-about-user-experience", "permanent": true },
+    { "source": "/blog/good-service-is-clear-before-it-is-friendly", "destination": "/blog/trust-is-designed-before-the-guest-arrives", "permanent": true },
+    { "source": "/blog/why-hospitality-needs-boundaries-not-just-smiles", "destination": "/blog/trust-is-designed-before-the-guest-arrives", "permanent": true },
+    { "source": "/blog/the-problem-with-rules-guests-only-see-after-they-break-them", "destination": "/blog/trust-is-designed-before-the-guest-arrives", "permanent": true },
+    { "source": "/blog/your-guest-doesn-t-read-everything-design-for-that", "destination": "/blog/trust-is-designed-before-the-guest-arrives", "permanent": true },
+    { "source": "/blog/how-to-write-guest-messages-that-prevent-problems-before-they-happen", "destination": "/blog/trust-is-designed-before-the-guest-arrives", "permanent": true },
+    { "source": "/blog/handling-complaints-is-basically-user-research-with-higher-stakes", "destination": "/blog/reviews-are-not-just-feedback-they-are-public-ux-research", "permanent": true },
+    { "source": "/blog/damage-claims-bad-reviews-and-the-emotional-side-of-hosting", "destination": "/blog/reviews-are-not-just-feedback-they-are-public-ux-research", "permanent": true },
+    { "source": "/blog/user-research-building-products-people-actually-need", "destination": "/blog/how-to-do-user-research-for-travelers-the-complete-guide", "permanent": true },
+    { "source": "/blog/how-an-a-b-test-really-looks-when-you-don-t-have-enough-data", "destination": "/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal", "permanent": true },
+    { "source": "/blog/the-professional-maturity-of-reporting-an-inconclusive-test", "destination": "/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal", "permanent": true },
+    { "source": "/blog/micro-semiotics-forms-ambiguous-labels-checkout", "destination": "/blog/ux-is-semiotics-why-an-interface-is-a-system-of-signs", "permanent": true }
   ]
 }

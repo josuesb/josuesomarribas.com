@@ -4,7 +4,7 @@ locale: "en"
 title: "Designing for Real-World Context"
 description: "Using travel and hosting experience to design for adverse conditions: one hand free, harsh sunlight, poor connection, stress, and imperfect attention."
 date: "2026-06-14T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ux-research-product-thinking"
 tags: []

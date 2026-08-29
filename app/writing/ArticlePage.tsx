@@ -6,13 +6,14 @@ import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import ArticleTools from "./ArticleTools";
 import { editorialImage } from "../../lib/editorial-assets";
+import { rewriteMergedArticleLinks } from "../../lib/article-redirects";
 
 function plainText(value:string) { return value.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, " ").trim(); }
 function headingId(value:string) { return plainText(value).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
 function prepareBody(body:string) {
   const headings:{ id:string; label:string }[] = [];
   const used = new Set<string>();
-  const html = body.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_match, attributes, content) => {
+  const html = rewriteMergedArticleLinks(body).replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_match, attributes, content) => {
     let id = headingId(content) || "section"; let suffix = 2;
     while (used.has(id)) id = `${id}-${suffix++}`; used.add(id);
     headings.push({ id, label:plainText(content) });

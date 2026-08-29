@@ -4,7 +4,7 @@ locale: "en"
 title: "What Hotel Reception Taught Me About Airbnb Hosting"
 description: "A practical look at Airbnb hosting, hospitality UX, guest messages, service boundaries, and the small details that shape trust."
 date: "2026-07-01T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "hospitality-airbnb-service-design"
 tags: []

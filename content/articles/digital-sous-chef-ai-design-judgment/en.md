@@ -4,7 +4,7 @@ locale: "en"
 title: "The Digital Sous-Chef: Delegating the Carpentry, Not the Judgment"
 description: "How to use AI for repetitive design work like alt text, summaries, and content cleanup without handing over strategic judgment."
 date: "2026-06-17T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-design-creativity-judgment"
 tags: []

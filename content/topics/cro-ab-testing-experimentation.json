@@ -2,12 +2,12 @@
   "slug": "cro-ab-testing-experimentation",
   "name": "CRO, A/B Testing & Experimentation",
   "description": "Posts about conversion optimization, A/B testing, analytics, QA, experimentation maturity, traffic limitations, ethical optimization, and how real tests behave outside perfect case studies.",
-  "pillarPost": "how-an-a-b-test-really-looks-when-you-don-t-have-enough-data",
+  "pillarPost": "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal",
   "featuredPosts": [
     "cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet",
     "how-i-qa-an-a-b-test-before-it-goes-live",
     "javascript-i-write-every-week-in-an-a-b-testing-role",
-    "the-professional-maturity-of-reporting-an-inconclusive-test",
+    "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal",
     "increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization",
     "the-metrics-you-re-not-watching-are-the-ones-that-will-hurt-you",
     "why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better"

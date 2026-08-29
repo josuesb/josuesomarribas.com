@@ -4,7 +4,7 @@ locale: "en"
 title: "AI In UX Design: Faster, But Are We Getting Lazier?"
 description: "AI in UX design can speed up work, but also tempt teams to skip real thinking. This post shows where AI helps, where it hurts, and how to stay sharp."
 date: "2025-12-08T00:00:00.000Z"
-draft: false
+draft: true
 type: "Blog"
 cluster: "ai-design-creativity-judgment"
 tags: []
