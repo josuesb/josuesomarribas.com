@@ -4,6 +4,8 @@ import "../globals.css";
 import { MotionObserver } from "../MotionObserver";
 import AnalyticsTracker from "../../components/AnalyticsTracker";
 
+/* eslint-disable @next/next/next-script-for-ga -- vinext does not ship @next/third-parties; keep the existing async gtag integration. */
+
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 

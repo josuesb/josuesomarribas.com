@@ -49,7 +49,7 @@ export default function AboutPage() {
 
     <section className="about-voices shell"><header><small>05 / COLLABORATION</small><h2>People I trust<br/>have said this better.</h2></header><blockquote>“Josue brings rare balance—curious like a researcher, precise like an engineer, and human like a designer.”<cite>Product Director · E-commerce scale-up</cite></blockquote><blockquote>“He asks great questions, notices the details and makes collaboration feel easy.”<cite>Engineering collaborator · B2B SaaS</cite></blockquote><a href="https://www.linkedin.com/in/josuesb/" target="_blank" rel="noreferrer">Read 14 recommendations<br/>on LinkedIn <Arrow/></a></section>
 
-    <section className="about-curious"><div className="shell"><h2>Currently<br/><b>curious about</b></h2><p>Experiment validity　〰　Behavioral design　〰　Accessible interaction　〰　Browser quirks　〰　Typography　〰　Useful side projects</p></div></section>
+    <section className="about-curious"><div className="shell"><h2>Currently<br/><b>curious about</b></h2><p>Experiment validity 〰 Behavioral design 〰 Accessible interaction 〰 Browser quirks 〰 Typography 〰 Useful side projects</p></div></section>
 
     <section className="about-editorial-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a><CopyEmailButton /></div></div></section>
     <SiteFooter current="about" />
