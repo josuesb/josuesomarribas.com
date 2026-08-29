@@ -48,4 +48,5 @@ yarn-error.log*
 
 # Local high-quality audio backups (do not deploy or duplicate in Git history)
 /backup/audio-originals/
+/backup/audio-draft-optimized/
 /backup/blog-cover-originals/
