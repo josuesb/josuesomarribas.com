@@ -40,7 +40,17 @@ test("emits robots, sitemap and RSS into the deployed static directory", async (
 
 test("publishes only genuinely translated articles under the Spanish blog", async () => {
   const files = (await readdir(output("es/blog"))).filter((file) => file.endsWith(".html"));
-  assert.equal(files.length, 9);
+  const articleDirectories = await readdir(new URL("../content/articles/", import.meta.url), { withFileTypes:true });
+  const translatedSlugs = [];
+  for (const directory of articleDirectories.filter((entry) => entry.isDirectory())) {
+    try {
+      const source = await readFile(new URL(`../content/articles/${directory.name}/es.md`, import.meta.url), "utf8");
+      if (/^draft:\s*false$/m.test(source)) translatedSlugs.push(directory.name);
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
+  assert.deepEqual(files.sort(), translatedSlugs.map((slug) => `${slug}.html`).sort());
   for (const file of files) {
     const html = await readFile(output(`es/blog/${file}`), "utf8");
     assert.match(html, /<html lang="es"/);
