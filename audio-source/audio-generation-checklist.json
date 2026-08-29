@@ -800,6 +800,26 @@
       "output": "public/audio/blog/es/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.mp3",
       "archived_source": "audio-source/es/done/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction.txt",
       "generated_at": "2026-08-28T19:43:24.520736+00:00"
+    },
+    "en/how-i-generate-natural-blog-audio-locally-for-free.txt": {
+      "fingerprint": "0bc89172c79e801b948090183390daf1ccba88151f5c46d89019237f23ce6132",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/how-i-generate-natural-blog-audio-locally-for-free.mp3",
+      "archived_source": "audio-source/en/done/how-i-generate-natural-blog-audio-locally-for-free.txt",
+      "generated_at": "2026-08-29T04:44:12.060438+00:00"
+    },
+    "es/how-i-generate-natural-blog-audio-locally-for-free.txt": {
+      "fingerprint": "4fa9deffc2e32d499a12bcc7e79a80225d0e0f80ba265e4cc2506ae80015271a",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/how-i-generate-natural-blog-audio-locally-for-free.mp3",
+      "archived_source": "audio-source/es/done/how-i-generate-natural-blog-audio-locally-for-free.txt",
+      "generated_at": "2026-08-29T04:45:19.126409+00:00"
     }
   }
 }
