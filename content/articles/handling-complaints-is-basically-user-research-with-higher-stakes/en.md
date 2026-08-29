@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/jEcwOim20tHJErUwtF9XHcbLrs.webp"
 imageAlt: "Business professionals engaged in project discussion over a laptop in an office setting."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

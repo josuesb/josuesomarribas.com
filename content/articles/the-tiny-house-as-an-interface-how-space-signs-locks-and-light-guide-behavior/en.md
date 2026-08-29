@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/mrkFdb3AgKRHGnyagkUETQnjIE.webp"
 imageAlt: "Colorful tiny cabin surrounded by lush greenery in a serene forest setting."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

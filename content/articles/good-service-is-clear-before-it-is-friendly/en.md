@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/vw4PHAaYl433UcXNBVErBtoQdXQ.webp"
 imageAlt: "A cheerful bakery employee serves a customer a fresh pastry in a cozy café."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

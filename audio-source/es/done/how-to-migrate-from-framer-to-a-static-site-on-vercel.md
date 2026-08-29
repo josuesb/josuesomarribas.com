@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Migración de Framer", "Vercel", "Exportación estática", "React", "Desarrollo asistido por IA", "SEO técnico"]
 audio: ""
-sourceImage: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
+sourceImage: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel-1400.webp"
 imageAlt: "Kit editorial de migración visto desde arriba con tarjetas de contenido, mapas de rutas, recursos, pipeline de build, ramas de versiones y un conjunto final de páginas estáticas."
-image: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
+image: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""
@@ -90,7 +90,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Migración", "Sitio estático"]
 audio: ""
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 ---

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/5vCfTT7RRHXayoZQPWe67yfSZeI.webp"
 imageAlt: "Close-up of a hand showing a thumbs down gesture, symbolizing disapproval or rejection."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

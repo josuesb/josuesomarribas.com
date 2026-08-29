@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/lP2cC0GviVQwqboY3s3K3O8cTA.webp"
 imageAlt: "Silueta de una persona frente a un atardecer intenso en Aoulef, Argelia."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

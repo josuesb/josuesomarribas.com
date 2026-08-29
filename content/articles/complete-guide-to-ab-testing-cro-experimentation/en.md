@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/MrP66dKjNfPt1g7FqWrTMyhxGo.webp"
 imageAlt: "Dramatic A/B testing concept image with concrete blocks, magnifying glass, and experiment mockup"
-image: "/images/blog/complete-guide-ab-testing-v2.png"
+image: "/images/blog/complete-guide-ab-testing-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

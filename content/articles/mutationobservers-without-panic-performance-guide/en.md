@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/xrKCD7BOwRYKgAJmk1KBULtE5o.webp"
 imageAlt: "A creative representation of a DNA helix with blooming pastel roses, blending nature and science."
-image: "/images/blog/mutationobservers-without-panic-performance-guide-v2.png"
+image: "/images/blog/mutationobservers-without-panic-performance-guide-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

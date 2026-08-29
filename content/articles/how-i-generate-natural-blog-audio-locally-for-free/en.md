@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Local TTS", "Kokoro", "Accessibility", "Blog audio"]
 audio: ""
-sourceImage: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free.png"
+sourceImage: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free-1400.webp"
 imageAlt: "Editorial illustration representing a written blog article being transformed into an audio waveform locally on a computer."
-image: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free.png"
+image: "/images/blog/how-i-generate-natural-blog-audio-locally-for-free-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

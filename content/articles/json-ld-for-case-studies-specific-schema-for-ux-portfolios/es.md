@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/4iuRiUEdT8mg63cHw6Mew0A8UI.webp"
 imageAlt: "Una archivista cataloga piezas de un caso de estudio UX, como metáfora del schema JSON-LD para portfolios."
-image: "/images/blog/json-ld-for-case-studies-specific-schema-for-ux-portfolios-v2.png"
+image: "/images/blog/json-ld-for-case-studies-specific-schema-for-ux-portfolios-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/lRSy8JBqQOmtmOM3UORQYUETLQ.webp"
 imageAlt: "A glimpse into the past in Bodie, California's historic ghost town, showcasing its wooden buildings and desert landscape."
-image: "/images/blog/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet-v2.png"
+image: "/images/blog/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

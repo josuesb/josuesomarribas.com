@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/pEaCHglCAO0Uu1uwoyr0ba2E.webp"
 imageAlt: "Elegant black and white photo of Lady Justice statue, symbolizing fairness and law."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

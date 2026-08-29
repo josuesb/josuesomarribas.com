@@ -11,7 +11,7 @@ tags: ["ChatGPT","GEO","AI search","analytics","SEO","visibility"]
 audio: ""
 sourceImage: "/images/framer-migrated/jmjMKbpfaBGc0ntHpXeKzf8iaM.webp"
 imageAlt: "Laptop displaying ChatGPT introduction page on a web browser."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""

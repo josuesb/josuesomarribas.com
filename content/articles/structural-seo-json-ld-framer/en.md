@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/JonfDb4WmoRt6cIewByQIgGg54.webp"
 imageAlt: "A dynamic gathering of photographers capturing moments indoors with flash."
-image: "/images/blog/structural-seo-json-ld-framer-v2.png"
+image: "/images/blog/structural-seo-json-ld-framer-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

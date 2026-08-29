@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/Kl2GPdAxP74YaKUhhGuiq7DtC9w.webp"
 imageAlt: "urban billboard scene"
-image: "/images/blog/why-some-marketing-campaigns-convert-and-others-dont-v2.png"
+image: "/images/blog/why-some-marketing-campaigns-convert-and-others-dont-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

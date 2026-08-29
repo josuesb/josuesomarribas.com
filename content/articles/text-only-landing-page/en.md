@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/aDE3SDwekf0H7ymNhNGXWrHa3J4.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/text-only-landing-page-v2.png"
+image: "/images/blog/text-only-landing-page-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

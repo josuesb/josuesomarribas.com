@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/TYUoX187SQ5fKCAzvkBa39zRlw.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal-v2.png"
+image: "/images/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

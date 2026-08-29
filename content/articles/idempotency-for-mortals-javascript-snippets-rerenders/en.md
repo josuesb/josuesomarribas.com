@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/X3FPTwWcfDPTxy548JbItUEg2PI.webp"
 imageAlt: "Charming close-up of smiling twin girls with blonde hair sharing a grey hoodie indoors."
-image: "/images/blog/idempotency-for-mortals-javascript-snippets-rerenders-v2.png"
+image: "/images/blog/idempotency-for-mortals-javascript-snippets-rerenders-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

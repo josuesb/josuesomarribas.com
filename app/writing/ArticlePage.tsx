@@ -5,7 +5,7 @@ import { getAllArticles, type Article, type ArticleMeta } from "../../lib/conten
 import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import ArticleTools from "./ArticleTools";
-import { editorialImage } from "../../lib/editorial-assets";
+import { editorialImage, editorialThumbnail } from "../../lib/editorial-assets";
 import { rewriteMergedArticleLinks } from "../../lib/article-redirects";
 
 function plainText(value:string) { return value.replace(/<[^>]+>/g, "").replace(/&[^;]+;/g, " ").trim(); }
@@ -37,7 +37,7 @@ function articleHref(article:ArticleMeta, locale:"en"|"es") {
 
 function ArticleNavCard({ article, locale, label }:{ article:ArticleMeta; locale:"en"|"es"; label:string }) {
   return <a className="article-nav-card" href={articleHref(article, locale)}>
-    <span className="article-nav-thumb" aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(article.slug, article.image)})` }}/>
+    <span className="article-nav-thumb" aria-hidden="true"><Image src={editorialThumbnail(article.slug, article.image)} alt="" fill sizes="118px" loading="lazy" unoptimized/></span>
     <span><small>{label}</small><em>{article.cluster.replaceAll("-", " · ")}</em><strong>{article.title}</strong></span><b aria-hidden="true">→</b>
   </a>;
 }
@@ -81,8 +81,8 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
           <p className="article-description">{article.description}</p>
           <div className="article-meta"><span>{labels.by}</span><span>•</span><span>{minutes} {labels.minRead}</span><span>•</span><time dateTime={article.date}>{labels.updated} {new Intl.DateTimeFormat(locale, { month:"short", year:"numeric" }).format(new Date(article.date))}</time></div>
           <ArticleTools title={article.title} locale={locale} audioSrc={audioSrc}/>
-          {nextArticle && <a className="article-next-preview" href={articleHref(nextArticle, locale)}><span aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(nextArticle.slug, nextArticle.image)})` }}/><small>{labels.next}</small><strong>{nextArticle.title}</strong><b aria-hidden="true">→</b></a>}
-          <Image src={heroImage} alt={article.imageAlt} width={1800} height={900} priority unoptimized/>
+          {nextArticle && <a className="article-next-preview" href={articleHref(nextArticle, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(nextArticle.slug, nextArticle.image)} alt="" fill sizes="76px" loading="lazy" unoptimized/></span><small>{labels.next}</small><strong>{nextArticle.title}</strong><b aria-hidden="true">→</b></a>}
+          <Image src={heroImage} alt={article.imageAlt} width={1400} height={700} sizes="(max-width: 760px) calc(100vw - 30px), 900px" priority unoptimized/>
         </header>
         {isFouc && <div className="fouc-asset-story" aria-label="Visual explanation of flicker and experiment validity">
           {[
@@ -96,7 +96,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
           <ArticleNavCard article={nextArticle} locale={locale} label={labels.next}/>
           <a className="article-all-link" href={indexHref}>{labels.all} →</a>
         </nav>}
-        {!!related.length && <section className="article-related"><h2>{labels.moreTopic}</h2><div>{related.map(item => <a key={item.slug} href={articleHref(item, locale)}><span aria-hidden="true" style={{ backgroundImage:`url(${editorialImage(item.slug, item.image)})` }}/><small>{item.cluster.replaceAll("-", " · ")}</small><strong>{item.title}</strong><em>↗</em></a>)}</div></section>}
+        {!!related.length && <section className="article-related"><h2>{labels.moreTopic}</h2><div>{related.map(item => <a key={item.slug} href={articleHref(item, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(item.slug, item.image)} alt="" fill sizes="(max-width: 760px) 120px, 280px" loading="lazy" unoptimized/></span><small>{item.cluster.replaceAll("-", " · ")}</small><strong>{item.title}</strong><em>↗</em></a>)}</div></section>}
       </article>
     </div>
     <div className="article-footer"><SiteFooter locale={locale} current="writing"/></div>

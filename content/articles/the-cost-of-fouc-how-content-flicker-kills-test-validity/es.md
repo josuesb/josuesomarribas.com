@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/ALNTo3RT6llQXg7V7ZRc6lFPGNk.webp"
 imageAlt: "Un mago revela por accidente el mecanismo oculto de un truco fallido, como metáfora de una variante A/B expuesta demasiado tarde."
-image: "/images/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity-v2.png"
+image: "/images/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

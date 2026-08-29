@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: ""
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: "https://josuesomarribas.com/blog/utm-parameters-what-they-are-how-they-affect-seo-and-how-to-test-them-in-ga4"
 featured: false
 downloadUrl: ""

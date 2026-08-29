@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/plcKPCYLZhAfjWW0kptAgom89A.webp"
 imageAlt: "A human hand reaching towards a robotic hand symbolizing technology and connection."
-image: "/images/blog/the-risk-of-ai-visual-homogenization-v2.png"
+image: "/images/blog/the-risk-of-ai-visual-homogenization-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

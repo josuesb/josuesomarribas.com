@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/y0v96qbUwoYWA6eZpXLNmTb8A.webp"
 imageAlt: "Airbnb Guest Guidebook on a modern table in Kavala, Greece home."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

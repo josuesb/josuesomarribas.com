@@ -11,7 +11,7 @@ tags: ["design tokens","AI design","design systems","Figma","Framer","Claude","a
 audio: ""
 sourceImage: ""
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

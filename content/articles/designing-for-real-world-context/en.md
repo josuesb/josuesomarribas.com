@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/lGeKZgZlOmFCmzvZn3b3iOZ2Ko.webp"
 imageAlt: "A young man rests on a bed, surrounded by luggage, reflecting a travel or moving theme."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

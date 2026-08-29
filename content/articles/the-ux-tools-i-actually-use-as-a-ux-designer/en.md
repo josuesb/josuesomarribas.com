@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/H2V7B61m1qlFoA3nfrbcKQfgywA.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/the-ux-tools-i-actually-use-as-a-ux-designer-v2.png"
+image: "/images/blog/the-ux-tools-i-actually-use-as-a-ux-designer-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

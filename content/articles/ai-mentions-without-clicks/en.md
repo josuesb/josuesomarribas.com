@@ -11,7 +11,7 @@ tags: ["AI analytics","zero-click search","GEO","ChatGPT","brand visibility"]
 audio: ""
 sourceImage: "/images/framer-migrated/JPr9o9XKnSt8izQAce6SMKfg.webp"
 imageAlt: "Minimalist image of a robotic hand reaching out on a white background."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""

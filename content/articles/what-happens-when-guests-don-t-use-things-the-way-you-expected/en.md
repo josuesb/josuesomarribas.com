@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/p3hlB0nF5bnLlh7IU8CTGfESUM.webp"
 imageAlt: "Close-up of a hand placing a 'Do Not Disturb' sign on a hotel door, illustrating privacy and service."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

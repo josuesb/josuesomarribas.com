@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/FF4bB2GyDulSQno2NzBsQlDaI.webp"
 imageAlt: "Chefs working diligently in a modern stainless steel kitchen, preparing delicious dishes."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

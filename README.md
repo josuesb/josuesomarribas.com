@@ -48,7 +48,7 @@ command and the static output directory, so no dashboard overrides are needed.
 
 Blog articles are file-backed and live in `content/articles/<slug>/en.md`. Each file uses JSON-compatible YAML frontmatter followed by the original article HTML, which is valid inside Markdown. Topic metadata lives in `content/topics`.
 
-Run `npm run content:migrate` to re-import the Framer CSV backups. The importer preserves all 82 records, including drafts, normalizes slugs for static hosting, strips scripts and inline event handlers, and assigns `/images/blog/default-cover.png` as the temporary cover. Drafts remain on disk but are excluded from the index, sitemap, RSS, and generated public routes.
+Run `npm run content:migrate` to re-import the Framer CSV backups. The importer preserves all 82 records, including drafts, normalizes slugs for static hosting, strips scripts and inline event handlers, and assigns `/images/blog/default-cover-1400.webp` as the temporary cover. Drafts remain on disk but are excluded from the index, sitemap, RSS, and generated public routes.
 
 The canonical public content routes are `/blog/<slug>`. The corresponding
 `/es/blog/<slug>` pages are English-content fallbacks and remain `noindex`

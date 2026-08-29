@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/a2GbRdIvEtNjVDv6HL71XeP2rk.webp"
 imageAlt: "Retro dubbing studio with technicians adjusting analog voice controls while a narrator records in a central booth, representing advanced SSML narration design."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

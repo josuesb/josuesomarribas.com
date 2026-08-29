@@ -64,7 +64,7 @@ for (const article of articles) {
     audio: article.Audio,
     sourceImage: article.Image,
     imageAlt: article["Image:alt"] || "Abstract editorial illustration about digital product design and experimentation",
-    image: "/images/blog/default-cover.png",
+    image: "/images/blog/default-cover-1400.webp",
     canonical: article["Canonical URL"],
     featured: Boolean(article["Featured image"]),
     downloadUrl: article["File (s)"],

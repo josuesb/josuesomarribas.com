@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/ALNTo3RT6llQXg7V7ZRc6lFPGNk.webp"
 imageAlt: "Magician accidentally revealing the hidden mechanism behind a failed trick, symbolizing how flicker exposes an A/B test variant too early."
-image: "/images/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity-v2.png"
+image: "/images/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

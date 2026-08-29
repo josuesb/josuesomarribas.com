@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/nNfpFcCfJJTv25rkHi6zVIEoBnE.webp"
 imageAlt: "Frantic developer monitoring DOM changes on a vintage computer in a cinematic 90s-style lab."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

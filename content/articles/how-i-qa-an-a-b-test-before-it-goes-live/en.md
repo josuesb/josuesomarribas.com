@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/8Hbocqe25QvZYBRW1xDeRaYjwI.webp"
 imageAlt: "Two people each holding a different sheet of paper, one white and one orange, suggesting a comparison or handoff between two versions"
-image: "/images/blog/how-i-qa-an-a-b-test-before-it-goes-live-v2.png"
+image: "/images/blog/how-i-qa-an-a-b-test-before-it-goes-live-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

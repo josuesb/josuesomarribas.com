@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/OvgXQWCFn4WRmsTWgzyXYCsJG8.webp"
 imageAlt: "Close-up of a laptop screen displaying an interactive map, ideal for travel planning and navigation."
-image: "/images/blog/framer-localization-workflow-hreflang-and-multi-language-cms-v2.png"
+image: "/images/blog/framer-localization-workflow-hreflang-and-multi-language-cms-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/hJ6pFS2m6LgQh60RdhgDvjv49rc.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization-v2.png"
+image: "/images/blog/increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

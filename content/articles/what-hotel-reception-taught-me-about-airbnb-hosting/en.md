@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/vqk5JRarr9bGqPmLsLELY6pvCbs.webp"
 imageAlt: "A shiny metal hotel bell on a polished wooden counter, ideal for hospitality themes."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/oG4wbYAhmDvjS7K9P1Toou4vDuk.webp"
 imageAlt: "A hand opening a smart home door with digital access panel, conveying security and technology."
-image: "/images/blog/airbnb-as-a-product-v2.png"
+image: "/images/blog/airbnb-as-a-product-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

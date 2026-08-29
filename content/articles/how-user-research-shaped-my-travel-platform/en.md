@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/oKpx4jk36HE6VEaGmOeLhnhIcOQ.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/how-user-research-shaped-my-travel-platform-v2.png"
+image: "/images/blog/how-user-research-shaped-my-travel-platform-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

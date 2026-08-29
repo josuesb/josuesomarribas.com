@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Framer", "Vercel", "Sitio estático", "Desarrollo asistido por IA", "Portfolio", "Desarrollo web"]
 audio: ""
-sourceImage: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel.png"
+sourceImage: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel-1400.webp"
 imageAlt: "Collage editorial en el que un lienzo visual fragmentado se transforma, mediante un grafo de control de versiones, en un conjunto ordenado de páginas web estáticas."
-image: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel.png"
+image: "/images/blog/why-i-left-framer-for-a-static-site-on-vercel-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

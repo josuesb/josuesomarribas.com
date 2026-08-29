@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/joAKXvuiKvMkH8XUMuW82RO9PU.webp"
 imageAlt: "A silhouette of a man wearing a fedora in a backlit alley at sunrise."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

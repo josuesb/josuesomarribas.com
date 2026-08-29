@@ -11,7 +11,7 @@ tags: ["AI-readable content","GEO","blog writing","content structure","SEO"]
 audio: ""
 sourceImage: "/images/framer-migrated/9feOreXQpcLbna5FfAJ0q1VBEnc.webp"
 imageAlt: "Hands typing on a laptop with a blog post visible, cozy indoor setting with colorful screen in background."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: "https://josuesomarribas.com/blog/structural-seo-json-ld-framer"
 featured: false
 downloadUrl: ""

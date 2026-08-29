@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/iJ1N7C5lVkGoiLvJ6BrKdONg.webp"
 imageAlt: "“A wheelchair positioned alone on an indoor basketball court with empty bleachers and a hoop in the background.”"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

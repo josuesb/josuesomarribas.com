@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/s9ESVTY53N09jIBoFPZuDGplXz4.webp"
 imageAlt: "Man and Woman Having a Conversation"
-image: "/images/blog/the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right-v2.png"
+image: "/images/blog/the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

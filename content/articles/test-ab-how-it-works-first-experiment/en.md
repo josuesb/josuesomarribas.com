@@ -11,7 +11,7 @@ tags: ["test A/B","A/B testing","CRO","experiment design","metrics","Spanish SEO
 audio: ""
 sourceImage: ""
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

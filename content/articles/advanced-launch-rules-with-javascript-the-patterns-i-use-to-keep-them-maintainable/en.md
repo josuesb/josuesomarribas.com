@@ -11,7 +11,7 @@ tags: []
 audio: "https://framerusercontent.com/assets/d8TDQnjuy0xh2TkWr0MtQSjg.mp3"
 sourceImage: "/images/framer-migrated/m5oRpiYYJIjzqsw87K6zY1pPxys.webp"
 imageAlt: "Angled view of a laptop displaying a code editor on screen in black and white, with a blurred background."
-image: "/images/blog/advanced-launch-rules-with-javascript-v2.png"
+image: "/images/blog/advanced-launch-rules-with-javascript-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

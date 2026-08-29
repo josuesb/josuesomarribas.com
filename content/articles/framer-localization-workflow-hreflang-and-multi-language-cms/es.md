@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/OvgXQWCFn4WRmsTWgzyXYCsJG8.webp"
 imageAlt: "Primer plano de una pantalla con un mapa interactivo utilizado para planificación y navegación."
-image: "/images/blog/framer-localization-workflow-hreflang-and-multi-language-cms-v2.png"
+image: "/images/blog/framer-localization-workflow-hreflang-and-multi-language-cms-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

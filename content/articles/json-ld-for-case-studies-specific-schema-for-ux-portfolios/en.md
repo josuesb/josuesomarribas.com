@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/4iuRiUEdT8mg63cHw6Mew0A8UI.webp"
 imageAlt: "Archivist cataloging UX case study artifacts in a pastel museum archive, representing JSON-LD schema for structured portfolio content."
-image: "/images/blog/json-ld-for-case-studies-specific-schema-for-ux-portfolios-v2.png"
+image: "/images/blog/json-ld-for-case-studies-specific-schema-for-ux-portfolios-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

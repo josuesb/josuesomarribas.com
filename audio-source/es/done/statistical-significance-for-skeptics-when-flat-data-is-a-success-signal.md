@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/TYUoX187SQ5fKCAzvkBa39zRlw.webp"
 imageAlt: "Ilustración editorial abstracta sobre diseño de producto digital y experimentación."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

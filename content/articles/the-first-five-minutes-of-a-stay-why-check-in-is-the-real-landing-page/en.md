@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/lEpVpE5WlFR2o86breUO0kJOns.webp"
 imageAlt: "Close-up of a hotel receptionist receiving a credit card from a guest, highlighting a transaction at check-in."
-image: "/images/blog/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page-v2.png"
+image: "/images/blog/the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

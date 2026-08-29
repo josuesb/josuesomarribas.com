@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/nh2t1MEHpdXg6F6U3awYmTMYBgg.webp"
 imageAlt: "A solitary silhouette walks through a bright, high-contrast doorway, evoking mystery and isolation."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

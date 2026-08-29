@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/1N1MPI1D5MUMu9KvUpKsNnjcFig.webp"
 imageAlt: "Close-up of a 4-foot depth warning and no diving sign at a pool edge."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

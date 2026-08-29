@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/RjZVXUUVNLXStgc70Kim1KNB4U.webp"
 imageAlt: "A laptop covered with sticky notes and a prominent \"Help\" sign, conveying urgency."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

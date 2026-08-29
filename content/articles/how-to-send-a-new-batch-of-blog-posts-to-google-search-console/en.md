@@ -11,7 +11,7 @@ tags: ["SEO","Google Search Console","Framer","Sitemap","Indexing","Content Work
 audio: ""
 sourceImage: "/images/framer-migrated/iyDnHUqjGqecV1z0cGk8wUMV6Q.webp"
 imageAlt: "Detailed view of fiber optic cables connected to a patch panel in a data center."
-image: "/images/blog/how-to-send-a-new-batch-of-blog-posts-to-google-search-console-v2.png"
+image: "/images/blog/how-to-send-a-new-batch-of-blog-posts-to-google-search-console-v2-1400.webp"
 canonical: "https://josuesomarribas.com/blog/how-to-send-a-new-batch-of-blog-posts-to-google-search-console"
 featured: false
 downloadUrl: ""

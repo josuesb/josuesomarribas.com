@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/Pi0WAEGbgDUkOqvyDvk1zRzEQXc.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/how-to-do-user-research-for-travelers-the-complete-guide-v2.png"
+image: "/images/blog/how-to-do-user-research-for-travelers-the-complete-guide-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

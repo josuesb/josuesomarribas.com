@@ -11,7 +11,7 @@ tags: ["GEO","AI search","zero-click","brand awareness","analytics","ROI"]
 audio: ""
 sourceImage: "/images/framer-migrated/bukBxBLSL4PQYT8tZXUc9F68U.webp"
 imageAlt: "Overhead view of financial charts, laptop, and magnifying glass, ideal for business analysis themes."
-image: "/images/blog/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness-v2.png"
+image: "/images/blog/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness-v2-1400.webp"
 canonical: "https://josuesomarribas.com/blog/the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness"
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/y0leytJsxAPSTaDAeGuz1z5rzw.webp"
 imageAlt: "Stylish minimalist workspace featuring a laptop, notebooks, and potted plant on a white desk."
-image: "/images/blog/how-to-import-content-into-framer-automatically-v2.png"
+image: "/images/blog/how-to-import-content-into-framer-automatically-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

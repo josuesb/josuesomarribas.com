@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/lP2cC0GviVQwqboY3s3K3O8cTA.webp"
 imageAlt: "Silhouette of a person against a vibrant sunset in Aoulef, Algeria."
-image: "/images/blog/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g-v2.png"
+image: "/images/blog/designing-for-attention-degradation-ux-for-bags-sun-glare-and-3g-v2-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

@@ -12,7 +12,7 @@ tags: []
 audio: "https://framerusercontent.com/assets/W9DbjvHZRbOfFzMKozkAHPJ4vyE.mp3"
 sourceImage: "/images/framer-migrated/6tkChsyxcOvrlTKM5KD6whtyrc.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""

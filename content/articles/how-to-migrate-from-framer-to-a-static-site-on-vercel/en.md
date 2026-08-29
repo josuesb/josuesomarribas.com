@@ -9,9 +9,9 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Framer migration", "Vercel", "Static export", "React", "AI-assisted development", "Technical SEO"]
 audio: ""
-sourceImage: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
+sourceImage: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel-1400.webp"
 imageAlt: "Top-down editorial migration kit showing content cards, route maps, assets, a build pipeline, version branches, and a final stack of static pages."
-image: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel.png"
+image: "/images/blog/how-to-migrate-from-framer-to-a-static-site-on-vercel-1400.webp"
 canonical: ""
 featured: false
 downloadUrl: ""
@@ -90,7 +90,7 @@ type: "Blog"
 cluster: "framer-cms-technical-seo"
 tags: ["Migration", "Static site"]
 audio: ""
-image: "/images/blog/default-cover.png"
+image: "/images/blog/default-cover-1400.webp"
 canonical: ""
 featured: false
 ---
