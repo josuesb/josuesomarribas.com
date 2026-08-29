@@ -11,7 +11,7 @@ tags: ["GEO","SEO","AI search","content strategy","generative engines"]
 audio: ""
 sourceImage: "/images/framer-migrated/Q8UYDbNcc5LLwh8FqgZaPwQPk.webp"
 imageAlt: "Close-up of an AI chat interface on a laptop screen in a dark setting."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/geo-vs-seo-ai-search-v2.png"
 canonical: "https://josuesomarribas.com/blog/geo-vs-seo-ai-search"
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/LToW4gMsFh6Ljx0t0MLo2Pqiog.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/conducting-a-competitor-analysis-for-a-travel-platform-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

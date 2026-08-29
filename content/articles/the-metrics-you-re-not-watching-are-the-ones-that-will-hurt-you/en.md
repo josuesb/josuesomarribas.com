@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/VcAVzGo1T4TP91HNbXaazHHCdU.webp"
 imageAlt: "Eggs and milk spilled on a kitchen counter next to a stove and dishrack."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/the-metrics-you-re-not-watching-are-the-ones-that-will-hurt-you-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

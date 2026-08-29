@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/R0DRiUTEc9FZizAcccMKy59qjDo.webp"
 imageAlt: "``` Developer's hands typing on a keyboard in a dark workspace, with code visible on screen"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/javascript-i-write-every-week-in-an-a-b-testing-role-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

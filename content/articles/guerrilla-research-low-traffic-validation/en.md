@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/colRm0ZzhNCapzHdeLm80B9i4ng.webp"
 imageAlt: "A woman in VR gear surrounded by computers and cables, immersed in a virtual simulation."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/guerrilla-research-low-traffic-validation-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

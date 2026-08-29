@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/KuAJ0s4bGFKTfTaVHWjeHNU16vY.webp"
 imageAlt: "A striking image of a modern architectural building with curved lines against a vivid blue sky."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/the-squircle-in-mobile-cro-superellipses-and-cognitive-friction-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/GakhqQQfUNlnCWDJnQ9NEifQBs.webp"
 imageAlt: "A dark, moody photograph of a Gothic-style house with ominous skies in London, Ohio."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/avoiding-haunted-house-tag-managers-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

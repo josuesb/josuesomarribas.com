@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/zrz77KIZrD8DRFO8YHAXhxfsdc.webp"
 imageAlt: "a simple flow linking Signifier (form) → Intended meaning → User interpretant (inference), with a UI example "
-image: "/images/blog/default-cover.png"
+image: "/images/blog/ux-is-semiotics-why-an-interface-is-a-system-of-signs-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

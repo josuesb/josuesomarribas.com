@@ -49,7 +49,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
   const isFouc = /fouc/i.test(article.slug);
-  const heroImage = isFouc ? "/assets/article-fouc/01-hero-diagrama.svg" : editorialImage(article.slug, article.image);
+  const heroImage = editorialImage(article.slug, article.image);
   const audioSrc = availableAudio(article, locale);
   const allArticles = getAllArticles({ locale });
   const currentIndex = Math.max(0, allArticles.findIndex(item => item.slug === article.slug));

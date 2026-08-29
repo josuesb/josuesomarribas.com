@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/LsSCOziQyw0QqfRCfJktRzoheQ.webp"
 imageAlt: "Detailed close-up view of a dictionary page highlighting the word 'dictionary' and its definition."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/l10n-is-not-translation-market-tone-urgency-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

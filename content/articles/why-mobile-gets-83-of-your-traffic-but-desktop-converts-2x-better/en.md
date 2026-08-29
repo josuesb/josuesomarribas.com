@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/ga3216AweXkfridfebgYVq0Q.webp"
 imageAlt: "Mobile gets 83% of your traffic but desktop converts 2x better. That gap costs you $199K yearly. 5 CRO fixes you can ship this week to close it."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

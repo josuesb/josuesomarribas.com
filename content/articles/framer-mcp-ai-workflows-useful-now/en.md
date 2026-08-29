@@ -11,7 +11,7 @@ tags: ["Framer MCP","Framer AI","AI workflows","CMS automation","Model Context P
 audio: ""
 sourceImage: "/images/framer-migrated/C3UIMOL60HMJI9RFr8CaWh5LRZY.webp"
 imageAlt: "Designer’s desk with connected workflow modules, representing practical Framer MCP and AI-assisted web design workflows."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/framer-mcp-ai-workflows-useful-now-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

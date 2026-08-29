@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/LayU6nj21LgzZeoI0hMYuNLhUzc.webp"
 imageAlt: "Abstract editorial illustration about digital product design and experimentation"
-image: "/images/blog/default-cover.png"
+image: "/images/blog/ai-assisted-ui-design-faster-better-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

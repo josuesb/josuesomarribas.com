@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/nMItpFipRRuEL6hKwnp53s4fNsY.webp"
 imageAlt: "A man and a woman knocking on a door decorated with a wreath, holding flowers."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/trust-is-designed-before-the-guest-arrives-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""

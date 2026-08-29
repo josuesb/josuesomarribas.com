@@ -11,7 +11,7 @@ tags: []
 audio: ""
 sourceImage: "/images/framer-migrated/mv2iQ3dm6xJ93M87irMyRuttk.webp"
 imageAlt: "Close-up of a man holding a blank speech bubble card, perfect for mockups and messages."
-image: "/images/blog/default-cover.png"
+image: "/images/blog/reviews-are-not-just-feedback-they-are-public-ux-research-v2.png"
 canonical: ""
 featured: false
 downloadUrl: ""
