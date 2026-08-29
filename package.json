@@ -12,6 +12,7 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "audio:generate": ".venv-tts/bin/python scripts/tts/generate_audio.py",
+    "audio:optimize": "node scripts/optimize-blog-audio.mjs",
     "images:migrate-framer": "node scripts/migrate-framer-images.mjs",
     "content:migrate": "node scripts/migrate-framer-content.mjs",
     "db:generate": "drizzle-kit generate"

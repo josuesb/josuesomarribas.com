@@ -91,6 +91,16 @@ The Python environment and general Python files remain ignored. This generator i
 
 Generated MP3 files are normal public assets and can be committed when they should be available on the deployed website. The local `.venv-tts` directory is never uploaded to GitHub or Vercel.
 
+## Optimize the published library
+
+Narration does not need the bitrate of music. To preserve the generated masters locally and convert the public library to mono MP3 at 64 kbps, run:
+
+```bash
+npm run audio:optimize
+```
+
+Originals are copied once to `backup/audio-originals/`. That backup is intentionally ignored by Git so it is not duplicated in GitHub or deployed to Vercel. The command validates duration before replacing each public file and skips files that are already optimized.
+
 ## Troubleshooting
 
 - `ffmpeg is missing`: run `brew install ffmpeg`.

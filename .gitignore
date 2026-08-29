@@ -45,3 +45,6 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# Local high-quality audio backups (do not deploy or duplicate in Git history)
+/backup/audio-originals/
