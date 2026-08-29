@@ -34,7 +34,7 @@ downloadText: "Descargar recursos de este artículo"
 
 <p>“No estadísticamente significativo” significa que, si en realidad no existiera ninguna diferencia, unos datos como los observados no resultarían sorprendentes. No significa que las variantes sean iguales. Significa que cualquier diferencia es menor de lo que el tamaño de la muestra permite detectar con fiabilidad.</p>
 
-<p>Ese umbral —el efecto mínimo detectable o MDE— se fijó, de manera explícita o accidental, cuando decidiste cuánto tiempo ejecutar el test. Un resultado plano en un test sin potencia suficiente informa principalmente sobre tu tráfico, una dinámica que explico con cifras reales en <a href="/blog/how-an-a-b-test-really-looks-when-you-don-t-have-enough-data">cómo se ve un test A/B cuando no tienes suficientes datos</a>.</p>
+<p>Ese umbral —el efecto mínimo detectable o MDE— se fijó, de manera explícita o accidental, cuando decidiste cuánto tiempo ejecutar el test. Un resultado plano en un test sin potencia suficiente informa principalmente sobre tu tráfico, una dinámica que explico con cifras reales en <a href="/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal">cómo se ve un test A/B cuando no tienes suficientes datos</a>.</p>
 
 <p>De aquí salen dos reglas. Primera: nunca interpretes un resultado plano sin declarar el MDE. “No detectamos diferencias y teníamos potencia para detectar cualquier cambio superior al 8%” aporta información. “No hubo diferencia” es ruido vestido con traje.</p>
 
@@ -54,7 +54,7 @@ downloadText: "Descargar recursos de este artículo"
 
 <p>Un resultado plano bien comunicado incluye el MDE, el planteamiento de no inferioridad cuando corresponda, la lectura de los guardrails y una decisión: publicar la variante más barata, mantener el control o diseñar una intervención con un cambio mayor.</p>
 
-<p>Presentado así, se entiende por lo que es: el experimento hizo su trabajo. Su trabajo era responder una pregunta y la respuesta llegó. Desarrollé una plantilla completa en <a href="/blog/the-professional-maturity-of-reporting-an-inconclusive-test">la madurez profesional de comunicar un test inconcluso</a> y una estrategia para poco tráfico en <a href="/blog/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet">CRO cuando todavía no tienes tráfico</a>.</p>
+<p>Presentado así, se entiende por lo que es: el experimento hizo su trabajo. Su trabajo era responder una pregunta y la respuesta llegó. Desarrollé una plantilla completa en <a href="/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal">la madurez profesional de comunicar un test inconcluso</a> y una estrategia para poco tráfico en <a href="/blog/cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet">CRO cuando todavía no tienes tráfico</a>.</p>
 
 <h2>La consecuencia</h2>
 

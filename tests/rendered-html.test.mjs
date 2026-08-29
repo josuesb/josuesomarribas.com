@@ -59,6 +59,30 @@ test("publishes only genuinely translated articles under the Spanish blog", asyn
   }
 });
 
+test("keeps published articles clustered and internal blog links resolvable", async () => {
+  const articleDirectories = await readdir(new URL("../content/articles/", import.meta.url), { withFileTypes:true });
+  const publishedSlugs = new Set();
+
+  for (const directory of articleDirectories.filter((entry) => entry.isDirectory())) {
+    try {
+      const source = await readFile(new URL(`../content/articles/${directory.name}/en.md`, import.meta.url), "utf8");
+      if (!/^draft:\s*false$/m.test(source)) continue;
+      publishedSlugs.add(directory.name);
+      assert.match(source, /^cluster:\s*"[^"]+"$/m, `${directory.name} needs an editorial cluster`);
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
+
+  for (const slug of publishedSlugs) {
+    const html = await readFile(output(`blog/${slug}.html`), "utf8");
+    const linkedSlugs = [...html.matchAll(/href="\/blog\/([^"?#/]+)[^"#]*"/g)].map((match) => match[1]);
+    for (const linkedSlug of linkedSlugs) {
+      assert.ok(publishedSlugs.has(linkedSlug), `${slug} links to unpublished /blog/${linkedSlug}`);
+    }
+  }
+});
+
 test("configures Vercel static output and permanent legacy redirects", async () => {
   const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
   assert.equal(config.framework, null);

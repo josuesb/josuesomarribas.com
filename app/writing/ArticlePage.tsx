@@ -56,8 +56,9 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const currentIndex = Math.max(0, allArticles.findIndex(item => item.slug === article.slug));
   const previousArticle = allArticles.length > 1 ? allArticles[(currentIndex - 1 + allArticles.length) % allArticles.length] : undefined;
   const nextArticle = allArticles.length > 1 ? allArticles[(currentIndex + 1) % allArticles.length] : undefined;
-  const relatedArticles = allArticles.filter(item => item.slug !== article.slug && item.cluster === article.cluster).slice(0, 3);
-  const related = relatedArticles.length === 3 ? relatedArticles : [...relatedArticles, ...allArticles.filter(item => item.slug !== article.slug && !relatedArticles.some(relatedItem => relatedItem.slug === item.slug))].slice(0, 3);
+  const related = article.cluster
+    ? allArticles.filter(item => item.slug !== article.slug && item.cluster === article.cluster).slice(0, 3)
+    : [];
   const labels = locale === "es"
     ? { note:"", contents:"EN ESTE ARTÍCULO", by:"Por Josue Somarribas", minRead:"min de lectura", updated:"Actualizado", all:"TODOS LOS ARTÍCULOS", next:"SIGUIENTE ARTÍCULO", previous:"ARTÍCULO ANTERIOR", moreTopic:"Más sobre este tema" }
     : { note:"", contents:"IN THIS NOTE", by:"By Josue Somarribas", minRead:"min read", updated:"Updated", all:"ALL WRITING", next:"NEXT NOTE", previous:"PREVIOUS NOTE", moreTopic:"More from this topic" };
