@@ -422,7 +422,7 @@ footer .footer-email{display:none}
 .article-page .sidebar-progress>b{font-size:.64rem}
 .article-back-link{display:block;margin-top:25px;padding-top:25px;border-top:1px solid #d7d2c8;color:#17212a;font-weight:750;font-size:.64rem;letter-spacing:.06em}
 .article-back-link:hover{color:var(--article-blue)}
-.article-page .article-shell>header h1{max-width:780px;font-size:clamp(3rem,5.2vw,4.8rem);letter-spacing:-.065em}
+.article-page .article-shell>header h1{max-width:780px;font-size:clamp(3rem,5.2vw,4.8rem);letter-spacing:0}
 .article-page .article-description{max-width:670px}
 .article-page .article-actions{width:max-content;margin:-49px 0 23px auto;padding:0}
 .article-page .article-actions button{min-height:38px;padding:0 14px;border:1px solid #d5cec1;border-radius:5px;background:#fffaf0;font-weight:700}

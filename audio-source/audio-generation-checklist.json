@@ -890,6 +890,66 @@
       "output": "public/audio/blog/es/why-i-left-framer-for-a-static-site-on-vercel.mp3",
       "archived_source": "audio-source/es/done/why-i-left-framer-for-a-static-site-on-vercel.md",
       "generated_at": "2026-08-29T10:28:38.623109+00:00"
+    },
+    "en/statistically-significant-does-not-mean-ship-it.md": {
+      "fingerprint": "49acae3e2a5378c994e1f592b391245754a8ff1707f60d9af4dc1d2b74e64d97",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/statistically-significant-does-not-mean-ship-it.mp3",
+      "archived_source": "audio-source/en/done/statistically-significant-does-not-mean-ship-it.md",
+      "generated_at": "2026-08-29T19:23:03.051730+00:00"
+    },
+    "es/statistically-significant-does-not-mean-ship-it.md": {
+      "fingerprint": "bad82f12c1d06f560792105bfa9171735ed71638e9035f53e12a1f583d905d3e",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/statistically-significant-does-not-mean-ship-it.mp3",
+      "archived_source": "audio-source/es/done/statistically-significant-does-not-mean-ship-it.md",
+      "generated_at": "2026-08-29T19:24:16.544805+00:00"
+    },
+    "en/guardrail-metrics-that-actually-protect.md": {
+      "fingerprint": "966e98adc0206271f7558186d3ad28156d9492abd06e379f4bbc7acc18ef9a3b",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/guardrail-metrics-that-actually-protect.mp3",
+      "archived_source": "audio-source/en/done/guardrail-metrics-that-actually-protect.md",
+      "generated_at": "2026-08-29T19:25:38.110004+00:00"
+    },
+    "es/guardrail-metrics-that-actually-protect.md": {
+      "fingerprint": "f3c6bc44a4c5ad59db2a1bb22ebefc06d8b53ba2b572d9ac7da366600cb6577e",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/guardrail-metrics-that-actually-protect.mp3",
+      "archived_source": "audio-source/es/done/guardrail-metrics-that-actually-protect.md",
+      "generated_at": "2026-08-29T19:26:44.646977+00:00"
+    },
+    "en/experimentation-culture-without-manufacturing-winners.md": {
+      "fingerprint": "0342c96917fd2e696c006f5115c34e10ebcc15d07648f355b6378a3c73755e89",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/experimentation-culture-without-manufacturing-winners.mp3",
+      "archived_source": "audio-source/en/done/experimentation-culture-without-manufacturing-winners.md",
+      "generated_at": "2026-08-29T19:28:15.481918+00:00"
+    },
+    "es/experimentation-culture-without-manufacturing-winners.md": {
+      "fingerprint": "67f68f16a8255d6506206449a9ca3f2eb921e51a0bf8039fe331751e72208202",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/experimentation-culture-without-manufacturing-winners.mp3",
+      "archived_source": "audio-source/es/done/experimentation-culture-without-manufacturing-winners.md",
+      "generated_at": "2026-08-29T19:29:30.411713+00:00"
     }
   }
 }
