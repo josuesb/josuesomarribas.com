@@ -362,6 +362,7 @@ footer .footer-email{display:none}
 
 /* Hero motion: one strong entrance, then restrained signal activity. */
 .hero-copy>*{animation:hero-rise .75s cubic-bezier(.16,1,.3,1) both}.hero-identity{animation-delay:.08s}.hero h1{animation-delay:.16s}.hero .lead{animation-delay:.26s}.hero-copy .actions{animation-delay:.36s}
+.hero-copy h1{opacity:1;animation:none}
 .hero h1 em{display:inline-block;animation:hero-italic-breathe 6s ease-in-out 1.4s infinite}
 .hero-flow-line{animation:hero-line-draw 1.1s cubic-bezier(.16,1,.3,1) .45s both}
 .hero-flow-step header,.hero-flow-step>div{animation:hero-rise .7s cubic-bezier(.16,1,.3,1) calc(.42s + var(--flow-index)*.11s) both}
