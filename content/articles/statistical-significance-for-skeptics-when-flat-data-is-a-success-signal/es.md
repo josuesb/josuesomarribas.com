@@ -1,8 +1,8 @@
 ---
 slug: "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal"
 locale: "es"
-title: "Significancia estadística para escépticos: cuando un resultado plano gana"
-description: "La mayoría de los tests A/B terminan sin diferencias significativas. Qué significa realmente un resultado plano y cuándo es precisamente la señal de éxito que buscabas."
+title: "Significancia estadística: cuando un resultado plano gana"
+description: "Qué significa un test A/B sin diferencias significativas, cómo leer su incertidumbre y en qué casos un resultado plano es una señal útil."
 date: "2026-07-17T00:00:00.000Z"
 draft: false
 type: "Blog"

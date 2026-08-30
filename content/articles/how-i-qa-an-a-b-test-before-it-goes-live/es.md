@@ -2,7 +2,7 @@
 slug: "how-i-qa-an-a-b-test-before-it-goes-live"
 locale: "es"
 title: "Cómo hago QA de un test A/B antes de publicarlo"
-description: "Mi proceso para revisar un test A/B antes de lanzarlo: variantes, breakpoints, analítica, control, flicker y acceso del equipo mediante IP en Adobe Target y Monetate."
+description: "Mi proceso de QA previo al lanzamiento: variantes, breakpoints, analítica, control, flicker y previews seguros del equipo en producción."
 date: "2026-03-19T00:00:00.000Z"
 draft: false
 type: "AB Testing"

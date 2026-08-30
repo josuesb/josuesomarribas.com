@@ -2,7 +2,7 @@
 slug: "the-squircle-in-mobile-cro-superellipses-and-cognitive-friction"
 locale: "es"
 title: "El squircle en CRO móvil: superelipses y fricción cognitiva"
-description: "Los squircles están por todas partes en las interfaces móviles. Qué puede aportar su geometría a la percepción y por qué no conviene prometer una mejora de conversión."
+description: "Qué aporta la geometría squircle a una interfaz móvil, cómo afecta la percepción y por qué no demuestra por sí sola una mejora de conversión."
 date: "2026-07-15T00:00:00.000Z"
 draft: false
 type: "Blog"

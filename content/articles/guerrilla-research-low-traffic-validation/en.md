@@ -1,7 +1,7 @@
 ---
 slug: "guerrilla-research-low-traffic-validation"
 locale: "en"
-title: "Guerrilla Research: Validating Ideas When Traffic Does Not Cooperate"
+title: "Guerrilla Research for Low-Traffic Validation"
 description: "How to use session recordings, five-user tests, and qualitative signals when your site does not have enough traffic for clean A/B testing."
 date: "2026-06-11T00:00:00.000Z"
 draft: false

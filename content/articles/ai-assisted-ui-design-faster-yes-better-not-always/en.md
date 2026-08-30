@@ -2,7 +2,7 @@
 slug: "ai-assisted-ui-design-faster-yes-better-not-always"
 locale: "en"
 title: "AI-Assisted UI Design: Faster, Yes. Better, Not Always."
-description: "A grounded look at how AI changes UI design. This post explains why AI tools make workflows faster but not necessarily better, highlighting issues like homogenization, reduced creativity, bias, and the loss of contextual judgment in real projects. Includes practical examples from Figma AI, Uizard, and Firefly."
+description: "A critical look at how AI accelerates UI design while introducing homogenization, bias, weaker context, and new demands on human judgment."
 date: "2025-12-08T00:00:00.000Z"
 draft: false
 type: "Blog"

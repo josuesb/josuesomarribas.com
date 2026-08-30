@@ -1,7 +1,7 @@
 ---
 slug: "the-mistake-every-global-app-makes-and-how-bemobile-gets-it-right"
 locale: "en"
-title: "The Mistake Every Global App Makes (And How Bemobile Gets It Right)"
+title: "The Global App Mistake Bemobile Gets Right"
 description: "Learn how global apps maintain editorial coherence across multiple languages. Master localization strategy, avoid common mistakes, and scale content globally."
 date: "2026-03-23T00:00:00.000Z"
 draft: false

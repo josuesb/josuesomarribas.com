@@ -1,7 +1,7 @@
 ---
 slug: "guerrilla-research-low-traffic-validation"
 locale: "es"
-title: "Investigación guerrilla: cómo validar ideas cuando el tráfico no acompaña"
+title: "Investigación guerrilla para validar con poco tráfico"
 description: "Cómo combinar grabaciones de sesión, entrevistas breves y pruebas con cinco personas cuando no hay tráfico suficiente para un test A/B fiable."
 date: "2026-06-11T00:00:00.000Z"
 draft: false

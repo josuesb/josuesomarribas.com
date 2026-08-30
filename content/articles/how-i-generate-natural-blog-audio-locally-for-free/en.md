@@ -2,7 +2,7 @@
 slug: "how-i-generate-natural-blog-audio-locally-for-free"
 locale: "en"
 title: "How I Generate Natural Blog Audio Locally for Free"
-description: "A complete workflow for natural blog narration using local Kokoro generation, speech-ready scripts, pronunciation QA, MP3 publishing, and a comparison with hosted voices."
+description: "Build natural blog narration locally with Kokoro, speech-ready scripts, pronunciation QA, automated MP3 export, and no paid voice API."
 date: "2026-08-28T00:00:00.000Z"
 draft: false
 type: "Blog"

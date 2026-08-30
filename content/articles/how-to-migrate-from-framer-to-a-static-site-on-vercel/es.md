@@ -1,7 +1,7 @@
 ---
 slug: "how-to-migrate-from-framer-to-a-static-site-on-vercel"
 locale: "es"
-title: "Cómo migrar de Framer a un sitio estático en Vercel asistido por IA"
+title: "Migrar de Framer a un sitio estático asistido por IA"
 description: "Guía práctica para trasladar un portfolio y un blog de Framer a un sitio estático basado en archivos, versionado con Git y desplegado en Vercel."
 date: "2026-08-28T13:00:00.000Z"
 draft: false

@@ -1,8 +1,8 @@
 ---
 slug: "advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable"
 locale: "en"
-title: "Advanced Launch Rules with JavaScript: The Patterns I Use to Keep Them Maintainable"
-description: "Practical patterns for writing maintainable Adobe Launch (AEP Data Collection) custom code, including utilities, idempotency, error handling, observability, performance tips, and a small starter kit you can reuse across rules."
+title: "Advanced Launch Rules with Maintainable JavaScript"
+description: "Patterns for reliable Adobe Launch custom code, including reusable utilities, idempotency, error handling, observability, and performance."
 date: "2025-12-18T00:00:00.000Z"
 draft: false
 type: "Blog"

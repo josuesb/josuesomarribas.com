@@ -1,7 +1,7 @@
 ---
 slug: "how-to-migrate-from-framer-to-a-static-site-on-vercel"
 locale: "en"
-title: "How to Migrate from Framer to an AI-Assisted Static Site on Vercel"
+title: "Migrating from Framer to an AI-Assisted Static Site"
 description: "A practical migration guide for moving a Framer portfolio and CMS blog into a versioned, file-backed static site deployed through Git and Vercel."
 date: "2026-08-28T13:00:00.000Z"
 draft: false

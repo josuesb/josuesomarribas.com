@@ -1,8 +1,8 @@
 ---
 slug: "why-mobile-gets-83-of-your-traffic-but-desktop-converts-2x-better"
 locale: "en"
-title: "Why Mobile Gets 83% of Your Traffic But Desktop Converts 2x Better"
-description: "Mobile gets 83% of your traffic but desktop converts 2x better. That gap costs you $199K yearly. 5 CRO fixes you can ship this week to close it."
+title: "Why Mobile Traffic Converts Worse Than Desktop"
+description: "Why mobile conversion can lag behind desktop, how to diagnose the gap, and which CRO changes can reduce friction without relying on guesswork."
 date: "2026-03-20T00:00:00.000Z"
 draft: false
 type: "Blog"

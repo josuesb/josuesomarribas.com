@@ -2,7 +2,7 @@
 slug: "javascript-i-write-every-week-in-an-a-b-testing-role"
 locale: "en"
 title: "JavaScript I Write Every Week in an A/B Testing Role"
-description: "A look at the JavaScript I actually write every week working in A/B testing — from polling for async elements to cookie-based variant assignment. No theory, just real scripts."
+description: "Practical JavaScript for A/B testing, from finding asynchronous elements to safe DOM changes, tracking, cookies, and variant assignment."
 date: "2026-03-18T00:00:00.000Z"
 draft: false
 type: "AB Testing"

@@ -2,7 +2,7 @@
 slug: "how-user-research-shaped-my-travel-platform"
 locale: "en"
 title: "How User Research Shaped My Travel Platform"
-description: "Learn how I used User-Centered Design (UCD) to create a travel platform based on real user needs. In this post, I’ll share the questions I asked and the insights I discovered from their answers."
+description: "How interviews, user-centered design, and real traveler needs shaped the questions, priorities, and product direction of a travel platform."
 date: "2025-01-31T00:00:00.000Z"
 draft: false
 type: "Blog"

@@ -1,8 +1,8 @@
 ---
 slug: "cro-when-you-don-t-have-the-traffic-optimizing-a-site-that-nobody-visits-yet"
 locale: "en"
-title: "CRO When You Don't Have the Traffic: Optimizing a Site That Nobody Visits Yet"
-description: "Most CRO playbooks need 23,000 visitors per test. Yours doesn't have them. A practical approach to optimization when traffic is thin: design, UX, and judgment over significance."
+title: "CRO Without Traffic: How to Optimize a Low-Volume Site"
+description: "A practical approach to low-traffic optimization using larger changes, qualitative evidence, closer metrics, UX research, and informed judgment."
 date: "2026-06-06T00:00:00.000Z"
 draft: false
 type: "Blog"

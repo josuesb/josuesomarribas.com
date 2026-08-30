@@ -1,8 +1,8 @@
 ---
 slug: "complete-guide-to-ab-testing-cro-experimentation"
 locale: "en"
-title: "The Complete Guide to A/B Testing, CRO, Research, Statistics, and Experimentation Tools"
-description: "A complete practical guide to A/B testing, CRO, experimentation statistics, research methods, QA, GA4 tracking, Monetate, Adobe Target, Optimizely, VWO, AB Tasty, and ethical optimization."
+title: "A/B Testing and CRO: A Complete Practical Guide"
+description: "Learn experimentation strategy, statistics, research, QA, analytics, platform fundamentals, and ethical optimization in one practical guide."
 date: "2026-06-10T00:00:00.000Z"
 draft: false
 type: "Blog"

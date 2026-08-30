@@ -1,7 +1,7 @@
 ---
 slug: "why-i-left-framer-for-a-static-site-on-vercel"
 locale: "es"
-title: "Por qué dejé Framer por un sitio estático en Vercel asistido por IA"
+title: "Por qué dejé Framer por un sitio estático asistido por IA"
 description: "Por qué trasladé mi portfolio de Framer a un sitio estático basado en archivos, cuánto cuesta realmente, qué gané y a qué renuncié."
 date: "2026-08-28T14:00:00.000Z"
 draft: false

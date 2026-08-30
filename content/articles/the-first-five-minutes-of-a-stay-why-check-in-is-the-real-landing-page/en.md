@@ -1,7 +1,7 @@
 ---
 slug: "the-first-five-minutes-of-a-stay-why-check-in-is-the-real-landing-page"
 locale: "en"
-title: "The First Five Minutes of a Stay: Why Check-in Is the Real Landing Page"
+title: "Why the First Five Minutes Define the Guest Experience"
 description: "A practical look at Airbnb hosting, hospitality UX, guest messages, service boundaries, and the small details that shape trust."
 date: "2026-06-21T00:00:00.000Z"
 draft: false

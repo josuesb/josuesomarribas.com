@@ -1,7 +1,7 @@
 ---
 slug: "increasing-conversions-without-dark-patterns-a-strategic-approach-to-ethical-optimization"
 locale: "en"
-title: "Increasing Conversions Without Dark Patterns: A Strategic Approach to Ethical Optimization"
+title: "Increasing Conversions Without Dark Patterns"
 description: "A strategic guide to increasing conversions without relying on dark patterns, balancing performance, transparency, and long-term trust."
 date: "2026-02-24T00:00:00.000Z"
 draft: false

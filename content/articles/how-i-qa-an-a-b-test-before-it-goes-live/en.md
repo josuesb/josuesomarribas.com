@@ -2,7 +2,7 @@
 slug: "how-i-qa-an-a-b-test-before-it-goes-live"
 locale: "en"
 title: "How I QA an A/B Test Before It Goes Live"
-description: "A step-by-step look at how I QA an A/B test before it goes live — including how to whitelist team IPs in Adobe Target and Monetate so your team can preview variants without affecting live traffic."
+description: "My pre-launch A/B test QA process for variants, breakpoints, analytics, control integrity, flicker, and safe team previews in production."
 date: "2026-03-19T00:00:00.000Z"
 draft: false
 type: "AB Testing"

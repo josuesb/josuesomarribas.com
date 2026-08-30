@@ -1,7 +1,7 @@
 ---
 slug: "idempotency-for-mortals-javascript-snippets-rerenders"
 locale: "en"
-title: "Idempotency for Mortals: JavaScript Snippets That Survive Re-renders"
+title: "JavaScript Idempotency: Snippets That Survive Re-renders"
 description: "Practical JavaScript patterns to keep A/B testing and tag manager snippets from duplicating UI, leaking DOM nodes, or breaking after re-renders."
 date: "2026-06-08T00:00:00.000Z"
 draft: false

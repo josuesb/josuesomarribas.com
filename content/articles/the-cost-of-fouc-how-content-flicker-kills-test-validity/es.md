@@ -2,7 +2,7 @@
 slug: "the-cost-of-fouc-how-content-flicker-kills-test-validity"
 locale: "es"
 title: "El coste del FOUC: cómo el parpadeo invalida un test A/B"
-description: "Cuando una persona ve el control durante 300 ms antes de que aparezca la variante, los datos quedan contaminados. Por qué el parpadeo es un problema de validez y cómo corregirlo."
+description: "Por qué mostrar brevemente el control antes de la variante contamina un test A/B, debilita su validez y exige corregir la implementación."
 date: "2026-07-21T00:00:00.000Z"
 draft: false
 type: "Blog"

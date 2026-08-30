@@ -2,7 +2,7 @@
 slug: "the-ux-tools-i-actually-use-as-a-ux-designer"
 locale: "en"
 title: "The UX Tools I Actually Use as a UX Designer"
-description: "Discover the AI-powered UX tools I actually use as a UX designer to boost creativity and efficiency. From generating visuals to refining copy, see how tools like Lummi AI, ChatGPT, Leonardo AI, and Midjourney enhance my workflow."
+description: "The UX and AI tools I use for research, visual exploration, writing, prototyping, and production—and where human judgment still matters."
 date: "2025-02-26T00:00:00.000Z"
 draft: false
 type: "Pro Tips"

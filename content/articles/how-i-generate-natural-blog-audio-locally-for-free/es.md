@@ -2,7 +2,7 @@
 slug: "how-i-generate-natural-blog-audio-locally-for-free"
 locale: "es"
 title: "Cómo genero audio natural para mi blog gratis y en local"
-description: "Un flujo práctico para generar narraciones naturales localmente en un Mac con Apple Silicon usando Kokoro, MLX Audio, exportación automática a MP3 y ninguna API de voz de pago."
+description: "Genera narraciones naturales en un Mac con Kokoro y MLX Audio, prepara el texto y exporta MP3 automáticamente sin una API de voz de pago."
 date: "2026-08-28T00:00:00.000Z"
 draft: false
 type: "Blog"

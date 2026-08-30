@@ -12,7 +12,7 @@ export async function generateMetadata({ params }:{ params:Promise<{slug:string}
   const article = getArticle(slug, "es");
   if (!article) return {};
   return {
-    title:`${article.title} — Josue Somarribas`,
+    title:article.title,
     description:article.description,
     alternates:{ canonical:`/es/blog/${slug}`, languages:{ en:`/blog/${slug}`, es:`/es/blog/${slug}`, "x-default":`/blog/${slug}` } },
     openGraph:{ title:article.title, description:article.description, type:"article", url:`/es/blog/${slug}`, images:[article.image] },

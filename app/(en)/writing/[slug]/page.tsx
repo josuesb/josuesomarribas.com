@@ -6,7 +6,7 @@ import ArticlePage from "../../../writing/ArticlePage";
 export function generateStaticParams(){ return getAllArticles().map(article => ({ slug:article.slug })); }
 export async function generateMetadata({ params }:{ params:Promise<{slug:string}> }):Promise<Metadata>{
   const { slug } = await params; const article = getArticle(slug); if (!article) return {};
-  return { title:`${article.title} — Josue Somarribas`, description:article.description,
+  return { title:article.title, description:article.description,
     alternates:{ canonical:`/blog/${slug}` }, openGraph:{ title:article.title, description:article.description, type:"article", url:`/blog/${slug}`, images:[article.image] } };
 }
 export default async function Page({ params }:{ params:Promise<{slug:string}> }){ const { slug } = await params; if(slug === ":slug") return <main/>; const article=getArticle(slug); if(!article || article.draft) notFound(); return <ArticlePage article={article} locale="en"/>; }
