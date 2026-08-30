@@ -1,135 +1,98 @@
 TODO — josuesomarribas.com
-Revisión: 2026-08-27 (web local + código)
+Revisión: 2026-08-30
 
-PRIORIDAD ALTA — enlaces y acciones que ahora no cumplen lo que prometen
+ESTADO ACTUAL
 
-[ ] Hacer que “Writing / Artículos” de la portada lleve a /writing y /es/writing.
-    Ahora apunta a #writing, que es el bloque de testimonio, no la página de artículos.
+- Repositorio publicado desde main en Vercel.
+- 45 artículos publicados en inglés.
+- 15 artículos publicados en español.
+- Todos los artículos publicados tienen imagen local optimizada.
+- Todos los artículos publicados tienen audio MP3 local.
+- Sitemap, RSS, canonical y hreflang generados automáticamente.
+- Redirecciones permanentes activas para artículos fusionados.
+- Enlaces internos publicados validados durante el build.
+- Títulos y descripciones dentro de los objetivos SEO definidos.
+- npm run lint y npm test en verde.
 
-[ ] Crear o enlazar las páginas reales de los proyectos:
-    - 5 Seconds Tester — “Try the tool / Probar herramienta”. Ahora: #process.
-    - 5 Seconds Tester — “Read the story / Leer el caso”. Ahora: #process.
-    - Font Tester — “Explore prototype / Explorar prototipo”. Ahora: #process.
-    - PitchCR — “Visit live site / Visitar web”. Ahora abre un email.
+PRIORIDAD ALTA — CONTENIDO
 
-[ ] Sustituir los enlaces sociales provisionales:
-    - GitHub (portada EN/ES y footer de Writing): href="#".
-    - LinkedIn (portada EN/ES y footer de Writing): href="#".
+[ ] Traducir selectivamente los mejores artículos pendientes.
+    Quedan 30 artículos publicados en inglés sin versión española.
+    Priorizar por calidad, relevancia profesional y potencial de búsqueda.
+    No traducir automáticamente contenido débil o que pueda fusionarse.
 
-[ ] Crear la página de la nota destacada “The Cost of FOUC…” / “El coste del FOUC…”.
-    “Read the note / Leer la nota” apunta a href="#".
+[ ] Revisar los 43 borradores ingleses.
+    Clasificar cada uno como:
+    - Archivo histórico de una fusión.
+    - Idea recuperable para un artículo nuevo.
+    - Contenido que puede eliminarse definitivamente.
 
-[ ] Decidir destinos reales para cada nota del listado de Writing. Las cinco tarjetas
-    parecen contenido publicable, pero actualmente no enlazan a ninguna página:
-    - Mutation Observers vs Polling: A Shootout for A/B Testing.
-    - Statistical Significance for Skeptics: When Flat Wins.
-    - The Squircle in Mobile CRO: Superellipses and Friction.
-    - JSON-LD for Case Studies: Schema for UX Portfolios.
-    - ElevenLabs for Developers: Advanced SSML Narration Hacks.
-    Crear también las versiones/rutas en español o definir una política de traducción.
+[ ] Mantener la checklist editorial para cada publicación nueva:
+    - Versión EN y ES cuando corresponda.
+    - Imagen WebP de 1400 × 700 y thumbnail de 480 × 240.
+    - Original de alta calidad guardado en image-backups/.
+    - Audio local por idioma y fuente archivada en audio-source/*/done/.
+    - Familia editorial, descripción, alt text y fecha.
+    - URL incluida automáticamente en sitemap.xml.
 
-[ ] Implementar el formulario de newsletter. Ahora no tiene action ni manejador y el
-    envío recarga/navega sin guardar la dirección.
+PRIORIDAD MEDIA — CALIDAD DEL SITIO
 
-[ ] Implementar “Copy email / Copiar email” en portada y Writing, con confirmación
-    visible y accesible (por ejemplo, “Email copied / Email copiado”).
+[ ] Ejecutar una auditoría responsive completa en móvil y tablet.
+    Revisar home, About, Now, índice del blog y detalle de artículos.
+    Comprobar títulos largos, navegación, imágenes, tablas, código y animaciones.
 
-[ ] Crear o enlazar un RSS real. “RSS feed / Feed RSS” apunta a href="#".
+[ ] Ejecutar una auditoría WCAG 2.1 AA.
+    Revisar navegación por teclado, focus-visible, contraste, orden semántico,
+    etiquetas accesibles y comportamiento con prefers-reduced-motion.
 
-PRIORIDAD ALTA — errores detectados
+[ ] Medir Core Web Vitals en producción.
+    Revisar LCP, CLS e INP en las rutas principales y en varios artículos.
+    Corregir únicamente problemas reproducibles en datos de campo o pruebas móviles.
 
-[ ] Corregir el idioma del documento en las rutas españolas. /es y /es/writing
-    mantienen <html lang="en">; debe ser lang="es" a nivel de documento.
+[ ] Revisar enlaces externos de los artículos.
+    Detectar fuentes eliminadas, redirecciones innecesarias y recursos con error.
+    Los enlaces internos ya se validan automáticamente durante el build.
 
-[ ] Corregir la duplicación del buscador, filtros y listado completo en Writing.
-    WritingPage renderiza <WritingIndex> una vez antes de la nota destacada y otra
-    vez después, por lo que la misma interfaz y las cinco notas aparecen dos veces.
+PRIORIDAD MEDIA — SEO Y DISTRIBUCIÓN
 
-[ ] Actualizar o reemplazar tests/rendered-html.test.mjs. Sigue comprobando el
-    skeleton del proyecto inicial y falla contra la web actual (2 tests, 0 pasan).
-    El build sí termina correctamente antes de ejecutar esos tests.
+[ ] Revisar Google Search Console después de cada lote editorial.
+    - Confirmar que sitemap.xml fue leído correctamente.
+    - Inspeccionar las URLs prioritarias.
+    - Vigilar páginas descubiertas pero no indexadas.
+    - No solicitar indexación manual para cada URL salvo que sea prioritaria.
 
-[ ] Dejar npm run lint en verde. En la revisión devuelve 27 errores:
-    enlaces href="#" no válidos, labels decorativos sin control asociado, navegación
-    interna con <a> en vez de Link, espacios Unicode irregulares y otros avisos a11y.
+[ ] Revisar rendimiento editorial después de acumular datos suficientes.
+    Usar impresiones, consultas, CTR y posición para decidir qué artículos ampliar,
+    fusionar, traducir o retirar. Evitar decisiones basadas en pocos días de datos.
 
-PRIORIDAD MEDIA — páginas o destinos aún sin resolver
+PRIORIDAD BAJA — MANTENIMIENTO
 
-[ ] Currículum: “Résumé / Currículum” solo baja al footer. Añadir PDF/página de CV o
-    cambiar el texto del enlace para que describa el destino real.
+[ ] Añadir una comprobación automática de longitud editorial al test suite.
+    Objetivos actuales: títulos de hasta 65 caracteres y descripciones de hasta 165.
 
-[ ] Recomendaciones: “Read 14 recommendations” solo baja al footer. Crear sección o
-    página con las recomendaciones, o enlazar a la fuente externa correspondiente.
-    Añadir también la traducción española; en /es el texto sigue en inglés.
+[ ] Añadir una comprobación automática de cobertura de audio e imágenes.
+    El build debería fallar si un artículo publicado referencia un recurso inexistente.
 
-[ ] “About / Sobre mí” apunta al inicio completo (#about está en toda la sección hero).
-    Añadir una sección biográfica real o cambiar el destino/nombre.
+[ ] Revisar periódicamente dependencias, vulnerabilidades y compatibilidad con Vercel.
+    Actualizar de forma controlada y verificar siempre build estático, sitemap y rutas.
 
-[ ] “Field notes” es un filtro disponible pero ninguna nota usa esa categoría; al
-    seleccionarlo siempre muestra cero resultados. Añadir contenido o quitar el filtro.
+COMANDOS DE VALIDACIÓN
 
-[ ] Revisar categorías sin filtro: hay notas con Data, SEO, Development y Audio, pero
-    esos filtros no aparecen. Definir taxonomía consistente.
+npm run lint
+npm test
+npm run audio:generate
+npm run audio:optimize
 
-[ ] Decidir qué botones de las maquetas deben ser interactivos o decorativos:
-    A/B del hero, Start test, Choose A/B y See upcoming events parecen controles reales
-    para teclado/lector de pantalla, pero no hacen nada. Si son ilustración, retirarlos
-    del foco y marcarlos como decorativos; si son demos, implementar su comportamiento.
+DEFINICIÓN DE PUBLICACIÓN COMPLETA
 
-PRIORIDAD MEDIA — SEO y contenido
+Una entrega editorial está terminada cuando:
 
-[ ] Añadir /writing y /es/writing a app/sitemap.ts; ahora solo incluye / y /es.
-
-[ ] Añadir páginas de detalle publicables al sitemap cuando existan, con canonical y
-    hreflang EN/ES correctos.
-
-[ ] Añadir datos estructurados útiles: Person/ProfilePage en la portada y Article o
-    BlogPosting en cada nota, cuando existan URLs individuales.
-
-[ ] Completar traducciones que siguen en inglés en /es y /es/writing, por ejemplo:
-    “Read 14 recommendations”, “Experimentation”, “UX Engineering”, “Field notes”,
-    “Copy email” y partes de los previews/etiquetas.
-
-[ ] Revisar fechas de Writing (todas son de 2024) y decidir si son contenido real,
-    borradores o ejemplos. Evitar publicar cinco resúmenes sin página de lectura.
-
-PRIORIDAD BAJA — calidad y acabado
-
-[ ] Añadir estilos :focus-visible consistentes para enlaces, botones, filtros y campos.
-
-[ ] Probar manualmente los breakpoints móvil/tablet y navegación con teclado. En móvil
-    el menú principal desaparece sin alternativa; añadir menú accesible si se necesitan
-    esas rutas desde pantallas pequeñas.
-
-[ ] Verificar contraste de texto pequeño y tenue, especialmente tarjetas, etiquetas,
-    proceso, bloque NDA y footer.
-
-[ ] Añadir pruebas mínimas por ruta (/, /es, /writing, /es/writing), enlaces internos,
-    cambio de idioma, filtros/búsqueda, newsletter y botones de copiar email.
-
-[ ] Revisar la captura full-page con animaciones: durante la auditoría el cosido visual
-    repitió parte del hero cerca del final. Confirmar en navegadores reales si es solo
-    un artefacto de captura provocado por transform/animación o un fallo reproducible.
-
-LISTA RESUMIDA DE LINKS SIN PÁGINA O DESTINO REAL
-
-- Home EN/ES: Try the tool / Probar herramienta -> #process
-- Home EN/ES: Read the story / Leer el caso -> #process
-- Home EN/ES: Explore prototype / Explorar prototipo -> #process
-- Home EN/ES: Visit live site / Visitar web -> mailto
-- Home EN/ES: Read 14 recommendations -> #footer
-- Home EN/ES: Résumé / Currículum -> #footer
-- Home EN/ES: GitHub -> #
-- Home EN/ES: LinkedIn -> #
-- Writing EN/ES: Read the note / Leer la nota -> #
-- Writing EN/ES: RSS feed / Feed RSS -> #
-- Writing EN/ES: GitHub -> #
-- Writing EN/ES: LinkedIn -> #
-- Writing EN/ES: las cinco notas del listado no tienen enlace a detalle
-
-COMPROBACIONES REALIZADAS
-
-- Rutas visibles: /, /es, /writing, /es/writing.
-- npm run build: correcto.
-- npm run lint: falla con 27 errores.
-- npm test: falla; 2 tests heredados del starter, 0 pasan.
+1. El contenido está revisado y marcado como draft: false.
+2. La imagen publicada y su thumbnail existen en public/images/blog/.
+3. El original de imagen está respaldado en image-backups/.
+4. El audio existe en public/audio/blog/{idioma}/.
+5. La fuente de audio está archivada y registrada en la checklist.
+6. La URL aparece una sola vez en sitemap.xml con canonical correcto.
+7. EN/ES incluyen hreflang cuando existe traducción real.
+8. npm run lint y npm test terminan correctamente.
+9. Los cambios están versionados y publicados en main.
