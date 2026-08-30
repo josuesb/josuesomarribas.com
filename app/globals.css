@@ -348,6 +348,7 @@ footer .footer-email{display:none}
 .hero-copy .btn-outline:hover{border-color:#fff;background:#ffffff0d}
 .hero>.meta{width:min(1180px,calc(100% - 48px));margin:0 auto;padding:17px 0 19px;border-top:1px solid #5b403b55;color:#bfa09a;font:600 .68rem/1.5 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
 .hero>.meta i{display:inline-block;width:8px;height:8px;margin-right:14px;border-radius:50%;background:var(--hero-coral);box-shadow:0 0 16px #ff5b3d}
+.hero>.meta time{text-transform:none}
 
 .hero-signal-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-top:54px;color:#ddd}
 .hero-flow-line{position:absolute;left:6%;right:2%;top:81px;height:1px;background:#d8d4cb99;transform-origin:left}
