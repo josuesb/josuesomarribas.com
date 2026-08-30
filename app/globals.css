@@ -597,13 +597,40 @@ footer .footer-email{display:none}
   .writing-hero h1{font-size:clamp(2.75rem,13vw,3.7rem)}.notebook-art{height:270px}.writing-index-v2 .writing-tools{padding-top:24px}.featured-articles{padding-top:30px}.featured-card,.featured-card:first-child{grid-template-columns:1fr;grid-template-rows:190px auto}.featured-card .featured-cover{grid-column:1;grid-row:1;background-size:cover}.featured-card>div{grid-column:1;grid-row:2}.writing-index-v2 .note-row,.writing-index-v2 .note-row:nth-child(even){grid-template-columns:minmax(0,1fr);gap:12px;padding:16px 12px}.note-number{font-size:1rem}.writing-index-v2 .article-cover{display:none}.writing-index-v2 .note-copy p{display:none}.writing-page .newsletter h2,.writing-contact h2{font-size:1.7rem}
 }
 
-:where(a, button, input, textarea, select):focus-visible{
+:where(a, button, input, textarea, select, summary):focus-visible{
   outline:3px solid #ff5a40;
   outline-offset:3px;
 }
 
+/* AA contrast for compact coral labels and calls to action. */
+.btn-red,
+.hero-copy .btn-red{
+  background:linear-gradient(135deg,#d83220,#bd2518);
+  color:#fff;
+  box-shadow:inset 0 0 0 1px #ed6a59;
+}
+.home-journal-cover>span{background:#d83220}
+.home-journal-cover::after{
+  content:attr(data-index);
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:1;
+  padding:6px 8px;
+  background:#d83220;
+  color:#fff;
+  font:700 .68rem var(--font-mono);
+}
+.article-shell>header .writing-label{color:#1d62c9}
+
 @media(prefers-reduced-motion:reduce){
-  .writing-art-editorial,.notebook-layer{animation:none!important}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
 }
 
 .newsletter-honeypot{

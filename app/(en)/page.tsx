@@ -134,9 +134,8 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
           </header>
           <div className="home-journal-grid">
             {latestArticles.map((article,index) => <article className="home-journal-card" key={article.slug}>
-              <a className="home-journal-cover" href={`${blogPath}/${article.slug}`} aria-label={article.title}>
+              <a className="home-journal-cover" href={`${blogPath}/${article.slug}`} aria-label={article.title} data-index={String(index + 1).padStart(2,"0")}>
                 {article.image && <Image src={article.image} alt={article.imageAlt} fill sizes="(max-width: 700px) 100vw, 33vw" unoptimized />}
-                <span>{String(index + 1).padStart(2,"0")}</span>
               </a>
               <div className="home-journal-copy"><p><span>{article.type}</span><time dateTime={article.date}>{formatDate(article.date)}</time></p><h3><a href={`${blogPath}/${article.slug}`}>{article.title}</a></h3><p>{article.description}</p><a href={`${blogPath}/${article.slug}`}>{locale === "es" ? "Leer artículo" : "Read article"} <Arrow /></a></div>
             </article>)}

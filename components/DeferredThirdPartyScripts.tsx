@@ -17,7 +17,10 @@ export default function DeferredThirdPartyScripts() {
     currentWindow.dataLayer.push(["js", new Date()]);
     currentWindow.dataLayer.push(["config", "G-65JN3HEB8W"]);
 
+    let loaded = false;
     const loadScripts = () => {
+      if (loaded) return;
+      loaded = true;
       const analytics = document.createElement("script");
       analytics.async = true;
       analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-65JN3HEB8W";
@@ -33,13 +36,19 @@ export default function DeferredThirdPartyScripts() {
       document.head.appendChild(hotjar);
     };
 
+    const intentEvents = ["pointerdown", "keydown", "touchstart"] as const;
+    let timer:ReturnType<typeof setTimeout> | undefined;
     const schedule = () => {
-      if ("requestIdleCallback" in window) window.requestIdleCallback(loadScripts, { timeout:5000 });
-      else window.setTimeout(loadScripts, 2500);
+      timer = globalThis.setTimeout(loadScripts, 8000);
+      intentEvents.forEach(event => window.addEventListener(event, loadScripts, { once:true, passive:true }));
     };
     if (document.readyState === "complete") schedule();
     else window.addEventListener("load", schedule, { once:true });
-    return () => window.removeEventListener("load", schedule);
+    return () => {
+      window.removeEventListener("load", schedule);
+      intentEvents.forEach(event => window.removeEventListener(event, loadScripts));
+      if (timer) globalThis.clearTimeout(timer);
+    };
   }, []);
   return null;
 }
