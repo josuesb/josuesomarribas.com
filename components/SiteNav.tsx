@@ -1,9 +1,9 @@
 type Locale = "en" | "es";
-type Current = "home" | "writing" | "about" | "now";
+type Current = "home" | "writing" | "about" | "now" | "lab";
 
 const labels = {
-  en:{ work:"Work", experiments:"Experiments", writing:"Writing", about:"About", now:"Now", resume:"Résumé", talk:"Let's talk" },
-  es:{ work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", now:"Ahora", resume:"Currículum", talk:"Hablemos" },
+  en:{ work:"Work", experiments:"Experiments", writing:"Writing", about:"About", now:"Now", lab:"Lab", resume:"Résumé", talk:"Let's talk" },
+  es:{ work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", now:"Ahora", lab:"Lab", resume:"Currículum", talk:"Hablemos" },
 };
 
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
@@ -18,10 +18,11 @@ export default function SiteNav({ locale="en", current="home", articleSlug, hasS
     <a className={current === "writing" ? "current" : undefined} href={writing}>{t.writing}</a>
     <a className={current === "about" ? "current" : undefined} href="/about">{t.about}</a>
     <a className={current === "now" ? "current" : undefined} href={locale === "es" ? "/es/now" : "/now"}>{t.now}</a>
+    <a className={current === "lab" ? "current" : undefined} href={locale === "es" ? "/es/lab" : "/lab"}>{t.lab}</a>
     <a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
   </>;
-  const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : current === "now" ? "/now" : "/";
-  const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "writing" ? "/es/blog" : current === "now" ? "/es/now" : "/es";
+  const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : current === "now" ? "/now" : current === "lab" ? "/lab" : "/";
+  const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "writing" ? "/es/blog" : current === "now" ? "/es/now" : current === "lab" ? "/es/lab" : "/es";
   const language = <div className="language-switcher" aria-label="Language selector">
     <a className={locale === "en" ? "active" : undefined} href={englishLanguageHref} lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><span>/</span>
     <a className={locale === "es" ? "active" : undefined} href={spanishLanguageHref} lang="es" aria-current={locale === "es" ? "page" : undefined} title={articleSlug && !hasSpanishTranslation ? "This article is not yet available in Spanish; view translated articles" : undefined}>ES</a>
