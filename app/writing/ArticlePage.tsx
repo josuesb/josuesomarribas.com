@@ -49,7 +49,6 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const articleUrl = `https://www.josuesomarribas.com${articlePath}`;
   const { html, headings } = prepareBody(article.body);
   const minutes = Math.max(1, Math.ceil(plainText(article.body).split(/\s+/).length / 220));
-  const isFouc = /fouc/i.test(article.slug);
   const heroImage = editorialImage(article.slug, article.image);
   const audioSrc = availableAudio(article, locale);
   const allArticles = getAllArticles({ locale });
@@ -86,12 +85,6 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
           {nextArticle && <a className="article-next-preview" href={articleHref(nextArticle, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(nextArticle.slug, nextArticle.image)} alt="" fill sizes="76px" loading="lazy" unoptimized/></span><small>{labels.next}</small><strong>{nextArticle.title}</strong><b aria-hidden="true">→</b></a>}
           <Image src={heroImage} alt={article.imageAlt} width={1400} height={700} sizes="(max-width: 760px) calc(100vw - 30px), 900px" priority unoptimized/>
         </header>
-        {isFouc && <div className="fouc-asset-story" aria-label="Visual explanation of flicker and experiment validity">
-          {[
-            ["02-recorrido-ocular",1600,430], ["03-timeline-300ms",1800,500], ["04-anotaciones-validity",1200,900],
-            ["05-banner-senal",1400,360], ["06-checklist-papel",1800,600], ["07-check-manuscrito",700,600]
-          ].map(([file,width,height])=><Image key={file} src={`/assets/article-fouc/${file}.svg`} alt="" aria-hidden="true" width={Number(width)} height={Number(height)}/>) }
-        </div>}
         <div className="article-content" dangerouslySetInnerHTML={{ __html:html }}/>
         {previousArticle && nextArticle && <nav className="article-post-nav" aria-label={locale === "es" ? "Navegar entre artículos" : "Browse articles"}>
           <ArticleNavCard article={previousArticle} locale={locale} label={labels.previous}/>

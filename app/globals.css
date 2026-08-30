@@ -672,3 +672,7 @@ footer .footer-email{display:none}
   .belief-grid,.route-line,.recommendations>div{grid-template-columns:1fr}
   .route-line{gap:14px}
 }
+
+.article-editorial-figure{margin:1.2em 0 2.1em}
+.article-editorial-figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);border-radius:7px}
+.article-editorial-figure figcaption{margin-top:9px;color:var(--muted);font:600 .72rem/1.45 var(--font-mono);letter-spacing:.01em}
