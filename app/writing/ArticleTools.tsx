@@ -140,7 +140,7 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
       <div className="floating-audio-copy"><small>{locale === "es" ? "ESCUCHANDO" : "NOW LISTENING"}</small><strong>{title}</strong></div>
       <div className="floating-audio-controls">
         <button type="button" onClick={() => skip(-15)} disabled={!audioSrc} aria-label={locale === "es" ? "Retroceder 15 segundos" : "Rewind 15 seconds"}>−15</button>
-        <button className="floating-audio-toggle" type="button" onClick={listen} aria-label={listening ? (locale === "es" ? "Pausar" : "Pause") : (locale === "es" ? "Reproducir" : "Play")}>{listening ? "Ⅱ" : "▶"}</button>
+        <button className="floating-audio-toggle" type="button" onClick={listen} aria-label={listening ? (locale === "es" ? "Pausar" : "Pause") : (locale === "es" ? "Reproducir" : "Play")}>{listening ? <span className="floating-pause-icon" aria-hidden="true"><i/><i/></span> : <span aria-hidden="true">▶</span>}</button>
         <button type="button" onClick={() => skip(15)} disabled={!audioSrc} aria-label={locale === "es" ? "Avanzar 15 segundos" : "Forward 15 seconds"}>+15</button>
       </div>
       <div className="floating-audio-timeline">

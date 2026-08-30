@@ -622,6 +622,8 @@ footer .footer-email{display:none}
   font:700 .68rem var(--font-mono);
 }
 .article-shell>header .writing-label{color:#1d62c9}
+.floating-pause-icon{display:flex;align-items:center;justify-content:center;gap:4px}
+.floating-pause-icon i{display:block;width:3px;height:15px;border-radius:1px;background:currentColor}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
