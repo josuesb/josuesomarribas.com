@@ -31,9 +31,9 @@ const copy = {
 
 const tools = [
   {id:"font",number:"02",category:"utilities" as const,status:"live",name:{en:"Font Tester",es:"Probador de tipografías"},description:{en:"Compare typefaces with real content, fine-tune size and spacing, and test readability.",es:"Compara tipografías con contenido real, ajusta tamaño y espaciado y prueba la legibilidad."},image:"/assets/project-previews/font-tester.webp",href:"https://fonts.josuesomarribas.com/?color=%23111111&bgColor=%23ffffff"},
-  {id:"audio",number:"03",category:"utilities" as const,status:"live",name:{en:"Local Blog Audio Generator",es:"Generador local de audio"},description:{en:"Generate natural-sounding article narration locally, privately and without a per-use fee.",es:"Genera narraciones naturales de artículos localmente, con privacidad y sin coste por uso."},image:"/assets/writing-editorial/06-ssml-audio.png",href:"/blog/how-i-generate-natural-blog-audio-locally-for-free"},
+  {id:"audio",number:"03",category:"utilities" as const,status:"live",name:{en:"Local Blog Audio Generator",es:"Generador local de audio"},description:{en:"Generate natural-sounding article narration locally, privately and without a per-use fee.",es:"Genera narraciones naturales de artículos localmente, con privacidad y sin coste por uso."},image:"/assets/writing-editorial/06-ssml-audio.svg",href:"/blog/how-i-generate-natural-blog-audio-locally-for-free"},
   {id:"duration",number:"04",category:"experiments" as const,status:"concept",name:{en:"A/B Duration Calculator",es:"Calculadora de duración A/B"},description:{en:"Estimate the sample and running time an experiment needs before committing traffic.",es:"Estima la muestra y el tiempo que necesita un experimento antes de comprometer tráfico."},image:"/assets/process/02-frame.svg",href:"/blog/complete-guide-to-ab-testing-cro-experimentation"},
-  {id:"fouc",number:"05",category:"experiments" as const,status:"concept",name:{en:"FOUC Simulator",es:"Simulador de FOUC"},description:{en:"See how content flicker contaminates perception, behavior and experiment validity.",es:"Observa cómo el parpadeo contamina la percepción, el comportamiento y la validez del experimento."},image:"/assets/writing-editorial/01-fouc-original-flicker-variant.png",href:"/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity"},
+  {id:"fouc",number:"05",category:"experiments" as const,status:"concept",name:{en:"FOUC Simulator",es:"Simulador de FOUC"},description:{en:"See how content flicker contaminates perception, behavior and experiment validity.",es:"Observa cómo el parpadeo contamina la percepción, el comportamiento y la validez del experimento."},image:"/assets/writing-editorial/01-fouc-original-flicker-variant.svg",href:"/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity"},
 ];
 
 export default function LabPage({ locale="en" }:{ locale?:Locale }) {
@@ -65,14 +65,14 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       {(filter === "all" || filter === "systems") && <article className="labx-wedding">
         <div className="labx-wedding-copy"><p>PRIVATE PLATFORM · ADVANCED BUILD</p><h2>Comparte el Momento</h2><span>DIGITAL EVENT INVITATIONS</span><p>{t.wedding}</p><ul><li><b>{t.invite}</b><span>{t.inviteCopy}</span></li><li><b>{t.rsvp}</b><span>{t.rsvpCopy}</span></li></ul><small>Next.js 16 · React 19 · TypeScript · Neon · Drizzle</small><div><em><i/>{t.development}</em><a href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer">{t.preview} <span aria-hidden="true">↗</span></a></div></div>
         <div className="labx-wedding-art" role="img" aria-label={locale === "es" ? "Portada pública de la boda y panel anónimo de gestión de invitados" : "Public wedding page and anonymous guest-management dashboard"}>
-          <Image className="labx-wedding-public" src="/assets/lab/comparte-public.webp" alt="" width={1440} height={900} unoptimized/>
-          <Image className="labx-wedding-admin" src="/assets/lab/comparte-admin.webp" alt="" width={1536} height={1024} unoptimized/>
+          <Image className="labx-wedding-public" src="/assets/lab/comparte-public.webp" alt="" width={1440} height={900} loading="eager" unoptimized/>
+          <Image className="labx-wedding-admin" src="/assets/lab/comparte-admin.webp" alt="" width={1536} height={1024} loading="eager" unoptimized/>
         </div>
       </article>}
 
       {!!visibleTools.length && <section className="labx-tool-grid" aria-label={locale === "es" ? "Herramientas y experimentos" : "Tools and experiments"}>{visibleTools.map(tool=><article key={tool.id}>
         <header><b>{tool.number}</b><span>{tool.category === "utilities" ? t.filters.utilities : t.filters.experiments}</span></header>
-        <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" unoptimized/></div>
+        <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" loading="eager" unoptimized/></div>
         <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={tool.href} target={tool.href.startsWith("http")?"_blank":undefined} rel={tool.href.startsWith("http")?"noreferrer":undefined}>{tool.status === "concept" ? t.concept : tool.id === "audio" ? t.read : t.open} <span aria-hidden="true">→</span></a>
       </article>)}</section>}
 
