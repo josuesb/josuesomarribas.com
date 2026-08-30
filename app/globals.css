@@ -248,7 +248,7 @@ footer .footer-email{display:none}
 .work-section>.shell{width:min(1280px,calc(100% - 64px))}
 .work-section>.shell>h2{margin:0 0 12px;color:#0a2463;font-size:clamp(2.35rem,3.8vw,3.4rem);font-weight:750;letter-spacing:-.04em}
 .work-section .section-intro{margin:0 0 38px;color:#756d62;font-size:var(--text-base)}
-.projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
 .project{min-height:650px;padding:24px;border:1px solid #ddd6ca;border-radius:10px;background:#f9f6f0;box-shadow:0 9px 24px rgba(48,37,20,.035)}
 .project-blue{background:#0a2463;border-color:#173b85;color:#fff}
 .project header{align-items:baseline;gap:14px;min-height:42px}
