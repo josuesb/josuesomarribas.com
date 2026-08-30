@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import type { ArticleMeta } from "../../lib/content";
-import { editorialThumbnail } from "../../lib/editorial-assets";
+import { editorialImage, editorialThumbnail } from "../../lib/editorial-assets";
 
 type Locale = "en" | "es";
 
@@ -99,7 +99,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     {!!featured.length && <section className="featured-articles" aria-labelledby="featured-heading">
       <div className="latest-head"><p>{t.featured}</p><span>{locale === "es" ? "Una selección para conocer mi forma de pensar y trabajar." : "A selection that shows how I think and work."}</span></div>
       <div className="featured-grid">{featured.map((article, index) => <a className={`featured-card featured-card-${index + 1}`} href={articleHref(article, locale)} key={article.slug}>
-        <span className="featured-cover" aria-hidden="true"><Image src={editorialThumbnail(article.slug, article.image)} alt="" fill sizes="(max-width: 760px) calc(100vw - 30px), 45vw" loading="lazy" unoptimized/></span>
+        <span className="featured-cover" aria-hidden="true"><Image src={editorialImage(article.slug, article.image)} alt="" fill sizes={index === 0 ? "(max-width: 760px) calc(100vw - 30px), 58vw" : "(max-width: 760px) calc(100vw - 30px), 190px"} loading="lazy" unoptimized/></span>
         <div><small>{clusterLabel(article.cluster, locale)}</small><h2>{article.title}</h2><p>{article.description}</p><span className="read-meta">{readingMinutes(article)} {t.min} <b aria-hidden="true">↗</b></span></div>
       </a>)}</div>
     </section>}
