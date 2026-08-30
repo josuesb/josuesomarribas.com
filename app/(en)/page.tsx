@@ -2,6 +2,7 @@ import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
+import ExperienceDuration from "../../components/ExperienceDuration";
 import type { CSSProperties } from "react";
 import { getAllArticles } from "../../lib/content";
 
@@ -56,7 +57,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
 
           <ExperimentArtwork />
         </div>
-        <p className="meta shell"><i aria-hidden="true" />8+ years <b>·</b> Spain <b>·</b> Working globally</p>
+        <p className="meta shell"><i aria-hidden="true" /><ExperienceDuration locale={locale}/> <b>·</b> {locale === "es" ? "España" : "Spain"} <b>·</b> {locale === "es" ? "Trabajo globalmente" : "Working globally"}</p>
       </section>
 
       <section className="capabilities">
