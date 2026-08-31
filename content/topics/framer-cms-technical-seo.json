@@ -2,12 +2,12 @@
   "slug": "framer-cms-technical-seo",
   "name": "Framer, CMS & Technical SEO",
   "description": "Posts about building, structuring, importing, and optimizing content in Framer, including CMS workflows, schema, structured data, audio, and practical SEO setup.",
-  "pillarPost": "seo-schema-in-framer",
+  "pillarPost": "json-ld-examples-and-use-cases",
   "featuredPosts": [
+    "json-ld-for-case-studies-specific-schema-for-ux-portfolios",
     "structural-seo-json-ld-framer",
     "how-to-import-content-into-framer-automatically",
-    "how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer",
-    "website-builders-and-which-one-i-think-is-best-for-you"
+    "how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer"
   ],
   "seoTitle": "Framer CMS, Schema & Technical SEO",
   "seoDescription": "Practical posts about Framer CMS, structured data, JSON-LD, blog imports, schema markup, and technical SEO workflows for cleaner content operations."

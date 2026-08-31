@@ -1,0 +1,41 @@
+Ejemplos de JSON-LD: 12 usos prácticos para una web.
+
+JSON-LD resulta más sencillo cuando dejas de tratarlo como un adorno SEO y lo utilizas para describir aquello sobre lo que realmente habla una página. Una URL puede representar un artículo, una persona, una empresa, un producto, un evento o varias entidades relacionadas. JSON-LD asigna nombres, tipos, propiedades y relaciones que las máquinas pueden interpretar.
+
+Que un marcado sea válido en Schema.org no significa que pueda generar un resultado enriquecido en Google. Schema.org ofrece un vocabulario amplio, mientras que Google admite un conjunto menor y cambiante de funciones de búsqueda. JSON-LD no garantiza rankings ni resultados enriquecidos. Su valor práctico es aportar claridad.
+
+Estos son doce casos útiles.
+
+Primero, Organization. Utilízalo en una página autorizada sobre una empresa, normalmente la portada o la página Acerca de. Permite relacionar el nombre, la dirección canónica, el logotipo, los datos de contacto y los perfiles verificados. Asigna a la organización un identificador estable y reutilízalo cuando otro objeto haga referencia a ella.
+
+Segundo, Person. Utiliza Person cuando la página trate principalmente sobre una persona, como un portfolio, un perfil de autor, una página de conferenciante o una web personal. Entre las propiedades útiles están el nombre, la dirección web, el cargo, la empresa y los perfiles públicos verificados.
+
+Tercero, WebSite. Representa el sitio completo, no una página individual. Puede declarar el nombre de la web, su editor, sus idiomas y la relación con la persona u organización principal. No debe sustituir el marcado del contenido específico de cada URL.
+
+Cuarto, Article o BlogPosting. Utiliza estos tipos para contenido editorial. El titular, el autor, las fechas y la imagen del marcado deben coincidir con lo que ve el lector. BlogPosting es un tipo específico útil para artículos de blog.
+
+Quinto, BreadcrumbList. Describe la posición de una página dentro de una jerarquía real. Sus elementos deben corresponder a una ruta de navegación lógica, no a una lista inventada únicamente para los buscadores.
+
+Sexto, Product. Utiliza Product para un artículo o variante concreta que pueda comprarse. El precio, la disponibilidad, las valoraciones y las reseñas deben coincidir con la información visible. Product no es una etiqueta genérica para un servicio.
+
+Séptimo, SoftwareApplication. Puede describir una aplicación móvil, web, de escritorio u otro software. Conviene utilizar un subtipo más específico, como MobileApplication o WebApplication, cuando corresponda con precisión.
+
+Octavo, Event. Utiliza Event para algo que sucede en un momento definido, como una conferencia, un webinar, un taller o una actuación. El estado y el modo de asistencia importan cuando el evento se aplaza, cancela, celebra online o adopta un formato híbrido.
+
+Noveno, VideoObject. Describe un vídeo reproducible. La miniatura, la fecha de publicación, la duración, la descripción y la dirección del contenido deben ser correctas y accesibles. Funciona mejor cuando el vídeo es una parte principal de la página.
+
+Décimo, JobPosting. Utilízalo para una única vacante que esté realmente abierta. La empresa, la ubicación, el tipo de empleo, la fecha de publicación y la caducidad deben coincidir con la oferta visible. Una vacante caducada nunca debería permanecer marcada como abierta.
+
+Undécimo, LocalBusiness. Es un subtipo de Organization para negocios con presencia física de atención al público. Elige el subtipo correcto más específico y mantén coherentes la dirección, el teléfono, el horario y la información geográfica. Una empresa completamente remota debería utilizar Organization.
+
+Duodécimo, CreativeWork. Es útil para un proyecto, diseño, informe, conjunto de datos u otra creación. Schema.org no define un tipo CaseStudy, por lo que inventarlo no es válido. Un caso de portfolio puede ser un Article o BlogPosting cuya propiedad about haga referencia a un CreativeWork.
+
+Una página suele necesitar varios objetos conectados. Un artículo puede pertenecer a una web, identificar a una persona como autora, referenciar a una organización como editora e incluir migas de pan. Los identificadores estables permiten que esos objetos se relacionen sin duplicar ni contradecir la misma entidad. Se pueden agrupar dentro de un grafo, pero un grafo más grande no es automáticamente mejor.
+
+Para elegir el tipo correcto, empieza por la entidad principal de la página. Utiliza el subtipo válido más específico que siga siendo preciso. Comprueba que cada afirmación importante sea visible para el lector. Después consulta por separado la documentación de Google, porque la validez en Schema.org y la elegibilidad para funciones de Google son preguntas distintas.
+
+Entre los errores habituales están inventar tipos, añadir precios o valoraciones invisibles, utilizar la entidad equivocada, generar marcado contradictorio mediante varios plugins y mantener empleos caducados, eventos pasados, precios antiguos o productos no disponibles. Los datos estructurados describen el contenido; no pueden crear autoridad, relevancia o utilidad cuando el contenido es débil.
+
+Antes de publicar, valida el grafo con el validador de Schema.org y prueba las funciones admitidas por Google mediante la prueba de resultados enriquecidos. Compara las propiedades importantes con la página visible, inspecciona la dirección publicada en lugar de limitarte a una vista previa y vigila los problemas detectados en Search Console.
+
+La regla práctica es sencilla. Usa JSON-LD para expresar lo que una persona atenta ya puede aprender de la página. Elige la entidad principal, descríbela mediante el tipo correcto más específico, conecta las entidades relacionadas con identificadores estables y detente antes de que el grafo se vuelva especulativo. Los mejores datos estructurados no son los más elaborados, sino los más fáciles de verificar y mantener.

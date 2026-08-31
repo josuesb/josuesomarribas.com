@@ -980,6 +980,26 @@
       "output": "public/audio/blog/es/how-i-qa-an-a-b-test-before-it-goes-live.mp3",
       "archived_source": "audio-source/es/done/how-i-qa-an-a-b-test-before-it-goes-live.md",
       "generated_at": "2026-08-30T13:40:30.303550+00:00"
+    },
+    "en/json-ld-examples-and-use-cases.txt": {
+      "fingerprint": "ba9097ce6420b894b44cd0b775835513cce9299b3dda008f509b3413f9317698",
+      "language": "en",
+      "voice": "bm_george",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/en/json-ld-examples-and-use-cases.mp3",
+      "archived_source": "audio-source/en/done/json-ld-examples-and-use-cases.txt",
+      "generated_at": "2026-08-31T22:54:02.307792+00:00"
+    },
+    "es/json-ld-examples-and-use-cases.txt": {
+      "fingerprint": "d723d0733ae07af7b9527d3abc196b79dfdb985f1e1c7024655705a523e5c7fa",
+      "language": "es",
+      "voice": "em_alex",
+      "speed": 0.95,
+      "model": "mlx-community/Kokoro-82M-bf16",
+      "output": "public/audio/blog/es/json-ld-examples-and-use-cases.mp3",
+      "archived_source": "audio-source/es/done/json-ld-examples-and-use-cases.txt",
+      "generated_at": "2026-08-31T22:56:09.029272+00:00"
     }
   }
 }
