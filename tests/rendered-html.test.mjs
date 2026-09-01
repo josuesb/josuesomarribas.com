@@ -52,7 +52,8 @@ test("publishes only genuinely translated articles under the Spanish blog", asyn
   for (const directory of articleDirectories.filter((entry) => entry.isDirectory())) {
     try {
       const source = await readFile(new URL(`../content/articles/${directory.name}/es.md`, import.meta.url), "utf8");
-      if (/^draft:\s*false$/m.test(source)) translatedSlugs.push(directory.name);
+      const date = source.match(/^date:\s*"([^"]+)"$/m)?.[1];
+      if (/^draft:\s*false$/m.test(source) && date && Date.parse(date) <= Date.now()) translatedSlugs.push(directory.name);
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }
@@ -72,7 +73,8 @@ test("keeps published articles clustered and internal blog links resolvable", as
   for (const directory of articleDirectories.filter((entry) => entry.isDirectory())) {
     try {
       const source = await readFile(new URL(`../content/articles/${directory.name}/en.md`, import.meta.url), "utf8");
-      if (!/^draft:\s*false$/m.test(source)) continue;
+      const date = source.match(/^date:\s*"([^"]+)"$/m)?.[1];
+      if (!/^draft:\s*false$/m.test(source) || !date || Date.parse(date) > Date.now()) continue;
       publishedSlugs.add(directory.name);
       assert.match(source, /^cluster:\s*"[^"]+"$/m, `${directory.name} needs an editorial cluster`);
     } catch (error) {

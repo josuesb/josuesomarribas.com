@@ -4,12 +4,21 @@ import path from "node:path";
 const origin = "https://www.josuesomarribas.com";
 const articlesRoot = path.join(process.cwd(), "content", "articles");
 const outputRoot = path.join(process.cwd(), "dist", "client");
+const sanitySnapshot = path.join(process.cwd(), "work", "sanity-content.json");
+
+async function remoteArticles() {
+  if (process.env.SANITY_CONTENT_SOURCE !== "remote") return null;
+  const snapshot = JSON.parse(await readFile(sanitySnapshot, "utf8"));
+  return snapshot.articles;
+}
 
 const escapeXml = (value) => value.replace(/[<>&'"]/g, (character) => ({
   "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;",
 })[character]);
 
 async function publishedArticles() {
+  const remote = await remoteArticles();
+  if (remote) return remote.filter(article => article.locale === "en").sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
   const directories = (await readdir(articlesRoot, { withFileTypes:true }))
     .filter(entry => entry.isDirectory())
     .map(entry => entry.name);
@@ -28,6 +37,8 @@ async function publishedArticles() {
 }
 
 async function translatedSlugs() {
+  const remote = await remoteArticles();
+  if (remote) return new Set(remote.filter(article => article.locale === "es").map(article => article.slug));
   const directories = (await readdir(articlesRoot, { withFileTypes:true }))
     .filter(entry => entry.isDirectory())
     .map(entry => entry.name);

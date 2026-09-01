@@ -23,6 +23,7 @@ __pycache__/
 # next.js
 /.next/
 /.vinext/
+/.sanity/
 /out/
 
 # misc
