@@ -36,6 +36,10 @@ test("emits robots, sitemap and RSS into the deployed static directory", async (
   assert.match(sitemap, /<loc>https:\/\/www\.josuesomarribas\.com\/es\/blog\/the-cost-of-fouc-how-content-flicker-kills-test-validity<\/loc>/);
   assert.doesNotMatch(sitemap, /<loc>[^<]*\/writing/);
   assert.doesNotMatch(sitemap, /<lastmod>\d{3}-/);
+  assert.ok(sitemap.split("\n").length > 10, "sitemap should be human-readable rather than minified");
+  for (const [, lastModified] of sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) {
+    assert.ok(Date.parse(lastModified) <= Date.now(), `sitemap must not publish a future lastmod: ${lastModified}`);
+  }
   assert.match(rss, /<link>https:\/\/www\.josuesomarribas\.com\/blog<\/link>/);
   assert.match(rss, /<guid isPermaLink="true">https:\/\/www\.josuesomarribas\.com\/blog\//);
   assert.doesNotMatch(rss, /josuesomarribas\.com\/writing/);

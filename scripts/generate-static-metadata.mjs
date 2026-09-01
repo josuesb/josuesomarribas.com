@@ -22,7 +22,7 @@ async function publishedArticles() {
       const separator = line.indexOf(":");
       return [line.slice(0, separator), JSON.parse(line.slice(separator + 1).trim())];
     }));
-    if (!metadata.draft) articles.push(metadata);
+    if (!metadata.draft && Date.parse(metadata.date) <= Date.now()) articles.push(metadata);
   }
   return articles.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 }
@@ -48,9 +48,17 @@ async function translatedSlugs() {
 
 function sitemapEntry({ url, lastModified, priority, alternates }) {
   const alternateLinks = alternates
-    ? Object.entries(alternates).map(([language, href]) => `<xhtml:link rel="alternate" hreflang="${language}" href="${href}"/>`).join("")
+    ? Object.entries(alternates).map(([language, href]) => `    <xhtml:link rel="alternate" hreflang="${language}" href="${href}"/>`).join("\n")
     : "";
-  return `<url><loc>${url}</loc>${lastModified ? `<lastmod>${new Date(lastModified).toISOString()}</lastmod>` : ""}<changefreq>${lastModified ? "yearly" : "weekly"}</changefreq><priority>${priority}</priority>${alternateLinks}</url>`;
+  return [
+    "  <url>",
+    `    <loc>${url}</loc>`,
+    ...(lastModified ? [`    <lastmod>${new Date(lastModified).toISOString()}</lastmod>`] : []),
+    `    <changefreq>${lastModified ? "yearly" : "weekly"}</changefreq>`,
+    `    <priority>${priority}</priority>`,
+    ...(alternateLinks ? [alternateLinks] : []),
+    "  </url>",
+  ].join("\n");
 }
 
 function assertValidArticleDate(article) {
@@ -80,7 +88,10 @@ const sitemapEntries = [
   ...articles.map((article) => ({ url: `${origin}/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates: spanishSlugs.has(article.slug) ? { en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } : undefined })),
   ...articles.filter((article) => spanishSlugs.has(article.slug)).map((article) => ({ url: `${origin}/es/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates:{ en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } })),
 ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${sitemapEntries.map(sitemapEntry).join("")}</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${sitemapEntries.map(sitemapEntry).join("\n")}
+</urlset>\n`;
 const rssItems = articles.map((article) => {
   const url = `${origin}/blog/${article.slug}`;
   return `<item><title>${escapeXml(article.title)}</title><link>${url}</link><guid isPermaLink="true">${url}</guid><pubDate>${new Date(article.date).toUTCString()}</pubDate><description>${escapeXml(article.description)}</description></item>`;
