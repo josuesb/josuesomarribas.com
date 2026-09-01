@@ -4,6 +4,7 @@ import "../globals.css";
 import { MotionObserver } from "../MotionObserver";
 import AnalyticsTracker from "../../components/AnalyticsTracker";
 import DeferredThirdPartyScripts from "../../components/DeferredThirdPartyScripts";
+import SiteStructuredData from "../../components/SiteStructuredData";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
@@ -25,6 +26,6 @@ export const metadata: Metadata = {
 
 export default function SpanishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="es">
-    <body className={`${geist.variable} ${mono.variable}`}><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver />{children}</body>
+    <body className={`${geist.variable} ${mono.variable}`}><SiteStructuredData locale="es"/><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver />{children}</body>
   </html>;
 }
