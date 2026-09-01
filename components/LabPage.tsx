@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import { labTools } from "../lib/lab-tools";
 import SiteFooter from "./SiteFooter";
 import SiteNav from "./SiteNav";
 
@@ -11,7 +13,7 @@ type Category = "all" | "live" | "systems" | "experiments" | "utilities";
 const copy = {
   en:{
     title:"Useful things, built from curiosity.", intro:"Tools, experiments and side projects made to solve real problems.", filters:{all:"All",live:"Live tools",systems:"Client systems",experiments:"Experiments",utilities:"Utilities"},
-    open:"Open tool", preview:"View public preview", read:"Read how it works", concept:"View concept", featured:"Featured tool", updated:"Updated", live:"Live", development:"In development",
+    open:"Open tool", details:"View details", preview:"View public preview", read:"Read how it works", concept:"View concept", featured:"Featured tool", updated:"Updated", live:"Live", development:"In development",
     seconds:"Test whether a message is understood in five seconds—before traffic, polish or persuasion hide the problem.",
     wedding:"A private invitation platform with a public event layer, personalized guest experiences and a complete operational dashboard.",
     invite:"Personalized invitations", inviteCopy:"Unique links, reserved places, envelope animation and RSVP flows.", rsvp:"RSVP & guest operations", rsvpCopy:"Confirmations, released places, messages, exports and activity history.",
@@ -20,7 +22,7 @@ const copy = {
   },
   es:{
     title:"Cosas útiles, construidas desde la curiosidad.", intro:"Herramientas, experimentos y proyectos paralelos creados para resolver problemas reales.", filters:{all:"Todo",live:"Herramientas live",systems:"Sistemas",experiments:"Experimentos",utilities:"Utilidades"},
-    open:"Abrir herramienta", preview:"Ver vista pública", read:"Ver cómo funciona", concept:"Ver concepto", featured:"Herramienta destacada", updated:"Actualizado", live:"Live", development:"En desarrollo",
+    open:"Abrir herramienta", details:"Ver ficha", preview:"Ver vista pública", read:"Ver cómo funciona", concept:"Ver concepto", featured:"Herramienta destacada", updated:"Actualizado", live:"Live", development:"En desarrollo",
     seconds:"Comprueba si un mensaje se entiende en cinco segundos, antes de que el tráfico, el acabado o la persuasión oculten el problema.",
     wedding:"Una plataforma privada de invitaciones con página pública, experiencias personalizadas y un panel operativo completo.",
     invite:"Invitaciones personalizadas", inviteCopy:"Enlaces únicos, cupos reservados, animación de sobre y flujos RSVP.", rsvp:"RSVP y gestión de invitados", rsvpCopy:"Confirmaciones, cupos liberados, mensajes, exportaciones e historial de actividad.",
@@ -29,20 +31,10 @@ const copy = {
   },
 };
 
-const tools = [
-  {id:"font",number:"02",category:"utilities" as const,status:"live",name:{en:"Font Tester",es:"Probador de tipografías"},description:{en:"Compare typefaces with real content, fine-tune size and spacing, and test readability.",es:"Compara tipografías con contenido real, ajusta tamaño y espaciado y prueba la legibilidad."},image:"/assets/project-previews/font-tester.webp",href:"https://fonts.josuesomarribas.com/?color=%23111111&bgColor=%23ffffff"},
-  {id:"audio",number:"03",category:"utilities" as const,status:"live",name:{en:"Local Blog Audio Generator",es:"Generador local de audio"},description:{en:"Generate natural-sounding article narration locally, privately and without a per-use fee.",es:"Genera narraciones naturales de artículos localmente, con privacidad y sin coste por uso."},image:"/assets/writing-editorial/06-ssml-audio.svg",href:"/blog/how-i-generate-natural-blog-audio-locally-for-free"},
-  {id:"preflight",number:"04",category:"experiments" as const,status:"live",name:{en:"Experiment Preflight",es:"Preflight de experimentos"},description:{en:"Check whether an A/B test has enough traffic and time to detect an effect that would actually be worth shipping.",es:"Comprueba si un test A/B tiene suficiente tráfico y tiempo para detectar un efecto que realmente justificaría implementar."},image:"/assets/lab/experiment-preflight.webp",href:"https://experiments.josuesomarribas.com/"},
-  {id:"fouc",number:"05",category:"experiments" as const,status:"concept",name:{en:"FOUC Simulator",es:"Simulador de FOUC"},description:{en:"See how content flicker contaminates perception, behavior and experiment validity.",es:"Observa cómo el parpadeo contamina la percepción, el comportamiento y la validez del experimento."},image:"/assets/writing-editorial/01-fouc-original-flicker-variant.svg",href:"/blog/the-cost-of-fouc-how-content-flicker-kills-test-validity"},
-  {id:"concat",number:"06",category:"utilities" as const,status:"live",name:{en:"URL Concat Tool",es:"Generador masivo de URLs"},description:{en:"Turn Excel or CSV rows into parameterized URLs from a reusable template. Files stay entirely inside the browser.",es:"Convierte filas de Excel o CSV en URLs parametrizadas usando una plantilla reutilizable. Los archivos permanecen en el navegador."},image:"/assets/lab/concat.webp",href:"https://concat.josuesomarribas.com/"},
-  {id:"utm",number:"07",category:"utilities" as const,status:"live",name:{en:"UTM Builder & Validator",es:"Generador y validador UTM"},description:{en:"Build campaign URLs, detect naming and encoding problems, and preview how their values will appear in GA4.",es:"Crea enlaces de campaña, detecta problemas de nomenclatura y encoding y previsualiza sus valores en GA4."},image:"/assets/lab/utm-builder.webp",href:"https://utm.josuesomarribas.com/"},
-  {id:"debug",number:"08",category:"utilities" as const,status:"live",name:{en:"Browser Debug Report",es:"Informe de depuración del navegador"},description:{en:"Capture viewport, screen, browser, input and preference details in one report that is ready to share with a developer.",es:"Recopila viewport, pantalla, navegador, métodos de entrada y preferencias en un informe listo para compartir con un desarrollador."},image:"/assets/lab/browser-debug.webp",href:"https://debug.josuesomarribas.com/"},
-];
-
 export default function LabPage({ locale="en" }:{ locale?:Locale }) {
   const t = copy[locale];
   const [filter,setFilter] = useState<Category>("all");
-  const visibleTools = useMemo(() => tools.filter(tool => filter === "all" || tool.category === filter || (filter === "live" && tool.status === "live")),[filter]);
+  const visibleTools = useMemo(() => labTools.filter(tool => tool.number !== "01" && (filter === "all" || tool.category === filter || (filter === "live" && tool.status === "live"))),[filter]);
   const filters = Object.entries(t.filters) as [Category,string][];
 
   return <main className="labx-page">
@@ -61,8 +53,8 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       <nav className="labx-filters" aria-label={locale === "es" ? "Filtrar herramientas" : "Filter tools"}>{filters.map(([value,label])=><button key={value} type="button" className={filter===value?"active":""} aria-pressed={filter===value} onClick={()=>setFilter(value)}>{label}</button>)}</nav>
 
       {(filter === "all" || filter === "live") && <article className="labx-featured">
-        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><a href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer">{t.open} <span aria-hidden="true">→</span></a></div>
-        <a className="labx-featured-image" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer" aria-label={`${t.open}: 5 Seconds Tester`}><Image src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester interface" fill sizes="(max-width: 760px) calc(100vw - 48px), 58vw" unoptimized/></a>
+        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><Link href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`}>{t.details} <span aria-hidden="true">→</span></Link></div>
+        <Link className="labx-featured-image" href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`} aria-label={`${t.details}: 5 Seconds Tester`}><Image src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester interface" fill sizes="(max-width: 760px) calc(100vw - 48px), 58vw" unoptimized/></Link>
       </article>}
 
       {(filter === "all" || filter === "systems") && <article className="labx-wedding">
@@ -76,7 +68,7 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       {!!visibleTools.length && <section className="labx-tool-grid" aria-label={locale === "es" ? "Herramientas y experimentos" : "Tools and experiments"}>{visibleTools.map(tool=><article key={tool.id}>
         <header><b>{tool.number}</b><span>{tool.category === "utilities" ? t.filters.utilities : t.filters.experiments}</span></header>
         <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" loading="eager" unoptimized/></div>
-        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={tool.href} target={tool.href.startsWith("http")?"_blank":undefined} rel={tool.href.startsWith("http")?"noreferrer":undefined}>{tool.status === "concept" ? t.concept : tool.id === "audio" ? t.read : t.open} <span aria-hidden="true">→</span></a>
+        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><Link href={`${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} <span aria-hidden="true">→</span></Link>
       </article>)}</section>}
 
       <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><a href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse} <span aria-hidden="true">→</span></a></aside>
