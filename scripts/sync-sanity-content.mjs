@@ -2,6 +2,7 @@ import {createClient} from "@sanity/client";
 import {mkdir, writeFile} from "node:fs/promises";
 import {existsSync} from "node:fs";
 import path from "node:path";
+import {portableTextToHtml} from "./lib/portable-text-html.mjs";
 
 const projectId = "uui9v8rf";
 const dataset = "production";
@@ -29,10 +30,15 @@ const query = `*[_type == "article" && publicationDate <= now()] | order(publica
   "downloadUrl": coalesce(downloadUrl, ""),
   "downloadText": coalesce(downloadText, ""),
   legacySlug,
-  "body": bodyHtml.code
+  "portableBody": body,
+  "legacyBody": bodyHtml.code
 }`;
 
-const articles = await client.fetch(query);
+const remoteArticles = await client.fetch(query);
+const articles = remoteArticles.map(article => {
+  const {portableBody, legacyBody, ...metadata} = article;
+  return {...metadata, body: Array.isArray(portableBody) && portableBody.length ? portableTextToHtml(portableBody) : legacyBody};
+});
 if (!Array.isArray(articles) || articles.length === 0) throw new Error("Sanity returned no published articles; refusing to build an empty site.");
 for (const article of articles) {
   if (!article.slug || !article.locale || !article.title || !article.body) throw new Error(`Incomplete Sanity article: ${article.slug ?? "unknown slug"}`);
