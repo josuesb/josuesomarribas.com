@@ -108,9 +108,43 @@ const sitemapEntries = [
   ...articles.filter((article) => spanishSlugs.has(article.slug)).map((article) => ({ url: `${origin}/es/blog/${article.slug}`, lastModified: article.date, priority: "0.6", alternates:{ en:`${origin}/blog/${article.slug}`, es:`${origin}/es/blog/${article.slug}` } })),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${sitemapEntries.map(sitemapEntry).join("\n")}
 </urlset>\n`;
+const sitemapStylesheet = `<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <xsl:output method="html" encoding="UTF-8"/>
+  <xsl:template match="/">
+    <html lang="es">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Sitemap — Josue Somarribas</title>
+        <style>
+          *{box-sizing:border-box}body{margin:0;background:#f7f0df;color:#101920;font-family:Arial,sans-serif}header{padding:48px max(24px,calc((100% - 1120px)/2));background:#101920;color:#f7f0df}h1{margin:0 0 8px;font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,5rem);font-weight:500;letter-spacing:-.05em}header p{margin:0;color:#c9c4b9}main{width:min(1120px,calc(100% - 48px));margin:32px auto 64px}.summary{margin:0 0 18px;color:#0849b6;font-family:monospace;font-size:.78rem;font-weight:700;text-transform:uppercase}table{width:100%;border-collapse:collapse;background:#fffaf0;border:1px solid #c8c0b2}th,td{padding:14px 16px;border-bottom:1px solid #d8d0c2;text-align:left;vertical-align:top}th{background:#ebe4d7;font-family:monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}td{font-size:.86rem}a{color:#0849b6;overflow-wrap:anywhere}tr:hover td{background:#f3ecdf}.priority{font-family:monospace}@media(max-width:680px){header{padding:32px 20px}main{width:calc(100% - 24px)}th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3){display:none}th,td{padding:12px 10px}}
+        </style>
+      </head>
+      <body>
+        <header><h1>Sitemap</h1><p>josuesomarribas.com · Índice de páginas públicas</p></header>
+        <main>
+          <p class="summary"><xsl:value-of select="count(s:urlset/s:url)"/> URLs indexables</p>
+          <table>
+            <thead><tr><th>URL</th><th>Última modificación</th><th>Prioridad</th></tr></thead>
+            <tbody>
+              <xsl:for-each select="s:urlset/s:url">
+                <tr>
+                  <td><a href="{s:loc}"><xsl:value-of select="s:loc"/></a></td>
+                  <td><xsl:choose><xsl:when test="s:lastmod"><xsl:value-of select="substring(s:lastmod,1,10)"/></xsl:when><xsl:otherwise>—</xsl:otherwise></xsl:choose></td>
+                  <td class="priority"><xsl:value-of select="s:priority"/></td>
+                </tr>
+              </xsl:for-each>
+            </tbody>
+          </table>
+        </main>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>\n`;
 const rssItems = articles.map((article) => {
   const url = `${origin}/blog/${article.slug}`;
   return `<item><title>${escapeXml(article.title)}</title><link>${url}</link><guid isPermaLink="true">${url}</guid><pubDate>${new Date(article.date).toUTCString()}</pubDate><description>${escapeXml(article.description)}</description></item>`;
@@ -122,5 +156,6 @@ await mkdir(outputRoot, { recursive: true });
 await Promise.all([
   writeFile(path.join(outputRoot, "robots.txt"), robots),
   writeFile(path.join(outputRoot, "sitemap.xml"), sitemap),
+  writeFile(path.join(outputRoot, "sitemap.xsl"), sitemapStylesheet),
   writeFile(path.join(outputRoot, "rss.xml"), rss),
 ]);

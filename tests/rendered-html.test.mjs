@@ -25,9 +25,10 @@ test("exports canonical public pages as static HTML", async () => {
 });
 
 test("emits robots, sitemap and RSS into the deployed static directory", async () => {
-  const [robots, sitemap, rss] = await Promise.all([
+  const [robots, sitemap, stylesheet, rss] = await Promise.all([
     readFile(output("robots.txt"), "utf8"),
     readFile(output("sitemap.xml"), "utf8"),
+    readFile(output("sitemap.xsl"), "utf8"),
     readFile(output("rss.xml"), "utf8"),
   ]);
   assert.match(robots, /Sitemap: https:\/\/www\.josuesomarribas\.com\/sitemap\.xml/);
@@ -37,6 +38,9 @@ test("emits robots, sitemap and RSS into the deployed static directory", async (
   assert.doesNotMatch(sitemap, /<loc>[^<]*\/writing/);
   assert.doesNotMatch(sitemap, /<lastmod>\d{3}-/);
   assert.ok(sitemap.split("\n").length > 10, "sitemap should be human-readable rather than minified");
+  assert.match(sitemap, /<\?xml-stylesheet type="text\/xsl" href="\/sitemap\.xsl"\?>/);
+  assert.match(stylesheet, /<xsl:stylesheet/);
+  assert.match(stylesheet, /Índice de páginas públicas/);
   for (const [, lastModified] of sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) {
     assert.ok(Date.parse(lastModified) <= Date.now(), `sitemap must not publish a future lastmod: ${lastModified}`);
   }
