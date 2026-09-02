@@ -1,13 +1,16 @@
 TODO — josuesomarribas.com
-Revisión: 2026-08-30
+Revisión: 2026-09-03
 
 ESTADO ACTUAL
 
 - Repositorio publicado desde main en Vercel.
+- Sanity es la fuente de contenido del build de producción.
 - 45 artículos publicados en inglés.
 - 15 artículos publicados en español.
-- Todos los artículos publicados tienen imagen local optimizada.
-- Todos los artículos publicados tienen audio MP3 local.
+- Los 105 documentos de Sanity tienen sus imágenes gestionadas en el CMS.
+- Los 60 artículos publicados tienen imagen de portada y audio gestionados en Sanity.
+- Las imágenes editoriales internas están migradas a assets de Sanity.
+- Las rutas locales se conservan temporalmente como respaldo de migración.
 - Sitemap, RSS, canonical y hreflang generados automáticamente.
 - Redirecciones permanentes activas para artículos fusionados.
 - Enlaces internos publicados validados durante el build.
@@ -15,6 +18,10 @@ ESTADO ACTUAL
 - npm run lint y npm test en verde.
 
 PRIORIDAD ALTA — CONTENIDO
+
+[x] Migrar imágenes y audios existentes a Sanity.
+    106 imágenes y 62 audios únicos subidos sin referencias ausentes.
+    Los 105 documentos fueron actualizados en una sola transacción.
 
 [ ] Traducir selectivamente los mejores artículos pendientes.
     Quedan 30 artículos publicados en inglés sin versión española.
