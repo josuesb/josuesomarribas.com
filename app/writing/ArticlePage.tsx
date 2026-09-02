@@ -26,10 +26,10 @@ function prepareBody(body:string) {
 function availableAudio(article:Article, locale:"en"|"es") {
   const generatedUrl = `/audio/blog/${locale}/${article.slug}.mp3`;
   const publicFile = (url:string) => path.join(process.cwd(), "public", url.replace(/^\//, ""));
+  if (article.audio && !article.audio.startsWith("/")) return article.audio;
+  if (article.audio && fs.existsSync(publicFile(article.audio))) return article.audio;
   if (fs.existsSync(publicFile(generatedUrl))) return generatedUrl;
-  if (!article.audio) return undefined;
-  if (article.audio.startsWith("/") && !fs.existsSync(publicFile(article.audio))) return undefined;
-  return article.audio;
+  return undefined;
 }
 
 function articleHref(article:ArticleMeta, locale:"en"|"es") {
