@@ -2,6 +2,7 @@ import {escapeHTML, toHTML, uriLooksSafe} from "@portabletext/to-html";
 
 const components = {
   types: {
+    image: ({value}) => `<figure class="article-editorial-figure"><img src="${escapeHTML(value.url ?? "")}" alt="${escapeHTML(value.alt ?? "")}" loading="lazy">${value.caption ? `<figcaption>${escapeHTML(value.caption)}</figcaption>` : ""}</figure>`,
     externalImage: ({value}) => `<img src="${escapeHTML(value.src ?? "")}" alt="${escapeHTML(value.alt ?? "")}" loading="lazy">`,
     editorialFigure: ({value}) => `<figure class="article-editorial-figure"><img src="${escapeHTML(value.src ?? "")}" alt="${escapeHTML(value.alt ?? "")}" loading="lazy">${value.caption ? `<figcaption>${escapeHTML(value.caption)}</figcaption>` : ""}</figure>`,
     codeBlock: ({value}) => `<pre data-language="${escapeHTML(value.language ?? "text")}"><code>${escapeHTML(value.code ?? "")}</code></pre>`,

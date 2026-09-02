@@ -6,6 +6,7 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "prebuild": "node scripts/clean-build-output.mjs",
     "dev": "vinext dev",
     "build": "vinext build && node scripts/generate-static-metadata.mjs",
     "build:sanity": "node scripts/sync-sanity-content.mjs && SANITY_CONTENT_SOURCE=remote npm run build",

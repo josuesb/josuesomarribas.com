@@ -12,6 +12,7 @@ export type Article = ArticleMeta & { body: string };
 
 const articlesRoot = path.join(process.cwd(), "content", "articles");
 const sanitySnapshot = path.join(process.cwd(), "work", "sanity-content.json");
+const isPublished = (article: ArticleMeta) => !article.draft && Date.parse(article.date) <= Date.now();
 
 function sanityArticles(): Article[] | null {
   if (process.env.SANITY_CONTENT_SOURCE !== "remote" || !fs.existsSync(sanitySnapshot)) return null;
@@ -34,21 +35,23 @@ function readArticleFile(file: string): Article {
 
 export function getAllArticles({ includeDrafts = false, locale = "en" as "en" | "es" } = {}): ArticleMeta[] {
   const remoteArticles = sanityArticles();
-  if (remoteArticles) return remoteArticles.filter(article => article.locale === locale && (includeDrafts || !article.draft))
+  if (remoteArticles) return remoteArticles.filter(article => article.locale === locale && (includeDrafts || isPublished(article)))
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     .map(article => { const metadata = { ...article } as Article & { body?:string }; delete metadata.body; return metadata; });
   if (!fs.existsSync(articlesRoot)) return [];
   return fs.readdirSync(articlesRoot).flatMap(slug => {
     const file = path.join(articlesRoot, slug, `${locale}.md`);
     return fs.existsSync(file) ? [readArticleFile(file)] : [];
-  }).filter(article => includeDrafts || !article.draft)
+  }).filter(article => includeDrafts || isPublished(article))
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     .map(article => { const metadata = { ...article } as Article & { body?:string }; delete metadata.body; return metadata; });
 }
 
 export function getArticle(slug: string, locale: "en" | "es" = "en"): Article | null {
   const remoteArticles = sanityArticles();
-  if (remoteArticles) return remoteArticles.find(article => article.slug === slug && article.locale === locale) ?? null;
+  if (remoteArticles) return remoteArticles.find(article => article.slug === slug && article.locale === locale && isPublished(article)) ?? null;
   const file = path.join(articlesRoot, slug, `${locale}.md`);
-  return fs.existsSync(file) ? readArticleFile(file) : null;
+  if (!fs.existsSync(file)) return null;
+  const article = readArticleFile(file);
+  return isPublished(article) ? article : null;
 }

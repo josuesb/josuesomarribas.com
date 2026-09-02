@@ -14,6 +14,7 @@ const schema = Schema.compile({
         {type: "block", styles: ["normal", "h1", "h2", "h3", "h4", "blockquote"].map(value => ({title: value, value})), marks: {annotations: [{name: "link", type: "object", fields: [{name: "href", type: "string"}]}]}},
         {name: "externalImage", type: "object", fields: [{name: "src", type: "string"}, {name: "alt", type: "string"}]},
         {name: "editorialFigure", type: "object", fields: [{name: "src", type: "string"}, {name: "alt", type: "string"}, {name: "caption", type: "string"}]},
+        {type: "image", options: {hotspot: true}, fields: [{name: "alt", type: "string"}, {name: "caption", type: "string"}]},
         {name: "codeBlock", type: "object", fields: [{name: "language", type: "string"}, {name: "code", type: "text"}]},
         {name: "rawHtml", type: "object", fields: [{name: "label", type: "string"}, {name: "html", type: "object", fields: [{name: "language", type: "string"}, {name: "code", type: "text"}]}]},
       ],

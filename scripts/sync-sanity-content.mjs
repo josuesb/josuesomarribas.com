@@ -21,16 +21,19 @@ const query = `*[_type == "article" && publicationDate <= now()] | order(publica
   "type": coalesce(contentType, "Blog"),
   "cluster": topic->slug.current,
   "tags": coalesce(tags, []),
-  "audio": coalesce(audioPath, ""),
+  "audio": coalesce(audioFile.asset->url, audioPath, ""),
   "sourceImage": coalesce(sourceImagePath, ""),
-  "imageAlt": coalesce(imageAlt, ""),
-  "image": coalesce(imagePath, ""),
+  "imageAlt": coalesce(mainImage.alt, imageAlt, ""),
+  "image": coalesce(mainImage.asset->url, imagePath, ""),
   "canonical": coalesce(canonical, ""),
   "featured": coalesce(featured, false),
   "downloadUrl": coalesce(downloadUrl, ""),
   "downloadText": coalesce(downloadText, ""),
   legacySlug,
-  "portableBody": body,
+  "portableBody": body[]{
+    ...,
+    _type == "image" => {..., "url": asset->url}
+  },
   "legacyBody": bodyHtml.code
 }`;
 
