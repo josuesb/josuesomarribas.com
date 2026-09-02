@@ -6,9 +6,9 @@ ESTADO ACTUAL
 - Repositorio publicado desde main en Vercel.
 - Sanity es la fuente de contenido del build de producción.
 - 45 artículos publicados en inglés.
-- 15 artículos publicados en español.
-- Los 105 documentos de Sanity tienen sus imágenes gestionadas en el CMS.
-- Los 60 artículos publicados tienen imagen de portada y audio gestionados en Sanity.
+- 18 artículos publicados en español.
+- Los 108 documentos de Sanity tienen sus imágenes gestionadas en el CMS.
+- Los 63 artículos publicados tienen imagen de portada gestionada en Sanity; 60 tienen audio.
 - Las imágenes editoriales internas están migradas a assets de Sanity.
 - Las rutas locales se conservan temporalmente como respaldo de migración.
 - Sitemap, RSS, canonical y hreflang generados automáticamente.
@@ -23,10 +23,11 @@ PRIORIDAD ALTA — CONTENIDO
     106 imágenes y 62 audios únicos subidos sin referencias ausentes.
     Los 105 documentos fueron actualizados en una sola transacción.
 
-[ ] Traducir selectivamente los mejores artículos pendientes.
-    Quedan 30 artículos publicados en inglés sin versión española.
-    Priorizar por calidad, relevancia profesional y potencial de búsqueda.
-    No traducir automáticamente contenido débil o que pueda fusionarse.
+[x] Traducir selectivamente los mejores artículos pendientes.
+    Primer lote editorial publicado: guía completa de test A/B y CRO, GEO vs. SEO
+    y riesgo de homogeneización visual con IA.
+    Quedan 27 artículos ingleses sin versión española; no se traducen en bloque
+    hasta disponer de señales de rendimiento o una razón editorial concreta.
 
 [ ] Revisar los 43 borradores ingleses.
     Clasificar cada uno como:

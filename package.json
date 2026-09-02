@@ -24,6 +24,7 @@
     "sanity:sync": "node scripts/sync-sanity-content.mjs",
     "sanity:migrate-portable-text": "sanity exec scripts/migrate-sanity-portable-text.mjs --with-user-token",
     "sanity:migrate-media": "sanity exec scripts/migrate-sanity-media.mjs --with-user-token",
+    "sanity:translate-selected": "sanity exec scripts/translate-sanity-articles.mjs --with-user-token",
     "sanity:import": "npm run sanity:prepare-import && sanity dataset import work/sanity-import.ndjson --dataset production --replace",
     "db:generate": "drizzle-kit generate"
   },
