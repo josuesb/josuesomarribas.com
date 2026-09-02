@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { labTools } from "../lib/lab-tools";
 import SiteFooter from "./SiteFooter";
@@ -53,8 +52,8 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       <nav className="labx-filters" aria-label={locale === "es" ? "Filtrar herramientas" : "Filter tools"}>{filters.map(([value,label])=><button key={value} type="button" className={filter===value?"active":""} aria-pressed={filter===value} onClick={()=>setFilter(value)}>{label}</button>)}</nav>
 
       {(filter === "all" || filter === "live") && <article className="labx-featured">
-        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><Link href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`}>{t.details} <span aria-hidden="true">→</span></Link></div>
-        <Link className="labx-featured-image" href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`} aria-label={`${t.details}: 5 Seconds Tester`}><Image src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester interface" fill sizes="(max-width: 760px) calc(100vw - 48px), 58vw" unoptimized/></Link>
+        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><a href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`}>{t.details} <span aria-hidden="true">→</span></a></div>
+        <a className="labx-featured-image" href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`} aria-label={`${t.details}: 5 Seconds Tester`}><Image src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester interface" fill sizes="(max-width: 760px) calc(100vw - 48px), 58vw" unoptimized/></a>
       </article>}
 
       {(filter === "all" || filter === "systems") && <article className="labx-wedding">
@@ -68,7 +67,7 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       {!!visibleTools.length && <section className="labx-tool-grid" aria-label={locale === "es" ? "Herramientas y experimentos" : "Tools and experiments"}>{visibleTools.map(tool=><article key={tool.id}>
         <header><b>{tool.number}</b><span>{tool.category === "utilities" ? t.filters.utilities : t.filters.experiments}</span></header>
         <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" loading="eager" unoptimized/></div>
-        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><Link href={`${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} <span aria-hidden="true">→</span></Link>
+        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={`${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} <span aria-hidden="true">→</span></a>
       </article>)}</section>}
 
       <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><a href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse} <span aria-hidden="true">→</span></a></aside>

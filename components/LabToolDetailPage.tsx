@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { labTools, type LabLocale, type LabTool } from "../lib/lab-tools";
 import SiteFooter from "./SiteFooter";
 import SiteNav from "./SiteNav";
@@ -24,7 +23,7 @@ export default function LabToolDetailPage({ tool, locale }:{tool:LabTool;locale:
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}}/>
     <section className="labd-hero shell">
       <div className="labd-hero-copy">
-        <Link className="labd-back" href={base}>← {t.lab}</Link>
+        <a className="labd-back" href={base}>← {t.lab}</a>
         <p className="labd-kicker">LAB / {tool.number} · {tool.status === "live" ? t.live : t.concept}</p>
         <h1>{tool.name[locale]}</h1>
         <p className="labd-deck">{tool.description[locale]}</p>
@@ -39,7 +38,7 @@ export default function LabToolDetailPage({ tool, locale }:{tool:LabTool;locale:
         <section><p>03 / SYSTEM</p><h2>{t.architecture}</h2><p>{tool.architecture[locale]}</p><h3>{t.built}</h3><ul className="labd-stack">{tool.stack.map(item=><li key={item}>{item}</li>)}</ul></section>
         <section><p>04 / HONEST NOTES</p><h2>{t.limits}</h2><ul className="labd-limits">{tool.limits[locale].map(item=><li key={item}>{item}</li>)}</ul></section>
       </div>
-      <nav className="labd-next"><Link href={base}>← {t.back}</Link><Link href={`${base}/${nextTool.slug}`}><small>{t.next}</small>{nextTool.name[locale]} <span aria-hidden="true">→</span></Link></nav>
+      <nav className="labd-next"><a href={base}>← {t.back}</a><a href={`${base}/${nextTool.slug}`}><small>{t.next}</small>{nextTool.name[locale]} <span aria-hidden="true">→</span></a></nav>
     </div>
     <SiteFooter locale={locale} current="lab"/>
   </main>;
