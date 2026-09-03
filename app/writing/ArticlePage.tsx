@@ -19,7 +19,8 @@ function prepareBody(body:string) {
     while (used.has(id)) id = `${id}-${suffix++}`; used.add(id);
     headings.push({ id, label:plainText(content) });
     return `<h2${attributes} id="${id}">${content}</h2>`;
-  });
+  }).replace(/<table\b/gi, '<div class="article-table-scroll"><table')
+    .replace(/<\/table>/gi, '</table></div>');
   return { html, headings };
 }
 

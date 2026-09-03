@@ -46,9 +46,12 @@ PRIORIDAD ALTA — CONTENIDO
 
 PRIORIDAD MEDIA — CALIDAD DEL SITIO
 
-[ ] Ejecutar una auditoría responsive completa en móvil y tablet.
-    Revisar home, About, Now, índice del blog y detalle de artículos.
-    Comprobar títulos largos, navegación, imágenes, tablas, código y animaciones.
+[x] Ejecutar una auditoría responsive completa en móvil y tablet.
+    - 10 rutas EN/ES revisadas a 320, 375, 768 y 1024 px.
+    - Eliminado el scroll horizontal de About y de las tarjetas españolas.
+    - Corregido el grid del newsletter español en móvil.
+    - Las tablas de artículos conservan ahora un ancho legible con scroll interno;
+      código, imágenes, títulos largos, navegación y animaciones no desbordan.
 
 [x] Ejecutar una auditoría WCAG 2.1 AA.
     - 11 rutas representativas auditadas en inglés y español con Pa11y WCAG2AA.
