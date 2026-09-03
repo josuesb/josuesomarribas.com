@@ -644,6 +644,34 @@ footer .footer-email{display:none}
   overflow:hidden;
 }
 
+/* WCAG 2.1 AA: text colors on light editorial surfaces. */
+.project:not(.project-blue) .number,
+.about-work-copy small,
+.about-career small,
+.about-outside small,
+.about-voices small,
+.about-career-intro a,
+.about-outside a,
+.about-voices cite,
+.about-voices>a,
+.featured-card:first-child small,
+.writing-page .newsletter form>a{
+  color:#a9271a;
+}
+
+.about-thinking small,
+.about-thinking-grid b{
+  color:#ff745f;
+}
+
+.writing-index-v2 .note-meta{
+  color:#565d61;
+}
+
+.writing-page .newsletter button{
+  background:#b42318;
+}
+
 /* Responsive primary navigation. */
 .mobile-nav{display:none;position:relative}
 .mobile-nav summary{width:44px;height:44px;display:grid;place-items:center;border:1px solid currentColor;border-radius:5px;cursor:pointer;list-style:none}

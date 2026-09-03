@@ -79,3 +79,21 @@
 .labd-tech li span{display:grid;place-items:center;width:23px;height:23px;border:1px solid #aaa39a}.labd-tech>a{font:750 .6rem var(--font-mono);text-transform:uppercase}
 @media(max-width:900px){.labd-page .labd-hero{grid-template-columns:1fr}.labd-page .labd-problem{grid-template-columns:1fr 1fr;gap:26px}.labd-page .labd-problem>p:first-child{grid-column:1/-1}.labd-page .labd-features ol{grid-template-columns:1fr}.labd-tech{grid-template-columns:1fr}}
 @media(max-width:620px){.labd-page .labd-hero{padding-block:38px}.labd-page .labd-hero h1{font-size:clamp(3.2rem,16vw,5rem)}.labd-meta{display:grid;gap:7px}.labd-meta span+span::before{display:none}.labd-visual-frame{min-height:280px}.labd-page .labd-problem{grid-template-columns:1fr}.labd-page .labd-problem>p:first-child{grid-column:auto}.labd-context-mark{min-height:145px}}
+
+/* WCAG 2.1 AA: reserve bright coral/blue for decoration and darken body-sized text. */
+.labx-hero-copy>p:first-child,
+.labx-wedding-copy>p:first-child,
+.labx-wedding-copy em,
+.labd-kicker,
+.labd-body section>p:first-child{
+  color:#a9271a;
+}
+
+.labd-preview-head span:last-child,
+.labd-next small{
+  color:#575c5f;
+}
+
+.labd-tech>p{
+  color:#063a91;
+}

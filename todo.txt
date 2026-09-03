@@ -50,9 +50,12 @@ PRIORIDAD MEDIA — CALIDAD DEL SITIO
     Revisar home, About, Now, índice del blog y detalle de artículos.
     Comprobar títulos largos, navegación, imágenes, tablas, código y animaciones.
 
-[ ] Ejecutar una auditoría WCAG 2.1 AA.
-    Revisar navegación por teclado, focus-visible, contraste, orden semántico,
-    etiquetas accesibles y comportamiento con prefers-reduced-motion.
+[x] Ejecutar una auditoría WCAG 2.1 AA.
+    - 11 rutas representativas auditadas en inglés y español con Pa11y WCAG2AA.
+    - Corregido el contraste de etiquetas, metadatos, enlaces y CTA en Home,
+      About, Blog, Lab y fichas de Lab; el nuevo barrido no devuelve errores.
+    - Verificados controles nativos, nombres accesibles, orden semántico,
+      focus-visible global y comportamiento con prefers-reduced-motion.
 
 [ ] Medir Core Web Vitals en producción.
     Revisar LCP, CLS e INP en las rutas principales y en varios artículos.
