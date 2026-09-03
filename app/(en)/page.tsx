@@ -3,9 +3,9 @@ import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
 import Image from "next/image";
 import ExperienceDuration from "../../components/ExperienceDuration";
-import type { CSSProperties } from "react";
 import { getAllArticles } from "../../lib/content";
 import CroExperienceSection from "../../components/CroExperienceSection";
+import HeroExperimentArtwork from "../../components/HeroExperimentArtwork";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -20,21 +20,6 @@ const CapabilityIcon = ({ type }: { type: "research" | "experiment" | "code" | "
   };
   return <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[type]}</svg>;
 };
-
-const ExperimentArtwork = () => (
-  <div className="hero-signal-flow" role="img" aria-label="Experiment workflow from signal to measurable result">
-    <div className="hero-flow-line" aria-hidden="true" />
-    {[
-      { label:"SIGNAL", number:"01", className:"flow-signal", content:<><small>Conversion rate</small><strong>+18.7%</strong><span className="flow-chart"><i/><i/><i/><i/><i/></span></> },
-      { label:"HYPOTHESIS", number:"02", className:"flow-hypothesis", content:<p>If we <b>reduce friction</b> in the pricing section, more users will complete the upgrade.</p> },
-      { label:"BUILD", number:"03", className:"flow-build", content:<code><span><b>const</b> test = {'{'}</span><span>&nbsp;&nbsp;variant: <i>&apos;B&apos;</i>,</span><span>&nbsp;&nbsp;change: <i>&apos;clarity&apos;</i></span><span>{'}'};</span><em>deploy(test);</em></code> },
-      { label:"MEASURE", number:"04", className:"flow-measure", content:<><small>Result</small><strong>+18.7%</strong><span>Lift</span><hr/><span>Stat. Sig. <b>99%</b></span></> },
-    ].map((step,index)=><section className={`hero-flow-step ${step.className}`} key={step.label} style={{ "--flow-index":index } as CSSProperties}>
-      <header><b>{step.label}</b><span>{step.number}</span><i aria-hidden="true" /></header>
-      <div>{step.content}</div>
-    </section>)}
-  </div>
-);
 
 export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
   const latestArticles = getAllArticles({ locale }).slice(0, 3);
@@ -56,7 +41,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             </div>
           </div>
 
-          <ExperimentArtwork />
+          <HeroExperimentArtwork locale={locale} />
         </div>
         <p className="meta shell"><i aria-hidden="true" /><ExperienceDuration locale={locale}/> <b>·</b> {locale === "es" ? "España" : "Spain"} <b>·</b> {locale === "es" ? "Trabajo globalmente" : "Working globally"}</p>
       </section>
