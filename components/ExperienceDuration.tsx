@@ -39,8 +39,8 @@ export default function ExperienceDuration({ locale="en" }:{ locale?:"en"|"es" }
   }, []);
 
   const text = locale === "es"
-    ? `${duration.years} AÑOS, ${duration.months} MESES y ${duration.days} DÍAS de experiencia`
-    : `${duration.years} YEARS, ${duration.months} MONTHS and ${duration.days} DAYS of experience`;
+    ? `${duration.years} ${duration.years === 1 ? "AÑO" : "AÑOS"}, ${duration.months} ${duration.months === 1 ? "MES" : "MESES"} y ${duration.days} ${duration.days === 1 ? "DÍA" : "DÍAS"} de experiencia`
+    : `${duration.years} ${duration.years === 1 ? "YEAR" : "YEARS"}, ${duration.months} ${duration.months === 1 ? "MONTH" : "MONTHS"} and ${duration.days} ${duration.days === 1 ? "DAY" : "DAYS"} of experience`;
 
   return <time dateTime={`P${duration.years}Y${duration.months}M${duration.days}D`} suppressHydrationWarning>{text}</time>;
 }
