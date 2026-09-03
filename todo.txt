@@ -29,11 +29,12 @@ PRIORIDAD ALTA — CONTENIDO
     Quedan 27 artículos ingleses sin versión española; no se traducen en bloque
     hasta disponer de señales de rendimiento o una razón editorial concreta.
 
-[ ] Revisar los 43 borradores ingleses.
-    Clasificar cada uno como:
-    - Archivo histórico de una fusión.
-    - Idea recuperable para un artículo nuevo.
-    - Contenido que puede eliminarse definitivamente.
+[x] Revisar los borradores ingleses.
+    Sanity contenía 44, uno más que el inventario local anterior.
+    - 30 archivos históricos de fusiones, con redirección al artículo consolidado.
+    - 10 ideas recuperables, con instrucciones editoriales concretas.
+    - 4 candidatos a eliminación definitiva; todavía no se han borrado.
+    La clasificación y su motivo quedan guardados en cada borrador de Sanity.
 
 [ ] Mantener la checklist editorial para cada publicación nueva:
     - Versión EN y ES cuando corresponda.

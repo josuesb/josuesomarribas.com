@@ -19,6 +19,16 @@ export const mergedArticleRedirects: Record<string, string> = {
   "how-an-a-b-test-really-looks-when-you-don-t-have-enough-data": "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal",
   "the-professional-maturity-of-reporting-an-inconclusive-test": "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal",
   "micro-semiotics-forms-ambiguous-labels-checkout": "ux-is-semiotics-why-an-interface-is-a-system-of-signs",
+  "ai-mentions-without-clicks": "the-roi-of-ai-search-mentions-calculating-the-value-of-zero-click-brand-awareness",
+  "google-search-console-for-chatgpt": "geo-vs-seo-ai-search",
+  "how-to-track-ai-visibility": "geo-vs-seo-ai-search",
+  "llms-txt-json-ld-framer-setup": "structural-seo-json-ld-framer",
+  "make-blog-posts-ai-readable": "geo-vs-seo-ai-search",
+  "mutationobservers-vs-polling-a-performance-shootout-for-a-b-testing": "mutationobservers-without-panic-performance-guide",
+  "seo-schema-in-framer": "structural-seo-json-ld-framer",
+  "test-ab-how-it-works-first-experiment": "complete-guide-to-ab-testing-cro-experimentation",
+  "elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks": "how-i-generate-natural-blog-audio-locally-for-free",
+  "how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer": "how-i-generate-natural-blog-audio-locally-for-free",
 };
 
 export function rewriteMergedArticleLinks(html: string) {

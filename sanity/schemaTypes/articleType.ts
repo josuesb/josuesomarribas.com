@@ -99,6 +99,19 @@ export const articleType = defineType({
     defineField({name: "legacySlug", title: "Legacy slug", type: "string", group: "seo"}),
     defineField({name: "downloadUrl", title: "Download URL", type: "string", group: "extras"}),
     defineField({name: "downloadText", title: "Download label", type: "string", group: "extras"}),
+    defineField({
+      name: "draftDisposition",
+      title: "Draft disposition",
+      description: "Editorial decision for unpublished legacy content.",
+      type: "string",
+      group: "extras",
+      options: {list: [
+        {title: "Historical merge", value: "historical-merge"},
+        {title: "Recoverable idea", value: "recoverable"},
+        {title: "Delete", value: "delete"},
+      ], layout: "radio"},
+    }),
+    defineField({name: "draftDispositionNote", title: "Draft disposition note", type: "text", rows: 3, group: "extras"}),
   ],
   orderings: [{title: "Publication date, newest", name: "publicationDateDesc", by: [{field: "publicationDate", direction: "desc"}]}],
   preview: {
