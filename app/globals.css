@@ -373,6 +373,26 @@ footer .footer-email{display:none}
 @media(max-width:650px){.cro-experience-main{width:min(100% - 30px,1180px);padding-block:46px 36px}.cro-experience-copy>p:first-child{margin-bottom:20px}.cro-experience-copy h2{font-size:clamp(2.75rem,14vw,4rem)}.cro-experience-copy>p:nth-of-type(2){margin-top:20px}.cro-experience-copy .btn{width:100%;margin-top:25px}.cro-stage{height:430px;margin-top:8px}.cro-browser{right:-18%;width:105%;height:285px}.cro-browser-grid{padding:22px;gap:12px}.cro-module{min-height:78px}.cro-mobile{bottom:45px;left:-4%;width:155px;height:260px}.cro-mobile .cro-module{margin:7px}.cro-attention{top:125px;right:-7%;width:205px;height:166px;padding:12px}.cro-attention>div{height:53px;margin-top:7px}.cro-attention i{width:50px;height:50px}.cro-code{bottom:35px;left:27%;width:210px}.cro-code code{padding:11px 15px;font-size:.57rem}.cro-ticket{bottom:2px;width:220px;padding:10px}.cro-ticket>b{font-size:.57rem}.cro-ticket small:last-child{margin-left:70px}.cro-live{right:0;bottom:-6px;padding:11px 14px;font-size:.58rem}.cro-winner{display:none}.cro-route{bottom:-9px;width:90%}.cro-proof>div>div{min-height:72px;padding:10px;text-align:center;font-size:.58rem}.cro-proof svg{width:22px;height:22px}}
 @media(prefers-reduced-motion:reduce){.cro-layer,.cro-attention i,.cro-live i,.cro-route path{animation:none!important}.cro-layer{will-change:auto}}
 
+/* Layer artwork is intentionally image-based: fixed intrinsic geometry prevents
+   its internal UI from participating in page layout. */
+.cro-stage>img.cro-layer{display:block;height:auto;padding:0;border:0;background:none;box-shadow:none;object-fit:contain;overflow:visible;backdrop-filter:none}
+.cro-stage>img.cro-browser{top:-7px;right:-2%;width:88%}
+.cro-stage>img.cro-mobile{bottom:24px;left:-1%;width:225px}
+.cro-stage>img.cro-attention{top:115px;right:-4%;width:315px}
+.cro-stage>img.cro-code{bottom:38px;left:28%;width:295px}
+.cro-stage>img.cro-ticket{bottom:-2px;left:-2%;width:320px}
+.cro-stage>img.cro-live{right:19%;bottom:-7px;width:250px}
+.cro-stage>img.cro-winner{right:-4%;bottom:-12px;width:250px}
+@media(max-width:650px){
+  .cro-stage>img.cro-browser{top:0;right:-24%;width:116%}
+  .cro-stage>img.cro-mobile{bottom:26px;left:-10%;width:170px}
+  .cro-stage>img.cro-attention{top:117px;right:-13%;width:220px}
+  .cro-stage>img.cro-code{bottom:31px;left:25%;width:225px}
+  .cro-stage>img.cro-ticket{bottom:-4px;left:-7%;width:240px}
+  .cro-stage>img.cro-live{right:-5%;bottom:-10px;width:190px}
+  .cro-stage>img.cro-winner{display:none}
+}
+
 /* Homepage hero — compact signal-to-outcome composition. */
 .hero{
   --hero-coral:#ff5b3d;
