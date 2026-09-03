@@ -7,13 +7,13 @@ const CheckIcon = () => <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="
 
 function CroArtwork({ locale }: { locale: "en" | "es" }) {
   return <div className="cro-stage" role="img" aria-label={locale === "es" ? "Capas de un experimento digital desde las variantes hasta la implementación permanente" : "Layers of a digital experiment from variants through permanent implementation"}>
-    <Image className="cro-browser cro-layer" src="/assets/cro-experience/browser.svg" alt="" width={760} height={420} unoptimized/>
-    <Image className="cro-mobile cro-layer" src="/assets/cro-experience/mobile.svg" alt="" width={240} height={430} unoptimized/>
-    <Image className="cro-attention cro-layer" src="/assets/cro-experience/attention.svg" alt="" width={340} height={240} unoptimized/>
-    <Image className="cro-code cro-layer" src="/assets/cro-experience/code.svg" alt="" width={310} height={220} unoptimized/>
-    <Image className="cro-ticket cro-layer" src="/assets/cro-experience/ticket.svg" alt="" width={350} height={112} unoptimized/>
-    <Image className="cro-live cro-layer" src="/assets/cro-experience/live.svg" alt="" width={270} height={76} unoptimized/>
-    <Image className="cro-winner cro-layer" src="/assets/cro-experience/winner.svg" alt="" width={270} height={110} unoptimized/>
+    <Image className="cro-browser cro-layer" src="/assets/cro-experience/browser.webp" alt="" width={760} height={420} unoptimized/>
+    <Image className="cro-mobile cro-layer" src="/assets/cro-experience/mobile.webp" alt="" width={240} height={430} unoptimized/>
+    <Image className="cro-attention cro-layer" src="/assets/cro-experience/attention.webp" alt="" width={340} height={240} unoptimized/>
+    <Image className="cro-code cro-layer" src="/assets/cro-experience/code.webp" alt="" width={310} height={220} unoptimized/>
+    <Image className="cro-ticket cro-layer" src="/assets/cro-experience/ticket.webp" alt="" width={350} height={112} unoptimized/>
+    <Image className="cro-live cro-layer" src="/assets/cro-experience/live.webp" alt="" width={270} height={76} unoptimized/>
+    <Image className="cro-winner cro-layer" src="/assets/cro-experience/winner.webp" alt="" width={270} height={110} unoptimized/>
     <svg className="cro-route" viewBox="0 0 760 260" aria-hidden="true"><path d="M30 215 C220 250 250 198 365 205 S525 230 560 165 S650 100 730 120"/><path d="m718 108 14 12-16 8"/></svg>
   </div>;
 }
