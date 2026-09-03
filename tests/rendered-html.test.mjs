@@ -115,6 +115,11 @@ test("configures Vercel static output and permanent legacy redirects", async () 
     { source: "/blog/test-ab-how-it-works-first-experiment", destination: "/blog/complete-guide-to-ab-testing-cro-experimentation", permanent: true },
     { source: "/blog/how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer", destination: "/blog/how-i-generate-natural-blog-audio-locally-for-free", permanent: true },
     { source: "/blog/elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks", destination: "/blog/how-i-generate-natural-blog-audio-locally-for-free", permanent: true },
+    { source: "/blog/seo-and-geo-how-search-visibility-changes-with-ai-answers", destination: "/blog/geo-vs-seo-ai-search", permanent: true },
+    { source: "/blog/seo-and-geo-search-visibility-ai-answers", destination: "/blog/geo-vs-seo-ai-search", permanent: true },
+    { source: "/blog/professional-maturity-reporting-inconclusive-test", destination: "/blog/statistical-significance-for-skeptics-when-flat-data-is-a-success-signal", permanent: true },
+    { source: "/blog/the-boring-js-utility-library-building-window-launchutils", destination: "/blog/advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable", permanent: true },
+    { source: "/blog/the-micro-semiotics-of-forms", destination: "/blog/ux-is-semiotics-why-an-interface-is-a-system-of-signs", permanent: true },
   ];
   for (const redirect of requiredRedirects) {
     assert.ok(config.redirects.some(item => JSON.stringify(item) === JSON.stringify(redirect)), `Missing redirect ${redirect.source}`);

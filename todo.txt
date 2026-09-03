@@ -64,11 +64,14 @@ PRIORIDAD MEDIA — CALIDAD DEL SITIO
 
 PRIORIDAD MEDIA — SEO Y DISTRIBUCIÓN
 
-[ ] Revisar Google Search Console después de cada lote editorial.
-    - Confirmar que sitemap.xml fue leído correctamente.
-    - Inspeccionar las URLs prioritarias.
-    - Vigilar páginas descubiertas pero no indexadas.
-    - No solicitar indexación manual para cada URL salvo que sea prioritaria.
+[x] Revisar Google Search Console después del lote editorial de septiembre.
+    - sitemap.xml correcto, leído el 3 sept 2026 y con 88 páginas descubiertas.
+    - 158 páginas indexadas y 59 sin indexar en el último informe disponible.
+    - Las 3 traducciones prioritarias todavía no están indexadas: 2 no reconocidas
+      y 1 descubierta actualmente sin indexar. No se solicitó indexación manual.
+    - De 6 errores 404 históricos, 5 tienen ahora redirección permanente; la página
+      temporal banner-example-temporary-page permanece correctamente eliminada.
+    - Repetir esta revisión después del siguiente lote editorial.
 
 [ ] Revisar rendimiento editorial después de acumular datos suficientes.
     Usar impresiones, consultas, CTR y posición para decidir qué artículos ampliar,

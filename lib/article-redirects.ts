@@ -29,6 +29,11 @@ export const mergedArticleRedirects: Record<string, string> = {
   "test-ab-how-it-works-first-experiment": "complete-guide-to-ab-testing-cro-experimentation",
   "elevenlabs-studio-for-developers-advanced-ssml-and-narration-hacks": "how-i-generate-natural-blog-audio-locally-for-free",
   "how-i-add-real-audio-to-my-blog-posts-using-chatgpt-elevenlabs-and-framer": "how-i-generate-natural-blog-audio-locally-for-free",
+  "seo-and-geo-how-search-visibility-changes-with-ai-answers": "geo-vs-seo-ai-search",
+  "seo-and-geo-search-visibility-ai-answers": "geo-vs-seo-ai-search",
+  "professional-maturity-reporting-inconclusive-test": "statistical-significance-for-skeptics-when-flat-data-is-a-success-signal",
+  "the-boring-js-utility-library-building-window-launchutils": "advanced-launch-rules-with-javascript-the-patterns-i-use-to-keep-them-maintainable",
+  "the-micro-semiotics-of-forms": "ux-is-semiotics-why-an-interface-is-a-system-of-signs",
 };
 
 export function rewriteMergedArticleLinks(html: string) {
