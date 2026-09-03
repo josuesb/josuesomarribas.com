@@ -5,6 +5,7 @@ import Image from "next/image";
 import ExperienceDuration from "../../components/ExperienceDuration";
 import type { CSSProperties } from "react";
 import { getAllArticles } from "../../lib/content";
+import CroExperienceSection from "../../components/CroExperienceSection";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -70,6 +71,8 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
           ].map(([icon,title,text],i)=><article key={title} className={`cap cap-${i}`}><span className="cap-icon"><CapabilityIcon type={icon as "research"|"experiment"|"code"|"analytics"}/></span><div><h2>{title}</h2><p>{text}</p></div></article>)}
         </div>
       </section>
+
+      <CroExperienceSection locale={locale}/>
 
       <section className="work-section" id="work">
         <div className="shell">

@@ -6,7 +6,7 @@ export function MotionObserver() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     document.body.classList.add("motion-ready");
-    const targets = document.querySelectorAll(".cap, .work-section > .shell > h2, .section-intro, .project, .nda, .process h2, .process article, .quote-inner, .contact-grid > div");
+    const targets = document.querySelectorAll(".cap, .cro-experience-copy, .cro-stage, .cro-proof, .work-section > .shell > h2, .section-intro, .project, .nda, .process h2, .process article, .quote-inner, .contact-grid > div");
     targets.forEach((target, index) => {
       target.classList.add("reveal");
       (target as HTMLElement).style.setProperty("--reveal-delay", `${(index % 5) * 70}ms`);
