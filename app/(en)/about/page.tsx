@@ -3,6 +3,7 @@ import SiteFooter from "../../../components/SiteFooter";
 import SiteNav from "../../../components/SiteNav";
 import CopyEmailButton from "../../../components/CopyEmailButton";
 import Image from "next/image";
+import AboutHeroCollage3D from "../../../components/AboutHeroCollage3D";
 
 export const metadata: Metadata = {
   title: "About — Josue Somarribas",
@@ -11,7 +12,6 @@ export const metadata: Metadata = {
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
-const aboutHeroLayers = ["01-cuaderno-field-kit", "02-mapa-costa-rica-spain", "03-ventana-experimento", "04-tarjeta-ab", "05-reloj-barcelona", "06-nota-investigacion", "07-sello-curious"];
 const editorialAsset = "/assets/about-editorial";
 
 export default function AboutPage() {
@@ -26,11 +26,7 @@ export default function AboutPage() {
           <div className="actions"><a className="btn btn-red" href={resumeHref} download>Download résumé ↓</a><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a></div>
           <p className="about-meta">8+ years across UX and web development · Based in Spain · Born in Costa Rica</p>
         </div>
-        <div className="about-collage" role="img" aria-label="Research, experimentation and a journey from Costa Rica to Spain">
-          <Image className="about-decor about-asset-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" aria-hidden="true" width={1024} height={1024}/>
-          <Image className="about-decor about-asset-waves" src="/assets/global/ondas-marfil-3-lineas.svg" alt="" aria-hidden="true" width={1400} height={360}/>
-          {aboutHeroLayers.map((file,index)=><Image key={file} className={`about-hero-layer about-layer-${index+1}`} src={`/assets/about-hero/${file}.svg`} alt="" aria-hidden="true" width={1800} height={1100} priority={index<3}/>) }
-        </div>
+        <AboutHeroCollage3D />
       </div>
     </section>
 
