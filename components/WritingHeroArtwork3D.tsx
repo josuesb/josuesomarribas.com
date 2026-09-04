@@ -3,8 +3,8 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
 const copy = {
-  en: { aria:"Three-dimensional editorial system with an article, code and experiment result", label:"FIELD NOTE / 024", title:"Clarity is a systems problem.", deck:"Research, interface decisions and production code—documented.", read:"08 MIN READ", result:"MEASURED LIFT" },
-  es: { aria:"Sistema editorial tridimensional con un artículo, código y resultado experimental", label:"NOTA DE CAMPO / 024", title:"La claridad es un problema de sistema.", deck:"Investigación, decisiones de interfaz y código de producción—documentados.", read:"08 MIN DE LECTURA", result:"MEJORA MEDIDA" },
+  en: { aria:"Three-dimensional editorial system with an article, code and experiment result", label:"FIELD NOTE / 024", title:"Clarity is a systems problem.", deck:"Research, interface decisions and production code—documented.", result:"MEASURED LIFT" },
+  es: { aria:"Sistema editorial tridimensional con un artículo, código y resultado experimental", label:"NOTA DE CAMPO / 024", title:"La claridad es un problema de sistema.", deck:"Investigación, decisiones de interfaz y código de producción—documentados.", result:"MEJORA MEDIDA" },
 } as const;
 
 export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
@@ -47,7 +47,6 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
         <div className="writing-3d-rule"/>
         <h2>{t.title}</h2>
         <p>{t.deck}</p>
-        <footer><span>UX × CRO × FRONT-END</span><b>{t.read}</b></footer>
       </article>
       <div className="writing-3d-result-card"><small>{t.result}</small><strong>+18.7%</strong><span>99% CONFIDENCE</span></div>
       <div className="writing-3d-index"><span>J/S</span><b>WRITING<br/>ARCHIVE</b></div>
