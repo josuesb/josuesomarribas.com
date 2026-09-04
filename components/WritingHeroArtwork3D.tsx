@@ -1,23 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, type PointerEvent } from "react";
 
-const layers = [
-  { src:"/assets/writing-hero/01-libro-base.png", className:"writing-3d-book", x:0, y:8, depth:0, rotate:0, drift:5 },
-  { src:"/assets/writing-hero/02-pagina-codigo.png", className:"writing-3d-code", x:-24, y:-8, depth:82, rotate:-1.5, drift:11 },
-  { src:"/assets/writing-hero/03-pagina-notas.png", className:"writing-3d-notes", x:24, y:-18, depth:154, rotate:1.8, drift:17 },
-  { src:"/assets/writing-hero/04-marcador-rojo.png", className:"writing-3d-marker", x:38, y:-30, depth:226, rotate:3, drift:23 },
-  { src:"/assets/writing-hero/05-cursor.png", className:"writing-3d-cursor", x:48, y:15, depth:292, rotate:-2, drift:30 },
-] as const;
-
-const layerTransform = (layer: typeof layers[number], x = 0, y = 0) =>
-  `translate3d(${layer.x + x * layer.drift}px, ${layer.y + y * layer.drift}px, ${layer.depth}px) rotateZ(${layer.rotate}deg)`;
+const copy = {
+  en: { aria:"Three-dimensional editorial system with an article, code and experiment result", label:"FIELD NOTE / 024", title:"Clarity is a systems problem.", deck:"Research, interface decisions and production code—documented.", read:"08 MIN READ", result:"MEASURED LIFT" },
+  es: { aria:"Sistema editorial tridimensional con un artículo, código y resultado experimental", label:"NOTA DE CAMPO / 024", title:"La claridad es un problema de sistema.", deck:"Investigación, decisiones de interfaz y código de producción—documentados.", read:"08 MIN DE LECTURA", result:"MEJORA MEDIDA" },
+} as const;
 
 export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
   const sceneRef = useRef<HTMLDivElement>(null);
-  const layerRefs = useRef<Array<HTMLImageElement | null>>([]);
   const frameRef = useRef<number | null>(null);
+  const t = copy[locale];
 
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
@@ -30,32 +23,34 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = requestAnimationFrame(() => {
-      if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(11 - y * 14).toFixed(2)}deg) rotateY(${(-15 + x * 20).toFixed(2)}deg) rotateZ(-2deg)`;
-      layers.forEach((layer, index) => {
-        const element = layerRefs.current[index];
-        if (element) element.style.transform = layerTransform(layer, x, y);
-      });
+      if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(9 - y * 12).toFixed(2)}deg) rotateY(${(-12 + x * 18).toFixed(2)}deg) rotateZ(-1deg)`;
     });
   };
 
   const reset = () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = requestAnimationFrame(() => {
-      if (sceneRef.current) sceneRef.current.style.transform = "rotateX(11deg) rotateY(-15deg) rotateZ(-2deg)";
-      layers.forEach((layer, index) => {
-        const element = layerRefs.current[index];
-        if (element) element.style.transform = layerTransform(layer);
-      });
+      if (sceneRef.current) sceneRef.current.style.transform = "rotateX(9deg) rotateY(-12deg) rotateZ(-1deg)";
     });
   };
 
-  return <div className="notebook-art writing-3d-viewport" role="img" aria-label={locale === "es" ? "Cuaderno editorial tridimensional con wireframes, código y notas" : "Three-dimensional editorial notebook with wireframes, code and notes"} onPointerMove={move} onPointerLeave={reset}>
-    <span className="notebook-layer notebook-halo" aria-hidden="true"/>
-    <span className="notebook-layer notebook-blueprint" aria-hidden="true"/>
+  return <div className="notebook-art writing-3d-viewport" role="img" aria-label={t.aria} onPointerMove={move} onPointerLeave={reset}>
     <div ref={sceneRef} className="writing-3d-scene" aria-hidden="true">
-      <Image className="writing-3d-layer writing-3d-book-edge writing-3d-book-edge-back" src="/assets/writing-hero/01-libro-base.png" alt="" width={1800} height={1100} priority unoptimized sizes="(max-width: 760px) 100vw, 52vw"/>
-      <Image className="writing-3d-layer writing-3d-book-edge writing-3d-book-edge-front" src="/assets/writing-hero/01-libro-base.png" alt="" width={1800} height={1100} priority unoptimized sizes="(max-width: 760px) 100vw, 52vw"/>
-      {layers.map((layer, index) => <Image key={layer.src} ref={element => { layerRefs.current[index] = element; }} className={`writing-3d-layer ${layer.className}`} src={layer.src} alt="" width={1800} height={1100} priority={index < 3} unoptimized sizes="(max-width: 760px) 100vw, 52vw" style={{ transform:layerTransform(layer) }}/>) }
+      <div className="writing-3d-grid-plane"/>
+      <div className="writing-3d-code-panel">
+        <header><span>EXPERIMENT.LOG</span><i/></header>
+        <code><b>const</b> insight = observe();<br/><br/><span>if</span> (signal) {'{'}<br/>&nbsp;&nbsp;frameHypothesis();<br/>&nbsp;&nbsp;prototype();<br/>&nbsp;&nbsp;measure();<br/>{'}'}</code>
+        <footer><i/><i/><i/></footer>
+      </div>
+      <article className="writing-3d-article-panel">
+        <header><span>{t.label}</span><b>↗</b></header>
+        <div className="writing-3d-rule"/>
+        <h2>{t.title}</h2>
+        <p>{t.deck}</p>
+        <footer><span>UX × CRO × FRONT-END</span><b>{t.read}</b></footer>
+      </article>
+      <div className="writing-3d-result-card"><small>{t.result}</small><strong>+18.7%</strong><span>99% CONFIDENCE</span></div>
+      <div className="writing-3d-index"><span>J/S</span><b>WRITING<br/>ARCHIVE</b></div>
     </div>
   </div>;
 }
