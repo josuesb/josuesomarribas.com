@@ -18,8 +18,8 @@ export default function HeroExperimentArtwork({ locale = "en" }: { locale?: Loca
     const bounds = sceneRef.current.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width - 0.5;
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    sceneRef.current.style.setProperty("--scene-rotate-x", `${(-y * 5).toFixed(2)}deg`);
-    sceneRef.current.style.setProperty("--scene-rotate-y", `${(x * 7).toFixed(2)}deg`);
+    sceneRef.current.style.setProperty("--scene-rotate-x", `${(-y * 10).toFixed(2)}deg`);
+    sceneRef.current.style.setProperty("--scene-rotate-y", `${(x * 14).toFixed(2)}deg`);
     sceneRef.current.style.setProperty("--scene-light-x", `${((x + 0.5) * 100).toFixed(1)}%`);
     sceneRef.current.style.setProperty("--scene-light-y", `${((y + 0.5) * 100).toFixed(1)}%`);
   };
