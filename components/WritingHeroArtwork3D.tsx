@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type PointerEvent } from "react";
+import { useDeviceTilt } from "./useDeviceTilt";
 
 const copy = {
   en: { aria:"Three-dimensional editorial system with an article, code and experiment result", label:"FIELD NOTE / 024", title:"Clarity is a systems problem.", deck:"Research, interface decisions and production code—documented.", result:"MEASURED LIFT" },
@@ -11,6 +12,11 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef<number | null>(null);
   const t = copy[locale];
+
+  const applyTilt = (x: number, y: number) => {
+    if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(9 - y * 12).toFixed(2)}deg) rotateY(${(-12 + x * 18).toFixed(2)}deg) rotateZ(-1deg)`;
+  };
+  const requestTiltAccess = useDeviceTilt(applyTilt);
 
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
@@ -23,7 +29,7 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = requestAnimationFrame(() => {
-      if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(9 - y * 12).toFixed(2)}deg) rotateY(${(-12 + x * 18).toFixed(2)}deg) rotateZ(-1deg)`;
+      applyTilt(x, y);
     });
   };
 
@@ -34,7 +40,7 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
     });
   };
 
-  return <div className="notebook-art writing-3d-viewport" role="img" aria-label={t.aria} onPointerMove={move} onPointerLeave={reset}>
+  return <div className="notebook-art writing-3d-viewport" role="img" aria-label={t.aria} onPointerDown={requestTiltAccess} onPointerMove={move} onPointerLeave={reset}>
     <div ref={sceneRef} className="writing-3d-scene" aria-hidden="true">
       <div className="writing-3d-grid-plane"/>
       <div className="writing-3d-code-panel">

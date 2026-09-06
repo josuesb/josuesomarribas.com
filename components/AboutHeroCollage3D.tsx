@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, type PointerEvent } from "react";
+import { useDeviceTilt } from "./useDeviceTilt";
 
 const pieces = [
   { file:"01-cuaderno-field-kit", depth:0, drift:4 },
@@ -22,6 +23,15 @@ export default function AboutHeroCollage3D() {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
   }, []);
 
+  const applyTilt = (x: number, y: number) => {
+    if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(6 - y * 11).toFixed(2)}deg) rotateY(${(-8 + x * 15).toFixed(2)}deg) rotateZ(1deg)`;
+    pieces.forEach((piece, index) => {
+      const element = pieceRefs.current[index];
+      if (element) element.style.transform = `translate3d(${(x * piece.drift).toFixed(2)}px, ${(y * piece.drift).toFixed(2)}px, ${piece.depth}px)`;
+    });
+  };
+  const requestTiltAccess = useDeviceTilt(applyTilt);
+
   const move = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === "touch" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -29,11 +39,7 @@ export default function AboutHeroCollage3D() {
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = requestAnimationFrame(() => {
-      if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(6 - y * 11).toFixed(2)}deg) rotateY(${(-8 + x * 15).toFixed(2)}deg) rotateZ(1deg)`;
-      pieces.forEach((piece, index) => {
-        const element = pieceRefs.current[index];
-        if (element) element.style.transform = `translate3d(${(x * piece.drift).toFixed(2)}px, ${(y * piece.drift).toFixed(2)}px, ${piece.depth}px)`;
-      });
+      applyTilt(x, y);
     });
   };
 
@@ -48,7 +54,7 @@ export default function AboutHeroCollage3D() {
     });
   };
 
-  return <div className="about-collage about-3d-viewport" role="img" aria-label="Research, experimentation and a journey from Costa Rica to Spain" onPointerMove={move} onPointerLeave={reset}>
+  return <div className="about-collage about-3d-viewport" role="img" aria-label="Research, experimentation and a journey from Costa Rica to Spain" onPointerDown={requestTiltAccess} onPointerMove={move} onPointerLeave={reset}>
     <div ref={sceneRef} className="about-3d-scene" aria-hidden="true">
       <Image className="about-decor about-asset-sun about-3d-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024}/>
       <Image className="about-decor about-asset-waves about-3d-waves" src="/assets/global/ondas-marfil-3-lineas.svg" alt="" width={1400} height={360}/>

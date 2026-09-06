@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type CSSProperties, type PointerEvent } from "react";
+import { useDeviceTilt } from "./useDeviceTilt";
 
 type Locale = "en" | "es";
 
@@ -13,15 +14,21 @@ export default function HeroExperimentArtwork({ locale = "en" }: { locale?: Loca
   const sceneRef = useRef<HTMLDivElement>(null);
   const t = copy[locale];
 
+  const applyTilt = (x: number, y: number) => {
+    if (!sceneRef.current) return;
+    sceneRef.current.style.setProperty("--scene-rotate-x", `${(-y * 10).toFixed(2)}deg`);
+    sceneRef.current.style.setProperty("--scene-rotate-y", `${(x * 14).toFixed(2)}deg`);
+    sceneRef.current.style.setProperty("--scene-light-x", `${((x + 0.5) * 100).toFixed(1)}%`);
+    sceneRef.current.style.setProperty("--scene-light-y", `${((y + 0.5) * 100).toFixed(1)}%`);
+  };
+  const requestTiltAccess = useDeviceTilt(applyTilt);
+
   const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === "touch" || !sceneRef.current) return;
     const bounds = sceneRef.current.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width - 0.5;
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    sceneRef.current.style.setProperty("--scene-rotate-x", `${(-y * 10).toFixed(2)}deg`);
-    sceneRef.current.style.setProperty("--scene-rotate-y", `${(x * 14).toFixed(2)}deg`);
-    sceneRef.current.style.setProperty("--scene-light-x", `${((x + 0.5) * 100).toFixed(1)}%`);
-    sceneRef.current.style.setProperty("--scene-light-y", `${((y + 0.5) * 100).toFixed(1)}%`);
+    applyTilt(x, y);
   };
 
   const resetScene = () => {
@@ -39,7 +46,7 @@ export default function HeroExperimentArtwork({ locale = "en" }: { locale?: Loca
     { label:t.measure, number:"04", className:"flow-measure", content:<><small>{t.result}</small><strong>+18.7%</strong><span>{t.lift}</span><hr/><span>{t.significance} <b>99%</b></span></> },
   ];
 
-  return <div className="hero-flow-perspective" onPointerMove={handlePointerMove} onPointerLeave={resetScene}>
+  return <div className="hero-flow-perspective" onPointerDown={requestTiltAccess} onPointerMove={handlePointerMove} onPointerLeave={resetScene}>
     <div ref={sceneRef} className="hero-signal-flow" role="img" aria-label={t.aria}>
       <div className="hero-flow-line" aria-hidden="true" />
       {steps.map((step,index)=><section className={`hero-flow-step ${step.className}`} key={step.label} style={{ "--flow-index":index } as CSSProperties}>
