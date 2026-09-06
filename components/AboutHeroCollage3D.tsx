@@ -30,7 +30,7 @@ export default function AboutHeroCollage3D() {
       if (element) element.style.transform = `translate3d(${(x * piece.drift).toFixed(2)}px, ${(y * piece.drift).toFixed(2)}px, ${piece.depth}px)`;
     });
   };
-  const requestTiltAccess = useDeviceTilt(applyTilt);
+  const { requestAccess: requestTiltAccess } = useDeviceTilt(applyTilt);
 
   const move = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === "touch" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;

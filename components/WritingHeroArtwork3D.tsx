@@ -16,7 +16,7 @@ export default function WritingHeroArtwork3D({ locale }:{ locale:"en"|"es" }) {
   const applyTilt = (x: number, y: number) => {
     if (sceneRef.current) sceneRef.current.style.transform = `rotateX(${(9 - y * 12).toFixed(2)}deg) rotateY(${(-12 + x * 18).toFixed(2)}deg) rotateZ(-1deg)`;
   };
-  const requestTiltAccess = useDeviceTilt(applyTilt);
+  const { requestAccess: requestTiltAccess } = useDeviceTilt(applyTilt);
 
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
