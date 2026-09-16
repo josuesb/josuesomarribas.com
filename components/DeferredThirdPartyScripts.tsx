@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+const GA4_MEASUREMENT_ID = "G-NGFV2VSWEC";
+
 type DeferredWindow = Window & {
   dataLayer?: unknown[];
   gtag?: (command:string, eventName:string, parameters?:Record<string, string | number | boolean | undefined>) => void;
@@ -15,7 +17,7 @@ export default function DeferredThirdPartyScripts() {
     currentWindow.dataLayer ??= [];
     currentWindow.gtag ??= (...args:unknown[]) => currentWindow.dataLayer?.push(args);
     currentWindow.dataLayer.push(["js", new Date()]);
-    currentWindow.dataLayer.push(["config", "G-65JN3HEB8W"]);
+    currentWindow.dataLayer.push(["config", GA4_MEASUREMENT_ID]);
 
     let loaded = false;
     const loadScripts = () => {
@@ -23,7 +25,7 @@ export default function DeferredThirdPartyScripts() {
       loaded = true;
       const analytics = document.createElement("script");
       analytics.async = true;
-      analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-65JN3HEB8W";
+      analytics.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
       document.head.appendChild(analytics);
 
       currentWindow.hj ??= Object.assign((...args:unknown[]) => {
