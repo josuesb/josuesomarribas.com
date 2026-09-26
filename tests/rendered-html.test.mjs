@@ -144,3 +144,16 @@ test("consolidates every merged article into one indexable canonical URL", async
     assert.doesNotMatch(html, /<meta name="robots" content="noindex/i, redirect.destination);
   }
 });
+
+test("hangover images resolve to deployed files without a runtime optimizer", async () => {
+  const { JSDOM } = await import("jsdom");
+  const document = new JSDOM(await readFile(output("hangover.html"), "utf8")).window.document;
+  const images = [...document.querySelectorAll("img")];
+  assert.equal(images.length, 7, "logo, three hero objects and three illustrations");
+  for (const image of images) {
+    const src = image.getAttribute("src");
+    assert.ok(src.startsWith("/hangover/assets/"), `Expected a static asset: ${src}`);
+    assert.ok(!image.getAttribute("srcset")?.includes("/_next/image"));
+    assert.ok((await readFile(output(src.slice(1)))).length > 0, `Missing deployed asset: ${src}`);
+  }
+});
