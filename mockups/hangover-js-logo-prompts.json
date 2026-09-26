@@ -1,0 +1,14 @@
+[
+  {
+    "name": "box",
+    "prompt": "Replace only the upper-left JOSB® logo with the exact JS. letterform mark from image 2, printed in black directly on the ivory cardboard (no dark rectangle, no registered symbol). Faithfully preserve the logo's thick tightly spaced J and S and square period. Keep all other text, packaging, red cross, shape, perspective, texture, lighting, framing and transparent background unchanged."
+  },
+  {
+    "name": "note",
+    "prompt": "Replace only the small bottom-left JOSB LABORATORIES branding with the exact JS. logo shape from image 2, in black ink, followed by LABORATORIES in small stamped lettering. Keep EST. 2026 beneath. Keep handwritten main text, paper, angle, lighting, texture, framing and transparency unchanged. No dark rectangle around logo."
+  },
+  {
+    "name": "og",
+    "prompt": "Replace BOTH JOSB® marks (upper left of composition and upper left of medicine carton) with the exact JS. letterform logo from image 2, printed black with no rectangular background, no registered symbol. Preserve all other text, layout, dimensions, colors and elements unchanged. Landscape social sharing image."
+  }
+]

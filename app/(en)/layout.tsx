@@ -24,6 +24,6 @@ export const metadata: Metadata = {
 
 export default function EnglishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en">
-    <body className={`${geist.variable} ${mono.variable}`}><SiteStructuredData locale="en"/><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver />{children}</body>
+    <body className={`${geist.variable} ${mono.variable}`}>{children}<SiteStructuredData locale="en"/><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver /></body>
   </html>;
 }

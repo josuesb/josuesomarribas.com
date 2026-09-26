@@ -10,7 +10,7 @@
 .ah-wrap { width:min(1320px,calc(100% - 112px)); margin-inline:auto; }
 .ah-nav { min-height:88px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .ah-brand { display:flex; align-items:center; font-size:34px; font-weight:900; letter-spacing:-2px; }
-.ah-brand sup { align-self:flex-start; font-size:12px; letter-spacing:0; margin-top:9px; }
+.ah-brand-logo { display:block; width:83px; height:auto; }
 .ah-brand>span { border-left:1px solid var(--ah-line); margin-left:22px; padding-left:22px; font-size:8px; font-weight:500; letter-spacing:1.5px; line-height:1.7; }
 .ah-nav nav { display:flex; align-items:center; gap:34px; font-size:12px; }
 .ah-nav a:hover { color:var(--ah-red); }
@@ -20,15 +20,15 @@
 .ah-dot { display:inline-block; width:9px; height:9px; margin-right:9px; border-radius:50%; background:var(--ah-red); }
 .ah-hero { display:grid; grid-template-columns:46% 54%; padding-top:36px; padding-bottom:34px; }
 .ah-hero-copy { position:relative; z-index:2; padding:20px 0 0; }
-.ah h1 { margin:20px 0 24px; font-size:clamp(56px,6.3vw,90px); line-height:.91; font-weight:800; letter-spacing:-.065em; }
+.ah h1 { margin:28px 0 32px; font-size:clamp(54px,5.9vw,84px); line-height:1.04; font-weight:750; letter-spacing:-.05em; }
 .ah h1>span { color:var(--ah-red); }
-.ah-intro { max-width:355px; font-size:17px; line-height:1.4; color:#595959; }
-.ah-button { display:inline-block; border:1px solid #111; background:#111; color:#fff; min-height:48px; padding:15px 29px; margin-top:24px; font-size:11px; font-weight:600; letter-spacing:1.6px; transition:background 160ms ease; }
+.ah-intro { max-width:370px; font-size:17px; line-height:1.6; color:#595959; }
+.ah-button { display:inline-flex; align-items:center; justify-content:center; gap:14px; border:1px solid #111; background:#111; color:#fff; min-height:48px; padding:15px 29px; margin-top:24px; font-size:11px; font-weight:600; letter-spacing:1.6px; transition:background 160ms ease; }
 .ah-button:hover { background:var(--ah-red); border-color:var(--ah-red); }
 .ah-caption { margin-top:12px!important; color:#666; font-size:12px; }
 .ah-live { font-size:11px; max-width:350px; }
 .ah-live:not(:empty) { padding-top:10px; }
-.ah-dose-note { margin-top:22px!important; font-size:8px; letter-spacing:1.6px; color:#555; }
+.ah-dose-note { margin-top:28px!important; font-size:9px; letter-spacing:1.6px; color:#555; }
 .ah textarea { width:min(100%,360px); min-height:90px; padding:12px; margin-top:12px; border:1px solid var(--ah-line); }
 /* Each still-life object is its own transparent image and positioning layer. */
 .ah-product-stage { position:relative; min-width:0; min-height:590px; }
@@ -127,7 +127,7 @@
   .ah-nav-dose { font-size:9px; padding:12px 15px; }
   .ah-hero { grid-template-columns:1fr; padding-top:18px; padding-bottom:18px; }
   .ah-hero-copy { padding:10px 0 0; }
-  .ah h1 { font-size:clamp(54px,12.9vw,88px); margin-block:20px; }
+  .ah h1 { font-size:clamp(48px,11.8vw,76px); margin-block:24px 28px; }
   .ah-label { font-size:8px; }
   .ah-intro { max-width:350px; font-size:15px; }
   .ah-button { min-height:48px; }
@@ -168,3 +168,19 @@
   html:has(.ah) { scroll-behavior:auto; }
   .ah * { animation:none!important; transition:none!important; }
 }
+
+.ah-copy-icon { width:18px; height:18px; flex-shrink:0; }
+.ah-hero #get-cure { margin-top:32px; }
+.ah-hero #get-cure .ah-button { margin-top:0; min-width:218px; min-height:52px; }
+.ah-hero #get-cure .ah-caption { margin-top:14px!important; max-width:340px; line-height:1.6; }
+.ah-instructions button { display:inline-flex; align-items:center; gap:10px; }
+@media(max-width:700px) {
+  .ah-hero #get-cure { margin-top:28px; }
+  .ah-dose-note { font-size:8px; line-height:1.8; max-width:310px; }
+}
+
+.ah-experience-text { margin-top:24px; white-space:pre-line; overflow-wrap:anywhere; }
+.ah-experience-text p+p { margin-top:20px; }
+.ah-instructions { scroll-margin-top:24px; }
+
+.modal_hide { display: none; }
