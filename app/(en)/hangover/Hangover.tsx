@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { experienceInstructions } from "./experience";
 
-const cure = "Are you okay? You sound a little hungover. 🥴\nThis might explain it: https://josuesomarribas.com/hangover";
+const cure = "Here, visit this link https://josuesomarribas.com/hangover and take it ALL in!";
 
 function CopyLabel({ copied, full = false }: { copied: boolean; full?: boolean }) {
   return <><span>{copied ? "COPIED" : full ? "Copy full instructions" : "COPY THE CURE"}</span><svg className="ah-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{copied ? <path d="m5 12 4 4L19 6"/> : <><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></>}</svg></>;
