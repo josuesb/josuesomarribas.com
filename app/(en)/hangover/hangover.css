@@ -33,9 +33,9 @@
 /* Each still-life object is its own transparent image and positioning layer. */
 .ah-product-stage { position:relative; min-width:0; min-height:590px; }
 .ah-product-stage img { position:absolute; display:block; height:auto; object-fit:contain; user-select:none; pointer-events:none; }
-.ah-product-box { width:106%; top:-14px; right:-8%; z-index:1; filter:drop-shadow(16px 24px 12px #29261c1c); }
-.ah-product-blister { width:53%; left:-12%; bottom:8%; z-index:3; filter:drop-shadow(8px 12px 5px #29261c20); }
-.ah-product-note { width:60%; right:-7%; bottom:-2%; z-index:2; filter:drop-shadow(5px 9px 5px #29261c18); }
+.ah-product-box { width:96%; top:-14px; right:-3%; z-index:1; filter:drop-shadow(16px 24px 12px #29261c1c); }
+.ah-product-blister { width:47%; left:-10%; bottom:8%; z-index:3; filter:drop-shadow(8px 12px 5px #29261c20); }
+.ah-product-note { width:55%; right:-5%; bottom:-2%; z-index:2; filter:drop-shadow(5px 9px 5px #29261c18); }
 .ah-ticker { display:flex; align-items:center; justify-content:space-between; gap:20px; border-block:1px solid #777; padding:18px 28px; font-size:10px; letter-spacing:1.8px; white-space:nowrap; overflow:hidden; }
 .ah-ticker i { font-size:24px; font-style:normal; color:var(--ah-red); }
 .ah-section { padding-block:36px; scroll-margin-top:24px; }

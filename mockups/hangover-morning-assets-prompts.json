@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ux",
+    "prompt": "Use case: illustration-story. Generate a standalone editorial illustration matching the black-and-white illustrated robots in the Morning After section of the reference mockup. Fine expressive pen-and-ink crosshatching, hand drawn character, witty magazine illustration, black ink only on an even flat #F5F5F2 background. Landscape 3:2 composition, centered, fully visible with generous breathing space. No page layout, no captions, no heading, no colored accents. An expressive exhausted little retro robot resting its head in one hand at a desk covered in dozens of tiny paper button designs, with a coffee mug. Absurd UX design burnout. No text."
+  },
+  {
+    "name": "code",
+    "prompt": "Use case: illustration-story. Generate a standalone editorial illustration matching the black-and-white illustrated robots in the Morning After section of the reference mockup. Fine expressive pen-and-ink crosshatching, hand drawn character, witty magazine illustration, black ink only on an even flat #F5F5F2 background. Landscape 3:2 composition, centered, fully visible with generous breathing space. No page layout, no captions, no heading, no colored accents. An expressive exhausted little retro robot collapsed face down on a desk under a precarious stack of code printouts and error reports. Absurd programmer burnout. Only tiny readable labels '404' and 'SyntaxError' on two papers."
+  },
+  {
+    "name": "marketing",
+    "prompt": "Use case: illustration-story. Generate a standalone editorial illustration matching the black-and-white illustrated robots in the Morning After section of the reference mockup. Fine expressive pen-and-ink crosshatching, hand drawn character, witty magazine illustration, black ink only on an even flat #F5F5F2 background. Landscape 3:2 composition, centered, fully visible with generous breathing space. No page layout, no captions, no heading, no colored accents. An expressive exhausted little retro robot tangled in a mess of cables and paper marketing funnels, charts and dashboards surrounding it. Absurd marketing burnout. No text."
+  }
+]
