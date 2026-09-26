@@ -149,7 +149,9 @@ test("hangover images resolve to deployed files without a runtime optimizer", as
   const { JSDOM } = await import("jsdom");
   const document = new JSDOM(await readFile(output("hangover.html"), "utf8")).window.document;
   const images = [...document.querySelectorAll("img")];
-  assert.equal(images.length, 7, "logo, three hero objects and three illustrations");
+  assert.equal(images.length, 6, "three hero objects and three illustrations");
+  assert.equal(document.querySelector(".ah-brand-wordmark")?.textContent, "JS.");
+  assert.equal(document.querySelector(".ah-brand img"), null);
   for (const image of images) {
     const src = image.getAttribute("src");
     assert.ok(src.startsWith("/hangover/assets/"), `Expected a static asset: ${src}`);
