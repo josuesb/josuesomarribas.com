@@ -100,7 +100,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
       <div className="latest-head"><p>{t.featured}</p><span>{locale === "es" ? "Una selección para conocer mi forma de pensar y trabajar." : "A selection that shows how I think and work."}</span></div>
       <div className="featured-grid">{featured.map((article, index) => <a className={`featured-card featured-card-${index + 1}`} href={articleHref(article, locale)} key={article.slug}>
         <span className="featured-cover" aria-hidden="true"><Image src={editorialImage(article.slug, article.image)} alt="" fill sizes={index === 0 ? "(max-width: 760px) calc(100vw - 30px), 58vw" : "(max-width: 760px) calc(100vw - 30px), 190px"} loading="lazy" unoptimized/></span>
-        <div><small>{clusterLabel(article.cluster, locale)}</small><h2>{article.title}</h2><p>{article.description}</p><span className="read-meta">{readingMinutes(article)} {t.min} <b aria-hidden="true">↗</b></span></div>
+        <div><small>{clusterLabel(article.cluster, locale)}</small><h2>{article.title}</h2><p>{article.description}</p><span className="read-meta">{readingMinutes(article)} {t.min} </span></div>
       </a>)}</div>
     </section>}
 
@@ -108,7 +108,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
       <div className="archive-head"><div><h2 id="archive-heading">{isBrowsing ? (locale === "es" ? "Resultados" : "Results") : t.archive}</h2><p>{isBrowsing ? `${matches.length} ${t.notes}` : (locale === "es" ? "Notas breves, guías y aprendizajes desde el trabajo." : "Field notes, practical guides and lessons from the work.")}</p></div></div>
       <div className="notes-list">{visible.map((article, index) => <a className="note-row" href={articleHref(article, locale)} key={article.slug} aria-label={article.title}>
         <div className="note-copy"><div className="note-eyebrow"><span className="note-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><small>{clusterLabel(article.cluster, locale)}</small></div><h3>{article.title}</h3><p>{article.description}</p></div>
-        <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span><b aria-hidden="true">↗</b></div>
+        <div className="note-meta"><time dateTime={article.date}>{new Intl.DateTimeFormat(locale, { dateStyle:"medium" }).format(new Date(article.date))}</time><span>{readingMinutes(article)} {t.min}</span></div>
         <span className="article-cover" aria-hidden="true"><Image src={editorialThumbnail(article.slug, article.image)} alt="" fill sizes="(max-width: 760px) 1px, 180px" loading="lazy" unoptimized/></span>
       </a>)}</div>
       {visible.length < archive.length && <div className="archive-load-sentinel" ref={loadSentinel} aria-hidden="true"/>}

@@ -29,10 +29,10 @@ export default function SiteNav({ locale="en", current="home", articleSlug, hasS
   </div>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{navigationLinks()}</div>{language}
-    <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} <span aria-hidden="true">↗</span></a>
+    <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a>
     <details className="mobile-nav">
       <summary aria-label={locale === "es" ? "Abrir menú" : "Open menu"}><span aria-hidden="true" className="mobile-nav-icon"/></summary>
-      <div className="mobile-nav-panel">{navigationLinks()}<a className="btn btn-red mobile-talk" href="mailto:josuesomarribasb@gmail.com">{t.talk} <span aria-hidden="true">↗</span></a></div>
+      <div className="mobile-nav-panel">{navigationLinks()}<a className="btn btn-red mobile-talk" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a></div>
     </details>
   </nav>;
 }

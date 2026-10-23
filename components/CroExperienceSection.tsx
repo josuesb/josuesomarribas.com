@@ -32,7 +32,7 @@ export default function CroExperienceSection({ locale = "en" }: { locale?: "en" 
         <p>{es ? "CRO EN PRODUCCIÓN" : "CRO IN PRODUCTION"}</p>
         <h2>{es ? <>No me quedo<br/>en la hipótesis.</> : <>I don&apos;t stop<br/>at the hypothesis.</>}</h2>
         <p>{es ? "Desarrollo la variante, protejo el lanzamiento y ayudo a convertir los tests ganadores en producto." : "I build the variant, protect the release and help winning tests become product."}</p>
-        <a className="btn btn-red" href="#process">{es ? "Ver cómo trabajo" : "Explore my CRO work"} <span aria-hidden="true">↗</span></a>
+        <a className="btn btn-red" href="#process">{es ? "Ver cómo trabajo" : "Explore my CRO work"} </a>
         <small>{es ? "30–50 experimentos · Adobe Target · Monetate" : "30–50 experiments · Adobe Target · Monetate"}</small>
       </div>
       <CroArtwork locale={locale}/>

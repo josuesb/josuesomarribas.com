@@ -19,8 +19,8 @@ export default function NotFound() {
         <h1 id="not-found-title">Signal lost.</h1>
         <p>This page didn&apos;t survive the experiment.</p>
         <div className="not-found-actions">
-          <Link className="btn btn-red" href="/">Back to home <span aria-hidden="true">→</span></Link>
-          <Link className="btn btn-outline" href="/blog">Explore writing <span aria-hidden="true">→</span></Link>
+          <Link className="btn btn-red" href="/">Back to home </Link>
+          <Link className="btn btn-outline" href="/blog">Explore writing </Link>
         </div>
       </div>
     </section>

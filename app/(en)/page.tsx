@@ -7,7 +7,6 @@ import { getAllArticles } from "../../lib/content";
 import CroExperienceSection from "../../components/CroExperienceSection";
 import HeroExperimentArtwork from "../../components/HeroExperimentArtwork";
 
-const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export const dynamic = "force-static";
 
@@ -36,8 +35,8 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <h1>I turn hesitation into<br /><em>experiences that ship.</em></h1>
             <p className="lead">Research, interface design, front-end implementation and experimentation—from signal to measurable outcome.</p>
             <div className="actions">
-              <a className="btn btn-red" href="#work">View selected work <span>↓</span></a>
-              <a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Discuss a project <Arrow /></a>
+              <a className="btn btn-red" href="#work">View selected work </a>
+              <a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Discuss a project </a>
             </div>
           </div>
 
@@ -69,28 +68,28 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>What You Carry</h3><p>An immersive bilingual campaign exposing the hidden cost of wildlife trafficking in Costa Rica.</p>
               <div className="project-preview-frame"><Image className="project-preview-image project-preview-wyc" src="/assets/project-previews/what-you-carry.webp" alt="What You Carry wildlife conservation campaign homepage" fill sizes="(max-width: 700px) 100vw, 50vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web development</dd></div><div><dt>Location:</dt><dd>Costa Rica</dd></div><div><dt>Focus:</dt><dd>Storytelling · Conservation</dd></div></dl>
-              <a className="btn btn-red" href="https://whatyoucarrycr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="What You Carry">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://whatyoucarrycr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="What You Carry">Visit live site </a>
             </article>
             <article className="project project-cream">
               <header><span className="number">02</span><small>CLIENT WORK · CREATIVE WEB DEVELOPMENT</small></header>
               <h3>Andrés Tenor</h3><p>A distinctive artist website for opera and bolero tenor Andrés Rodríguez, based in Barcelona.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/andres-tenor.webp" alt="Andrés Rodríguez tenor website homepage" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Location:</dt><dd>Barcelona · Europe</dd></div><div><dt>Focus:</dt><dd>Artist identity · Performance</dd></div></dl>
-              <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Andrés Tenor">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://andrestenor.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Andrés Tenor">Visit live site </a>
             </article>
             <article className="project project-cream">
               <header><span className="number">03</span><small>CLIENT WORK · WEB DESIGN + DEVELOPMENT</small></header>
               <h3>Rofka Projects</h3><p>A digital presence for a Costa Rican construction company—from planning and design to finished spaces.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/rofka-projects.webp" alt="Rofka Projects homepage featuring its construction portfolio" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Web design & development</dd></div><div><dt>Platform:</dt><dd>Framer</dd></div><div><dt>Focus:</dt><dd>Brand presence · Responsive UI</dd></div></dl>
-              <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Rofka Projects">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://rofkaproyectos.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Rofka Projects">Visit live site </a>
             </article>
             <article className="project project-cream">
               <header><span className="number">04</span><small>CLIENT WORK · WEB DEVELOPMENT</small></header>
               <h3>PitchCR</h3><p>A digital home for Costa Rica&apos;s startup and pitch community.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/pitchcr.webp" alt="Current homepage displayed at pitchcr.com" fill sizes="(max-width: 900px) 100vw, 33vw" unoptimized /></div>
               <dl><div><dt>Role:</dt><dd>Design implementation</dd></div><div><dt>Platform:</dt><dd>Squarespace</dd></div><div><dt>Focus:</dt><dd>Responsive UI</dd></div></dl>
-              <a className="btn btn-red" href="https://www.pitchcr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="PitchCR">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://www.pitchcr.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="PitchCR">Visit live site </a>
             </article>
           </div>
 
@@ -101,49 +100,49 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <h3>5 Seconds Tester</h3><p>A live tool for testing whether a value proposition is understood in five seconds.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester upload and test interface" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>Research workflow</span></div>
-              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="5 Seconds Tester">Try the tool <Arrow /></a><a href="#process">See how I work →</a></div>
+              <div className="card-actions"><a className="btn btn-red" href="https://www.fivesecondtester.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="5 Seconds Tester">Try the tool </a><a href="#process">See how I work </a></div>
             </article>
             <article className="project project-blue project-secondary">
               <header><span className="number">06</span><small>EXPERIMENT · UX ENGINEERING</small></header>
               <h3>Font Tester</h3><p>A browser-based experiment exploring how typography changes perception and trust.</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/font-tester.webp" alt="Font Tester typography controls and live preview" fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Interactive prototype</span><span>Behavioral comparison</span><span>Front-end build</span></div>
-              <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Font Tester">Explore prototype <Arrow /></a>
+              <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Font Tester">Explore prototype </a>
             </article>
             <article className="project project-cream project-secondary">
               <header><span className="number">07</span><small>INDEPENDENT PRODUCT · RESEARCH + FRONT-END</small></header>
               <h3>Sitemap Explorer</h3><p>{locale === "es" ? "Una herramienta visual para explorar la estructura de un sitio web a partir de sus sitemaps." : "A visual tool for exploring a website’s structure from its sitemaps."}</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/sitemap-explorer.webp" alt={locale === "es" ? "Interfaz de Sitemap Explorer con un mapa de carpetas e idiomas" : "Sitemap Explorer interface showing a map of folders and languages"} fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>{locale === "es" ? "Arquitectura de información" : "Information architecture"}</span></div>
-              <a className="btn btn-red" href="https://sitemap.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Sitemap Explorer">Try the tool <Arrow /></a>
+              <a className="btn btn-red" href="https://sitemap.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Sitemap Explorer">Try the tool </a>
             </article>
             <article className="project project-cream project-secondary">
               <header><span className="number">08</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · DISEÑO + DESARROLLO" : "INDEPENDENT PRODUCT · DESIGN + DEVELOPMENT"}</small></header>
               <h3>Comparte el Momento</h3><p>{locale === "es" ? "Un gestor de invitaciones digitales para compartir y organizar momentos especiales." : "A digital invitation manager for sharing and organizing special moments."}</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/comparte-el-momento.webp" alt={locale === "es" ? "Invitación de boda de Comparte el Momento con los nombres y la fotografía de la pareja" : "Comparte el Momento wedding invitation featuring the couple’s names and photograph"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>{locale === "es" ? "Invitaciones digitales" : "Digital invitations"}</span><span>{locale === "es" ? "Gestión de eventos" : "Event management"}</span></div>
-              <a className="btn btn-red" href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Comparte el Momento">Visit live site <Arrow /></a>
+              <a className="btn btn-red" href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Comparte el Momento">Visit live site </a>
             </article>
             <article className="project project-cream project-secondary">
               <header><span className="number">09</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · ANALÍTICA + CRO" : "INDEPENDENT PRODUCT · ANALYTICS + CRO"}</small></header>
               <h3>UTM Builder &amp; Validator</h3><p>{locale === "es" ? "Una herramienta para crear enlaces UTM y detectar errores de seguimiento antes de lanzar una campaña." : "A tool for building UTM links and catching tracking errors before launching a campaign."}</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/utm-builder.webp" alt={locale === "es" ? "Generador y validador de UTMs con campos de URL, fuente, medio y campaña" : "UTM builder and validator with URL, source, medium and campaign fields"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>{locale === "es" ? "Seguimiento de campañas" : "Campaign tracking"}</span><span>{locale === "es" ? "Validación de UTMs" : "UTM validation"}</span></div>
-              <a className="btn btn-red" href="https://utm.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="UTM Builder & Validator">Try the tool <Arrow /></a>
+              <a className="btn btn-red" href="https://utm.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="UTM Builder & Validator">Try the tool </a>
             </article>
             <article className="project project-blue project-secondary">
               <header><span className="number">10</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · AUTOMATIZACIÓN" : "INDEPENDENT PRODUCT · AUTOMATION"}</small></header>
               <h3>URL Concat Tool</h3><p>{locale === "es" ? "Genera URLs en lote combinando una plantilla con los datos de un archivo Excel o CSV." : "Generate URLs in bulk by combining a template with data from an Excel or CSV file."}</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/url-concat-tool.webp" alt={locale === "es" ? "URL Concat Tool con una plantilla de URL y carga de archivos Excel o CSV" : "URL Concat Tool with a URL template and Excel or CSV file upload"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
               <div className="tags"><span>Live product</span><span>Excel / CSV</span><span>{locale === "es" ? "Generación de URLs" : "Bulk URL generation"}</span></div>
-              <a className="btn btn-red" href="https://concat.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="URL Concat Tool">Try the tool <Arrow /></a>
+              <a className="btn btn-red" href="https://concat.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="URL Concat Tool">Try the tool </a>
             </article>
             <article className="project project-cream project-secondary">
               <header><span className="number">11</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · IA + ANALÍTICA" : "INDEPENDENT PRODUCT · AI + ANALYTICS"}</small></header>
               <h3>AI Visibility Benchmark</h3><p>{locale === "es" ? "Explora cómo los asistentes de IA mencionan, recomiendan y citan una marca, con una demo de datos simulados." : "Explore how AI assistants mention, recommend and cite a brand, with a demo using simulated data."}</p>
               <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/ai-visibility-benchmark.webp" alt={locale === "es" ? "Demo de AI Visibility Benchmark con métricas de descubrimiento, recomendación y citas oficiales" : "AI Visibility Benchmark demo showing discovery, recommendation and official citation metrics"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
               <div className="tags"><span>{locale === "es" ? "Demo interactiva" : "Interactive demo"}</span><span>{locale === "es" ? "Visibilidad en IA" : "AI visibility"}</span><span>{locale === "es" ? "Análisis de marca" : "Brand analysis"}</span></div>
-              <a className="btn btn-red" href="https://bench.josuesomarribas.com/demo" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="AI Visibility Benchmark">{locale === "es" ? "Explorar demo " : "Explore demo "}<Arrow /></a>
+              <a className="btn btn-red" href="https://bench.josuesomarribas.com/demo" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="AI Visibility Benchmark">{locale === "es" ? "Explorar demo " : "Explore demo "}</a>
             </article>
           </div>
 
@@ -154,14 +153,14 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
         <div className="shell">
           <header className="home-journal-head">
             <div><p>{locale === "es" ? "NOTAS DESDE EL TRABAJO" : "NOTES FROM THE WORK"}</p><h2>{locale === "es" ? "Ideas que vale la pena conservar." : "Ideas worth keeping."}</h2></div>
-            <a href={blogPath}>{locale === "es" ? "Ver todos los artículos" : "Read all articles"} <Arrow /></a>
+            <a href={blogPath}>{locale === "es" ? "Ver todos los artículos" : "Read all articles"} </a>
           </header>
           <div className="home-journal-grid">
             {latestArticles.map((article,index) => <article className="home-journal-card" key={article.slug}>
               <a className="home-journal-cover" href={`${blogPath}/${article.slug}`} aria-label={article.title} data-index={String(index + 1).padStart(2,"0")}>
                 {article.image && <Image src={article.image} alt={article.imageAlt} fill sizes="(max-width: 700px) 100vw, 33vw" unoptimized />}
               </a>
-              <div className="home-journal-copy"><p><span>{article.type}</span><time dateTime={article.date}>{formatDate(article.date)}</time></p><h3><a href={`${blogPath}/${article.slug}`}>{article.title}</a></h3><p>{article.description}</p><a href={`${blogPath}/${article.slug}`}>{locale === "es" ? "Leer artículo" : "Read article"} <Arrow /></a></div>
+              <div className="home-journal-copy"><p><span>{article.type}</span><time dateTime={article.date}>{formatDate(article.date)}</time></p><h3><a href={`${blogPath}/${article.slug}`}>{article.title}</a></h3><p>{article.description}</p><a href={`${blogPath}/${article.slug}`}>{locale === "es" ? "Leer artículo" : "Read article"} </a></div>
             </article>)}
           </div>
         </div>
@@ -178,11 +177,11 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
             <article><div className="process-panel"><header><b>04</b><span>Instrument</span></header><Image src="/assets/process/04-instrument.svg" alt="Event tracking code for the CTA experiment" width={240} height={140}/></div><div className="process-copy"><h3>Instrument & ship</h3><p>Track event and ship behind experiment flag. Analytics event in place before ship.</p></div></article>
             <article><div className="process-panel"><header><b>05</b><span>Learn</span></header><Image src="/assets/process/05-learn.svg" alt="Experiment quality assurance checklist" width={240} height={140}/></div><div className="process-copy"><h3>Learn</h3><p>Analyze behavior by variant and segment. Decide what to keep, iterate or drop.</p></div></article>
           </div>
-          <section className="process-quote" id="writing"><span aria-hidden="true">“</span><blockquote>Josue bridges design decisions and<br />production constraints exceptionally well.<cite>Product collaborator · Enterprise project</cite></blockquote><a href="https://www.linkedin.com/in/josuesb/" target="_blank" rel="noreferrer">Read 14 recommendations <Arrow /></a></section>
+          <section className="process-quote" id="writing"><span aria-hidden="true">“</span><blockquote>Josue bridges design decisions and<br />production constraints exceptionally well.<cite>Product collaborator · Enterprise project</cite></blockquote><a href="https://www.linkedin.com/in/josuesb/" target="_blank" rel="noreferrer">Read 14 recommendations </a></section>
         </div>
       </section>
 
-      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Start a conversation <Arrow /></a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Based in Spain · CET · English + Spanish</p></div></div></section>
+      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Start a conversation </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Based in Spain · CET · English + Spanish</p></div></div></section>
       <div id="footer"><SiteFooter locale={locale}/></div>
     </main>
   );

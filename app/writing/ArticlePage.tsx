@@ -40,7 +40,7 @@ function articleHref(article:ArticleMeta, locale:"en"|"es") {
 function ArticleNavCard({ article, locale, label }:{ article:ArticleMeta; locale:"en"|"es"; label:string }) {
   return <a className="article-nav-card" href={articleHref(article, locale)}>
     <span className="article-nav-thumb" aria-hidden="true"><Image src={editorialThumbnail(article.slug, article.image)} alt="" fill sizes="118px" loading="lazy" unoptimized/></span>
-    <span><small>{label}</small><em>{article.cluster.replaceAll("-", " · ")}</em><strong>{article.title}</strong></span><b aria-hidden="true">→</b>
+    <span><small>{label}</small><em>{article.cluster.replaceAll("-", " · ")}</em><strong>{article.title}</strong></span>
   </a>;
 }
 
@@ -73,7 +73,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
         <b>{labels.contents}</b>
         <nav>{headings.slice(0, 7).map(heading => <a key={heading.id} href={`#${heading.id}`}>{heading.label}</a>)}</nav>
         <ArticleTools title={article.title} locale={locale} mode="sidebar-progress"/>
-        <a className="article-back-link" href={indexHref}>← {labels.all}</a>
+        <a className="article-back-link" href={indexHref}> {labels.all}</a>
       </aside>
       <article className="article-shell">
         {labels.note && <p className="translation-note">{labels.note}</p>}
@@ -83,16 +83,16 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
           <p className="article-description">{article.description}</p>
           <div className="article-meta"><span>{labels.by}</span><span>•</span><span>{minutes} {labels.minRead}</span><span>•</span><time dateTime={article.date}>{labels.updated} {new Intl.DateTimeFormat(locale, { month:"short", year:"numeric" }).format(new Date(article.date))}</time></div>
           <ArticleTools title={article.title} locale={locale} audioSrc={audioSrc}/>
-          {nextArticle && <a className="article-next-preview" href={articleHref(nextArticle, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(nextArticle.slug, nextArticle.image)} alt="" fill sizes="76px" loading="lazy" unoptimized/></span><small>{labels.next}</small><strong>{nextArticle.title}</strong><b aria-hidden="true">→</b></a>}
+          {nextArticle && <a className="article-next-preview" href={articleHref(nextArticle, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(nextArticle.slug, nextArticle.image)} alt="" fill sizes="76px" loading="lazy" unoptimized/></span><small>{labels.next}</small><strong>{nextArticle.title}</strong></a>}
           <Image src={heroImage} alt={article.imageAlt} width={1400} height={700} sizes="(max-width: 760px) calc(100vw - 30px), 900px" priority unoptimized/>
         </header>
         <div className="article-content" dangerouslySetInnerHTML={{ __html:html }}/>
         {previousArticle && nextArticle && <nav className="article-post-nav" aria-label={locale === "es" ? "Navegar entre artículos" : "Browse articles"}>
           <ArticleNavCard article={previousArticle} locale={locale} label={labels.previous}/>
           <ArticleNavCard article={nextArticle} locale={locale} label={labels.next}/>
-          <a className="article-all-link" href={indexHref}>{labels.all} →</a>
+          <a className="article-all-link" href={indexHref}>{labels.all} </a>
         </nav>}
-        {!!related.length && <section className="article-related"><h2>{labels.moreTopic}</h2><div>{related.map(item => <a key={item.slug} href={articleHref(item, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(item.slug, item.image)} alt="" fill sizes="(max-width: 760px) 120px, 280px" loading="lazy" unoptimized/></span><small>{item.cluster.replaceAll("-", " · ")}</small><strong>{item.title}</strong><em>↗</em></a>)}</div></section>}
+        {!!related.length && <section className="article-related"><h2>{labels.moreTopic}</h2><div>{related.map(item => <a key={item.slug} href={articleHref(item, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(item.slug, item.image)} alt="" fill sizes="(max-width: 760px) 120px, 280px" loading="lazy" unoptimized/></span><small>{item.cluster.replaceAll("-", " · ")}</small><strong>{item.title}</strong></a>)}</div></section>}
       </article>
     </div>
     <div className="article-footer"><SiteFooter locale={locale} current="writing"/></div>
