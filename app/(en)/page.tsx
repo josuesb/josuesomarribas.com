@@ -110,6 +110,13 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <div className="tags"><span>Interactive prototype</span><span>Behavioral comparison</span><span>Front-end build</span></div>
               <a className="bottom-link" href="https://fonts.josuesomarribas.com/?color=%23111111&amp;bgColor=%23ffffff" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Font Tester">Explore prototype <Arrow /></a>
             </article>
+            <article className="project project-cream project-secondary">
+              <header><span className="number">07</span><small>INDEPENDENT PRODUCT · RESEARCH + FRONT-END</small></header>
+              <h3>Sitemap Explorer</h3><p>{locale === "es" ? "Una herramienta visual para explorar la estructura de un sitio web a partir de sus sitemaps." : "A visual tool for exploring a website’s structure from its sitemaps."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/sitemap-explorer.webp" alt={locale === "es" ? "Interfaz de Sitemap Explorer con un mapa de carpetas e idiomas" : "Sitemap Explorer interface showing a map of folders and languages"} fill sizes="(max-width: 900px) 100vw, 50vw" unoptimized /></div>
+              <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>{locale === "es" ? "Arquitectura de información" : "Information architecture"}</span></div>
+              <a className="btn btn-red" href="https://sitemap.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Sitemap Explorer">Try the tool <Arrow /></a>
+            </article>
           </div>
 
         </div>
