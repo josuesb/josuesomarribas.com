@@ -460,6 +460,13 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 .hero-flow-step:nth-of-type(2){transform:translate3d(0,2px,66px)}
 .hero-flow-step:nth-of-type(3){transform:translate3d(0,-5px,98px)}
 .hero-flow-step:nth-of-type(4){transform:translate3d(0,-12px,130px)}
+/* Independent depth motion composes with the scene tilt and card hover. */
+@keyframes hero-depth-drift{
+  0%,100%{translate:0 0 0;rotate:1 0 0 0deg}
+  45%{translate:0 -8px 18px;rotate:1 0 0 -3deg}
+  70%{translate:0 -3px 8px;rotate:1 0 0 1deg}
+}
+.hero-flow-step{animation:hero-depth-drift 4s cubic-bezier(0.77,0,0.175,1) calc(.6s + var(--flow-index)*.16s)}
 .hero-flow-step header{height:66px;display:flex;flex-direction:column;align-items:center;gap:7px;color:#bfa09a;font:600 .66rem var(--font-mono);letter-spacing:.1em}
 .hero-flow-step header b{color:#eeeae2;font-weight:650}.hero-flow-step header i{z-index:1;width:13px;height:13px;border:1px solid #d8d4cb;background:#0d1011}
 .hero-flow-step:first-of-type header i{border:3px solid #ff7a65;background:var(--hero-coral);box-shadow:0 0 0 7px #ff5b3d20,0 0 20px #ff5b3d}
@@ -491,7 +498,7 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 @media(max-width:600px){
   .hero-grid{width:min(100% - 30px,1180px);gap:22px;padding-block:32px 28px}.hero-identity{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:25px}.hero-copy .name{padding:0;border:0;font-size:1.2rem}.hero-copy .eyebrow{font-size:.62rem}.hero h1{font-size:clamp(2.65rem,12.8vw,3.8rem);line-height:1}.hero .lead{margin-top:22px}.hero-copy .actions{margin-top:24px}.hero-flow-perspective{padding:18px;margin:-18px}.hero-motion-control{display:block;position:relative;z-index:5;margin:0 auto 8px;padding:9px 13px;border:1px solid #ffffff38;border-radius:999px;background:#151b1d;color:#eeeae2;font:650 .62rem var(--font-mono);letter-spacing:.04em}.hero-signal-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding-top:14px;transform:rotateX(var(--scene-rotate-x)) rotateY(var(--scene-rotate-y)) translateZ(-20px)}.hero-flow-step:nth-of-type(n){transform:none}.hero-flow-line{display:none}.hero-flow-step header{height:52px}.hero-flow-step>div{height:160px}.hero>.meta{width:min(100% - 30px,1180px);padding-block:16px;font-size:.62rem}.hero>.meta b{display:inline}
 }
-@media(prefers-reduced-motion:reduce){.hero *,.hero *::before,.hero *::after{animation:none!important;transition:none!important}.hero-signal-flow,.hero-flow-step,.hero-flow-step>div{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.hero *,.hero *::before,.hero *::after{animation:none!important;transition:none!important}.hero-signal-flow,.hero-flow-step,.hero-flow-step>div{transform:none!important;translate:none!important;rotate:none!important}}
 
 /* About — editorial story below the preserved hero. */
 .about-work{display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:42px;min-height:520px;padding-block:58px}.about-work-copy small,.about-thinking small,.about-career small,.about-outside small,.about-voices small{color:var(--red);font:700 .65rem var(--font-mono);letter-spacing:.08em}.about-work h2,.about-thinking h2,.about-field-notes h2,.about-career h2,.about-outside h2,.about-voices h2{margin:18px 0;font:500 clamp(2.35rem,3.6vw,3.5rem)/.98 Georgia,serif;letter-spacing:-.05em}.about-work-copy>i,.about-career-intro>i,.about-outside .shell>div>i{display:block;width:40px;height:2px;margin:22px 0;background:var(--red)}.about-work-copy p{max-width:390px;margin:0 0 18px;font-size:.88rem;line-height:1.65}.about-work-art{position:relative;height:470px}.about-work-art img{position:absolute;display:block;max-width:none;height:auto}.about-work-papers{z-index:1;left:-20px;top:-5px;width:680px;animation:about-paper-drift 9s ease-in-out infinite}.about-work-tools{z-index:2;right:-42px;bottom:-76px;width:570px;animation:about-tools-drift 7.5s ease-in-out .6s infinite}
