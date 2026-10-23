@@ -1,3 +1,4 @@
+import ContactArtwork3D from "../../components/ContactArtwork3D";
 import SiteFooter from "../../components/SiteFooter";
 import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
@@ -181,7 +182,7 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
         </div>
       </section>
 
-      <section className="contact"><div className="contact-art" aria-hidden="true"><Image className="contact-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024} /><Image className="contact-waves" src="/assets/global/ondas-blancas-3-lineas.svg" alt="" width={1400} height={360} /></div><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Start a conversation </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Based in Spain · CET · English + Spanish</p></div></div></section>
+      <section className="contact"><ContactArtwork3D /><div className="shell contact-grid"><div><h2>Have a stubborn<br />product problem?</h2><p>Send me the messy version. No pitch deck required.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Start a conversation </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Based in Spain · CET · English + Spanish</p></div></div></section>
       <div id="footer"><SiteFooter locale={locale}/></div>
     </main>
   );
