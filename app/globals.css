@@ -456,10 +456,10 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 .hero-flow-line{position:absolute;left:6%;right:2%;top:81px;height:1px;background:#d8d4cb99;box-shadow:0 5px 10px #000;transform:translateZ(28px);transform-origin:left}
 .hero-flow-line::after{content:"→";position:absolute;right:-2px;top:-12px;color:#f0eee8;font-size:1.15rem}
 .hero-flow-step{position:relative;min-width:0;transform-style:preserve-3d;transition:transform 500ms var(--ease-out)}
-.hero-flow-step:nth-of-type(1){transform:translate3d(0,8px,34px)}
-.hero-flow-step:nth-of-type(2){transform:translate3d(0,2px,66px)}
-.hero-flow-step:nth-of-type(3){transform:translate3d(0,-5px,98px)}
-.hero-flow-step:nth-of-type(4){transform:translate3d(0,-12px,130px)}
+.hero-flow-step:nth-of-type(1){transform:translate3d(0,14px,24px) rotateY(5deg)}
+.hero-flow-step:nth-of-type(2){transform:translate3d(0,5px,48px) rotateY(2deg)}
+.hero-flow-step:nth-of-type(3){transform:translate3d(0,-18px,112px) rotateY(-3deg)}
+.hero-flow-step:nth-of-type(4){transform:translate3d(0,-3px,64px) rotateY(-5deg)}
 /* Independent depth motion composes with the scene tilt and card hover. */
 @keyframes hero-depth-drift{
   0%,100%{translate:0 0 0;rotate:1 0 0 0deg}
@@ -471,6 +471,13 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 .hero-flow-step header b{color:#eeeae2;font-weight:650}.hero-flow-step header i{z-index:1;width:13px;height:13px;border:1px solid #d8d4cb;background:#0d1011}
 .hero-flow-step:first-of-type header i{border:3px solid #ff7a65;background:var(--hero-coral);box-shadow:0 0 0 7px #ff5b3d20,0 0 20px #ff5b3d}
 .hero-flow-step>div{position:relative;overflow:hidden;height:190px;display:flex;flex-direction:column;padding:18px 15px;border:1px solid #ffffff38;background:linear-gradient(145deg,#1a2022f5,#0c1011fa);box-shadow:2px 2px 0 #333a3c,4px 4px 0 #252b2d,6px 6px 0 #191e20,16px 24px 34px #0008;font:500 .67rem/1.55 var(--font-mono);transition:transform 500ms var(--ease-out),border-color 180ms ease,background-color 180ms ease,box-shadow 500ms var(--ease-out)}
+.hero-flow-step>div{height:218px;box-shadow:2px 2px 0 #41494b,5px 5px 0 #303739,8px 8px 0 #22292b,11px 11px 0 #171d1f,18px 30px 38px #0009}
+.flow-build>div{border-color:#ff7259;background:linear-gradient(145deg,#222a2c,#151b1d);box-shadow:2px 2px 0 #b65c4c,5px 5px 0 #824438,8px 8px 0 #57352e,11px 11px 0 #302421,20px 34px 44px #000a}
+.flow-build header b{color:#ffb4a5}
+.flow-build header i{border-color:#ff7259;background:#ff5b3d}
+@media(hover:hover) and (pointer:fine){
+  .hero-flow-step:hover{transform:translate3d(0,-20px,145px) rotateY(-2deg)}
+}
 @media(hover:hover) and (pointer:fine){.hero-flow-step:hover{transform:translate3d(0,-13px,175px)}.hero-flow-step:hover>div{transform:rotateX(-2deg);border-color:#ff7259;background:#1b2022;box-shadow:3px 3px 0 #703b32,6px 6px 0 #482c28,9px 9px 0 #251d1b,24px 38px 52px #000b}.hero-flow-step:hover>div::after{transform:translateX(120%)}}
 .hero-flow-step small{color:#9ca2a4}.hero-flow-step strong{margin:8px 0;color:#4f91ff;font-size:1.35rem}.hero-flow-step p{margin:9px 0;color:#c3c4c2}.hero-flow-step p b{color:#4f91ff}.hero-flow-step code{display:flex;flex-direction:column;color:#b9c5d0}.hero-flow-step code b{color:#ff5b3d}.hero-flow-step code i{color:#77b58c;font-style:normal}.hero-flow-step code em{margin-top:14px;color:#b9c5d0;font-style:normal}.hero-flow-step hr{width:100%;margin:auto 0 12px;border:0;border-top:1px solid #ffffff18}.hero-flow-step>div>span:last-child b{float:right;color:#4f91ff}.flow-chart{height:72px;display:flex!important;align-items:flex-end;gap:4px;margin-top:auto;border-bottom:1px solid #315eae}.flow-chart i{flex:1;background:#315eae;clip-path:polygon(0 65%,100% 40%,100% 100%,0 100%)}.flow-chart i:nth-child(2){height:42%}.flow-chart i:nth-child(3){height:58%}.flow-chart i:nth-child(4){height:72%}.flow-chart i:nth-child(5){height:92%}
 
