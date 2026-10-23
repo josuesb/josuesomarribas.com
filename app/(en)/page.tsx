@@ -117,6 +117,20 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <div className="tags"><span>Live product</span><span>Built end-to-end</span><span>{locale === "es" ? "Arquitectura de información" : "Information architecture"}</span></div>
               <a className="btn btn-red" href="https://sitemap.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Sitemap Explorer">Try the tool <Arrow /></a>
             </article>
+            <article className="project project-cream project-secondary">
+              <header><span className="number">08</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · DISEÑO + DESARROLLO" : "INDEPENDENT PRODUCT · DESIGN + DEVELOPMENT"}</small></header>
+              <h3>Comparte el Momento</h3><p>{locale === "es" ? "Un gestor de invitaciones digitales para compartir y organizar momentos especiales." : "A digital invitation manager for sharing and organizing special moments."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/comparte-el-momento.webp" alt={locale === "es" ? "Invitación de boda de Comparte el Momento con los nombres y la fotografía de la pareja" : "Comparte el Momento wedding invitation featuring the couple’s names and photograph"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>Live product</span><span>{locale === "es" ? "Invitaciones digitales" : "Digital invitations"}</span><span>{locale === "es" ? "Gestión de eventos" : "Event management"}</span></div>
+              <a className="btn btn-red" href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="Comparte el Momento">Visit live site <Arrow /></a>
+            </article>
+            <article className="project project-cream project-secondary">
+              <header><span className="number">09</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · ANALÍTICA + CRO" : "INDEPENDENT PRODUCT · ANALYTICS + CRO"}</small></header>
+              <h3>UTM Builder &amp; Validator</h3><p>{locale === "es" ? "Una herramienta para crear enlaces UTM y detectar errores de seguimiento antes de lanzar una campaña." : "A tool for building UTM links and catching tracking errors before launching a campaign."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/utm-builder.webp" alt={locale === "es" ? "Generador y validador de UTMs con campos de URL, fuente, medio y campaña" : "UTM builder and validator with URL, source, medium and campaign fields"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>Live product</span><span>{locale === "es" ? "Seguimiento de campañas" : "Campaign tracking"}</span><span>{locale === "es" ? "Validación de UTMs" : "UTM validation"}</span></div>
+              <a className="btn btn-red" href="https://utm.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="UTM Builder & Validator">Try the tool <Arrow /></a>
+            </article>
           </div>
 
         </div>
