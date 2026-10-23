@@ -131,6 +131,20 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <div className="tags"><span>Live product</span><span>{locale === "es" ? "Seguimiento de campañas" : "Campaign tracking"}</span><span>{locale === "es" ? "Validación de UTMs" : "UTM validation"}</span></div>
               <a className="btn btn-red" href="https://utm.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="UTM Builder & Validator">Try the tool <Arrow /></a>
             </article>
+            <article className="project project-blue project-secondary">
+              <header><span className="number">10</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · AUTOMATIZACIÓN" : "INDEPENDENT PRODUCT · AUTOMATION"}</small></header>
+              <h3>URL Concat Tool</h3><p>{locale === "es" ? "Genera URLs en lote combinando una plantilla con los datos de un archivo Excel o CSV." : "Generate URLs in bulk by combining a template with data from an Excel or CSV file."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/url-concat-tool.webp" alt={locale === "es" ? "URL Concat Tool con una plantilla de URL y carga de archivos Excel o CSV" : "URL Concat Tool with a URL template and Excel or CSV file upload"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>Live product</span><span>Excel / CSV</span><span>{locale === "es" ? "Generación de URLs" : "Bulk URL generation"}</span></div>
+              <a className="btn btn-red" href="https://concat.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="URL Concat Tool">Try the tool <Arrow /></a>
+            </article>
+            <article className="project project-cream project-secondary">
+              <header><span className="number">11</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · IA + ANALÍTICA" : "INDEPENDENT PRODUCT · AI + ANALYTICS"}</small></header>
+              <h3>AI Visibility Benchmark</h3><p>{locale === "es" ? "Explora cómo los asistentes de IA mencionan, recomiendan y citan una marca, con una demo de datos simulados." : "Explore how AI assistants mention, recommend and cite a brand, with a demo using simulated data."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/ai-visibility-benchmark.webp" alt={locale === "es" ? "Demo de AI Visibility Benchmark con métricas de descubrimiento, recomendación y citas oficiales" : "AI Visibility Benchmark demo showing discovery, recommendation and official citation metrics"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>{locale === "es" ? "Demo interactiva" : "Interactive demo"}</span><span>{locale === "es" ? "Visibilidad en IA" : "AI visibility"}</span><span>{locale === "es" ? "Análisis de marca" : "Brand analysis"}</span></div>
+              <a className="btn btn-red" href="https://bench.josuesomarribas.com/demo" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="AI Visibility Benchmark">{locale === "es" ? "Explorar demo " : "Explore demo "}<Arrow /></a>
+            </article>
           </div>
 
         </div>
