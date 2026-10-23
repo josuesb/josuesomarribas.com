@@ -16,6 +16,6 @@ export default function CopyEmailButton({ label = "Copy email", copiedLabel = "C
   }
 
   return <button className="btn btn-outline" type="button" onClick={copyEmail} aria-live="polite">
-    <span aria-hidden="true">✉</span> {copied ? copiedLabel : label}
+    {copied ? copiedLabel : label}
   </button>;
 }

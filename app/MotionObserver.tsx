@@ -18,6 +18,7 @@ export function MotionObserver() {
       }
     }), { threshold: 0.13, rootMargin: "0px 0px -45px" });
     targets.forEach((target) => observer.observe(target));
+    document.querySelectorAll(".contact-art").forEach((target) => observer.observe(target));
     return () => observer.disconnect();
   }, []);
   return null;
