@@ -145,6 +145,13 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <div className="tags"><span>{locale === "es" ? "Demo interactiva" : "Interactive demo"}</span><span>{locale === "es" ? "Visibilidad en IA" : "AI visibility"}</span><span>{locale === "es" ? "Análisis de marca" : "Brand analysis"}</span></div>
               <a className="btn btn-red" href="https://bench.josuesomarribas.com/demo" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="AI Visibility Benchmark">{locale === "es" ? "Explorar demo " : "Explore demo "}</a>
             </article>
+            <article className="project project-blue project-secondary">
+              <header><span className="number">12</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · EXPERIMENTACIÓN + CRO" : "INDEPENDENT PRODUCT · EXPERIMENTATION + CRO"}</small></header>
+              <h3>CRO Lab · {locale === "es" ? "Calculadora A/B" : "A/B Calculator"}</h3><p>{locale === "es" ? "Compara los resultados de tus tests A/B importando informes CSV de GA4 o introduciendo los datos manualmente." : "Compare A/B test results by importing GA4 CSV reports or entering data manually."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/project-previews/cro-lab.png" alt={locale === "es" ? "Calculadora A/B de CRO Lab con importación de informes CSV de GA4" : "CRO Lab A/B Calculator with GA4 CSV report import"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>Live product</span><span>A/B testing</span><span>GA4 / CSV</span></div>
+              <a className="btn btn-red" href="https://ab.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="CRO Lab">Try the tool </a>
+            </article>
           </div>
 
         </div>
