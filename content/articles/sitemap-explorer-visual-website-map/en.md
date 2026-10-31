@@ -1,8 +1,8 @@
 ---
 slug: "sitemap-explorer-visual-website-map"
 locale: "en"
-title: "Sitemap Explorer: turn your sitemap into a visual map of your website"
-description: "Turn sitemap URLs into an interactive map to explore folders and languages, inspect pages, and export your website structure."
+title: "Sitemap Explorer: turn your website’s URLs into a visual map"
+description: "Turn sitemaps and URL lists into a navigable map to explore your website structure, filter sections, and export results."
 date: "2026-10-31T00:00:00.000Z"
 draft: false
 type: "Blog"
@@ -18,29 +18,50 @@ downloadUrl: ""
 downloadText: ""
 ---
 
-<p>A sitemap can contain hundreds or thousands of URLs. Reading them in an XML file does not always help you understand how a website is organised.</p>
-<p>To make that easier, I built <strong>Sitemap Explorer</strong>, a tool that turns the URLs in your sitemaps into a visual structure you can explore, filter, and export.</p>
-<p>The idea is simple: move from a list of addresses to a map that shows how pages are distributed across domains, folders, and languages.</p>
-<h2>From an XML file to a structure you can explore</h2>
-<p>Start by importing a sitemap from a URL, uploading XML files, or pasting their contents directly. If you work with several sources, you can combine them in one project.</p>
-<p>Sitemap Explorer organises pages by their paths and generates an interactive map. You can expand folders, zoom into a particular section, and browse its pages without reviewing the entire file.</p>
-<p>The tool distinguishes between actual pages and folders inferred from URLs. For example, several addresses sharing <code>/services/</code> can be grouped under that folder, even when the sitemap does not include a page at that address.</p>
-<h2>Explore your website one section at a time</h2>
-<p>Displaying the entire structure at once can make a map hard to read. Exploration happens by branch: open the sections that interest you and keep the rest collapsed.</p>
-<p>Pan across the canvas, zoom, or enter a branch to examine it in more detail. A list view also lets you browse the structure in a more compact format.</p>
-<p>To find specific content, search by URL and filter by language. If you only need an overview of the organisation, display folders alone.</p>
-<h2>Inspect each page</h2>
-<p>Selecting a page opens a panel with its full URL, source sitemap, and available metadata, such as its last modification date or declared priority.</p>
-<p>You can check a URL’s context without leaving the map, copy it, or open it to review its content.</p>
-<p>When the same URL appears in several sources, the tool deduplicates exact matches and preserves their provenance. You can combine sitemaps while keeping track of where each page appears.</p>
-<h2>Export the result you need</h2>
-<p>Sitemap Explorer lets you download data as <strong>XML, CSV, and JSON</strong>, and generate a visual representation as <strong>SVG or PNG</strong>.</p>
-<p>Export the project, a branch, or filtered results. You can also save the current visualisation to preserve expanded and collapsed branches and node positions.</p>
-<p>This is useful for adding a map to a presentation, sharing a section with your team, or continuing to work with URLs in a spreadsheet.</p>
-<h2>What you can use it for</h2>
-<p>The tool can help you:</p>
-<ul><li>Review how URLs are organised by section and depth.</li><li>Compare the structure of different languages.</li><li>Bring several sitemaps together in one view.</li><li>Prepare an analysis for a migration or content reorganisation.</li><li>Explain a website’s structure to clients and teams.</li></ul>
-<p>The map represents the paths included in the sitemaps. It does not show internal linking relationships or independently check whether a page is indexed or responds correctly. Its value lies in making the information in those files visible and manageable.</p>
-<h2>Try Sitemap Explorer with your own website</h2>
-<p>Load your sitemap, expand its main sections, and explore how your pages are distributed. Start with a folder overview, then go deeper into the branches you want to review.</p>
-<p><strong><a href="https://sitemap.josuesomarribas.com/">Open Sitemap Explorer and turn your sitemap into a visual map you can explore and share.</a></strong></p>
+<p>A sitemap lets you look up a website’s URLs, but understanding its structure from an XML file can be impractical. When hundreds of pages are spread across categories, languages, and several files, a list of links falls short.</p>
+
+<p>To make this easier, I built <a href="https://sitemap.josuesomarribas.com/">Sitemap Explorer</a>, a tool that turns sitemaps and URL lists into a visual structure you can explore, filter, and export.</p>
+
+<h2>From a URL list to a navigable structure</h2>
+
+<p>Sitemap Explorer organises addresses by their paths and displays them as a tree of folders and pages. You can browse a website’s sections, expand branches, and focus on the part you need to review.</p>
+
+<p>For example, if a shop has pages under <code>/es/productos/</code> and <code>/en/products/</code>, you can explore each section separately and see how many URLs each branch contains.</p>
+
+<p>The tool distinguishes actual pages from folders inferred from paths. This helps you interpret the map: a folder grouping several URLs does not necessarily correspond to an existing page.</p>
+
+<h2>Import your data in different ways</h2>
+
+<p>Start by entering a public sitemap URL, selecting files, or pasting content directly. The tool accepts XML, Markdown tables, and URL lists.</p>
+
+<p>You can combine several sources in one project and enable or disable each one to adjust your exploration. If a URL appears in multiple sources, it is merged while preserving its provenance, so you can check where it came from without seeing duplicates on the map.</p>
+
+<h2>Explore the whole site or focus on a section</h2>
+
+<p>Switch between map and list views, search for a URL or folder, and filter by language. You can also display folders alone for a simpler view of the structure.</p>
+
+<p>Select an item to see its available details in the inspector: path, depth, source, and, when included in the sitemap, modification date and priority.</p>
+
+<p>This lets you move from an overview to a specific review: locate a category, explore its pages, and inspect their details in the same space.</p>
+
+<h2>Export what you need to share</h2>
+
+<p>A visual structure is especially useful when you can bring it into your work. Sitemap Explorer can export the full project, a selected branch, filtered results, or the current visualisation.</p>
+
+<p>Available formats include SVG and PNG for sharing the map as an image, and CSV, JSON, and XML for further work with the data, depending on the content selected.</p>
+
+<p>Prepare an overview for a meeting or extract a specific section to review with your team.</p>
+
+<h2>A tool for reviewing your website architecture</h2>
+
+<p>Sitemap Explorer can be a starting point for a content inventory, reviewing how URLs are distributed across sections, or preparing a discussion about a migration or redesign.</p>
+
+<p>The map represents the structure of imported paths. To analyse how pages actually link to one another, you need to complement this information with an internal linking review.</p>
+
+<p>Files and pasted text are processed locally, and the project is saved in your browser. When you import from a URL, the server downloads the public sitemap to bring it into the tool.</p>
+
+<h2>Try Sitemap Explorer</h2>
+
+<p>To see your website structure more clearly, import your sitemap or load the included example to explore its features.</p>
+
+<p><strong><a href="https://sitemap.josuesomarribas.com/">Open Sitemap Explorer →</a></strong></p>

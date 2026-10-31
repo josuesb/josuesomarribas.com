@@ -1,8 +1,8 @@
 ---
 slug: "sitemap-explorer-visual-website-map"
 locale: "es"
-title: "Sitemap Explorer: convierte tu sitemap en un mapa visual de tu web"
-description: "Transforma las URLs de tus sitemaps en un mapa interactivo para explorar carpetas e idiomas, consultar páginas y exportar tu estructura web."
+title: "Sitemap Explorer: convierte las URLs de tu web en un mapa visual"
+description: "Transforma sitemaps y listas de URLs en un mapa navegable para explorar la estructura de tu web, filtrar sus secciones y exportar los resultados."
 date: "2026-10-31T00:00:00.000Z"
 draft: false
 type: "Blog"
@@ -18,29 +18,50 @@ downloadUrl: ""
 downloadText: ""
 ---
 
-<p>Un sitemap puede contener cientos o miles de URLs. Pero leerlas en un archivo XML no siempre ayuda a entender cómo se organiza una web.</p>
-<p>Para facilitar esa tarea he creado <strong>Sitemap Explorer</strong>, una herramienta que transforma las URLs de tus sitemaps en una estructura visual que puedes explorar, filtrar y exportar.</p>
-<p>La idea es sencilla: pasar de una lista de direcciones a un mapa que te permita ver cómo se distribuyen las páginas entre dominios, carpetas e idiomas.</p>
-<h2>De un archivo XML a una estructura que puedes recorrer</h2>
-<p>Puedes empezar importando un sitemap desde una URL, cargando archivos XML o pegando su contenido directamente. Si trabajas con varias fuentes, puedes combinarlas en un mismo proyecto.</p>
-<p>Sitemap Explorer organiza las páginas según sus rutas y genera un mapa interactivo. Desde ahí puedes desplegar carpetas, acercarte a una sección concreta y recorrer sus páginas sin tener que revisar todo el archivo.</p>
-<p>La herramienta distingue entre páginas reales y carpetas inferidas a partir de las URLs. Por ejemplo, que varias direcciones compartan <code>/servicios/</code> permite agruparlas bajo esa carpeta, aunque el sitemap no incluya una página con esa dirección.</p>
-<h2>Explora la web por partes</h2>
-<p>Mostrar toda la estructura de golpe puede hacer que un mapa resulte difícil de leer. Por eso, la exploración se realiza por ramas: abres las secciones que te interesan y mantienes el resto contraído.</p>
-<p>Puedes desplazarte por el lienzo, utilizar el zoom o entrar en una rama para analizarla con más detalle. También tienes una vista de lista si prefieres recorrer la estructura en un formato más compacto.</p>
-<p>Para localizar contenido concreto, puedes buscar por URL y filtrar por idioma. Y, si solo necesitas una visión general de la organización, puedes mostrar únicamente las carpetas.</p>
-<h2>Consulta el detalle de cada página</h2>
-<p>Al seleccionar una página, un panel muestra su URL completa, el sitemap de origen y los metadatos disponibles, como la fecha de última modificación o la prioridad declarada.</p>
-<p>Esto permite consultar el contexto de una URL sin salir del mapa, copiarla o abrirla para revisar su contenido.</p>
-<p>Cuando una misma URL aparece en varias fuentes, la herramienta la deduplica por coincidencia exacta y conserva su procedencia. Así puedes combinar sitemaps sin perder la referencia de dónde aparece cada página.</p>
-<h2>Exporta el resultado según lo que necesites</h2>
-<p>Sitemap Explorer permite descargar los datos en <strong>XML, CSV y JSON</strong>, y generar una representación visual en <strong>SVG o PNG</strong>.</p>
-<p>Puedes exportar el proyecto, una rama o los resultados de los filtros. También puedes guardar la visualización actual para conservar las ramas abiertas y contraídas y la posición de los nodos.</p>
-<p>Esto resulta útil para incorporar un mapa a una presentación, compartir una sección con tu equipo o seguir trabajando con las URLs en una hoja de cálculo.</p>
-<h2>Para qué puedes utilizarlo</h2>
-<p>La herramienta puede ayudarte a:</p>
-<ul><li>Revisar cómo se organizan las URLs por secciones y niveles de profundidad.</li><li>Comparar la estructura de distintos idiomas.</li><li>Reunir varios sitemaps en una sola vista.</li><li>Preparar el análisis de una migración o una reorganización de contenidos.</li><li>Explicar la estructura de una web a clientes y equipos.</li></ul>
-<p>El mapa representa la estructura de las rutas incluidas en los sitemaps. No muestra las relaciones de enlazado interno ni comprueba por sí solo si una página está indexada o responde correctamente. Su utilidad está en hacer visible y manejable la información que contienen esos archivos.</p>
-<h2>Prueba Sitemap Explorer con tu propia web</h2>
-<p>Carga tu sitemap, despliega sus principales secciones y explora cómo se distribuyen tus páginas. Puedes empezar con una vista general de carpetas y profundizar después en las ramas que quieras revisar.</p>
-<p><strong><a href="https://sitemap.josuesomarribas.com/">Abre Sitemap Explorer y convierte tu sitemap en un mapa visual que puedas recorrer y compartir.</a></strong></p>
+<p>Un sitemap te permite consultar las URLs de una web, pero entender su estructura a partir de un archivo XML puede resultar poco práctico. Cuando hay cientos de páginas repartidas entre categorías, idiomas y varios archivos, una lista de enlaces se queda corta.</p>
+
+<p>Para facilitar esa tarea he creado <a href="https://sitemap.josuesomarribas.com/">Sitemap Explorer</a>, una herramienta que transforma sitemaps y listas de URLs en una estructura visual que puedes explorar, filtrar y exportar.</p>
+
+<h2>De una lista de URLs a una estructura navegable</h2>
+
+<p>Sitemap Explorer organiza las direcciones según sus rutas y las representa como un árbol de carpetas y páginas. Así puedes recorrer las distintas secciones de una web, desplegar sus ramas y centrarte en la parte que necesitas revisar.</p>
+
+<p>Por ejemplo, si una tienda tiene páginas dentro de <code>/es/productos/</code> y <code>/en/products/</code>, puedes explorar ambas secciones por separado y consultar cuántas URLs agrupa cada rama.</p>
+
+<p>La herramienta distingue entre páginas reales y carpetas inferidas a partir de las rutas. Esta diferencia ayuda a interpretar el mapa: una carpeta que organiza varias URLs no tiene por qué corresponder a una página existente.</p>
+
+<h2>Importa tus datos de distintas formas</h2>
+
+<p>Puedes empezar introduciendo la URL de un sitemap público, seleccionando archivos o pegando directamente el contenido. La herramienta admite XML, tablas Markdown y listas de URLs.</p>
+
+<p>También permite combinar varias fuentes en un mismo proyecto y activar o desactivar cada una para ajustar la exploración. Si una URL aparece en varias fuentes, se unifica conservando su procedencia, de modo que puedas consultar de dónde viene sin verla repetida en el mapa.</p>
+
+<h2>Explora el conjunto o céntrate en una sección</h2>
+
+<p>Puedes alternar entre una vista de mapa y una vista de lista, buscar una URL o carpeta y filtrar por idioma. También puedes mostrar únicamente las carpetas para obtener una visión más sencilla de la estructura.</p>
+
+<p>Al seleccionar un elemento, el inspector muestra sus datos disponibles: ruta, profundidad, origen y, cuando el sitemap los incluye, fecha de modificación y prioridad.</p>
+
+<p>Esto permite pasar de una visión general a una revisión concreta: localizar una categoría, explorar sus páginas y consultar sus detalles desde el mismo espacio.</p>
+
+<h2>Exporta lo que necesitas compartir</h2>
+
+<p>Una estructura visual resulta especialmente útil cuando puedes incorporarla a tu trabajo. Sitemap Explorer permite exportar el proyecto completo, una rama seleccionada, los resultados filtrados o la visualización actual.</p>
+
+<p>Los formatos disponibles incluyen SVG y PNG para compartir el mapa como imagen, y CSV, JSON y XML para seguir trabajando con los datos, según el contenido elegido.</p>
+
+<p>Puedes preparar una vista general para una reunión o extraer una sección específica para revisarla con tu equipo.</p>
+
+<h2>Una ayuda para revisar la arquitectura de tu web</h2>
+
+<p>Sitemap Explorer puede servir como punto de partida para inventariar contenidos, revisar cómo se distribuyen las URLs por secciones o preparar una conversación sobre una migración o un rediseño.</p>
+
+<p>El mapa representa la estructura de las rutas importadas. Para analizar cómo se enlazan realmente las páginas entre sí, hace falta complementar esa información con una revisión del enlazado interno.</p>
+
+<p>Los archivos y el texto pegado se procesan localmente, y el proyecto se guarda en el navegador. Si importas desde una URL, el servidor descarga el sitemap público para incorporarlo a la herramienta.</p>
+
+<h2>Prueba Sitemap Explorer</h2>
+
+<p>Si quieres ver la estructura de tu web de una forma más clara, puedes importar tu sitemap o cargar el ejemplo incluido para explorar sus funciones.</p>
+
+<p><strong><a href="https://sitemap.josuesomarribas.com/">Abrir Sitemap Explorer →</a></strong></p>
