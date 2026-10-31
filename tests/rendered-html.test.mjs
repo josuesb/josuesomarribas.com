@@ -10,6 +10,7 @@ test("exports canonical public pages as static HTML", async () => {
     ["index.html", /Josue Somarribas/, "en"],
     ["es.html", /Ingeniero UX/, "es"],
     ["about.html", /Designer by instinct/, "en"],
+    ["es/about.html", /Diseñador por instinto/, "es"],
     ["blog.html", /Things I’m learning/, "en"],
     ["es/blog.html", /Cosas que estoy aprendiendo/, "es"],
     ["lab.html", /Useful things, built from curiosity/, "en"],
@@ -32,7 +33,7 @@ test("emits robots, sitemap and RSS into the deployed static directory", async (
     readFile(output("rss.xml"), "utf8"),
   ]);
   assert.match(robots, /Sitemap: https:\/\/www\.josuesomarribas\.com\/sitemap\.xml/);
-  for (const route of ["/about", "/now", "/es/now", "/lab", "/es/lab", "/blog", "/es/blog"]) assert.match(sitemap, new RegExp(`<loc>https://www\\.josuesomarribas\\.com${route}</loc>`));
+  for (const route of ["/about", "/es/about", "/now", "/es/now", "/lab", "/es/lab", "/blog", "/es/blog"]) assert.match(sitemap, new RegExp(`<loc>https://www\\.josuesomarribas\\.com${route}</loc>`));
   assert.match(sitemap, /<loc>https:\/\/www\.josuesomarribas\.com\/blog\/the-cost-of-fouc-how-content-flicker-kills-test-validity<\/loc>/);
   assert.match(sitemap, /<loc>https:\/\/www\.josuesomarribas\.com\/es\/blog\/the-cost-of-fouc-how-content-flicker-kills-test-validity<\/loc>/);
   assert.doesNotMatch(sitemap, /<loc>[^<]*\/writing/);

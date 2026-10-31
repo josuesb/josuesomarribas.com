@@ -14,7 +14,7 @@ const pieces = [
   { file:"07-sello-curious", depth:164, drift:27 },
 ] as const;
 
-export default function AboutHeroCollage3D() {
+export default function AboutHeroCollage3D({ locale = "en" }: { locale?: "en" | "es" }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const pieceRefs = useRef<Array<HTMLImageElement | null>>([]);
   const frameRef = useRef<number | null>(null);
@@ -54,7 +54,7 @@ export default function AboutHeroCollage3D() {
     });
   };
 
-  return <div className="about-collage about-3d-viewport" role="img" aria-label="Research, experimentation and a journey from Costa Rica to Spain" onPointerDown={requestTiltAccess} onPointerMove={move} onPointerLeave={reset}>
+  return <div className="about-collage about-3d-viewport" role="img" aria-label={locale === "es" ? "Investigación, experimentación y un viaje de Costa Rica a España" : "Research, experimentation and a journey from Costa Rica to Spain"} onPointerDown={requestTiltAccess} onPointerMove={move} onPointerLeave={reset}>
     <div ref={sceneRef} className="about-3d-scene" aria-hidden="true">
       <Image className="about-decor about-asset-sun about-3d-sun" src="/assets/global/sol-rojo-texturizado.svg" alt="" width={1024} height={1024}/>
       <Image className="about-decor about-asset-waves about-3d-waves" src="/assets/global/ondas-marfil-3-lineas.svg" alt="" width={1400} height={360}/>

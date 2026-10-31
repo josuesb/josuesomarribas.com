@@ -1,6 +1,20 @@
 import {readFile} from 'node:fs/promises';
 import {getCliClient} from 'sanity/cli';
-import {convertHtmlToPortableText} from './lib/portable-text.mjs';
+import {htmlToBlocks} from '@portabletext/block-tools';
+import {Schema} from '@sanity/schema';
+import {JSDOM} from 'jsdom';
+
+// These articles contain text, headings, lists and links only.
+const schema = Schema.compile({name:'productArticles', types:[{
+  name:'article', type:'document', fields:[{name:'body', type:'array', of:[{
+    type:'block', styles:['normal','h2','h3'].map(value => ({title:value, value})),
+    marks:{annotations:[{name:'link', type:'object', fields:[{name:'href', type:'string'}]}]},
+  }]}],
+}]});
+const bodyType = schema.get('article').fields.find(field => field.name === 'body').type;
+const convertHtmlToPortableText = html => htmlToBlocks(html, bodyType, {
+  parseHtml: value => new JSDOM(value).window.document,
+});
 
 // Publish only explicitly selected articles; never reimport the whole CMS.
 const slugs = process.argv.slice(2).filter(value => value !== '--commit');

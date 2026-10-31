@@ -7,6 +7,7 @@ import AboutHeroCollage3D from "../../../components/AboutHeroCollage3D";
 
 export const metadata: Metadata = {
   title: "About — Josue Somarribas",
+  alternates: { canonical: "/about", languages: { en: "/about", es: "/es/about", "x-default": "/about" } },
   description: "UX Engineer and CRO Developer connecting human behavior, interface craft and production code.",
 };
 

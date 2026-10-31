@@ -9,7 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
   { url:origin, changeFrequency:"monthly", priority:1, alternates:{languages:{en:origin,es:`${origin}/es`}} },
   { url:`${origin}/es`, changeFrequency:"monthly", priority:1, alternates:{languages:{en:origin,es:`${origin}/es`}} },
-  { url:`${origin}/about`, changeFrequency:"monthly", priority:.8 },
+  { url:`${origin}/about`, changeFrequency:"monthly", priority:.8, alternates:{languages:{en:`${origin}/about`,es:`${origin}/es/about`}} },
+  { url:`${origin}/es/about`, changeFrequency:"monthly", priority:.8, alternates:{languages:{en:`${origin}/about`,es:`${origin}/es/about`}} },
   { url:`${origin}/hangover`, changeFrequency:"monthly", priority:.8 },
   { url:`${origin}/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
   { url:`${origin}/es/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
