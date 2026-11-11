@@ -58,5 +58,4 @@
 @media (max-width: 600px) {
   .page { padding: 28px 24px; }
   .label { margin-top: 48px; }
-  .content { font-size: var(--type-body); line-height: var(--leading-body); }
 }

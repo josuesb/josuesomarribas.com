@@ -29,7 +29,6 @@
 @media(max-width:760px){
   .not-found-hero{min-height:0;grid-template-columns:minmax(0,1fr) 100px;gap:12px;padding-block:45px}
   .not-found-code{grid-column:1}
-  .not-found-code>span{font-size:var(--type-title);line-height:var(--leading-title)}
   .not-found-sun{grid-column:2;width:110px;height:110px}
   .not-found-copy{grid-column:1/-1;padding:45px 0 0}
   .not-found-label{right:0;top:45px}

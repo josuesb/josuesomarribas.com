@@ -12,7 +12,7 @@
 .ah-brand { display:flex; align-items:center; font-size:var(--type-section); line-height:var(--leading-heading); font-weight:900; letter-spacing:var(--tracking-heading); }
 .ah-brand-wordmark { font-family:var(--font-geist),Arial,sans-serif; }
 .ah-brand>span { border-left:1px solid var(--ah-line); margin-left:22px; padding-left:22px; font-size:var(--type-caption); font-weight:500; letter-spacing:1.5px; line-height:var(--leading-ui); }
-.ah-nav nav { display:flex; align-items:center; gap:34px; font-size:var(--type-caption); line-height:var(--leading-ui); }
+.ah-nav nav { display:flex; align-items:center; gap:34px; font-size:var(--type-ui); line-height:var(--leading-ui); }
 .ah-nav a:hover { color:var(--ah-red); }
 .ah-nav-dose { border:1px solid #333; padding:12px 21px; font-size:var(--type-caption); line-height:var(--leading-ui); font-weight:600; letter-spacing:1px; }
 .ah-nav-dose span { margin-left:20px; }
@@ -82,7 +82,7 @@
 .ah-example-note { margin-top:22px!important; text-align:center; color:#666; font-size:var(--type-caption); line-height:var(--leading-ui); }
 .ah-about { display:grid; grid-template-columns:1fr 1.1fr; padding-block:30px; border-top:1px solid var(--ah-line); gap:42px; }
 .ah-about h2 { margin-top:15px; }
-.ah-about>div:last-child { border-left:1px solid var(--ah-line); padding-left:42px; color:#666; font-size:var(--type-ui); line-height:var(--leading-ui); }
+.ah-about>div:last-child { border-left:1px solid var(--ah-line); padding-left:42px; color:#666; font-size:var(--type-body); line-height:var(--leading-body); }
 .ah-about p+p { margin-top:13px; }
 .ah-about a { display:inline-block; margin-top:18px; color:#111; border-bottom:1px solid #111; font-size:var(--type-caption); line-height:var(--leading-ui); font-weight:600; letter-spacing:1px; }
 .ah-closing { text-align:center; padding-block:6px 26px; }
@@ -94,53 +94,46 @@
 .ah-footer>div>a { font-size:var(--type-ui); line-height:var(--leading-ui); font-weight:800; letter-spacing:-.5px; }
 .ah-footer>div>span { padding-left:22px; border-left:1px solid var(--ah-line); font-size:var(--type-caption); line-height:var(--leading-ui); letter-spacing:1px; }
 .ah-footer>p { font-size:var(--type-body); line-height:var(--leading-body); color:#666; }
-.ah-footer>a { font-size:var(--type-caption); line-height:var(--leading-ui); letter-spacing:1px; white-space:nowrap; }
+.ah-footer>a { font-size:var(--type-ui); line-height:var(--leading-ui); letter-spacing:1px; white-space:nowrap; }
 .ah-skip { position:fixed; top:10px; left:10px; z-index:100; padding:12px; background:white; transform:translateY(-200%); }
 .ah-skip:focus { transform:translateY(0); }
 
 @media(min-width:1500px) { .ah-product-stage { min-height:645px; } }
 @media(max-width:1100px) {
   .ah-wrap { width:calc(100% - 64px); }
-  .ah-brand>span { font-size:var(--type-caption); line-height:var(--leading-ui); margin-left:15px; padding-left:15px; }
-  .ah-nav nav { gap:22px; }
-  .ah h1 { font-size:var(--type-title); line-height:var(--leading-title); }
+  .ah-brand>span { margin-left:15px; padding-left:15px; }
+  .ah-nav nav { gap:22px; font-size:var(--type-ui); line-height:var(--leading-ui); }
   .ah-hero { grid-template-columns:47% 53%; }
   .ah-product-stage { min-height:530px; }
   .ah-product-box { top:16px; }
   .ah-product-blister { bottom:18%; }
   .ah-product-note { bottom:7%; }
-  .ah-intro { font-size:var(--type-lead); line-height:var(--leading-body); max-width:310px; }
-  .ah-ticker { padding-inline:0; font-size:var(--type-caption); line-height:var(--leading-ui); gap:15px; }
+  .ah-intro { max-width:310px; }
+  .ah-ticker { padding-inline:0; gap:15px; }
   .ah-steps article { padding-inline:22px; }
   .ah-step-top { gap:15px; }
-  .ah-step-top>span { font-size:var(--type-title); line-height:var(--leading-title); }
   .ah-treatment-icon { width:90px; }
   .ah-symptom-grid article { padding-inline:20px; }
-  .ah h3 { font-size:var(--type-subheading); line-height:var(--leading-heading); }
   .ah-footer { flex-wrap:wrap; }
 }
 @media(max-width:700px) {
   .ah-wrap { width:calc(100% - 40px); }
   .ah-nav { min-height:74px; }
-  .ah-brand { font-size:var(--type-section); line-height:var(--leading-heading); }
   .ah-brand>span,.ah-nav nav>a:not(.ah-nav-dose) { display:none; }
-  .ah-nav-dose { font-size:var(--type-caption); line-height:var(--leading-ui); padding:12px 15px; }
+  .ah-nav-dose { padding:12px 15px; }
   .ah-hero { grid-template-columns:1fr; padding-top:18px; padding-bottom:18px; }
   .ah-hero-copy { padding:10px 0 0; }
-  .ah h1 { font-size:var(--type-title); line-height:var(--leading-title); margin-block:24px 28px; }
-  .ah-label { font-size:var(--type-caption); line-height:var(--leading-ui); }
-  .ah-intro { max-width:350px; font-size:var(--type-lead); line-height:var(--leading-body); }
+  .ah h1 { margin-block:24px 28px; }
+  .ah-intro { max-width:350px; }
   .ah-button { min-height:48px; }
-  .ah-dose-note { font-size:var(--type-caption); line-height:var(--leading-ui); letter-spacing:1.2px; }
+  .ah-dose-note { letter-spacing:1.2px; }
   .ah-product-stage { min-height:0; aspect-ratio:1.16; margin-top:18px; }
   .ah-product-box { width:84%; right:-2%; top:0; }
   .ah-product-blister { width:47%; left:-4%; bottom:8%; }
   .ah-product-note { width:54%; right:-3%; bottom:-1%; }
-  .ah-ticker { justify-content:flex-start; padding-block:12px; font-size:var(--type-caption); line-height:var(--leading-ui); }
-  .ah-ticker i { font-size:var(--type-card-title); line-height:var(--leading-heading); }
+  .ah-ticker { justify-content:flex-start; padding-block:12px; }
+  .ah-ticker i { font-size:var(--type-card-title); }
   .ah-section { padding-block:30px; }
-  .ah h2 { font-size:var(--type-section); line-height:var(--leading-heading); }
-  .ah-section-head>p { font-size:var(--type-body); line-height:var(--leading-body); }
   .ah-steps,.ah-symptom-grid,.ah-morning-grid { grid-template-columns:1fr; }
   .ah-steps article,.ah-steps article:first-child,.ah-steps article:last-child { padding:22px 0; border-left:0; border-bottom:1px solid var(--ah-line); }
   .ah-steps article:first-child { padding-top:0; }
@@ -152,7 +145,7 @@
   .ah-symptom-grid article,.ah-symptom-grid article:first-child,.ah-symptom-grid article:last-child { padding:22px 0; border-left:0; border-bottom:1px solid var(--ah-line); }
   .ah-symptom-grid article:first-child { padding-top:0; }
   .ah-symptom-grid article:last-child { border-bottom:0; padding-bottom:0; }
-  .ah-symptom-grid blockquote { font-size:var(--type-subheading); line-height:var(--leading-heading); min-height:0; }
+  .ah-symptom-grid blockquote { font-size:var(--type-subheading); min-height:0; }
   .ah-morning-grid article,.ah-morning-grid article:first-child,.ah-morning-grid article:last-child { padding:20px 0; border:0; }
   .ah-drawing { max-width:420px; margin:auto; }
   .ah-about { grid-template-columns:1fr; gap:24px; padding-block:30px; }
@@ -161,7 +154,7 @@
   .ah-closing h2 { max-width:340px; margin-inline:auto; }
   .ah .ah-footer { display:block; }
   .ah-footer>div { justify-content:space-between; gap:12px; }
-  .ah-footer>div>span { font-size:var(--type-caption); line-height:var(--leading-ui); padding-left:12px; }
+  .ah-footer>div>span { padding-left:12px; }
   .ah-footer>p { margin-block:18px; }
 }
 @media(prefers-reduced-motion:reduce) {
@@ -176,7 +169,7 @@
 .ah-instructions button { display:inline-flex; align-items:center; gap:10px; }
 @media(max-width:700px) {
   .ah-hero #get-cure { margin-top:28px; }
-  .ah-dose-note { font-size:var(--type-caption); line-height:var(--leading-ui); max-width:310px; }
+  .ah-dose-note { max-width:310px; }
 }
 
 .ah-experience-text { margin-top:24px; white-space:pre-line; overflow-wrap:anywhere; }
@@ -184,3 +177,5 @@
 .ah-instructions { scroll-margin-top:24px; }
 
 .modal_hide { display: none; }
+
+.ah-instructions p { font-size:var(--type-body); line-height:var(--leading-body); }

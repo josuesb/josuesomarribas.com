@@ -7,4 +7,4 @@
 .footer a:hover { color: #ff5a40; }
 .footer a[aria-current="page"] { text-decoration: underline; text-underline-offset: 5px; }
 @media (max-width: 1100px) { .inner.inner { flex-wrap: wrap; gap: 16px 24px; } .links.links { gap: 18px; } .url.url { display: none; } }
-@media (max-width: 760px) { .inner.inner { align-items: flex-start; } .copyright.copyright { align-self: center; } .links.links { width: 100%; margin: 0; gap: 8px 22px; font-size: var(--type-ui); line-height: var(--leading-ui); } }
+@media (max-width: 760px) { .inner.inner { align-items: flex-start; } .copyright.copyright { align-self: center; } .links.links { width: 100%; margin: 0; gap: 8px 22px; } }
