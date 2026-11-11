@@ -185,3 +185,29 @@
   .contact h2{font-size:42px}
 }
 @media(prefers-reduced-motion:reduce){.page *,.page *::before,.page *::after{transition:none!important;animation:none!important}}
+
+/* Keep the original 3D artwork within the editorial layout. */
+.heroArt{min-width:0;position:relative}
+.heroArt :global(.hero-flow-caption){position:relative;margin:38px 0 0;color:#bfa09a;font:500 12px/1.6 var(--font-mono),monospace;text-align:center}
+.heroArt :global(.hero-flow-step>div){font-size:12px;line-height:1.55}
+.heroArt :global(.hero-flow-step strong){font-size:19px}
+.delivery{scroll-margin-top:76px}
+.delivery :global(.cro-experience-main){width:min(1240px,calc(100% - 48px))}
+.delivery :global(.cro-experience-copy h2){font-size:clamp(44px,5vw,76px)}
+.contactRestored :global(.contact-grid){width:min(1240px,calc(100% - 48px))}
+.page .contactRestored h2{font-size:clamp(30px,2.8vw,44px);line-height:1.08;margin:0 0 14px;letter-spacing:-.04em;font-weight:650}
+@media(max-width:1100px){.heroGrid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px}}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.heroArt{width:100%;max-width:680px;margin:12px auto 0}}
+@media(max-width:760px){
+  .delivery :global(.cro-experience-main),.contactRestored :global(.contact-grid){width:calc(100% - 32px)}
+}
+@media(max-width:600px){
+  .heroArt :global(.hero-flow-perspective){padding:0;margin:0}
+  .heroArt :global(.hero-signal-flow){padding-top:12px}
+  .heroArt :global(.hero-flow-step header){height:40px;font-size:11px}
+  .heroArt :global(.hero-flow-step>div){height:148px;padding:12px;font-size:13px;line-height:1.5}
+  .heroArt :global(.hero-flow-step strong){font-size:17px;margin-top:0}
+  .heroArt :global(.hero-flow-step code){font-size:11px}
+  .heroArt :global(.hero-flow-step code em){margin-top:6px}
+  .heroArt :global(.hero-flow-caption){margin-top:24px;font-size:11px}
+}
