@@ -42,7 +42,7 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
           <p className={styles.eyebrow}><span /> UNA EXTENSIÓN PARA CHROME</p>
           <h1>Copia, organiza<br />y <em>abre tickets.</em></h1>
           <p className={styles.lead}>Menos pasos entre Jira y el resto de tu trabajo. Copia con tu formato, reúne tus tickets y prepara la próxima actualización.</p>
-          <div className={styles.heroActions}><ButtonLink  href="#funciones">Descubrir las funciones </ButtonLink></div>
+          <div className={styles.heroActions}><ButtonLink href="#funciones">Descubrir las funciones </ButtonLink></div>
           <p className={styles.status}><span /> En revisión en Chrome Web Store</p>
         </div>
         <div className={styles.spotlightPreview} aria-label="Ejemplo del buscador de tickets Spotlight">

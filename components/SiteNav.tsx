@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import { ButtonLink } from "./ui/Action";
 import styles from "./SiteNav.module.css";
 
@@ -10,6 +13,23 @@ const labels = {
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
 
 export default function SiteNav({ locale, current, languageHrefs }: { locale: Locale; current: Current; languageHrefs: Record<Locale, string> }) {
+  const menuRef = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    const menu = menuRef.current;
+    if (!menu) return;
+    const closeOnLink = (event: MouseEvent) => {
+      if ((event.target as HTMLElement).closest("a")) menu.open = false;
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && menu.open) {
+        menu.open = false;
+        menu.querySelector("summary")?.focus();
+      }
+    };
+    menu.addEventListener("click", closeOnLink);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => { menu.removeEventListener("click", closeOnLink); document.removeEventListener("keydown", closeOnEscape); };
+  }, []);
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
   const prefix = locale === "es" ? "/es" : "";
@@ -29,8 +49,8 @@ export default function SiteNav({ locale, current, languageHrefs }: { locale: Lo
         <a href={languageHrefs.es} lang="es" hrefLang="es" aria-current={locale === "es" ? "page" : undefined}>ES</a>
       </div>
       <a className={styles.resume} href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
-      <ButtonLink size="small" className={styles.desktopAction} href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink>
-      <details className={styles.mobile}>
+      <div className={styles.desktopAction}><ButtonLink size="small" href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink></div>
+      <details className={styles.mobile} ref={menuRef}>
         <summary aria-label={locale === "es" ? "Abrir menú" : "Open menu"}><span className={styles.menuIcon} aria-hidden="true"/></summary>
         <div className={styles.panel}>{links}<a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a><ButtonLink href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink></div>
       </details>

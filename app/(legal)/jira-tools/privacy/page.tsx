@@ -1,3 +1,4 @@
+import SiteFooter from "../../../../components/SiteFooter";
 import type { Metadata } from "next";
 import styles from "./privacy.module.css";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function JiraToolsPrivacyPage() {
   return (
-    <main className={styles.page}>
+    <><main className={styles.page}>
       <article className={styles.document} aria-labelledby="privacy-title">
         <header className={styles.header}>
           <a className={styles.brand} href="/es">Josue Somarribas </a>
@@ -23,8 +24,8 @@ export default function JiraToolsPrivacyPage() {
           <p>El usuario puede borrar la bandeja y el historial desde la extensión. Al desinstalarla se eliminan sus datos almacenados en el navegador.</p>
           <p>Jira Tools cumple la Política de Datos de Usuario de Chrome Web Store, incluidos sus requisitos de uso limitado.</p>
         </div>
-        <footer className={styles.footer}>Jira Tools · Política de privacidad</footer>
+        <p className={styles.footer}>Jira Tools · Política de privacidad</p>
       </article>
-    </main>
+    </main><SiteFooter locale="es"/></>
   );
 }

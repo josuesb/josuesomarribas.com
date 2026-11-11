@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "../../components/ui/Action";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import type { ArticleMeta } from "../../lib/content";
@@ -93,7 +95,7 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
     <div className="writing-tools">
       <label className="search-box"><span aria-hidden="true">⌕</span><input value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(INITIAL_ARCHIVE_SIZE); }} placeholder={t.search} aria-label={t.search}/></label>
       <small>{matches.length} {t.notes} · {t.updated}</small>
-      <div className="filter-row" aria-label={locale === "es" ? "Filtrar por tema" : "Filter by topic"}>{filters.map(value => <button type="button" key={value} className={filter === value ? "active" : ""} onClick={() => chooseFilter(value)}>{value === "All" ? t.all : clusterLabel(value, locale)}</button>)}</div>
+      <div className="filter-row" aria-label={locale === "es" ? "Filtrar por tema" : "Filter by topic"}>{filters.map(value => <Button variant="secondary" size="small" type="button" key={value} aria-pressed={filter === value} className={filter === value ? "active" : ""} onClick={() => chooseFilter(value)}>{value === "All" ? t.all : clusterLabel(value, locale)}</Button>)}</div>
     </div>
 
     {!!featured.length && <section className="featured-articles" aria-labelledby="featured-heading">

@@ -1,4 +1,4 @@
-import { ButtonLink } from "../../../components/ui/Action";
+import { ButtonLink, TextLink } from "../../../components/ui/Action";
 import type { Metadata } from "next";
 import SiteFooter from "../../../components/SiteFooter";
 import CopyEmailButton from "../../../components/CopyEmailButton";
@@ -22,7 +22,7 @@ export default function AboutPage() {
           <p className="about-label">ABOUT × THE PERSON BETWEEN THE PIXELS</p>
           <h1>Designer by instinct.<br />Engineer by practice.<br />Experimenter by <em>curiosity.</em></h1>
           <p className="about-lead">I&apos;m Josue Somarribas, a UX Engineer and CRO Developer connecting human behavior, interface craft and production code.</p>
-          <div className="actions"><ButtonLink  href={resumeHref} download>Download résumé </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink></div>
+          <div className="actions"><ButtonLink href={resumeHref} download>Download résumé </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink></div>
           <p className="about-meta">8+ years across UX and web development · Based in Spain · Born in Costa Rica</p>
         </div>
         <AboutHeroCollage3D />
@@ -38,15 +38,15 @@ export default function AboutPage() {
 
     <section className="about-field-notes"><div className="shell"><header><h2>Selected field notes</h2><span>EXCERPTS FROM MY DESIGN JOURNAL</span></header><Image src={`${editorialAsset}/field-notes.png`} alt="Four field notes about clarity, experimentation, craft and ethical measurement" width={2073} height={758} unoptimized/></div></section>
 
-    <section className="about-career shell" id="route"><div className="about-career-intro"><small>03 / PATH</small><h2>A path shaped<br/>by making.</h2><i/><p>I didn&apos;t follow a straight line. I followed curiosity, and kept building.</p><a href={resumeHref} target="_blank" rel="noreferrer">View résumé </a></div><div className="about-career-story"><Image src={`${editorialAsset}/career-route.png`} alt="A winding career route from Costa Rica to Barcelona" width={1983} height={793} unoptimized/><div className="about-milestones"><span><b>2017</b>Design curiosity</span><span><b>2018</b>Product foundations</span><span><b>2019</b>First experiments</span><span><b>2021</b>UX Engineering</span><span><b>2022</b>Barcelona</span><span><b>2024+</b>Learning loop</span></div></div></section>
+    <section className="about-career shell" id="route"><div className="about-career-intro"><small>03 / PATH</small><h2>A path shaped<br/>by making.</h2><i/><p>I didn&apos;t follow a straight line. I followed curiosity, and kept building.</p><TextLink href={resumeHref} target="_blank" rel="noreferrer">View résumé </TextLink></div><div className="about-career-story"><Image src={`${editorialAsset}/career-route.png`} alt="A winding career route from Costa Rica to Barcelona" width={1983} height={793} unoptimized/><div className="about-milestones"><span><b>2017</b>Design curiosity</span><span><b>2018</b>Product foundations</span><span><b>2019</b>First experiments</span><span><b>2021</b>UX Engineering</span><span><b>2022</b>Barcelona</span><span><b>2024+</b>Learning loop</span></div></div></section>
 
-    <section className="about-outside"><div className="shell"><div><small>04 / BEYOND WORK</small><h2>Outside the<br/>interface.</h2><i/><p>Hospitality taught me empathy. Travel taught me perspective. Costa Rica raised my roots. Barcelona feeds my curiosity.</p><p>Good conversations and strong coffee keep me going.</p><a href="https://www.airbnb.es/rooms/1328530246047347477" target="_blank" rel="noreferrer">Read the guest reviews </a></div><Image src={`${editorialAsset}/outside-collage.png`} alt="Room key, coffee receipt, Barcelona map and Costa Rica postcard" width={1536} height={1024} unoptimized/></div></section>
+    <section className="about-outside"><div className="shell"><div><small>04 / BEYOND WORK</small><h2>Outside the<br/>interface.</h2><i/><p>Hospitality taught me empathy. Travel taught me perspective. Costa Rica raised my roots. Barcelona feeds my curiosity.</p><p>Good conversations and strong coffee keep me going.</p><TextLink href="https://www.airbnb.es/rooms/1328530246047347477" target="_blank" rel="noreferrer">Read the guest reviews </TextLink></div><Image src={`${editorialAsset}/outside-collage.png`} alt="Room key, coffee receipt, Barcelona map and Costa Rica postcard" width={1536} height={1024} unoptimized/></div></section>
 
-    <section className="about-voices shell"><header><small>05 / COLLABORATION</small><h2>People I trust<br/>have said this better.</h2></header><blockquote>“Josue brings rare balance—curious like a researcher, precise like an engineer, and human like a designer.”<cite>Product Director · E-commerce scale-up</cite></blockquote><blockquote>“He asks great questions, notices the details and makes collaboration feel easy.”<cite>Engineering collaborator · B2B SaaS</cite></blockquote><a href="https://www.linkedin.com/in/josuesb/" target="_blank" rel="noreferrer">Read 14 recommendations<br/>on LinkedIn </a></section>
+    <section className="about-voices shell"><header><small>05 / COLLABORATION</small><h2>People I trust<br/>have said this better.</h2></header><blockquote>“Josue brings rare balance—curious like a researcher, precise like an engineer, and human like a designer.”<cite>Product Director · E-commerce scale-up</cite></blockquote><blockquote>“He asks great questions, notices the details and makes collaboration feel easy.”<cite>Engineering collaborator · B2B SaaS</cite></blockquote><TextLink href="https://www.linkedin.com/in/josuesb/" target="_blank" rel="noreferrer">Read 14 recommendations<br/>on LinkedIn </TextLink></section>
 
     <section className="about-curious"><div className="shell"><h2>Currently<br/><b>curious about</b></h2><p>Experiment validity 〰 Behavioral design 〰 Accessible interaction 〰 Browser quirks 〰 Typography 〰 Useful side projects</p></div></section>
 
-    <section className="about-editorial-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><ButtonLink  href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink><CopyEmailButton /></div></div></section>
+    <section className="about-editorial-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><ButtonLink href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink><CopyEmailButton /></div></div></section>
     <SiteFooter current="about" />
   </main>;
 }

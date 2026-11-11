@@ -1,3 +1,5 @@
+import SiteFooter from "./SiteFooter";
+import { ButtonLink, TextLink } from "./ui/Action";
 import Image from "next/image";
 
 type Locale = "en" | "es";
@@ -61,7 +63,6 @@ const asset = "/assets/now/editorial";
 
 export default function NowEditorialPage({locale="en"}:{locale?:Locale}) {
   const t = copy[locale];
-  const home = locale === "es" ? "/es" : "/";
   const blog = locale === "es" ? "/es/blog" : "/blog";
   return <main className="now-page" lang={locale}>
     
@@ -98,7 +99,7 @@ export default function NowEditorialPage({locale="en"}:{locale?:Locale}) {
 
       <article className="now-learning"><small>FIG. 04</small><h2>{t.learning}</h2><ol>{t.learningItems.map(([title,description],index)=><li key={title}><b>0{index+1}</b><span><strong>{title}</strong>{description}</span></li>)}</ol></article>
 
-      <article className="now-reading-list"><small>FIG. 05</small><h2>{t.reading}</h2><ol>{t.readingItems.map((item,index)=><li key={item}><b>{String(index+1).padStart(2,"0")}</b><span>{item}</span></li>)}</ol><a href={blog}>{locale === "es" ? "Notas en el sitio" : "Notes are on the site"} </a></article>
+      <article className="now-reading-list"><small>FIG. 05</small><h2>{t.reading}</h2><ol>{t.readingItems.map((item,index)=><li key={item}><b>{String(index+1).padStart(2,"0")}</b><span>{item}</span></li>)}</ol><TextLink href={blog}>{locale === "es" ? "Notas en el sitio" : "Notes are on the site"} </TextLink></article>
 
       <article className="now-collaborations"><small>FIG. 06</small><h2>{t.open}</h2><ul>{t.services.map(([title,description])=><li key={title}><strong>{title}</strong><span>{description}</span></li>)}</ul></article>
     </section>
@@ -106,9 +107,9 @@ export default function NowEditorialPage({locale="en"}:{locale?:Locale}) {
     <section className="now-final-cta shell">
       <Image src={`${asset}/cta-mark.png`} alt="" width={1536} height={1024} unoptimized/>
       <h2>{t.cta}</h2>
-      <a href="mailto:josuesomarribasb@gmail.com">{t.talk} </a>
+      <ButtonLink href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink>
     </section>
 
-    <footer className="now-editorial-footer"><div className="shell"><span>© 2026 Josue Somarribas</span><span>41.3851° N, 2.1734° E</span><span>{t.built} <i/></span><a href={home}>JS.</a></div></footer>
+    <SiteFooter locale={locale}/>
   </main>;
 }

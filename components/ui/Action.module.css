@@ -1,7 +1,8 @@
-.button.button {
+.button.button[data-ui] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   gap: 8px;
   min-height: var(--ui-control-height);
   padding: 12px 20px;
@@ -16,15 +17,15 @@
   cursor: pointer;
   transition: background-color .16s ease, border-color .16s ease;
 }
-.button.button:hover { background: var(--ui-accent-hover); }
-.button.button[data-variant="secondary"] { background: transparent; border-color: var(--ui-border); color: inherit; }
-.button.button[data-variant="secondary"]:hover { border-color: currentColor; background: color-mix(in srgb, currentColor 7%, transparent); }
-.button.button[data-variant="light"] { background: var(--ui-paper); color: var(--ui-ink); }
-.button.button[data-variant="light"]:hover { background: var(--ui-cream); border-color: var(--ui-border); }
-.button.button[data-size="small"] { min-height: 40px; padding: 9px 16px; }
-.button.button:disabled { opacity: .5; cursor: not-allowed; }
-.button.button:focus-visible, .link.link:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 4px; }
-.link.link {
+.button.button[data-ui]:hover { background: var(--ui-accent-hover); }
+.button.button[data-ui][data-variant="secondary"] { background: transparent; border-color: var(--ui-border); color: inherit; }
+.button.button[data-ui][data-variant="secondary"]:hover { border-color: currentColor; background: color-mix(in srgb, currentColor 7%, transparent); }
+.button.button[data-ui][data-variant="light"] { background: var(--ui-paper); color: var(--ui-ink); }
+.button.button[data-ui][data-variant="light"]:hover { background: var(--ui-cream); border-color: var(--ui-border); }
+.button.button[data-ui][data-size="small"] { min-height: 40px; padding: 9px 16px; }
+.button.button[data-ui]:disabled { opacity: .5; cursor: not-allowed; }
+.button.button[data-ui]:focus-visible, .link.link[data-ui]:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 4px; }
+.link.link[data-ui] {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
@@ -35,5 +36,7 @@
   text-underline-offset: 5px;
   text-decoration-thickness: 1px;
 }
-.link.link:hover { text-decoration-color: var(--ui-accent); }
-@media (prefers-reduced-motion: reduce) { .button.button { transition: none; } }
+.link.link[data-ui]:hover { text-decoration-color: var(--ui-accent); }
+@media (prefers-reduced-motion: reduce) { .button.button[data-ui] { transition: none; } }
+
+.button.button[data-ui][data-variant="secondary"][aria-pressed="true"] { background: var(--ui-ink); color: var(--ui-paper); border-color: var(--ui-ink); }

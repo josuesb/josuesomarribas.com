@@ -1,5 +1,8 @@
 "use client";
 
+import { Button, ButtonLink } from "../../../components/ui/Action";
+import SiteFooter from "../../../components/SiteFooter";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,7 +34,7 @@ export default function Hangover() {
     <a className="ah-skip" href="#ah-main">Skip to content</a>
     <header className="ah-nav ah-wrap">
       <Link className="ah-brand" href="/" aria-label="Josué Somarribas portfolio"><b className="logo ah-brand-wordmark">JS.</b><span>INDEPENDENT<br/>DIGITAL REMEDIES</span></Link>
-      <nav aria-label="Campaign navigation"><a href="#treatment">The treatment</a><a href="#symptoms">The symptoms</a><a className="ah-nav-dose" href="#get-cure">GET A DOSE </a></nav>
+      <nav aria-label="Campaign navigation"><a href="#treatment">The treatment</a><a href="#symptoms">The symptoms</a><ButtonLink size="small" href="#get-cure">GET A DOSE</ButtonLink></nav>
     </header>
     <main id="ah-main">
       <section className="ah-hero ah-wrap" aria-labelledby="ah-title">
@@ -39,7 +42,7 @@ export default function Hangover() {
           <p className="ah-label"><span className="ah-dot"/> RELIEF FOR THE OVERPROMPTED.</p>
           <h1 id="ah-title">Your AI had<br/>too many<br/>prompts<br/><span>last night.</span></h1>
           <p className="ah-intro">The overexplaining. The blind agreement. The absolute nonsense. Sounds like a digital hangover.</p>
-          <div id="get-cure"><button className="ah-button" onClick={() => copy()}><CopyLabel copied={copied === "cure"}/></button><p className="ah-caption">Paste it into your AI conversation. Let it recover.</p></div>
+          <div id="get-cure"><Button onClick={() => copy()}><CopyLabel copied={copied === "cure"}/></Button><p className="ah-caption">Paste it into your AI conversation. Let it recover.</p></div>
           <p className="ah-live" role="status">{copied === "cure" ? "Your dose is ready. Paste it into an existing conversation." : copied === "full" ? "Full instructions copied. Paste them into your assistant." : ""}{error && " Couldn’t copy automatically. Select the message below to copy it manually."}</p>
           {error && <textarea aria-label="Cure message to copy manually" readOnly value={cure} />}
           <p className="ah-dose-note">NO SIGN-UP. NO API. JUST A MUCH-NEEDED RESET.</p>
@@ -54,13 +57,13 @@ export default function Hangover() {
       <section id="treatment" className="ah-section ah-wrap">
         <div className="ah-section-head"><div><p className="ah-label">01 / DIRECTIONS FOR USE</p><h2>A small intervention. A better morning.</h2></div><p>No installation required.<br/>Your AI just needs a moment.</p></div>
         <div className="ah-steps">{[{n:"01",title:"Copy the cure.",text:"One click. One slightly concerned message. Consider it a glass of water for your AI."},{n:"02",title:"Paste into the chaos.",text:"Use an existing AI conversation. The more context, the more personal the diagnosis."},{n:"03",title:"Watch it self-reflect.",text:"A diagnosis. A clearer response. And, if supported, an illustrated souvenir of the damage."}].map(s => <article key={s.n}><div className="ah-step-top"><span>{s.n}</span><TreatmentIcon step={s.n}/></div><h3>{s.title}</h3><p>{s.text}</p></article>)}</div>
-        <div id="copy-instructions" className="ah-instructions"><p>AI not getting the hint? Copy the full experience instructions.</p><button onClick={() => copy(true)}><CopyLabel copied={copied === "full"} full/></button><p role="status">{copied === "full" ? "Full instructions copied." : error ? "Copy unavailable. Select the instructions below to copy them manually." : ""}</p>{error && <textarea aria-label="Full experience instructions to copy manually" readOnly value={experienceInstructions}/>}</div>
+        <div id="copy-instructions" className="ah-instructions"><p>AI not getting the hint? Copy the full experience instructions.</p><Button variant="secondary" onClick={() => copy(true)}><CopyLabel copied={copied === "full"} full/></Button><p role="status">{copied === "full" ? "Full instructions copied." : error ? "Copy unavailable. Select the instructions below to copy them manually." : ""}</p>{error && <textarea aria-label="Full experience instructions to copy manually" readOnly value={experienceInstructions}/>}</div>
       </section>
       <section id="symptoms" className="ah-symptoms"><div className="ah-wrap ah-section"><div className="ah-section-head"><div><p className="ah-label">02 / COMMON SYMPTOMS</p><h2>Recognize the symptoms?</h2></div><p>It’s not you.<br/>It’s the 73 prompts before you.</p></div><div className="ah-symptom-grid">{[{code:"SYMPTOM 001",quote:"“Absolutely! You’re absolutely right.”",name:"Chronic people-pleasing",desc:"Even when you’re absolutely not."},{code:"SYMPTOM 002",quote:"“Let’s delve into the 12 key pillars…”",name:"Acute overexplaining",desc:"You asked for the time. It built a clock."},{code:"SYMPTOM 003",quote:"“According to a study I just invented…”",name:"Unsupervised confidence",desc:"100% certain. 0% source material."}].map(s=><article key={s.code}><p className="ah-label">{s.code}<span>↗</span></p><blockquote>{s.quote}</blockquote><h3>{s.name}</h3><p>{s.desc}</p></article>)}</div></div></section>
       <section className="ah-section ah-wrap"><div className="ah-section-head"><div><p className="ah-label">03 / THE MORNING AFTER</p><h2>Every hangover has a story.</h2></div><p>Your conversation. Your chaos. Your souvenir.<br/>An illustration, if your assistant supports it.</p></div><div className="ah-morning-grid">{["47 versions of the same button.","It worked on my machine.","One funnel too many."].map((title,i)=><article key={title}><div className="ah-drawing"><Image unoptimized src={`/hangover/assets/morning-${["ux", "code", "marketing"][i]}.webp`} width={800} height={533} sizes="(max-width: 700px) 90vw, 30vw" alt={["Exhausted robot surrounded by dozens of button designs.", "Robot buried under code printouts and error reports.", "Robot tangled in marketing funnels, cables and dashboards."][i]} /><span>FIG. 0{i+1}</span></div><h3>{title}</h3><p>{["THE UX HANGOVER","THE DEVELOPER HANGOVER","THE MARKETING HANGOVER"][i]}</p></article>)}</div><p className="ah-example-note">Illustrative examples. Your assistant’s output will vary with your conversation and available tools.</p></section>
       <section className="ah-about ah-wrap"><div><p className="ah-label">04 / BEHIND THE QUESTIONABLE MEDICINE</p><h2>Real designer.<br/>Fictional pharmacist.</h2></div><div><p>I’m Josué Somarribas. I design and build digital experiences — from UX and front-end to experiments that ask, “what if?”</p><p>AI Hangover is one of those experiments. A little design, a little code, and a healthy suspicion of “Absolutely!”</p><Link href="/">MEET THE HUMAN BEHIND IT </Link></div></section>
-      <section className="ah-closing ah-wrap"><span className="ah-closing-cross" aria-hidden="true">+</span><h2>AI isn’t itself when it’s hungover.</h2><button className="ah-button" onClick={() => copy()}><CopyLabel copied={copied === "cure"}/></button><p className="ah-caption">One dose. A little perspective.</p></section>
+      <section className="ah-closing ah-wrap"><span className="ah-closing-cross" aria-hidden="true">+</span><h2>AI isn’t itself when it’s hungover.</h2><Button onClick={() => copy()}><CopyLabel copied={copied === "cure"}/></Button><p className="ah-caption">One dose. A little perspective.</p></section>
     </main>
-    <footer className="ah-footer ah-wrap"><div><a href="#ah-title">AI HANGOVER™</a><span>AN EXPERIMENT BY <Link href="/">JOSUÉ SOMARRIBAS </Link></span></div><p>*Fictional remedy. Real experiment. No medical claims, no guaranteed AI improvements.<br/>Not affiliated with OpenAI or any AI provider. Results depend on your assistant.</p><a href="#copy-instructions">COPY FULL INSTRUCTIONS </a></footer>
+    <footer className="ah-footer ah-wrap"><div><a href="#ah-title">AI HANGOVER™</a><span>AN EXPERIMENT BY <Link href="/">JOSUÉ SOMARRIBAS </Link></span></div><p>*Fictional remedy. Real experiment. No medical claims, no guaranteed AI improvements.<br/>Not affiliated with OpenAI or any AI provider. Results depend on your assistant.</p><a href="#copy-instructions">COPY FULL INSTRUCTIONS </a></footer><SiteFooter/>
   </div>;
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "../../components/ui/Action";
+
 import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "../../lib/analytics";
 
@@ -134,7 +136,7 @@ export default function ArticleTools({ title, locale = "en", audioSrc, mode = "a
   if (mode === "sidebar-progress") return <div className="sidebar-progress"><b>{locale === "es" ? "PROGRESO DE LECTURA" : "READING PROGRESS"}</b><span>{progress}%</span><i><em style={{ width:`${progress}%` }}/></i></div>;
   return <>
     <div className="article-actions" aria-label={locale === "es" ? "Herramientas del artículo" : "Article tools"}>
-      <button onClick={listen} aria-pressed={listening}>◉ <span>{listening ? (locale === "es" ? "Pausar" : "Pause") : (locale === "es" ? "Escuchar" : "Listen")}</span></button>
+      <Button variant="secondary" size="small" onClick={listen} aria-pressed={listening}>◉ <span>{listening ? (locale === "es" ? "Pausar" : "Pause") : (locale === "es" ? "Escuchar" : "Listen")}</span></Button>
     </div>
     {playerOpen && <section className="floating-audio-player" aria-label={locale === "es" ? "Reproductor del artículo" : "Article audio player"}>
       <div className="floating-audio-copy"><small>{locale === "es" ? "ESCUCHANDO" : "NOW LISTENING"}</small><strong>{title}</strong></div>

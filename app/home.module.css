@@ -4,12 +4,6 @@
 .page section[id]{scroll-margin-top:96px}
 .skip{position:fixed;top:-100px;left:20px;padding:12px 18px;z-index:100;background:var(--red);color:white}
 .skip:focus{top:12px}
-.header{position:sticky;top:0;z-index:30;background:#0d0f0f;color:var(--cream);border-bottom:1px solid #5b403b55}
-.header :global(.nav){width:min(1240px,calc(100% - 48px));height:76px;gap:22px;grid-template-columns:60px minmax(0,1fr) auto auto auto}
-.header :global(.logo){font-size:24px;letter-spacing:-1.5px}
-.header :global(.nav-links){gap:28px;font-size:14px}
-.header :global(.nav-resume){font-size:13px}
-.header :global(.nav-cta){font-size:14px;min-height:40px;padding-inline:16px}
 .hero{background:#0d0f0f;background-image:radial-gradient(circle at 72% 52%,#151c20 0,transparent 40%),linear-gradient(180deg,#0f1213 0,#090c0d 100%);color:var(--cream)}
 .heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center;padding-block:104px 100px}
 .eyebrow,.kicker{margin:0 0 18px;font:500 12px/1.5 var(--font-mono),monospace;letter-spacing:.02em}
@@ -18,9 +12,6 @@
 .heroCopy h1 em{font-family:Georgia,serif;font-weight:600;color:#ff5b3d;letter-spacing:-.045em}
 .lead{max-width:490px;margin:0;color:#d9b8b2;font-size:18px;line-height:1.65}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:32px}
-.actions :global(.btn){min-height:48px;font-size:14px;border-radius:4px;padding:12px 19px;gap:14px}
-.hero .actions :global(.btn-red){background:#ff5b3d;color:#fff;box-shadow:none}
-.hero .actions :global(.btn-outline){color:var(--cream);border-color:#ffffff38}
 .heroMeta{margin:28px 0 0;color:#bfa09a;font:400 12px/1.7 var(--font-mono),monospace}
 .instrument{padding:18px;background:#181f22;border:1px solid #41494b;box-shadow:14px 14px 0 #22292b;color:var(--cream)}
 .instrumentTop,.instrumentBottom{display:flex;justify-content:space-between;align-items:center;gap:12px;font:500 11px/1.5 var(--font-mono),monospace;color:#bfa09a}
@@ -95,12 +86,12 @@
 .writingSection .sectionIntro h2{color:#f4f0e6}
 .writingSection .kicker{color:#ff6348}
 .writingSection .textLink{text-decoration-color:#ffffff38}
-.articleRow{display:grid;grid-template-columns:115px minmax(0,1fr) 24px;gap:30px;align-items:baseline;padding:24px 0;border-top:1px solid #ffffff2b}
+.articleRow{display:grid;grid-template-columns:115px minmax(0,1fr);gap:30px;align-items:baseline;padding:24px 0;border-top:1px solid #ffffff2b}
 .articleRow:last-child{border-bottom:1px solid #ffffff2b}
 .articleRow time{font:400 11px/1.6 var(--font-mono),monospace;color:#aebac0}
 .articleRow h3{font-size:22px;line-height:1.35;font-weight:650;letter-spacing:-.025em;margin:0 0 8px}
 .articleRow p{font-size:14px;line-height:1.6;color:#b9c2c6;margin:0}
-.articleArrow{font-size:21px;color:#ff735b}
+
 .articleRow:hover h3{text-decoration:underline;text-decoration-color:#ff735b;text-underline-offset:4px}
 .quote{padding:28px;margin:36px 0 0;background:#111e25;border-left:3px solid #ff5b3d}
 .quote blockquote{margin:0 0 16px;font-size:19px;line-height:1.6}
@@ -110,14 +101,8 @@
 .contact .eyebrow{color:var(--cream)}
 .contact h2{font-size:clamp(44px,5.5vw,76px);font-weight:650;line-height:1.08;letter-spacing:-.05em;margin:22px 0 20px;max-width:900px}
 .contact>.wrap>p:not(.eyebrow){max-width:600px;font-size:16px;line-height:1.7}
-.contact .actions :global(.btn-light){background:var(--paper);color:var(--ink)}
-.contact .actions :global(.btn-outline){border-color:#aaa79d;color:var(--paper)}
 .contact>.wrap>.contactMeta{margin-top:24px;font:400 12px/1.7 var(--font-mono),monospace}
-.page :global(footer .shell){width:min(1240px,calc(100% - 48px))}
-.page :global(footer .logo){font-size:24px}
 @media(max-width:1100px){
-  .header :global(.nav){gap:16px}
-  .header :global(.nav-links){gap:18px}
   .heroGrid{gap:36px}
   .heroCopy h1{font-size:clamp(48px,5.5vw,64px)}
   .instrumentSteps li{grid-template-columns:20px 78px minmax(0,1fr);gap:8px;padding-inline:10px}
@@ -129,10 +114,9 @@
   .jiraLinks{grid-column:2;padding:0 20px 20px 0;flex-direction:row;flex-wrap:wrap;gap:16px}
   .jiraImage{grid-row:1/3}
 }
-@media(max-width:900px){.header :global(.nav){display:flex}.header :global(.nav-links){display:none}.header :global(.nav-resume){display:none}.header :global(.language-switcher){margin-left:auto}}
+
 @media(max-width:760px){
-  .wrap,.header :global(.nav),.page :global(footer .shell){width:calc(100% - 32px)}
-  .header :global(.nav){height:64px;gap:14px}
+  .wrap{width:calc(100% - 32px)}
   .heroGrid{grid-template-columns:1fr;padding-block:64px;gap:42px}
   .heroCopy h1{font-size:clamp(46px,9vw,68px)}
   .lead{font-size:17px}
@@ -151,7 +135,7 @@
   .clientMeta{font-size:11px}
   .methodGrid{grid-template-columns:1fr;gap:36px}
   .methodSteps li{grid-template-columns:30px 120px minmax(0,1fr)}
-  .articleRow{grid-template-columns:80px minmax(0,1fr) 18px;gap:12px}
+  .articleRow{grid-template-columns:80px minmax(0,1fr);gap:12px}
   .articleRow h3{font-size:18px}
   .contact{padding-block:75px}
   .quote{padding:24px}
@@ -162,7 +146,6 @@
 @media(max-width:480px){
   .heroCopy h1{font-size:clamp(42px,11vw,52px)}
   .hero .actions{align-items:flex-start;flex-direction:column}
-  .hero .actions :global(.btn){min-width:180px}
   .instrument{padding:14px}
   .instrumentTop{flex-direction:column;gap:6px}
   .instrumentSteps li{grid-template-columns:20px minmax(0,1fr);gap:4px 10px;padding:12px}
@@ -178,10 +161,10 @@
   .catalogLink{justify-content:flex-start}
   .methodSteps li{grid-template-columns:26px minmax(0,1fr);gap:6px 12px}
   .methodSteps p{grid-column:2}
-  .articleRow{grid-template-columns:minmax(0,1fr) 20px;gap:6px 12px}
+  .articleRow{grid-template-columns:minmax(0,1fr);gap:6px 12px}
   .articleRow time{grid-column:1;grid-row:1}
   .articleRow>div{grid-column:1;grid-row:2}
-  .articleArrow{grid-column:2;grid-row:2}
+
   .contact h2{font-size:42px}
 }
 @media(prefers-reduced-motion:reduce){.page *,.page *::before,.page *::after{transition:none!important;animation:none!important}}

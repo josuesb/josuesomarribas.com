@@ -1,3 +1,4 @@
+import SiteFooter from "../../components/SiteFooter";
 import { ButtonLink } from "../../components/ui/Action";
 import Image from "next/image";
 import brokenSun from "../../public/assets/404/broken-sun.png";
@@ -17,7 +18,7 @@ export default function NotFound() {
         <h1 id="not-found-title">Signal lost.</h1>
         <p>This page didn&apos;t survive the experiment.</p>
         <div className="not-found-actions">
-          <ButtonLink  href="/">Back to home </ButtonLink>
+          <ButtonLink href="/">Back to home </ButtonLink>
           <ButtonLink variant="secondary" href="/blog">Explore writing </ButtonLink>
         </div>
       </div>
@@ -28,6 +29,6 @@ export default function NotFound() {
       <p aria-hidden="true">Try another<br/>path. ↙</p>
     </section>
 
-    <footer className="not-found-footer"><div className="shell"><span>© 2026 Josue Somarribas</span><b>J—S</b></div></footer>
+    <SiteFooter/>
   </main>;
 }

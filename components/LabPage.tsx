@@ -1,7 +1,6 @@
 "use client";
 
-import { ButtonLink } from "./ui/Action";
-
+import { Button, ButtonLink, TextLink } from "./ui/Action";
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
@@ -51,15 +50,15 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
     </section>
 
     <div className="labx-catalog shell">
-      <nav className="labx-filters" aria-label={locale === "es" ? "Filtrar herramientas" : "Filter tools"}>{filters.map(([value,label])=><button key={value} type="button" className={filter===value?"active":""} aria-pressed={filter===value} onClick={()=>setFilter(value)}>{label}</button>)}</nav>
+      <nav className="labx-filters" aria-label={locale === "es" ? "Filtrar herramientas" : "Filter tools"}>{filters.map(([value,label])=><Button variant="secondary" size="small" key={value} type="button" className={filter===value?"active":""} aria-pressed={filter===value} onClick={()=>setFilter(value)}>{label}</Button>)}</nav>
 
       {(filter === "all" || filter === "live") && <article className="labx-featured">
-        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><a href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`}>{t.details} </a></div>
+        <div className="labx-featured-copy"><p><span>01</span>{t.featured}</p><h2>5 Seconds Tester</h2><p>{t.seconds}</p><dl><div><dt>STATUS</dt><dd><i/>{t.live}</dd></div><div><dt>TECH</dt><dd>Next.js · TypeScript · Vercel</dd></div></dl><ButtonLink variant="secondary" href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`}>{t.details}</ButtonLink></div>
         <a className="labx-featured-image" href={`${locale === "es" ? "/es" : ""}/lab/five-seconds-tester`} aria-label={`${t.details}: 5 Seconds Tester`}><Image src="/assets/project-previews/5-seconds-tester.webp" alt="5 Seconds Tester interface" fill sizes="(max-width: 760px) calc(100vw - 48px), 58vw" unoptimized/></a>
       </article>}
 
       {(filter === "all" || filter === "systems") && <article className="labx-wedding">
-        <div className="labx-wedding-copy"><p>PRIVATE PLATFORM · ADVANCED BUILD</p><h2>Comparte el Momento</h2><span>DIGITAL EVENT INVITATIONS</span><p>{t.wedding}</p><ul><li><b>{t.invite}</b><span>{t.inviteCopy}</span></li><li><b>{t.rsvp}</b><span>{t.rsvpCopy}</span></li></ul><small>Next.js 16 · React 19 · TypeScript · Neon · Drizzle</small><div><em><i/>{t.development}</em><a href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer">{t.preview} </a></div></div>
+        <div className="labx-wedding-copy"><p>PRIVATE PLATFORM · ADVANCED BUILD</p><h2>Comparte el Momento</h2><span>DIGITAL EVENT INVITATIONS</span><p>{t.wedding}</p><ul><li><b>{t.invite}</b><span>{t.inviteCopy}</span></li><li><b>{t.rsvp}</b><span>{t.rsvpCopy}</span></li></ul><small>Next.js 16 · React 19 · TypeScript · Neon · Drizzle</small><div><em><i/>{t.development}</em><TextLink href="https://www.comparteelmomento.com/" target="_blank" rel="noreferrer">{t.preview}</TextLink></div></div>
         <div className="labx-wedding-art" role="img" aria-label={locale === "es" ? "Portada pública de la boda y panel anónimo de gestión de invitados" : "Public wedding page and anonymous guest-management dashboard"}>
           <Image className="labx-wedding-public" src="/assets/lab/comparte-public.webp" alt="" width={1440} height={900} loading="eager" unoptimized/>
           <Image className="labx-wedding-admin" src="/assets/lab/comparte-admin.webp" alt="" width={1536} height={1024} loading="eager" unoptimized/>
@@ -69,11 +68,11 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       {!!visibleTools.length && <section className="labx-tool-grid" aria-label={locale === "es" ? "Herramientas y experimentos" : "Tools and experiments"}>{visibleTools.map(tool=><article key={tool.id}>
         <header><b>{tool.number}</b><span>{tool.category === "utilities" ? t.filters.utilities : t.filters.experiments}</span></header>
         <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" loading="eager" unoptimized/></div>
-        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={tool.landingUrl?.[locale] ?? `${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} </a>
+        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><TextLink href={tool.landingUrl?.[locale] ?? `${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details}</TextLink>
       </article>)}</section>}
 
-      <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><a href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse} </a></aside>
-      <section className="labx-cta"><span aria-hidden="true">⌁</span><div><h2>{t.cta}</h2><p>{t.ctaCopy}</p></div><ButtonLink  href="mailto:josuesomarribasb@gmail.com">{t.talk} </ButtonLink></section>
+      <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><TextLink href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse}</TextLink></aside>
+      <section className="labx-cta"><span aria-hidden="true">⌁</span><div><h2>{t.cta}</h2><p>{t.ctaCopy}</p></div><ButtonLink href="mailto:josuesomarribasb@gmail.com">{t.talk} </ButtonLink></section>
     </div>
     <SiteFooter locale={locale} current="lab"/>
   </main>;

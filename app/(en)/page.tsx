@@ -36,7 +36,7 @@ export default function Home({locale="en"}:{locale?:"en"|"es"} = {}) {
           <p className={styles.eyebrow}>Josue Somarribas / {es?"Ingeniero UX y desarrollador CRO":"UX Engineer & CRO Developer"}</p>
           <h1 id="home-title">{es?"Diseño la experiencia.":"I design the experience."}<br/><em>{es?"Y la construyo.":"Then I build it."}</em></h1>
           <p className={styles.lead}>{es?"Investigación, diseño de interfaces, front-end de producción y experimentación. Conecto las decisiones de producto con el código que las hace posibles.":"Research, interface design, production front-end and experimentation. I work where product decisions become code."}</p>
-          <div className={styles.actions}><ButtonLink  href="#work">{es?"Ver proyectos":"Explore my work"} </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">{es?"Cuéntame tu proyecto":"Discuss a project"} </ButtonLink></div>
+          <div className={styles.actions}><ButtonLink href="#work">{es?"Ver proyectos":"Explore my work"} </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">{es?"Cuéntame tu proyecto":"Discuss a project"} </ButtonLink></div>
           <p className={styles.heroMeta}>{es?"Desde España · Trabajo globalmente":"Based in Spain · Working globally"} · <ExperienceDuration locale={locale}/></p>
         </div>
         <div className={styles.heroArt}><HeroExperimentArtwork locale={locale}/></div>

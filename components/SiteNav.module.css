@@ -10,6 +10,7 @@
 .languages a { min-height: 40px; min-width: 28px; display: grid; place-items: center; opacity: .65; }
 .languages a[aria-current="page"] { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
 .resume { font-size: 13px; }
+.desktopAction { flex-shrink: 0; }
 .mobile { display: none; }
 .mobile summary { width: 40px; height: 40px; cursor: pointer; list-style: none; display: grid; place-items: center; border: 1px solid #ffffff38; border-radius: var(--ui-radius); }
 .mobile summary::-webkit-details-marker { display: none; }

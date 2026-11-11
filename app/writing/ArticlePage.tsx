@@ -12,7 +12,9 @@ function headingId(value:string) { return plainText(value).normalize("NFKD").rep
 function prepareBody(body:string) {
   const headings:{ id:string; label:string }[] = [];
   const used = new Set<string>();
-  const normalizedLinks = rewriteMergedArticleLinks(body).replace(/href="https:\/\/josuesomarribas\.com(\/[^"]*)"/g, 'href="$1"');
+  const normalizedLinks = rewriteMergedArticleLinks(body)
+    .replace(/(<a\b[^>]*>)([\s\S]*?)(<\/a>)/gi, (_match, open, label, close) => open + label.replace(/(↗|↙|↖|↘|→|←|↑|↓|&(?:rarr|larr|uarr|darr|nearr|searr);|&#(?:859[2-9]|860[0-1]);)(?=\s*(?:<[^>]+>\s*)*$)/gi, "") + close)
+    .replace(/href="https:\/\/josuesomarribas\.com(\/[^"]*)"/g, 'href="$1"');
   const html = normalizedLinks.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_match, attributes, content) => {
     let id = headingId(content) || "section"; let suffix = 2;
     while (used.has(id)) id = `${id}-${suffix++}`; used.add(id);
@@ -94,7 +96,7 @@ export default function ArticlePage({ article, locale }:{ article:Article; local
         {!!related.length && <section className="article-related"><h2>{labels.moreTopic}</h2><div>{related.map(item => <a key={item.slug} href={articleHref(item, locale)}><span aria-hidden="true"><Image src={editorialThumbnail(item.slug, item.image)} alt="" fill sizes="(max-width: 760px) 120px, 280px" loading="lazy" unoptimized/></span><small>{item.cluster.replaceAll("-", " · ")}</small><strong>{item.title}</strong></a>)}</div></section>}
       </article>
     </div>
-    <div className="article-footer"><SiteFooter locale={locale} current="writing"/></div>
+    <SiteFooter locale={locale} current="writing"/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/>
   </main>;
 }
