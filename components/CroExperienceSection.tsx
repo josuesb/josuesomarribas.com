@@ -29,11 +29,11 @@ export default function CroExperienceSection({ locale = "en" }: { locale?: "en" 
   return <section className="cro-experience" id="cro-experience">
     <div className="cro-experience-main shell">
       <div className="cro-experience-copy">
-        <p>{es ? "CRO EN PRODUCCIÓN" : "CRO IN PRODUCTION"}</p>
-        <h2>{es ? <>No me quedo<br/>en la hipótesis.</> : <>I don&apos;t stop<br/>at the hypothesis.</>}</h2>
-        <p>{es ? "Desarrollo la variante, protejo el lanzamiento y ayudo a convertir los tests ganadores en producto." : "I build the variant, protect the release and help winning tests become product."}</p>
-        <a className="btn btn-red" href="#process">{es ? "Ver cómo trabajo" : "Explore my CRO work"} </a>
-        <small>{es ? "30–50 experimentos · Adobe Target · Monetate" : "30–50 experiments · Adobe Target · Monetate"}</small>
+        <p>{es ? "IMPLEMENTACIÓN Y QA" : "IMPLEMENTATION & QA"}</p>
+        <h2>{es ? <>De la hipótesis<br/>a producción.</> : <>From hypothesis<br/>to production.</>}</h2>
+        <p>{es ? "Construyo la variante, preparo la instrumentación y reviso el comportamiento en QA y UAT antes de publicar." : "I build the variant, prepare the tracking and check behaviour in QA and UAT before release."}</p>
+        <a className="btn btn-red" href="/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf" target="_blank" rel="noreferrer">{es ? "Ver experiencia en el CV" : "View experience in my résumé"} </a>
+        <small>{es ? "Adobe Target · Monetate · QA, UAT y producción" : "Adobe Target · Monetate · QA, UAT & production"}</small>
       </div>
       <CroArtwork locale={locale}/>
     </div>

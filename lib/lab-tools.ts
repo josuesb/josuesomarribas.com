@@ -8,7 +8,8 @@ export type LabTool = {
   id:string;
   number:string;
   category:LabCategory;
-  status:"live" | "concept";
+  status:"live" | "concept" | "review";
+  landingUrl?:Localized;
   name:Localized;
   description:Localized;
   image:string;
@@ -95,6 +96,47 @@ export const labTools:LabTool[] = [
     limits:{en:["Browser APIs may omit or generalize privacy-sensitive information.","The report helps reproduce a problem but does not inspect the affected page itself."],es:["Las APIs del navegador pueden omitir o generalizar información sensible.","El informe ayuda a reproducir el problema, pero no inspecciona la página afectada." ]},
     architecture:{en:"A dependency-free static HTML page. All detection happens locally and no browser information is sent to a server.",es:"Una página HTML estática sin dependencias. Toda la detección ocurre localmente y no se envía información a ningún servidor."}, stack:["HTML","CSS","JavaScript","Browser APIs"]
   }
+  ,{
+    slug:"sitemap-explorer", id:"sitemap", number:"09", category:"utilities", status:"live", name:{en:"Sitemap Explorer",es:"Sitemap Explorer"},
+    description:{en:"Explore a website’s URLs as a visual map, filter sections and export the results.",es:"Explora las URLs de un sitio como un mapa visual, filtra secciones y exporta los resultados."},
+    image:"/assets/project-previews/sitemap-explorer.webp", imageAlt:{en:"Sitemap Explorer map of folders and languages",es:"Mapa de carpetas e idiomas de Sitemap Explorer"}, externalUrl:"https://sitemap.josuesomarribas.com/",
+    articleUrl:{en:"/blog/sitemap-explorer-visual-website-map",es:"/es/blog/sitemap-explorer-visual-website-map"},
+    problem:{en:"A long list of URLs makes it difficult to see how a website is organised. Sitemap Explorer groups paths into a structure you can navigate.",es:"Una lista larga de URLs dificulta ver cómo se organiza una web. Sitemap Explorer agrupa las rutas en una estructura navegable."},
+    features:{en:["Explore sitemaps and URL lists as folders.","Filter sections and languages.","Export results for further analysis."],es:["Explora sitemaps y listas de URLs como carpetas.","Filtra secciones e idiomas.","Exporta los resultados para analizarlos."]},
+    limits:{en:["A sitemap describes listed URLs; it does not prove that every page is indexed."],es:["Un sitemap describe las URLs incluidas; no demuestra que todas las páginas estén indexadas."]},
+    architecture:{en:"A visual interface for inspecting sitemap and URL structures, with exportable results.",es:"Una interfaz visual para inspeccionar estructuras de sitemaps y URLs, con resultados exportables."}, stack:["Sitemaps","URL analysis","Information architecture"]
+  },
+  {
+    slug:"ai-visibility-benchmark", id:"benchmark", number:"10", category:"experiments", status:"live", name:{en:"AI Visibility Benchmark",es:"AI Visibility Benchmark"},
+    description:{en:"Compare brand mentions, recommendations and citations across AI assistants, with original responses to review.",es:"Compara menciones, recomendaciones y citas de una marca entre asistentes de IA, con respuestas originales para revisar."},
+    image:"/assets/project-previews/ai-visibility-benchmark.webp", imageAlt:{en:"AI Visibility Benchmark demo with brand visibility metrics",es:"Demo de AI Visibility Benchmark con métricas de visibilidad de marca"}, externalUrl:"https://bench.josuesomarribas.com/demo",
+    articleUrl:{en:"/blog/ai-visibility-benchmark-brand-presence",es:"/es/blog/ai-visibility-benchmark-brand-presence"},
+    problem:{en:"One answer from an assistant is difficult to interpret alone. A common set of questions makes comparisons between models and competitors easier to inspect.",es:"Una respuesta aislada de un asistente es difícil de interpretar. Un conjunto común de preguntas permite comparar modelos y competidores con evidencia revisable."},
+    features:{en:["Compare mentions and recommendations across assistants.","Review original responses and detected links.","Explore the public demo using simulated data."],es:["Compara menciones y recomendaciones entre asistentes.","Revisa respuestas originales y enlaces detectados.","Explora la demo pública con datos simulados."]},
+    limits:{en:["The public demo uses simulated data.","Sample percentages do not represent market share.","A detected link does not prove that the model consulted its source."],es:["La demo pública usa datos simulados.","Los porcentajes de la muestra no representan cuota de mercado.","Un enlace detectado no demuestra que el modelo haya consultado esa fuente."]},
+    architecture:{en:"The analysis compares responses from OpenAI, Gemini and Claude APIs. The public demo illustrates the reports using simulated results.",es:"El análisis compara respuestas de las APIs de OpenAI, Gemini y Claude. La demo pública ilustra los informes con resultados simulados."}, stack:["AI APIs","Brand analysis","GEO"]
+  },
+  {
+    slug:"cro-lab", id:"cro-lab", number:"11", category:"experiments", status:"live", name:{en:"CRO Lab · A/B Calculator",es:"CRO Lab · Calculadora A/B"},
+    description:{en:"Compare A/B test results using GA4 CSV reports or manually entered data.",es:"Compara resultados de tests A/B con informes CSV de GA4 o datos introducidos manualmente."},
+    image:"/assets/project-previews/cro-lab.png", imageAlt:{en:"CRO Lab A/B calculator with CSV import",es:"Calculadora A/B de CRO Lab con importación CSV"}, externalUrl:"https://ab.josuesomarribas.com/",
+    problem:{en:"Experiment reports need a consistent way to compare variants. CRO Lab brings imported or manually entered results into one calculator.",es:"Los informes de experimentos necesitan una forma consistente de comparar variantes. CRO Lab reúne los resultados importados o manuales en una calculadora."},
+    features:{en:["Import GA4 reports as CSV.","Enter data manually.","Compare the results of A/B variants."],es:["Importa informes de GA4 en CSV.","Introduce datos manualmente.","Compara los resultados de variantes A/B."]},
+    limits:{en:["Interpretation depends on the experiment design and the quality of the input data."],es:["La interpretación depende del diseño experimental y de la calidad de los datos de entrada."]},
+    architecture:{en:"A web calculator for reviewing A/B experiment results from CSV reports or manual inputs.",es:"Una calculadora web para revisar resultados de experimentos A/B desde informes CSV o datos manuales."}, stack:["A/B testing","GA4","CSV"]
+  },
+  {
+    slug:"jira-tools", id:"jira", number:"12", category:"utilities", status:"review", name:{en:"Jira Tools",es:"Jira Tools"},
+    landingUrl:{en:"/jira-tools",es:"/es/jira-tools"},
+    description:{en:"Copy and organise Jira tickets with templates, a tray and local history. Open tickets by ID with Spotlight.",es:"Copia y organiza tickets de Jira con plantillas, bandeja e historial local. Abre tickets por ID con Spotlight."},
+    image:"/assets/jira-tools/04-bandeja-e-informes-1280x800.png", imageAlt:{en:"Jira Tools tray and status update preview",es:"Bandeja de Jira Tools y vista previa de actualización por estado"},
+    articleUrl:{en:"/blog/jira-tools-copy-organize-open-tickets",es:"/es/blog/jira-tools-copy-organize-open-tickets"},
+    problem:{en:"Sharing a bare ticket link loses context. Jira Tools prepares references with titles, statuses and assignees and collects them for an update.",es:"Compartir un enlace suelto pierde contexto. Jira Tools prepara referencias con título, estado y responsable y las reúne para una actualización."},
+    features:{en:["Copy in rich text, Markdown or plain text.","Collect tickets and group an update by status.","Open tickets by ID with Spotlight.","Find the last 100 distinct copied tickets."],es:["Copia en texto enriquecido, Markdown o texto plano.","Reúne tickets y agrupa una actualización por estado.","Abre tickets por ID con Spotlight.","Recupera los últimos 100 tickets distintos copiados."]},
+    limits:{en:["Under review in Chrome Web Store.","Saved ticket data does not update in the background."],es:["En revisión en Chrome Web Store.","Los datos guardados no se actualizan en segundo plano."]},
+    architecture:{en:"A Chrome extension with local browser storage. It does not modify tickets or send the tray and history to developer servers.",es:"Una extensión de Chrome con almacenamiento local. No modifica tickets ni envía la bandeja o el historial a servidores del desarrollador."}, stack:["Chrome extension","JavaScript","Local storage"]
+  }
+
 ];
 
 export const getLabTool = (slug:string) => labTools.find(tool => tool.slug === slug);

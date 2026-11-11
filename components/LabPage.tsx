@@ -67,7 +67,7 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       {!!visibleTools.length && <section className="labx-tool-grid" aria-label={locale === "es" ? "Herramientas y experimentos" : "Tools and experiments"}>{visibleTools.map(tool=><article key={tool.id}>
         <header><b>{tool.number}</b><span>{tool.category === "utilities" ? t.filters.utilities : t.filters.experiments}</span></header>
         <div className="labx-tool-image"><Image src={tool.image} alt="" fill sizes="(max-width: 760px) calc(100vw - 48px), 25vw" loading="eager" unoptimized/></div>
-        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={`${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} </a>
+        <h2>{tool.name[locale]}</h2><p>{tool.description[locale]}</p><a href={tool.landingUrl?.[locale] ?? `${locale === "es" ? "/es" : ""}/lab/${tool.slug}`}>{t.details} </a>
       </article>)}</section>}
 
       <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><a href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse} </a></aside>

@@ -144,7 +144,7 @@ body{background-color:var(--paper);background-image:url('/assets/global/textura-
 
 /* Shared top navigation. */
 .article-nav{background:#101920;color:#f7f0df}
-.nav{display:grid;grid-template-columns:90px minmax(480px,1fr) auto auto;gap:26px;justify-content:initial}
+.nav{display:grid;grid-template-columns:90px minmax(0,1fr) auto auto auto;gap:26px;justify-content:initial}
 .nav .nav-links{justify-content:center}
 .nav .language-switcher{margin:0}
 .hero-grid{grid-template-columns:.92fr 1.08fr;gap:46px;min-height:550px}
@@ -192,7 +192,7 @@ footer .footer-email-icon svg{display:block;flex-shrink:0}
 footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 
 @media(max-width:1050px){
-  .nav{grid-template-columns:70px 1fr auto auto;gap:18px}.nav .nav-links{gap:24px}.more-projects{grid-template-columns:1fr 1fr}.nda-copy{padding-left:45px}footer .footer-url{display:none}
+  .nav{grid-template-columns:70px minmax(0,1fr) auto auto auto;gap:18px}.nav .nav-links{gap:24px}.more-projects{grid-template-columns:1fr 1fr}.nda-copy{padding-left:45px}footer .footer-url{display:none}
 }
 @media(max-width:900px){
   .nav{display:flex}.hero-grid{grid-template-columns:1fr}.more-projects{grid-template-columns:1fr}.project-secondary{min-height:auto}.process-grid{grid-template-columns:1fr 1fr;gap:16px}.process article,.process article:first-child,.process article:last-child{padding:18px;border:1px solid var(--line);border-radius:8px}.process article:not(:last-child)::after,.process-loop{display:none}.more-work-heading{align-items:flex-start;flex-direction:column;gap:6px}
@@ -853,3 +853,8 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 .contact-art.contact-art-3d{height:280px;width:490px;top:50%;transform:translateY(-50%);opacity:1;pointer-events:none}
 .contact-art-3d canvas{display:block;width:100%;height:100%}
 @media(max-width:700px){.contact-art.contact-art-3d{right:-240px;opacity:.5}}
+
+/* Shared résumé link; homepage composition lives in home.module.css. */
+.nav-resume{font-size:var(--text-sm);white-space:nowrap;padding-block:12px;text-underline-offset:5px}
+.nav-resume:hover{text-decoration:underline}
+@media(max-width:900px){.nav-resume{display:none}}

@@ -12,14 +12,12 @@ export default function SiteNav({ locale="en", current="home", articleSlug, hasS
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
   const writing = locale === "es" ? "/es/blog" : "/blog";
-  const navigationLinks = () => <>
+  const navigationLinks = (secondary = false) => <>
     <a href={`${home}#work`}>{t.work}</a>
     <a href={`${home}#process`}>{t.experiments}</a>
     <a className={current === "writing" ? "current" : undefined} href={writing}>{t.writing}</a>
     <a className={current === "about" ? "current" : undefined} href={locale === "es" ? "/es/about" : "/about"}>{t.about}</a>
-    <a className={current === "now" ? "current" : undefined} href={locale === "es" ? "/es/now" : "/now"}>{t.now}</a>
-    <a className={current === "lab" ? "current" : undefined} href={locale === "es" ? "/es/lab" : "/lab"}>{t.lab}</a>
-    <a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
+    {secondary && <a className={current === "lab" ? "current" : undefined} href={locale === "es" ? "/es/lab" : "/lab"}>{t.lab}</a>}
   </>;
   const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : current === "now" ? "/now" : current === "lab" ? "/lab" : "/";
   const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "about" ? "/es/about" : current === "writing" ? "/es/blog" : current === "now" ? "/es/now" : current === "lab" ? "/es/lab" : "/es";
@@ -29,10 +27,11 @@ export default function SiteNav({ locale="en", current="home", articleSlug, hasS
   </div>;
   return <nav className="nav shell" aria-label="Primary navigation">
     <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{navigationLinks()}</div>{language}
+    <a className="nav-resume" href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
     <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a>
     <details className="mobile-nav">
       <summary aria-label={locale === "es" ? "Abrir menú" : "Open menu"}><span aria-hidden="true" className="mobile-nav-icon"/></summary>
-      <div className="mobile-nav-panel">{navigationLinks()}<a className="btn btn-red mobile-talk" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a></div>
+      <div className="mobile-nav-panel">{navigationLinks(true)}<a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a><a className="btn btn-red mobile-talk" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a></div>
     </details>
   </nav>;
 }

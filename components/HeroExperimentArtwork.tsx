@@ -6,8 +6,8 @@ import { useDeviceTilt } from "./useDeviceTilt";
 type Locale = "en" | "es";
 
 const copy = {
-  en: { aria:"Experiment workflow from signal to measurable result", signal:"SIGNAL", hypothesis:"HYPOTHESIS", build:"BUILD", measure:"MEASURE", conversion:"Conversion rate", hypothesisText:<>If we <b>reduce friction</b> in the pricing section, more users will complete the upgrade.</>, result:"Result", lift:"Lift", significance:"Stat. Sig.", activate:"Enable motion", denied:"Motion access blocked" },
-  es: { aria:"Flujo de experimento desde la señal hasta un resultado medible", signal:"SEÑAL", hypothesis:"HIPÓTESIS", build:"CONSTRUIR", measure:"MEDIR", conversion:"Tasa de conversión", hypothesisText:<>Si <b>reducimos la fricción</b> en la sección de precios, más personas completarán la mejora.</>, result:"Resultado", lift:"Mejora", significance:"Sig. estadística", activate:"Activar movimiento", denied:"Acceso al movimiento bloqueado" },
+  en: { aria:"Illustrative experiment workflow; not client results", signal:"SIGNAL", hypothesis:"HYPOTHESIS", build:"BUILD", measure:"MEASURE", observation:"Friction", signalText:"People hesitate at pricing.", hypothesisText:<>Clearer plan details help people choose.</>, result:"Compare", comparison:"Control / variant", guardrails:"Outcome + guardrails", caption:"Illustrative workflow · not client results", activate:"Enable motion", denied:"Motion access blocked" },
+  es: { aria:"Ejemplo de un experimento; no son resultados de clientes", signal:"SEÑAL", hypothesis:"HIPÓTESIS", build:"CONSTRUIR", measure:"MEDIR", observation:"Fricción", signalText:"Dudas al elegir un plan.", hypothesisText:<>Aclarar los planes facilita la elección.</>, result:"Comparar", comparison:"Control / variante", guardrails:"Resultado + guardrails", caption:"Ejemplo ilustrativo · no son resultados de clientes", activate:"Activar movimiento", denied:"Acceso al movimiento bloqueado" },
 } as const;
 
 export default function HeroExperimentArtwork({ locale = "en" }: { locale?: Locale }) {
@@ -40,20 +40,21 @@ export default function HeroExperimentArtwork({ locale = "en" }: { locale?: Loca
   };
 
   const steps = [
-    { label:t.signal, number:"01", className:"flow-signal", content:<><small>{t.conversion}</small><strong>+18.7%</strong><span className="flow-chart"><i/><i/><i/><i/><i/></span></> },
+    { label:t.signal, number:"01", className:"flow-signal", content:<><strong>{t.observation}</strong><p>{t.signalText}</p></> },
     { label:t.hypothesis, number:"02", className:"flow-hypothesis", content:<p>{t.hypothesisText}</p> },
     { label:t.build, number:"03", className:"flow-build", content:<code><span><b>const</b> test = {'{'}</span><span>&nbsp;&nbsp;variant: <i>&apos;B&apos;</i>,</span><span>&nbsp;&nbsp;change: <i>&apos;clarity&apos;</i></span><span>{'}'};</span><em>deploy(test);</em></code> },
-    { label:t.measure, number:"04", className:"flow-measure", content:<><small>{t.result}</small><strong>+18.7%</strong><span>{t.lift}</span><hr/><span>{t.significance} <b>99%</b></span></> },
+    { label:t.measure, number:"04", className:"flow-measure", content:<><strong>{t.result}</strong><span>{t.comparison}</span><hr/><span>{t.guardrails}</span></> },
   ];
 
   return <div className="hero-flow-perspective" onPointerMove={handlePointerMove} onPointerLeave={resetScene}>
     {tiltStatus !== "active" && <button className="hero-motion-control" type="button" onClick={requestTiltAccess}>{tiltStatus === "denied" ? t.denied : t.activate}</button>}
-    <div ref={sceneRef} className="hero-signal-flow" role="img" aria-label={t.aria}>
+    <div ref={sceneRef} className="hero-signal-flow" role="group" aria-label={t.aria}>
       <div className="hero-flow-line" aria-hidden="true" />
       {steps.map((step,index)=><section className={`hero-flow-step ${step.className}`} key={step.label} style={{ "--flow-index":index } as CSSProperties}>
         <header><b>{step.label}</b><span>{step.number}</span><i aria-hidden="true" /></header>
         <div>{step.content}</div>
       </section>)}
     </div>
+    <p className="hero-flow-caption">{t.caption}</p>
   </div>;
 }
