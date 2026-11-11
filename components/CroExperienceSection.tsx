@@ -1,3 +1,4 @@
+import { ButtonLink } from "./ui/Action";
 import Image from "next/image";
 
 const MonitorIcon = () => <svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="18" height="14" rx="1"/><path d="M7 22h8M11 16v6M24 5v14M21 8l3-3 3 3"/></svg>;
@@ -32,7 +33,7 @@ export default function CroExperienceSection({ locale = "en" }: { locale?: "en" 
         <p>{es ? "IMPLEMENTACIÓN Y QA" : "IMPLEMENTATION & QA"}</p>
         <h2>{es ? <>De la hipótesis<br/>a producción.</> : <>From hypothesis<br/>to production.</>}</h2>
         <p>{es ? "Construyo la variante, preparo la instrumentación y reviso el comportamiento en QA y UAT antes de publicar." : "I build the variant, prepare the tracking and check behaviour in QA and UAT before release."}</p>
-        <a className="btn btn-red" href="/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf" target="_blank" rel="noreferrer">{es ? "Ver experiencia en el CV" : "View experience in my résumé"} </a>
+        <ButtonLink  href="/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf" target="_blank" rel="noreferrer">{es ? "Ver experiencia en el CV" : "View experience in my résumé"} </ButtonLink>
         <small>{es ? "Adobe Target · Monetate · QA, UAT y producción" : "Adobe Target · Monetate · QA, UAT & production"}</small>
       </div>
       <CroArtwork locale={locale}/>

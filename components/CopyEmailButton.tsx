@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "./ui/Action";
+
+
 import { useState } from "react";
 import { trackEvent } from "../lib/analytics";
 
@@ -15,7 +18,7 @@ export default function CopyEmailButton({ label = "Copy email", copiedLabel = "C
     window.setTimeout(() => setCopied(false), 1800);
   }
 
-  return <button className="btn btn-outline" type="button" onClick={copyEmail} aria-live="polite">
+  return <Button variant="secondary" type="button" onClick={copyEmail} aria-live="polite">
     {copied ? copiedLabel : label}
-  </button>;
+  </Button>;
 }

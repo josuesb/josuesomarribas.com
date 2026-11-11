@@ -1,10 +1,12 @@
 "use client";
 
+import { ButtonLink } from "./ui/Action";
+
+
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { labTools } from "../lib/lab-tools";
 import SiteFooter from "./SiteFooter";
-import SiteNav from "./SiteNav";
 
 type Locale = "en" | "es";
 type Category = "all" | "live" | "systems" | "experiments" | "utilities";
@@ -37,7 +39,7 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
   const filters = Object.entries(t.filters) as [Category,string][];
 
   return <main className="labx-page">
-    <header className="labx-header"><SiteNav locale={locale} current="lab"/></header>
+    
 
     <section className="labx-hero shell">
       <div className="labx-hero-copy"><p>LAB / 01</p><strong aria-hidden="true">LAB</strong><h1>{t.title}</h1><i/><p>{t.intro}</p><small>JOSUE SOMARRIBAS · UX ENGINEER · CRO DEVELOPER</small></div>
@@ -71,7 +73,7 @@ export default function LabPage({ locale="en" }:{ locale?:Locale }) {
       </article>)}</section>}
 
       <aside className="labx-notebook"><span aria-hidden="true">▱</span><div><h2>{t.notebook}</h2><p>{t.notebookCopy}</p></div><a href={locale === "es" ? "/es/blog" : "/blog"}>{t.browse} </a></aside>
-      <section className="labx-cta"><span aria-hidden="true">⌁</span><div><h2>{t.cta}</h2><p>{t.ctaCopy}</p></div><a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a></section>
+      <section className="labx-cta"><span aria-hidden="true">⌁</span><div><h2>{t.cta}</h2><p>{t.ctaCopy}</p></div><ButtonLink  href="mailto:josuesomarribasb@gmail.com">{t.talk} </ButtonLink></section>
     </div>
     <SiteFooter locale={locale} current="lab"/>
   </main>;

@@ -12,7 +12,7 @@ export default function JiraToolsPrivacyPage() {
     <main className={styles.page}>
       <article className={styles.document} aria-labelledby="privacy-title">
         <header className={styles.header}>
-          <a className={styles.brand} href="/es">Josue Somarribas <span>↗</span></a>
+          <a className={styles.brand} href="/es">Josue Somarribas </a>
           <p className={styles.label}>JIRA TOOLS / PRIVACIDAD</p>
           <h1 id="privacy-title">Política de privacidad de Jira Tools</h1>
         </header>

@@ -1,3 +1,4 @@
+import { TextLink } from "./ui/Action";
 import Image from "next/image";
 import {labTools} from "../lib/lab-tools";
 import styles from "../app/home.module.css";
@@ -25,13 +26,13 @@ export default function HomeProducts({locale}:{locale:"en"|"es"}) {
     <header className={styles.sectionIntro}><div><p className={styles.kicker}>{es?"02 / Productos independientes":"02 / Independent products"}</p><h2 id="home-products-title">{es?"Herramientas hechas para usarse.":"Tools, built to be used."}</h2></div><p>{es?"Productos que convierten preguntas de UX, analítica y desarrollo en herramientas que puedes utilizar.":"Small products that turn UX, analytics and development questions into things you can use."}</p></header>
     <div className={styles.productGrid}>{products.map(product=><article className={styles.productCard} key={product.id}>
       <a className={styles.productImage} href={product.url} target="_blank" rel="noreferrer" aria-label={`${product.label}: ${product.name}`} data-analytics-event="project_click" data-analytics-label={product.id==="cro-lab"?"CRO Lab":product.name}><Image src={product.image} alt={product.name} fill sizes="(max-width: 480px) calc(100vw - 32px), (max-width: 1050px) 48vw, 295px" unoptimized/></a>
-      <div className={styles.productBody}><p className={styles.productCategory}>{product.category}</p><h3>{product.name}</h3><p>{product.description}</p><a className={styles.textLink} href={product.url} target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label={product.id==="cro-lab"?"CRO Lab":product.name}>{product.label} <span aria-hidden="true">↗</span></a></div>
+      <div className={styles.productBody}><p className={styles.productCategory}>{product.category}</p><h3>{product.name}</h3><p>{product.description}</p><TextLink className={styles.textLink} href={product.url} target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label={product.id==="cro-lab"?"CRO Lab":product.name}>{product.label} </TextLink></div>
     </article>)}</div>
     <article className={styles.jiraFeature}>
       <a className={styles.jiraImage} href={es?"/es/jira-tools":"/jira-tools"} aria-label={es?"Descubrir Jira Tools":"Discover Jira Tools"} data-analytics-event="project_click" data-analytics-label="Jira Tools"><Image src="/assets/jira-tools/04-bandeja-e-informes-1280x800.png" alt={es?"Bandeja y vista previa de actualización de Jira Tools":"Jira Tools tray and status update preview"} fill sizes="(max-width: 760px) calc(100vw - 32px), 240px" unoptimized/></a>
       <div><p className={styles.productCategory}>{es?"Extensión para Chrome · En revisión":"Chrome extension · Under review"}</p><h3>Jira Tools</h3><p>{es?"Copia, organiza y abre tickets por ID. Plantillas, bandeja e historial local.":"Copy, organise and open tickets by ID. Templates, a tray and local history."}</p></div>
-      <div className={styles.jiraLinks}><a className={styles.textLink} href={es?"/es/jira-tools":"/jira-tools"} data-analytics-event="project_click" data-analytics-label="Jira Tools">{es?"Descubrir Jira Tools":"Discover Jira Tools"} <span aria-hidden="true">↗</span></a><a className={styles.textLink} href={`${es?"/es":""}/blog/jira-tools-copy-organize-open-tickets`}>{es?"Leer el artículo":"Read the article"}</a></div>
+      <div className={styles.jiraLinks}><TextLink className={styles.textLink} href={es?"/es/jira-tools":"/jira-tools"} data-analytics-event="project_click" data-analytics-label="Jira Tools">{es?"Descubrir Jira Tools":"Discover Jira Tools"} </TextLink><TextLink className={styles.textLink} href={`${es?"/es":""}/blog/jira-tools-copy-organize-open-tickets`}>{es?"Leer el artículo":"Read the article"}</TextLink></div>
     </article>
-    <div className={styles.catalogLink}><a className={styles.textLink} href={es?"/es/lab":"/lab"}>{es?"Explorar todo el Lab":"Explore all of Lab"} <span aria-hidden="true">↗</span></a></div>
+    <div className={styles.catalogLink}><TextLink className={styles.textLink} href={es?"/es/lab":"/lab"}>{es?"Explorar todo el Lab":"Explore all of Lab"} </TextLink></div>
   </div></section>;
 }

@@ -1,7 +1,7 @@
+import { ButtonLink } from "../../components/ui/Action";
 import WritingIndex from "./WritingIndex";
 import type { ArticleMeta } from "../../lib/content";
 import SiteFooter from "../../components/SiteFooter";
-import SiteNav from "../../components/SiteNav";
 import CopyEmailButton from "../../components/CopyEmailButton";
 import WritingHeroArtwork3D from "../../components/WritingHeroArtwork3D";
 
@@ -13,12 +13,12 @@ const C={
 };
 
 export default function WritingPage({locale,articles}:{locale:"en"|"es";articles:ArticleMeta[]}){const t=C[locale];return <main className="writing-page" lang={locale}>
-  <section className="writing-hero"><SiteNav locale={locale} current="writing"/>
+  <section className="writing-hero">
     <div className="writing-hero-grid shell"><div><p className="writing-label">{t.label}</p><h1>{t.h1a}<br/>{t.h1b}<br/><em>{t.h1em}</em></h1><p className="writing-lead">{t.lead}</p><small>{t.by}</small></div><WritingHeroArtwork3D locale={locale}/></div>
   </section>
   <section className="writing-body"><div className="shell"><WritingIndex locale={locale} articles={articles}/></div>
   </section>
   <section className="newsletter" data-analytics-location="newsletter"><div className="shell"><div><h2>{t.follow}</h2><p>{t.follow2}</p></div><form action={mailchimpAction} method="post" target="_blank"><div><input type="email" name="EMAIL" id={`newsletter-email-${locale}`} placeholder={t.email} aria-label={t.email} autoComplete="email" required/><button type="submit" name="subscribe">{t.send}</button></div><div className="newsletter-honeypot" aria-hidden="true"><input type="text" name="b_a0e13242fe65e96acc0169bef_b6eb284256" tabIndex={-1} defaultValue="" autoComplete="off"/></div><a href="/rss.xml" data-analytics-event="rss_click">{t.rss} </a></form><div className="newsletter-art"><i/><b>≋</b></div></div></section>
-  <section className="writing-contact"><div className="shell"><h2>{t.compare}</h2><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">{t.start} </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/><p>{t.base}</p></div></section>
+  <section className="writing-contact"><div className="shell"><h2>{t.compare}</h2><ButtonLink variant="light" href="mailto:josuesomarribasb@gmail.com">{t.start} </ButtonLink><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/><p>{t.base}</p></div></section>
   <SiteFooter locale={locale} current="writing"/>
   </main>}

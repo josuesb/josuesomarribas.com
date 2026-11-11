@@ -17,7 +17,7 @@ export default function HomeClientWork({locale}:{locale:"en"|"es"}) {
         <Image src={`/assets/project-previews/${project.image}`} alt={`${project.name} — ${project.role[language]}`} fill sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1280px) 48vw, 608px" unoptimized/>
       </a>
       <div className={styles.clientMeta}><span>{String(index+1).padStart(2,"0")} / {project.category[language]}</span><span>{project.role[language]}</span></div>
-      <h3><a href={project.url} target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label={project.name}>{project.name}<span aria-hidden="true">↗</span></a></h3><p>{project.description[language]}</p>
+      <h3><a href={project.url} target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label={project.name}>{project.name}</a></h3><p>{project.description[language]}</p>
     </article>)}</div>
   </div></section>;
 }

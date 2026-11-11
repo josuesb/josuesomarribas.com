@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SiteNav from "./SiteNav";
 
 type Locale = "en" | "es";
 
@@ -65,7 +64,7 @@ export default function NowEditorialPage({locale="en"}:{locale?:Locale}) {
   const home = locale === "es" ? "/es" : "/";
   const blog = locale === "es" ? "/es/blog" : "/blog";
   return <main className="now-page" lang={locale}>
-    <header className="now-header"><SiteNav locale={locale} current="now" /></header>
+    
 
     <section className="now-editorial-hero shell">
       <div className="now-cover-copy">

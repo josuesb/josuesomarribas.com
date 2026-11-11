@@ -3,7 +3,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { getAllArticles, type Article, type ArticleMeta } from "../../lib/content";
 import SiteFooter from "../../components/SiteFooter";
-import SiteNav from "../../components/SiteNav";
 import ArticleTools from "./ArticleTools";
 import { editorialImage, editorialThumbnail } from "../../lib/editorial-assets";
 import { rewriteMergedArticleLinks } from "../../lib/article-redirects";
@@ -44,7 +43,7 @@ function ArticleNavCard({ article, locale, label }:{ article:ArticleMeta; locale
   </a>;
 }
 
-export default function ArticlePage({ article, locale, hasSpanishTranslation=false }:{ article:Article; locale:"en"|"es"; hasSpanishTranslation?:boolean }) {
+export default function ArticlePage({ article, locale }:{ article:Article; locale:"en"|"es"; hasSpanishTranslation?:boolean }) {
   const indexHref = locale === "es" ? "/es/blog" : "/blog";
   const articlePath = `${locale === "es" ? "/es" : ""}/blog/${article.slug}`;
   const articleUrl = `https://www.josuesomarribas.com${articlePath}`;
@@ -66,7 +65,7 @@ export default function ArticlePage({ article, locale, hasSpanishTranslation=fal
   const structuredData = { "@context":"https://schema.org", "@type":"BlogPosting", headline:article.title, description:article.description, image:schemaImage, datePublished:article.date, dateModified:article.date, author:{ "@type":"Person", name:"Josué Somarribas", url:"https://www.linkedin.com/in/josuesb/" }, url:articleUrl, mainEntityOfPage:{ "@type":"WebPage", "@id":articleUrl }, inLanguage:locale };
 
   return <main className="article-page" lang={locale}>
-    <div className="article-nav"><SiteNav locale={locale} current="writing" articleSlug={article.slug} hasSpanishTranslation={locale === "es" || hasSpanishTranslation}/></div>
+    
     <ArticleTools title={article.title} mode="progress"/>
     <div className="article-layout shell">
       <aside className="article-sidebar">

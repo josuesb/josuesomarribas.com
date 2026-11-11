@@ -1,7 +1,7 @@
+import { ButtonLink } from "./ui/Action";
 import Image from "next/image";
 import { labTools, type LabLocale, type LabTool } from "../lib/lab-tools";
 import SiteFooter from "./SiteFooter";
-import SiteNav from "./SiteNav";
 
 const text = {
   en:{review:"Under review in Chrome Web Store",product:"Explore product",lab:"Lab",live:"Live tool",concept:"Concept",open:"Open tool",article:"Read the field note",problem:"The problem",does:"Capabilities",architecture:"Privacy & architecture",limits:"Known limits",built:"Technologies",back:"Back to all tools",next:"Explore another tool",status:"Status",online:"Online",preview:"Product preview",context:"Context",capabilities:"Capabilities",system:"System",notes:"Honest notes"},
@@ -21,7 +21,7 @@ export default function LabToolDetailPage({ tool, locale }:{tool:LabTool;locale:
   } : {"@context":"https://schema.org","@type":"CreativeWork",name:tool.name[locale],description:tool.description[locale],author:{"@type":"Person",name:"Josue Somarribas"}};
 
   return <main className="labx-page labd-page">
-    <header className="labx-header"><SiteNav locale={locale} current="lab"/></header>
+    
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}}/>
     <section className="labd-hero shell">
       <div className="labd-hero-copy">
@@ -29,7 +29,7 @@ export default function LabToolDetailPage({ tool, locale }:{tool:LabTool;locale:
         <p className="labd-kicker">LAB / {tool.number} · {statusLabel}</p>
         <h1>{tool.name[locale]}</h1>
         <p className="labd-deck">{tool.description[locale]}</p>
-        {primaryUrl && <div className="labd-actions"><a className="btn btn-red" href={primaryUrl} target={tool.externalUrl ? "_blank" : undefined} rel={tool.externalUrl ? "noreferrer" : undefined}>{actionLabel} </a></div>}
+        {primaryUrl && <div className="labd-actions"><ButtonLink  href={primaryUrl} target={tool.externalUrl ? "_blank" : undefined} rel={tool.externalUrl ? "noreferrer" : undefined}>{actionLabel} </ButtonLink></div>}
         <p className="labd-meta"><span>{statusLabel}</span><span>{t.status}: <b>{tool.status === "live" ? t.online : statusLabel}</b></span><span>ID: LAB—{tool.number}</span></p>
       </div>
       <figure className="labd-visual"><div className="labd-preview-head"><span>{t.preview}</span><span>{tool.name[locale]}</span></div><div className="labd-visual-frame"><Image src={tool.image} alt={tool.imageAlt[locale]} fill priority sizes="(max-width: 800px) calc(100vw - 30px), 54vw" unoptimized/></div><figcaption>{tool.number} / {tool.category.toUpperCase()}</figcaption></figure>

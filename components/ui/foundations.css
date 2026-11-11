@@ -1,0 +1,23 @@
+:root {
+  /* Brand aliases stay stable even inside a product's local palette. */
+  --ui-ink: #111920;
+  --ui-paper: #fbf7ec;
+  --ui-cream: #f7f0df;
+  --ui-accent: #ef3625;
+  --ui-accent-hover: #d52c1d;
+  --ui-border: #aaa79d;
+  --ui-font: var(--font-geist), Arial, sans-serif;
+  --ui-radius: 5px;
+  --ui-control-height: 48px;
+  --ui-header-height: 76px;
+  --ui-content-width: 1240px;
+  --ui-gutter: 24px;
+}
+@media (max-width: 760px) {
+  :root { --ui-header-height: 64px; --ui-gutter: 16px; }
+}
+:where(a, button, summary, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 4px;
+}
+:where(section[id], h2[id], details[id]) { scroll-margin-top: calc(var(--ui-header-height) + 24px); }

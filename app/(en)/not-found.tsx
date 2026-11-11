@@ -1,13 +1,11 @@
+import { ButtonLink } from "../../components/ui/Action";
 import Image from "next/image";
-import Link from "next/link";
-import SiteNav from "../../components/SiteNav";
 import brokenSun from "../../public/assets/404/broken-sun.png";
 import routeBlueprint from "../../public/assets/404/route-blueprint.png";
 import "./not-found.css";
 
 export default function NotFound() {
   return <main className="not-found-page">
-    <SiteNav />
     <section className="not-found-hero shell" aria-labelledby="not-found-title">
       <div className="not-found-code" aria-hidden="true">
         <span data-text="404">404</span>
@@ -19,8 +17,8 @@ export default function NotFound() {
         <h1 id="not-found-title">Signal lost.</h1>
         <p>This page didn&apos;t survive the experiment.</p>
         <div className="not-found-actions">
-          <Link className="btn btn-red" href="/">Back to home </Link>
-          <Link className="btn btn-outline" href="/blog">Explore writing </Link>
+          <ButtonLink  href="/">Back to home </ButtonLink>
+          <ButtonLink variant="secondary" href="/blog">Explore writing </ButtonLink>
         </div>
       </div>
     </section>

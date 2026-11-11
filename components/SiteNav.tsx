@@ -1,37 +1,39 @@
+import { ButtonLink } from "./ui/Action";
+import styles from "./SiteNav.module.css";
+
 type Locale = "en" | "es";
 type Current = "home" | "writing" | "about" | "now" | "lab";
-
 const labels = {
-  en:{ work:"Work", experiments:"Experiments", writing:"Writing", about:"About", now:"Now", lab:"Lab", resume:"Résumé", talk:"Let's talk" },
-  es:{ work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", now:"Ahora", lab:"Lab", resume:"Currículum", talk:"Hablemos" },
+  en: { work:"Work", experiments:"Experiments", writing:"Writing", about:"About", lab:"Lab", resume:"Résumé", talk:"Let's talk" },
+  es: { work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", lab:"Lab", resume:"Currículum", talk:"Hablemos" },
 };
-
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
 
-export default function SiteNav({ locale="en", current="home", articleSlug, hasSpanishTranslation=false }:{ locale?:Locale; current?:Current; articleSlug?:string; hasSpanishTranslation?:boolean }) {
+export default function SiteNav({ locale, current, languageHrefs }: { locale: Locale; current: Current; languageHrefs: Record<Locale, string> }) {
   const t = labels[locale];
   const home = locale === "es" ? "/es" : "/";
-  const writing = locale === "es" ? "/es/blog" : "/blog";
-  const navigationLinks = (secondary = false) => <>
+  const prefix = locale === "es" ? "/es" : "";
+  const links = <>
     <a href={`${home}#work`}>{t.work}</a>
     <a href={`${home}#process`}>{t.experiments}</a>
-    <a className={current === "writing" ? "current" : undefined} href={writing}>{t.writing}</a>
-    <a className={current === "about" ? "current" : undefined} href={locale === "es" ? "/es/about" : "/about"}>{t.about}</a>
-    {secondary && <a className={current === "lab" ? "current" : undefined} href={locale === "es" ? "/es/lab" : "/lab"}>{t.lab}</a>}
+    <a href={`${prefix}/blog`} aria-current={current === "writing" ? "page" : undefined}>{t.writing}</a>
+    <a href={`${prefix}/about`} aria-current={current === "about" ? "page" : undefined}>{t.about}</a>
+    <a href={`${prefix}/lab`} aria-current={current === "lab" ? "page" : undefined}>{t.lab}</a>
   </>;
-  const englishLanguageHref = articleSlug ? `/blog/${articleSlug}` : current === "writing" ? "/blog" : current === "about" ? "/about" : current === "now" ? "/now" : current === "lab" ? "/lab" : "/";
-  const spanishLanguageHref = articleSlug && hasSpanishTranslation ? `/es/blog/${articleSlug}` : current === "about" ? "/es/about" : current === "writing" ? "/es/blog" : current === "now" ? "/es/now" : current === "lab" ? "/es/lab" : "/es";
-  const language = <div className="language-switcher" aria-label="Language selector">
-    <a className={locale === "en" ? "active" : undefined} href={englishLanguageHref} lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><span>/</span>
-    <a className={locale === "es" ? "active" : undefined} href={spanishLanguageHref} lang="es" aria-current={locale === "es" ? "page" : undefined} title={articleSlug && !hasSpanishTranslation ? "This article is not yet available in Spanish; view translated articles" : undefined}>ES</a>
-  </div>;
-  return <nav className="nav shell" aria-label="Primary navigation">
-    <a className="logo" href={home} aria-label="JS. — Josue Somarribas home">JS.</a><div className="nav-links">{navigationLinks()}</div>{language}
-    <a className="nav-resume" href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
-    <a className="btn btn-red nav-cta" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a>
-    <details className="mobile-nav">
-      <summary aria-label={locale === "es" ? "Abrir menú" : "Open menu"}><span aria-hidden="true" className="mobile-nav-icon"/></summary>
-      <div className="mobile-nav-panel">{navigationLinks(true)}<a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a><a className="btn btn-red mobile-talk" href="mailto:josuesomarribasb@gmail.com">{t.talk} </a></div>
-    </details>
-  </nav>;
+  return <header className={styles.header} data-site-header>
+    <nav className={styles.nav} aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
+      <a className={styles.logo} href={home} aria-label={locale === "es" ? "Josue Somarribas, inicio" : "Josue Somarribas home"}>JS.</a>
+      <div className={styles.links}>{links}</div>
+      <div className={styles.languages} aria-label={locale === "es" ? "Selector de idioma" : "Language selector"}>
+        <a href={languageHrefs.en} lang="en" hrefLang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><span aria-hidden="true">/</span>
+        <a href={languageHrefs.es} lang="es" hrefLang="es" aria-current={locale === "es" ? "page" : undefined}>ES</a>
+      </div>
+      <a className={styles.resume} href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a>
+      <ButtonLink size="small" className={styles.desktopAction} href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink>
+      <details className={styles.mobile}>
+        <summary aria-label={locale === "es" ? "Abrir menú" : "Open menu"}><span className={styles.menuIcon} aria-hidden="true"/></summary>
+        <div className={styles.panel}>{links}<a href={resumeHref} target="_blank" rel="noreferrer">{t.resume}</a><ButtonLink href="mailto:josuesomarribasb@gmail.com">{t.talk}</ButtonLink></div>
+      </details>
+    </nav>
+  </header>;
 }

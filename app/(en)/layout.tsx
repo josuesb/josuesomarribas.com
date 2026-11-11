@@ -4,6 +4,8 @@ import "../globals.css";
 import { MotionObserver } from "../MotionObserver";
 import AnalyticsTracker from "../../components/AnalyticsTracker";
 import DeferredThirdPartyScripts from "../../components/DeferredThirdPartyScripts";
+import SiteHeader from "../../components/SiteHeader";
+import { getAllArticles } from "../../lib/content";
 import SiteStructuredData from "../../components/SiteStructuredData";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
@@ -24,6 +26,6 @@ export const metadata: Metadata = {
 
 export default function EnglishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en">
-    <body className={`${geist.variable} ${mono.variable}`}>{children}<SiteStructuredData locale="en"/><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver /></body>
+    <body className={`${geist.variable} ${mono.variable}`}><SiteHeader locale="en" spanishArticleSlugs={getAllArticles({ locale:"es" }).map(article => article.slug)}/>{children}<SiteStructuredData locale="en"/><DeferredThirdPartyScripts/><AnalyticsTracker/><MotionObserver /></body>
   </html>;
 }

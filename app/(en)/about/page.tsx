@@ -1,6 +1,6 @@
+import { ButtonLink } from "../../../components/ui/Action";
 import type { Metadata } from "next";
 import SiteFooter from "../../../components/SiteFooter";
-import SiteNav from "../../../components/SiteNav";
 import CopyEmailButton from "../../../components/CopyEmailButton";
 import Image from "next/image";
 import AboutHeroCollage3D from "../../../components/AboutHeroCollage3D";
@@ -17,13 +17,12 @@ const editorialAsset = "/assets/about-editorial";
 export default function AboutPage() {
   return <main className="about-page">
     <section className="about-hero">
-      <SiteNav current="about" />
       <div className="shell about-hero-grid">
         <div>
           <p className="about-label">ABOUT × THE PERSON BETWEEN THE PIXELS</p>
           <h1>Designer by instinct.<br />Engineer by practice.<br />Experimenter by <em>curiosity.</em></h1>
           <p className="about-lead">I&apos;m Josue Somarribas, a UX Engineer and CRO Developer connecting human behavior, interface craft and production code.</p>
-          <div className="actions"><a className="btn btn-red" href={resumeHref} download>Download résumé </a><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Start a conversation </a></div>
+          <div className="actions"><ButtonLink  href={resumeHref} download>Download résumé </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink></div>
           <p className="about-meta">8+ years across UX and web development · Based in Spain · Born in Costa Rica</p>
         </div>
         <AboutHeroCollage3D />
@@ -47,7 +46,7 @@ export default function AboutPage() {
 
     <section className="about-curious"><div className="shell"><h2>Currently<br/><b>curious about</b></h2><p>Experiment validity 〰 Behavioral design 〰 Accessible interaction 〰 Browser quirks 〰 Typography 〰 Useful side projects</p></div></section>
 
-    <section className="about-editorial-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">Start a conversation </a><CopyEmailButton /></div></div></section>
+    <section className="about-editorial-contact"><div className="shell"><div><h2>If the problem sits between disciplines,<br/>I&apos;m probably interested.</h2><p>Send me the messy version. No pitch deck required.</p></div><div className="actions"><ButtonLink  href="mailto:josuesomarribasb@gmail.com">Start a conversation </ButtonLink><CopyEmailButton /></div></div></section>
     <SiteFooter current="about" />
   </main>;
 }

@@ -1,6 +1,6 @@
+import { ButtonLink } from "../../../../components/ui/Action";
 import type { Metadata } from "next";
 import SiteFooter from "../../../../components/SiteFooter";
-import SiteNav from "../../../../components/SiteNav";
 import CopyEmailButton from "../../../../components/CopyEmailButton";
 import Image from "next/image";
 import AboutHeroCollage3D from "../../../../components/AboutHeroCollage3D";
@@ -17,13 +17,12 @@ const editorialAsset = "/assets/about-editorial";
 export default function AboutPage() {
   return <main className="about-page">
     <section className="about-hero">
-      <SiteNav locale="es" current="about" />
       <div className="shell about-hero-grid">
         <div>
           <p className="about-label">SOBRE MÍ × LA PERSONA DETRÁS DE LOS PÍXELES</p>
           <h1>Diseñador por instinto.<br />Ingeniero por práctica.<br />Experimento por <em>curiosidad.</em></h1>
           <p className="about-lead">Soy Josue Somarribas, ingeniero UX y desarrollador CRO. Conecto el comportamiento humano, el diseño de interfaces y el código en producción.</p>
-          <div className="actions"><a className="btn btn-red" href={resumeHref} download>Descargar currículum </a><a className="btn btn-outline" href="mailto:josuesomarribasb@gmail.com">Hablemos </a></div>
+          <div className="actions"><ButtonLink  href={resumeHref} download>Descargar currículum </ButtonLink><ButtonLink variant="secondary" href="mailto:josuesomarribasb@gmail.com">Hablemos </ButtonLink></div>
           <p className="about-meta">Más de 8 años en UX y desarrollo web · Vivo en España · Nací en Costa Rica</p>
         </div>
         <AboutHeroCollage3D locale="es" />
@@ -47,7 +46,7 @@ export default function AboutPage() {
 
     <section className="about-curious"><div className="shell"><h2>Ahora mismo<br/><b>me interesa</b></h2><p>Validez de los experimentos 〰 Diseño conductual 〰 Interacción accesible 〰 Peculiaridades del navegador 〰 Tipografía 〰 Proyectos personales útiles</p></div></section>
 
-    <section className="about-editorial-contact"><div className="shell"><div><h2>Si el problema conecta varias disciplinas,<br/>seguramente me interesa.</h2><p>Cuéntame la idea tal como está. No hace falta una presentación.</p></div><div className="actions"><a className="btn btn-red" href="mailto:josuesomarribasb@gmail.com">Hablemos </a><CopyEmailButton label="Copiar email" copiedLabel="Copiado" /></div></div></section>
+    <section className="about-editorial-contact"><div className="shell"><div><h2>Si el problema conecta varias disciplinas,<br/>seguramente me interesa.</h2><p>Cuéntame la idea tal como está. No hace falta una presentación.</p></div><div className="actions"><ButtonLink  href="mailto:josuesomarribasb@gmail.com">Hablemos </ButtonLink><CopyEmailButton label="Copiar email" copiedLabel="Copiado" /></div></div></section>
     <SiteFooter locale="es" current="about" />
   </main>;
 }

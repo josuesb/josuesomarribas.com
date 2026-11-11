@@ -1,3 +1,4 @@
+import { ButtonLink, TextLink } from "../ui/Action";
 import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import SiteFooter from "../SiteFooter";
 import ContactArtwork3D from "../ContactArtwork3D";
@@ -34,14 +35,14 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
     <div className={styles.shell}>
       <nav className={styles.nav} aria-label="Navegación de Jira Tools">
         <a className={styles.brand} href={path} aria-label="Jira Tools, inicio"><Image src={`${assets}/icon.png`} width={36} height={36} alt="" />Jira Tools</a>
-        <div className={styles.navLinks}><div className={styles.languages} role="group" aria-label="Idioma"><a href="/jira-tools" hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><a href="/es/jira-tools" hrefLang="es" lang="es" aria-current={locale === "es" ? "page" : undefined}>ES</a></div><a href="#funciones">Funciones</a><a href="#preguntas">Preguntas</a><a href="/jira-tools/privacy">Privacidad <span aria-hidden="true">↗</span></a></div>
+        <div className={styles.navLinks}><a href="#funciones">Funciones</a><a href="#preguntas">Preguntas</a><a href="/jira-tools/privacy">Privacidad </a></div>
       </nav>
       <header className={styles.hero} id="contenido">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}><span /> UNA EXTENSIÓN PARA CHROME</p>
           <h1>Copia, organiza<br />y <em>abre tickets.</em></h1>
           <p className={styles.lead}>Menos pasos entre Jira y el resto de tu trabajo. Copia con tu formato, reúne tus tickets y prepara la próxima actualización.</p>
-          <div className={styles.heroActions}><a className={styles.primary} href="#funciones">Descubrir las funciones <span aria-hidden="true">↓</span></a></div>
+          <div className={styles.heroActions}><ButtonLink  href="#funciones">Descubrir las funciones </ButtonLink></div>
           <p className={styles.status}><span /> En revisión en Chrome Web Store</p>
         </div>
         <div className={styles.spotlightPreview} aria-label="Ejemplo del buscador de tickets Spotlight">
@@ -75,9 +76,9 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
           <div className={styles.featureText}><span className={styles.number}>04 — HISTORIAL LOCAL</span><h3>Ese ticket que copiaste.<br />Aquí sigue.</h3><p>Recupera los últimos 100 tickets copiados. Busca por ID o título y vuelve a copiarlos con tu formato y plantilla actuales.</p><p>El historial se queda en tu navegador. Puedes borrar un ticket o vaciarlo entero cuando quieras.</p></div>
           <div className={styles.featureVisual}><Screenshot file="05-historial-local" alt="Historial local con búsqueda por ID o título y acciones de copiar y eliminar" /></div>
         </div>
-        <div className={styles.menuFeature}><Screenshot file="01-menu-de-herramientas" alt="Menú del rayo con siete acciones y sus atajos" /><div><span className={styles.number}>TODO A MANO</span><h3>Un rayo.<br />Siete acciones.</h3><p>Copia, añade a la bandeja, abre por ID o prepara una actualización desde el mismo menú. Con el menú abierto, las teclas del 1 al 7 te llevan a cada acción.</p><a className={styles.textLink} href="#atajos">Ver los atajos <span aria-hidden="true">↗</span></a></div></div>
+        <div className={styles.menuFeature}><Screenshot file="01-menu-de-herramientas" alt="Menú del rayo con siete acciones y sus atajos" /><div><span className={styles.number}>TODO A MANO</span><h3>Un rayo.<br />Siete acciones.</h3><p>Copia, añade a la bandeja, abre por ID o prepara una actualización desde el mismo menú. Con el menú abierto, las teclas del 1 al 7 te llevan a cada acción.</p><TextLink className={styles.textLink} href="#atajos">Ver los atajos </TextLink></div></div>
       </section>
-      <section className={styles.privacy} aria-labelledby="privacy-heading"><span className={styles.privacyIcon} aria-hidden="true">↳</span><div><p className={styles.eyebrow}>TUS TICKETS, EN TU NAVEGADOR</p><h2 id="privacy-heading">Local por diseño.</h2><p>Tu bandeja, historial, plantillas y preferencias se guardan en el navegador. La extensión no envía estos datos a servidores del desarrollador, no incorpora analítica ni publicidad y no modifica tus tickets de Jira.</p><a className={styles.textLink} href="/jira-tools/privacy">Leer la política de privacidad <span aria-hidden="true">↗</span></a></div></section>
+      <section className={styles.privacy} aria-labelledby="privacy-heading"><span className={styles.privacyIcon} aria-hidden="true">↳</span><div><p className={styles.eyebrow}>TUS TICKETS, EN TU NAVEGADOR</p><h2 id="privacy-heading">Local por diseño.</h2><p>Tu bandeja, historial, plantillas y preferencias se guardan en el navegador. La extensión no envía estos datos a servidores del desarrollador, no incorpora analítica ni publicidad y no modifica tus tickets de Jira.</p><TextLink className={styles.textLink} href="/jira-tools/privacy">Leer la política de privacidad </TextLink></div></section>
       <section className={styles.faq} id="preguntas" aria-labelledby="faq-heading"><div><p className={styles.eyebrow}>ANTES DE EMPEZAR</p><h2 id="faq-heading">Algunas respuestas.</h2></div><div className={styles.questions}>
         <details><summary>¿Dónde puedo instalar Jira Tools?</summary><p>La extensión está en revisión en Chrome Web Store. El enlace de instalación estará disponible en esta página cuando se publique.</p></details>
         <details><summary>¿Cómo configuro mi Jira?</summary><p>En la extensión, abre Ajustes → Jira y guarda el dominio de tu instancia. Spotlight lo utilizará para construir el enlace del ticket. Abrir por ID no comprueba que el ticket exista.</p></details>
@@ -85,11 +86,11 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
         <details><summary>¿Se actualizan los tickets en segundo plano?</summary><p>No. La bandeja y el historial guardan una captura de los datos. Vuelve a añadir el ticket desde Jira para refrescarlo. Jira Tools no utiliza la API de Jira ni modifica tickets.</p></details>
         <details><summary>¿Funciona en cualquier página?</summary><p>Spotlight se abre sobre la página actual. En páginas internas de Chrome o sitios protegidos utiliza el popup de la extensión o una ventana compacta. La lectura de tickets depende de la estructura de tu instancia de Jira.</p></details>
       </div></section>
-      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span><p><a className={styles.textLink} href={`${locale === "es" ? "/es" : ""}/blog/jira-tools-copy-organize-open-tickets`}>Leer cómo he diseñado Jira Tools <span aria-hidden="true">↗</span></a></p></section>
+      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span><p><TextLink className={styles.textLink} href={`${locale === "es" ? "/es" : ""}/blog/jira-tools-copy-organize-open-tickets`}>Leer cómo he diseñado Jira Tools </TextLink></p></section>
 
     </div>
   </main>
-  <section className="contact"><ContactArtwork3D /><div className="shell contact-grid"><div><h2>¿Tienes un problema de producto<br />que se resiste?</h2><p>Envíame la versión desordenada. No hace falta una presentación.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Iniciar una conversación </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Desde España · CET · Español + Inglés</p></div></div></section>
+  <section className="contact"><ContactArtwork3D /><div className="shell contact-grid"><div><h2>¿Tienes un problema de producto<br />que se resiste?</h2><p>Envíame la versión desordenada. No hace falta una presentación.</p></div><div><div className="actions"><ButtonLink variant="light" href="mailto:josuesomarribasb@gmail.com">Iniciar una conversación </ButtonLink><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Desde España · CET · Español + Inglés</p></div></div></section>
   <SiteFooter locale={locale}/></>;
   return locale === "en" ? translate(content) : content;
 }
