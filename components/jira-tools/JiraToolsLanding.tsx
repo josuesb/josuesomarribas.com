@@ -85,7 +85,7 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
         <details><summary>¿Se actualizan los tickets en segundo plano?</summary><p>No. La bandeja y el historial guardan una captura de los datos. Vuelve a añadir el ticket desde Jira para refrescarlo. Jira Tools no utiliza la API de Jira ni modifica tickets.</p></details>
         <details><summary>¿Funciona en cualquier página?</summary><p>Spotlight se abre sobre la página actual. En páginas internas de Chrome o sitios protegidos utiliza el popup de la extensión o una ventana compacta. La lectura de tickets depende de la estructura de tu instancia de Jira.</p></details>
       </div></section>
-      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span></section>
+      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span><p><a className={styles.textLink} href={`${locale === "es" ? "/es" : ""}/blog/jira-tools-copy-organize-open-tickets`}>Leer cómo he diseñado Jira Tools <span aria-hidden="true">↗</span></a></p></section>
 
     </div>
   </main>

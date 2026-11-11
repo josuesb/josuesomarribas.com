@@ -75,3 +75,22 @@ Do not run the full dataset import to publish a small selection.
 After publishing, run `npm run build:sanity` and deploy the resulting site through
 Vercel. Verify the article URLs in the deployed site; CMS publication alone does
 not add routes to an existing static deployment.
+
+### Illustrated articles
+
+For a new article with inline figures, use the targeted illustrated publisher:
+
+```bash
+node scripts/create-jira-tools-article-media.mjs
+npx sanity exec scripts/publish-illustrated-article.mjs --with-user-token -- jira-tools-copy-organize-open-tickets
+```
+
+The dry run checks both translations and all local media. Append `--commit` to
+upload the covers and figures as managed Sanity images and create both published
+documents atomically. This command refuses to overwrite existing articles or
+drafts. Captions and alternative text remain editable in the CMS. Verify the
+published text and image URLs with:
+
+```bash
+npx sanity exec scripts/verify-illustrated-article.mjs --with-user-token -- jira-tools-copy-organize-open-tickets
+```

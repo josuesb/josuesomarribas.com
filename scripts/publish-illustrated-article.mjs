@@ -76,5 +76,5 @@ for (const {meta, body, id, topic} of articles) {
 }
 await transaction.commit({visibility:'sync'});
 const result = await client.fetch('*[_type == "article" && slug.current == $slug]{_id, locale, title, translationKey, "cover":mainImage.asset->url, "figures":count(body[_type == "image"])}', {slug});
-if (result.length !== 2 || result.some(doc => !doc.cover || doc.figures !== 4)) throw new Error('Published article verification failed.');
+if (result.length !== articles.length || result.some(doc => !doc.cover || doc.figures !== articles.find(article => article.meta.locale === doc.locale)?.body.filter(block => block._type === 'editorialFigure').length)) throw new Error('Published article verification failed.');
 console.log(JSON.stringify({published:result}, null, 2));

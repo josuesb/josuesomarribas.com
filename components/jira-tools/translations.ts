@@ -1,4 +1,5 @@
 export const english: Record<string, string> = {
+  "Leer cómo he diseñado Jira Tools": "Read how I designed Jira Tools",
   "Saltar al contenido": "Skip to content",
   "Navegación de Jira Tools": "Jira Tools navigation",
   "Jira Tools, inicio": "Jira Tools home",

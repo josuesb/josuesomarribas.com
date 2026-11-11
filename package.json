@@ -11,7 +11,7 @@
     "build": "vinext build && node scripts/generate-static-metadata.mjs",
     "build:sanity": "node scripts/sync-sanity-content.mjs && SANITY_CONTENT_SOURCE=remote npm run build",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "audio:generate": ".venv-tts/bin/python scripts/tts/generate_audio.py",
     "audio:optimize": "node scripts/optimize-blog-audio.mjs",
