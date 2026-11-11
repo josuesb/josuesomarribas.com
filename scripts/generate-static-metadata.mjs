@@ -93,6 +93,7 @@ const sitemapEntries = [
   { url: `${origin}/about`, priority: "0.8", alternates: { en: `${origin}/about`, es: `${origin}/es/about` } },
   { url: `${origin}/es/about`, priority: "0.8", alternates: { en: `${origin}/about`, es: `${origin}/es/about` } },
   { url: `${origin}/hangover`, priority: "0.8" },
+  { url: `${origin}/jira-tools`, priority: "0.7" },
   { url: `${origin}/jira-tools/privacy`, priority: "0.3" },
   { url: `${origin}/now`, priority: "0.7", alternates: { en: `${origin}/now`, es: `${origin}/es/now` } },
   { url: `${origin}/es/now`, priority: "0.7", alternates: { en: `${origin}/now`, es: `${origin}/es/now` } },
