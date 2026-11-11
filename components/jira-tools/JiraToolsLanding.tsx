@@ -1,31 +1,40 @@
-import type { Metadata } from "next";
+import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
+import SiteFooter from "../SiteFooter";
+import ContactArtwork3D from "../ContactArtwork3D";
+import CopyEmailButton from "../CopyEmailButton";
+import { english } from "./translations";
 import Image from "next/image";
 import styles from "./landing.module.css";
 
 const assets = "/assets/jira-tools";
-export const metadata: Metadata = {
-  title: "Jira Tools — Copia, organiza y abre tickets",
-  description: "Plantillas de copia, bandeja, informes por estado e historial local. Abre tickets de Jira por ID con Spotlight. Una extensión para Chrome.",
-  alternates: { canonical: "/jira-tools" },
-  openGraph: {
-    title: "Jira Tools — Copia, organiza y abre tickets",
-    description: "Menos pasos entre Jira y el resto de tu trabajo. Una extensión para Chrome con almacenamiento local.",
-    locale: "es_ES",
-    images: [{ url: `${assets}/04-bandeja-e-informes-1280x800.png`, width: 1280, height: 800, alt: "Bandeja y actualizaciones por estado de Jira Tools" }],
-  },
-};
 
 function Screenshot({ file, alt, priority = false }: { file: string; alt: string; priority?: boolean }) {
   return <Image src={`${assets}/${file}-1280x800.png`} alt={alt} width={1280} height={800} priority={priority} sizes="(max-width: 760px) 100vw, 1100px" className={styles.screenshot} />;
 }
 
-export default function JiraToolsLanding() {
-  return <main className={styles.page}>
+function translate(node: ReactNode): ReactNode {
+  if (typeof node === "string") {
+    const trimmed = node.trim();
+    return english[trimmed] ? node.replace(trimmed, english[trimmed]) : node;
+  }
+  if (Array.isArray(node)) return node.map(translate);
+  if (!isValidElement(node)) return node;
+  const element = node as ReactElement<Record<string, unknown>>;
+  const props = { ...element.props };
+  for (const key of ["alt", "aria-label"]) {
+    if (typeof props[key] === "string") props[key] = english[props[key]] ?? props[key];
+  }
+  return cloneElement(element, props, translate(props.children as ReactNode));
+}
+
+export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
+  const path = locale === "es" ? "/es/jira-tools" : "/jira-tools";
+  const content = <><main className={styles.page}>
     <a href="#contenido" className={styles.skip}>Saltar al contenido</a>
     <div className={styles.shell}>
       <nav className={styles.nav} aria-label="Navegación de Jira Tools">
-        <a className={styles.brand} href="/jira-tools" aria-label="Jira Tools, inicio"><Image src={`${assets}/icon.png`} width={36} height={36} alt="" />Jira Tools</a>
-        <div className={styles.navLinks}><a href="#funciones">Funciones</a><a href="#preguntas">Preguntas</a><a href="/jira-tools/privacy">Privacidad <span aria-hidden="true">↗</span></a></div>
+        <a className={styles.brand} href={path} aria-label="Jira Tools, inicio"><Image src={`${assets}/icon.png`} width={36} height={36} alt="" />Jira Tools</a>
+        <div className={styles.navLinks}><div className={styles.languages} role="group" aria-label="Idioma"><a href="/jira-tools" hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><a href="/es/jira-tools" hrefLang="es" lang="es" aria-current={locale === "es" ? "page" : undefined}>ES</a></div><a href="#funciones">Funciones</a><a href="#preguntas">Preguntas</a><a href="/jira-tools/privacy">Privacidad <span aria-hidden="true">↗</span></a></div>
       </nav>
       <header className={styles.hero} id="contenido">
         <div className={styles.heroCopy}>
@@ -37,7 +46,7 @@ export default function JiraToolsLanding() {
         </div>
         <div className={styles.spotlightPreview} aria-label="Ejemplo del buscador de tickets Spotlight">
           <div className={styles.previewTop}><span>⚡ Abrir ticket</span><kbd>Esc</kbd></div>
-          <label htmlFor="ticket-example">ID del ticket</label>
+          <span className={styles.inputLabel}>ID del ticket</span>
           <div className={styles.mockInput} id="ticket-example">ID-123<span aria-hidden="true" /></div>
           <p className={styles.destination}>jira.example.com/browse/ID-123</p>
           <div className={styles.recent}><span>ID-123</span><p>Mejorar la navegación del formulario</p></div>
@@ -77,7 +86,10 @@ export default function JiraToolsLanding() {
         <details><summary>¿Funciona en cualquier página?</summary><p>Spotlight se abre sobre la página actual. En páginas internas de Chrome o sitios protegidos utiliza el popup de la extensión o una ventana compacta. La lectura de tickets depende de la estructura de tu instancia de Jira.</p></details>
       </div></section>
       <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span></section>
-      <footer className={styles.footer}><a className={styles.brand} href="/jira-tools">⚡ Jira Tools</a><span>Hecho por <a href="/es">Josue Somarribas</a></span><a href="/jira-tools/privacy">Política de privacidad</a><p>Jira Tools es un proyecto independiente y no está afiliado a Atlassian.</p></footer>
+
     </div>
-  </main>;
+  </main>
+  <section className="contact"><ContactArtwork3D /><div className="shell contact-grid"><div><h2>¿Tienes un problema de producto<br />que se resiste?</h2><p>Envíame la versión desordenada. No hace falta una presentación.</p></div><div><div className="actions"><a className="btn btn-light" href="mailto:josuesomarribasb@gmail.com">Iniciar una conversación </a><CopyEmailButton label={locale === "es" ? "Copiar email" : "Copy email"} copiedLabel={locale === "es" ? "Copiado" : "Copied"}/></div><p>Desde España · CET · Español + Inglés</p></div></div></section>
+  <SiteFooter locale={locale}/></>;
+  return locale === "en" ? translate(content) : content;
 }

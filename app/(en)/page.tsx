@@ -152,6 +152,13 @@ export default function Home({ locale="en" }:{ locale?:"en"|"es" } = {}) {
               <div className="tags"><span>Live product</span><span>A/B testing</span><span>GA4 / CSV</span></div>
               <a className="btn btn-red" href="https://ab.josuesomarribas.com/" target="_blank" rel="noreferrer" data-analytics-event="project_click" data-analytics-label="CRO Lab">Try the tool </a>
             </article>
+            <article className="project project-cream project-secondary">
+              <header><span className="number">13</span><small>{locale === "es" ? "PRODUCTO INDEPENDIENTE · EXTENSIÓN PARA CHROME" : "INDEPENDENT PRODUCT · CHROME EXTENSION"}</small></header>
+              <h3>Jira Tools</h3><p>{locale === "es" ? "Copia y organiza tickets de Jira con plantillas, bandeja e historial local. Abre cualquier ticket por ID con Spotlight." : "Copy and organize Jira tickets with templates, a tray and local history. Open any ticket by ID with Spotlight."}</p>
+              <div className="project-preview-frame"><Image className="project-preview-image" src="/assets/jira-tools/04-bandeja-e-informes-1280x800.png" alt={locale === "es" ? "Bandeja de Jira Tools con tickets y una actualización agrupada por estado" : "Jira Tools tray with tickets and an update grouped by status"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized /></div>
+              <div className="tags"><span>{locale === "es" ? "En revisión en Chrome Web Store" : "Under review in Chrome Web Store"}</span><span>Spotlight</span><span>{locale === "es" ? "Datos locales" : "Local data"}</span></div>
+              <a className="btn btn-red" href="/jira-tools" data-analytics-event="project_click" data-analytics-label="Jira Tools">{locale === "es" ? "Descubrir Jira Tools" : "Discover Jira Tools"} </a>
+            </article>
           </div>
 
         </div>
