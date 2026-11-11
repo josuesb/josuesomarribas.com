@@ -412,12 +412,12 @@ footer .footer-email-icon:focus-visible{outline:2px solid currentColor;outline-o
 .cro-stage>img.cro-live{right:19%;bottom:-7px;width:250px}
 .cro-stage>img.cro-winner{right:-4%;bottom:-12px;width:250px}
 @media(max-width:650px){
-  .cro-stage>img.cro-browser{top:0;right:-24%;width:116%}
-  .cro-stage>img.cro-mobile{bottom:26px;left:-10%;width:170px}
-  .cro-stage>img.cro-attention{top:117px;right:-13%;width:220px}
-  .cro-stage>img.cro-code{bottom:31px;left:25%;width:225px}
-  .cro-stage>img.cro-ticket{bottom:-4px;left:-7%;width:240px}
-  .cro-stage>img.cro-live{right:-5%;bottom:-10px;width:190px}
+  .cro-stage>img.cro-browser{top:0;right:-3%;width:96%}
+  .cro-stage>img.cro-mobile{bottom:88px;left:-1%;width:150px}
+  .cro-stage>img.cro-attention{top:115px;right:0;width:200px}
+  .cro-stage>img.cro-code{bottom:36px;left:35%;width:202px}
+  .cro-stage>img.cro-ticket{bottom:-4px;left:0;width:228px}
+  .cro-stage>img.cro-live{right:0;bottom:-10px;width:164px}
   .cro-stage>img.cro-winner{display:none}
 }
 
