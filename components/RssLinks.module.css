@@ -1,0 +1,3 @@
+.links.links { display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px; }
+.badge { display:inline-flex; align-items:center; min-height:40px; flex-shrink:0; }
+.badge img { display:block; width:88px; height:31px; }

@@ -7,8 +7,8 @@ import styles from "./SiteNav.module.css";
 type Locale = "en" | "es";
 type Current = "home" | "writing" | "about" | "now" | "lab";
 const labels = {
-  en: { work:"Work", experiments:"Experiments", writing:"Writing", about:"About", lab:"Lab", resume:"Résumé", talk:"Let's talk" },
-  es: { work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", lab:"Lab", resume:"Currículum", talk:"Hablemos" },
+  en: { work:"Work", experiments:"CRO", writing:"Writing", about:"About", lab:"Lab", resume:"Résumé", talk:"Let's talk" },
+  es: { work:"Proyectos", experiments:"CRO", writing:"Artículos", about:"Sobre mí", lab:"Lab", resume:"Currículum", talk:"Hablemos" },
 };
 const resumeHref = "/CV/JosueSomarribas_CV_CRO_EN_06_2026-04.pdf";
 

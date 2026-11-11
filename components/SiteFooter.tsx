@@ -3,7 +3,7 @@ import styles from "./SiteFooter.module.css";
 export default function SiteFooter({ locale="en", current }:{ locale?:"en"|"es"; current?:"writing"|"about"|"lab" }) {
   const home = locale === "es" ? "/es" : "/";
   const prefix = locale === "es" ? "/es" : "";
-  const t = locale === "es" ? { work:"Proyectos", experiments:"Experimentos", writing:"Artículos", about:"Sobre mí", lab:"Lab", now:"Ahora" } : { work:"Work", experiments:"Experiments", writing:"Writing", about:"About", lab:"Lab", now:"Now" };
+  const t = locale === "es" ? { work:"Proyectos", experiments:"CRO", writing:"Artículos", about:"Sobre mí", lab:"Lab", now:"Ahora" } : { work:"Work", experiments:"CRO", writing:"Writing", about:"About", lab:"Lab", now:"Now" };
   return <footer className={styles.footer} data-site-footer><div className={styles.inner}>
     <a className={styles.logo} href={home} aria-label={locale === "es" ? "Josue Somarribas, inicio" : "Josue Somarribas home"}>JS.</a>
     <p className={styles.copyright}>© 2026 Josue Somarribas.</p><a className={styles.url} href="https://www.josuesomarribas.com">josuesomarribas.com</a>
