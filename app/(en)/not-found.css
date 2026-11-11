@@ -3,20 +3,20 @@
 .not-found-page .language-switcher a.active{color:#111920}
 .not-found-hero{min-height:470px;display:grid;grid-template-columns:minmax(380px,.95fr) 170px minmax(360px,.9fr);align-items:center;gap:22px;padding-block:54px 28px}
 .not-found-code{position:relative;display:flex;align-items:flex-end}
-.not-found-code>span{font-size:clamp(12rem,25vw,22rem);font-weight:850;line-height:.72;letter-spacing:-.09em}
-.not-found-code>small{position:absolute;left:2px;bottom:-46px;font:600 .68rem/1.3 var(--font-mono);letter-spacing:.08em}
+.not-found-code>span{font-size:var(--type-title);font-weight:850;line-height:var(--leading-title);letter-spacing:var(--tracking-heading)}
+.not-found-code>small{position:absolute;left:2px;bottom:-46px;font:600 var(--type-caption)/var(--leading-ui) var(--font-mono);letter-spacing:.08em}
 .not-found-sun{display:block;width:190px;height:190px;object-fit:contain}
 .not-found-copy{position:relative;padding-left:24px}
-.not-found-label{position:absolute;right:-10px;top:50%;margin:0;writing-mode:vertical-rl;font:600 .66rem var(--font-mono);letter-spacing:.16em}
-.not-found-copy h1{width:max-content;margin:0 0 30px;font:400 clamp(3.4rem,5.5vw,5.4rem)/.95 Georgia,serif;padding-bottom:11px}
-.not-found-copy>p:not(.not-found-label){margin:0;font:500 1rem/1.6 var(--font-mono)}
+.not-found-label{position:absolute;right:-10px;top:50%;margin:0;writing-mode:vertical-rl;font:600 var(--type-caption)/var(--leading-ui) var(--font-mono);letter-spacing:.16em}
+.not-found-copy h1{width:max-content;margin:0 0 30px;font:400 var(--type-title)/var(--leading-title) Georgia,serif;padding-bottom:11px}
+.not-found-copy>p:not(.not-found-label){margin:0;font:500 var(--type-body)/var(--leading-body) var(--font-mono)}
 .not-found-actions{display:flex;gap:16px;margin-top:38px}
 .not-found-actions .btn{min-width:170px}
 .not-found-actions .btn-outline{border-color:#111920}
 .not-found-diagram{position:relative;padding:14px 50px 28px 50px}
 .not-found-diagram img{display:block;width:100%;height:auto;box-shadow:0 13px 24px #082b6840;transform:rotate(-.15deg)}
-.not-found-diagram>p{position:absolute;right:-7px;bottom:72px;margin:0;color:#ef3625;font:600 1.35rem/1.15 "Comic Sans MS",cursive;transform:rotate(-7deg)}
-.not-found-footer{width:100%;min-height:74px;background:#111920;color:#f7f0df;border-top:1px solid #111920;font:500 .75rem var(--font-mono)}
+.not-found-diagram>p{position:absolute;right:-7px;bottom:72px;margin:0;color:#ef3625;font:600 var(--type-body)/var(--leading-body) "Comic Sans MS",cursive;transform:rotate(-7deg)}
+.not-found-footer{width:100%;min-height:74px;background:#111920;color:#f7f0df;border-top:1px solid #111920;font:500 var(--type-caption)/var(--leading-ui) var(--font-mono)}
 .not-found-footer>.shell{min-height:74px;display:flex;align-items:center;justify-content:space-between}
 
 @media(max-width:1050px){
@@ -29,11 +29,11 @@
 @media(max-width:760px){
   .not-found-hero{min-height:0;grid-template-columns:minmax(0,1fr) 100px;gap:12px;padding-block:45px}
   .not-found-code{grid-column:1}
-  .not-found-code>span{font-size:clamp(9rem,43vw,14rem)}
+  .not-found-code>span{font-size:var(--type-title);line-height:var(--leading-title)}
   .not-found-sun{grid-column:2;width:110px;height:110px}
   .not-found-copy{grid-column:1/-1;padding:45px 0 0}
   .not-found-label{right:0;top:45px}
-  .not-found-copy h1{font-size:clamp(3rem,14vw,4.6rem)}
+  .not-found-copy h1{font-size:var(--type-title);line-height:var(--leading-title)}
   .not-found-actions{max-width:none}
   .not-found-diagram{width:100%;overflow:hidden;padding:0 15px 30px}
   .not-found-diagram img{width:850px;max-width:none;transform:translateX(-18%) rotate(-.15deg)}
@@ -44,7 +44,7 @@
 @media(max-width:460px){
   .not-found-hero{grid-template-columns:minmax(0,1fr) 72px}
   .not-found-sun{width:82px;height:82px}
-  .not-found-copy>p:not(.not-found-label){max-width:270px;font-size:.86rem}
+  .not-found-copy>p:not(.not-found-label){max-width:270px;font-size:var(--type-body);line-height:var(--leading-body)}
 }
 
 /* Deliberately expressive 404 motion: short, tactile and fully optional. */

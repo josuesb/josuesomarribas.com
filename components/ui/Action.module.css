@@ -10,7 +10,7 @@
   border-radius: var(--ui-radius);
   background: var(--ui-accent);
   color: #fff;
-  font: 650 14px/1.4 var(--ui-font);
+  font: 650 var(--type-ui)/var(--leading-ui) var(--ui-font);
   letter-spacing: normal;
   text-align: center;
   text-decoration: none;
@@ -29,7 +29,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 40px;
-  font: 600 14px/1.5 var(--ui-font);
+  font: 600 var(--type-ui)/var(--leading-ui) var(--ui-font);
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--ui-border);
