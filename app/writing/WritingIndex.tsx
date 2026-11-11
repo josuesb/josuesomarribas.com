@@ -4,6 +4,7 @@ import { Button } from "../../components/ui/Action";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import styles from "./WritingFilters.module.css";
 import type { ArticleMeta } from "../../lib/content";
 import { editorialImage, editorialThumbnail } from "../../lib/editorial-assets";
 
@@ -92,10 +93,10 @@ export default function WritingIndex({ locale, articles }:{ locale:Locale; artic
   };
 
   return <div className="writing-index-v2">
-    <div className="writing-tools">
-      <label className="search-box"><span aria-hidden="true">⌕</span><input value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(INITIAL_ARCHIVE_SIZE); }} placeholder={t.search} aria-label={t.search}/></label>
-      <small>{matches.length} {t.notes} · {t.updated}</small>
-      <div className="filter-row" aria-label={locale === "es" ? "Filtrar por tema" : "Filter by topic"}>{filters.map(value => <Button variant="secondary" size="small" type="button" key={value} aria-pressed={filter === value} className={filter === value ? "active" : ""} onClick={() => chooseFilter(value)}>{value === "All" ? t.all : clusterLabel(value, locale)}</Button>)}</div>
+    <div className={styles.toolbar}>
+      <label className={styles.search}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(INITIAL_ARCHIVE_SIZE); }} placeholder={t.search} aria-label={t.search}/></label>
+      <small className={styles.summary} role="status" aria-live="polite">{matches.length} {matches.length === 1 ? (locale === "es" ? "artículo" : "article") : t.notes}</small>
+      <div className={styles.topics} role="group" aria-label={locale === "es" ? "Filtrar por tema" : "Filter by topic"}>{filters.map(value => <Button variant="secondary" size="small" type="button" key={value} aria-pressed={filter === value} className={filter === value ? "active" : ""} onClick={() => chooseFilter(value)}>{value === "All" ? t.all : clusterLabel(value, locale)}</Button>)}</div>
     </div>
 
     {!!featured.length && <section className="featured-articles" aria-labelledby="featured-heading">
