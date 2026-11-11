@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   { url:`${origin}/about`, changeFrequency:"monthly", priority:.8, alternates:{languages:{en:`${origin}/about`,es:`${origin}/es/about`}} },
   { url:`${origin}/es/about`, changeFrequency:"monthly", priority:.8, alternates:{languages:{en:`${origin}/about`,es:`${origin}/es/about`}} },
   { url:`${origin}/hangover`, changeFrequency:"monthly", priority:.8 },
+  { url:`${origin}/jira-tools/privacy`, changeFrequency:"yearly", priority:.3 },
   { url:`${origin}/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
   { url:`${origin}/es/now`, changeFrequency:"monthly", priority:.7, alternates:{languages:{en:`${origin}/now`,es:`${origin}/es/now`}} },
   { url:`${origin}/lab`, changeFrequency:"monthly", priority:.8, alternates:{languages:{en:`${origin}/lab`,es:`${origin}/es/lab`}} },
