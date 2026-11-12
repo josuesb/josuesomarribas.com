@@ -1,4 +1,7 @@
 export const english: Record<string, string> = {
+  "Instalar en Chrome": "Install in Chrome",
+  "Disponible en Chrome Web Store": "Available in Chrome Web Store",
+  "Jira Tools ya está disponible en Chrome Web Store.": "Jira Tools is now available in Chrome Web Store.",
   "Leer cómo he diseñado Jira Tools": "Read how I designed Jira Tools",
   "Saltar al contenido": "Skip to content",
   "Navegación de Jira Tools": "Jira Tools navigation",

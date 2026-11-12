@@ -126,14 +126,15 @@ export const labTools:LabTool[] = [
     architecture:{en:"A web calculator for reviewing A/B experiment results from CSV reports or manual inputs.",es:"Una calculadora web para revisar resultados de experimentos A/B desde informes CSV o datos manuales."}, stack:["A/B testing","GA4","CSV"]
   },
   {
-    slug:"jira-tools", id:"jira", number:"12", category:"utilities", status:"review", name:{en:"Jira Tools",es:"Jira Tools"},
+    slug:"jira-tools", id:"jira", number:"12", category:"utilities", status:"live", name:{en:"Jira Tools",es:"Jira Tools"},
+    externalUrl:"https://chromewebstore.google.com/detail/bplkoaddgjmgjaibedponhjpohnaichn",
     landingUrl:{en:"/jira-tools",es:"/es/jira-tools"},
     description:{en:"Copy and organise Jira tickets with templates, a tray and local history. Open tickets by ID with Spotlight.",es:"Copia y organiza tickets de Jira con plantillas, bandeja e historial local. Abre tickets por ID con Spotlight."},
     image:"/assets/jira-tools/04-bandeja-e-informes-1280x800.png", imageAlt:{en:"Jira Tools tray and status update preview",es:"Bandeja de Jira Tools y vista previa de actualización por estado"},
     articleUrl:{en:"/blog/jira-tools-copy-organize-open-tickets",es:"/es/blog/jira-tools-copy-organize-open-tickets"},
     problem:{en:"Sharing a bare ticket link loses context. Jira Tools prepares references with titles, statuses and assignees and collects them for an update.",es:"Compartir un enlace suelto pierde contexto. Jira Tools prepara referencias con título, estado y responsable y las reúne para una actualización."},
     features:{en:["Copy in rich text, Markdown or plain text.","Collect tickets and group an update by status.","Open tickets by ID with Spotlight.","Find the last 100 distinct copied tickets."],es:["Copia en texto enriquecido, Markdown o texto plano.","Reúne tickets y agrupa una actualización por estado.","Abre tickets por ID con Spotlight.","Recupera los últimos 100 tickets distintos copiados."]},
-    limits:{en:["Under review in Chrome Web Store.","Saved ticket data does not update in the background."],es:["En revisión en Chrome Web Store.","Los datos guardados no se actualizan en segundo plano."]},
+    limits:{en:["Saved ticket data does not update in the background."],es:["Los datos guardados no se actualizan en segundo plano."]},
     architecture:{en:"A Chrome extension with local browser storage. It does not modify tickets or send the tray and history to developer servers.",es:"Una extensión de Chrome con almacenamiento local. No modifica tickets ni envía la bandeja o el historial a servidores del desarrollador."}, stack:["Chrome extension","JavaScript","Local storage"]
   }
 

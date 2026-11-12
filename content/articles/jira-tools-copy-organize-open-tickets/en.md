@@ -22,7 +22,7 @@ downloadText: ""
 
 <p>I built <a href="/jira-tools">Jira Tools</a> to handle that work around the ticket: copying a useful reference, collecting several tasks and opening an issue when you already know its ID. It is a Chrome extension that stores preferences, a ticket tray and history in your browser.</p>
 
-<p>This article covers version 2.1.0. At the time of publication, the extension is under review in Chrome Web Store. The screenshots show its Spanish interface with fictional data.</p>
+<p>This article covers version 2.1.0. The extension is available in <a href="https://chromewebstore.google.com/detail/bplkoaddgjmgjaibedponhjpohnaichn">Chrome Web Store</a>. The screenshots show its Spanish interface with fictional data.</p>
 
 <h2>A reference you can understand before opening it</h2>
 
@@ -86,6 +86,6 @@ Assignee: {assignee}</code></pre>
 
 <h2>What you can see now</h2>
 
-<p>The <a href="/jira-tools">Jira Tools page</a> brings together its features and publication status. While the extension is under review, the page states that installation from Chrome Web Store is not yet available.</p>
+<p>The <a href="/jira-tools">Jira Tools page</a> brings together its features and publication status. You can <a href="https://chromewebstore.google.com/detail/bplkoaddgjmgjaibedponhjpohnaichn">install it from Chrome Web Store</a>.</p>
 
 <p>The project focuses on a short journey: leave Jira with a reference someone can understand, then return to a ticket without retracing your steps. Copy formats, the tray and history keep the context between those two moments.</p>

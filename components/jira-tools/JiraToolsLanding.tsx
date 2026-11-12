@@ -7,6 +7,8 @@ import { english } from "./translations";
 import Image from "next/image";
 import styles from "./landing.module.css";
 
+const storeUrl = "https://chromewebstore.google.com/detail/bplkoaddgjmgjaibedponhjpohnaichn";
+
 const assets = "/assets/jira-tools";
 
 function Screenshot({ file, alt, priority = false }: { file: string; alt: string; priority?: boolean }) {
@@ -42,8 +44,8 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
           <p className={styles.eyebrow}><span /> UNA EXTENSIÓN PARA CHROME</p>
           <h1>Copia, organiza<br />y <em>abre tickets.</em></h1>
           <p className={styles.lead}>Menos pasos entre Jira y el resto de tu trabajo. Copia con tu formato, reúne tus tickets y prepara la próxima actualización.</p>
-          <div className={styles.heroActions}><ButtonLink href="#funciones">Descubrir las funciones </ButtonLink></div>
-          <p className={styles.status}><span /> En revisión en Chrome Web Store</p>
+          <div className={styles.heroActions}><ButtonLink href={storeUrl} target="_blank" rel="noreferrer">Instalar en Chrome</ButtonLink></div>
+          <p className={styles.status}><span /> Disponible en Chrome Web Store</p>
         </div>
         <div className={styles.spotlightPreview} aria-label="Ejemplo del buscador de tickets Spotlight">
           <div className={styles.previewTop}><span>⚡ Abrir ticket</span><kbd>Esc</kbd></div>
@@ -80,13 +82,13 @@ export default function JiraToolsLanding({ locale }: { locale: "en" | "es" }) {
       </section>
       <section className={styles.privacy} aria-labelledby="privacy-heading"><span className={styles.privacyIcon} aria-hidden="true">↳</span><div><p className={styles.eyebrow}>TUS TICKETS, EN TU NAVEGADOR</p><h2 id="privacy-heading">Local por diseño.</h2><p>Tu bandeja, historial, plantillas y preferencias se guardan en el navegador. La extensión no envía estos datos a servidores del desarrollador, no incorpora analítica ni publicidad y no modifica tus tickets de Jira.</p><TextLink className={styles.textLink} href="/jira-tools/privacy">Leer la política de privacidad </TextLink></div></section>
       <section className={styles.faq} id="preguntas" aria-labelledby="faq-heading"><div><p className={styles.eyebrow}>ANTES DE EMPEZAR</p><h2 id="faq-heading">Algunas respuestas.</h2></div><div className={styles.questions}>
-        <details><summary>¿Dónde puedo instalar Jira Tools?</summary><p>La extensión está en revisión en Chrome Web Store. El enlace de instalación estará disponible en esta página cuando se publique.</p></details>
+        <details><summary>¿Dónde puedo instalar Jira Tools?</summary><p>Jira Tools ya está disponible en Chrome Web Store.</p></details>
         <details><summary>¿Cómo configuro mi Jira?</summary><p>En la extensión, abre Ajustes → Jira y guarda el dominio de tu instancia. Spotlight lo utilizará para construir el enlace del ticket. Abrir por ID no comprueba que el ticket exista.</p></details>
         <details id="atajos"><summary>¿Qué atajos puedo usar?</summary><p>En Mac: ⌘⇧J para copiar, ⌘⇧K para añadir a bandeja, ⌘⇧O para Spotlight y ⌘⇧Y para el menú. En Windows y Linux, usa Alt+Mayús en lugar de ⌘⇧.</p><p>Son combinaciones sugeridas. Si alguna está ocupada, puedes cambiarla en chrome://extensions/shortcuts. Ajustes → Atajos muestra las combinaciones realmente asignadas.</p></details>
         <details><summary>¿Se actualizan los tickets en segundo plano?</summary><p>No. La bandeja y el historial guardan una captura de los datos. Vuelve a añadir el ticket desde Jira para refrescarlo. Jira Tools no utiliza la API de Jira ni modifica tickets.</p></details>
         <details><summary>¿Funciona en cualquier página?</summary><p>Spotlight se abre sobre la página actual. En páginas internas de Chrome o sitios protegidos utiliza el popup de la extensión o una ventana compacta. La lectura de tickets depende de la estructura de tu instancia de Jira.</p></details>
       </div></section>
-      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><span className={styles.storeStatus}>En revisión en Chrome Web Store</span><p><TextLink className={styles.textLink} href={`${locale === "es" ? "/es" : ""}/blog/jira-tools-copy-organize-open-tickets`}>Leer cómo he diseñado Jira Tools </TextLink></p></section>
+      <section className={styles.closing}><Image src={`${assets}/icon.png`} alt="" width={56} height={56}/><h2>Tu trabajo ya tiene<br />suficientes pestañas.</h2><p>Acorta el camino entre un ticket y lo que viene después.</p><ButtonLink href={storeUrl} target="_blank" rel="noreferrer">Instalar en Chrome</ButtonLink><p><TextLink className={styles.textLink} href={`${locale === "es" ? "/es" : ""}/blog/jira-tools-copy-organize-open-tickets`}>Leer cómo he diseñado Jira Tools </TextLink></p></section>
 
     </div>
   </main>
